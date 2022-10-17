@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Contextualizando | Introdução à Filoinformática</title>
+  <meta name="description" content="1 Contextualizando | Introdução à Filoinformática" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Contextualizando | Introdução à Filoinformática" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Contextualizando | Introdução à Filoinformática" />
+  
+  
+  
+
+<meta name="author" content="Lucas S.B. Jordão" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="prêambulo.html"/>
+<link rel="next" href="filoinformática.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/clipboard-1.7.1/clipboard.min.js"></script>
+<link href="libs/primer-tooltips-1.4.0/build.css" rel="stylesheet" />
+<link href="libs/klippy-0.0.0.9500/css/klippy.min.css" rel="stylesheet" />
+<script src="libs/klippy-0.0.0.9500/js/klippy.min.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet" />
+<script src="libs/tippyjs-3.2.0/tippy.all.min.js"></script>
+<script src="libs/tippy-binding-0.1.0/tippy.js"></script>
+<link href="libs/vis-9.1.0/vis-network.min.css" rel="stylesheet" />
+<script src="libs/vis-9.1.0/vis-network.min.js"></script>
+<script src="libs/visNetwork-binding-2.1.2/visNetwork.js"></script>
+<script src="libs/fitvids-2.1.1/fitvids.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="prêambulo.html"><a href="prêambulo.html"><i class="fa fa-check"></i>Prêambulo</a></li>
+<li class="chapter" data-level="1" data-path="contextualizando.html"><a href="contextualizando.html"><i class="fa fa-check"></i><b>1</b> Contextualizando</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="contextualizando.html"><a href="contextualizando.html#histórico-e-fundamentos"><i class="fa fa-check"></i><b>1.1</b> Histórico e fundamentos</a></li>
+<li class="chapter" data-level="1.2" data-path="contextualizando.html"><a href="contextualizando.html#bioinformática-filoinformática"><i class="fa fa-check"></i><b>1.2</b> Bioinformática &gt; Filoinformática</a></li>
+<li class="chapter" data-level="1.3" data-path="contextualizando.html"><a href="contextualizando.html#passado"><i class="fa fa-check"></i><b>1.3</b> Passado</a></li>
+<li class="chapter" data-level="1.4" data-path="contextualizando.html"><a href="contextualizando.html#presente"><i class="fa fa-check"></i><b>1.4</b> Presente</a></li>
+<li class="chapter" data-level="1.5" data-path="contextualizando.html"><a href="contextualizando.html#futuro"><i class="fa fa-check"></i><b>1.5</b> Futuro</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="contextualizando.html"><a href="contextualizando.html#interoperabilidade"><i class="fa fa-check"></i><b>1.5.1</b> Interoperabilidade</a></li>
+<li class="chapter" data-level="1.5.2" data-path="contextualizando.html"><a href="contextualizando.html#evolução-da-web"><i class="fa fa-check"></i><b>1.5.2</b> Evolução da Web</a></li>
+<li class="chapter" data-level="1.5.3" data-path="contextualizando.html"><a href="contextualizando.html#o-futuro-integrativo-da-sistemática"><i class="fa fa-check"></i><b>1.5.3</b> O futuro integrativo da Sistemática</a>
+<ul>
+<li class="chapter" data-level="1.5.3.1" data-path="contextualizando.html"><a href="contextualizando.html#padrão-darwincore"><i class="fa fa-check"></i><b>1.5.3.1</b> Padrão DarwinCore</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5.4" data-path="contextualizando.html"><a href="contextualizando.html#w3c"><i class="fa fa-check"></i><b>1.5.4</b> W3C</a></li>
+<li class="chapter" data-level="1.5.5" data-path="contextualizando.html"><a href="contextualizando.html#web-semântica-web-3.0"><i class="fa fa-check"></i><b>1.5.5</b> <em>Web</em> Semântica (Web 3.0)</a></li>
+<li class="chapter" data-level="1.5.6" data-path="contextualizando.html"><a href="contextualizando.html#sistemas-de-organização-do-conhecimento"><i class="fa fa-check"></i><b>1.5.6</b> Sistemas de Organização do Conhecimento</a></li>
+<li class="chapter" data-level="1.5.7" data-path="contextualizando.html"><a href="contextualizando.html#ontologias"><i class="fa fa-check"></i><b>1.5.7</b> Ontologias</a>
+<ul>
+<li class="chapter" data-level="1.5.7.1" data-path="contextualizando.html"><a href="contextualizando.html#fundamentos-epistemológicos"><i class="fa fa-check"></i><b>1.5.7.1</b> Fundamentos epistemológicos</a></li>
+<li class="chapter" data-level="1.5.7.2" data-path="contextualizando.html"><a href="contextualizando.html#web-ontology-language"><i class="fa fa-check"></i><b>1.5.7.2</b> <em>Web Ontology Language</em></a></li>
+<li class="chapter" data-level="1.5.7.3" data-path="contextualizando.html"><a href="contextualizando.html#resource-description-framework"><i class="fa fa-check"></i><b>1.5.7.3</b> <em>Resource Description Framework</em></a></li>
+<li class="chapter" data-level="1.5.7.4" data-path="contextualizando.html"><a href="contextualizando.html#extensible-markup-language"><i class="fa fa-check"></i><b>1.5.7.4</b> <em>Extensible Markup Language</em></a></li>
+<li class="chapter" data-level="1.5.7.5" data-path="contextualizando.html"><a href="contextualizando.html#obo-foundry"><i class="fa fa-check"></i><b>1.5.7.5</b> OBO Foundry</a></li>
+<li class="chapter" data-level="1.5.7.6" data-path="contextualizando.html"><a href="contextualizando.html#gene-ontology"><i class="fa fa-check"></i><b>1.5.7.6</b> Gene Ontology</a></li>
+<li class="chapter" data-level="1.5.7.7" data-path="contextualizando.html"><a href="contextualizando.html#plant-ontology"><i class="fa fa-check"></i><b>1.5.7.7</b> Plant Ontology</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="filoinformática.html"><a href="filoinformática.html"><i class="fa fa-check"></i><b>2</b> Filoinformática</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="filoinformática.html"><a href="filoinformática.html#conceito"><i class="fa fa-check"></i><b>2.1</b> Conceito</a></li>
+<li class="chapter" data-level="2.2" data-path="filoinformática.html"><a href="filoinformática.html#fontes-de-dados"><i class="fa fa-check"></i><b>2.2</b> Fontes de dados</a></li>
+<li class="chapter" data-level="2.3" data-path="filoinformática.html"><a href="filoinformática.html#perspectivas"><i class="fa fa-check"></i><b>2.3</b> Perspectivas</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="visão-geral-e-roteiro-do-curso.html"><a href="visão-geral-e-roteiro-do-curso.html"><i class="fa fa-check"></i><b>3</b> Visão geral e roteiro do curso</a></li>
+<li class="chapter" data-level="4" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html"><i class="fa fa-check"></i><b>4</b> Técnicas moleculares</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#extração-do-dna"><i class="fa fa-check"></i><b>4.1</b> Extração do DNA</a></li>
+<li class="chapter" data-level="4.2" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#amplificação"><i class="fa fa-check"></i><b>4.2</b> Amplificação</a></li>
+<li class="chapter" data-level="4.3" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#eletroforese"><i class="fa fa-check"></i><b>4.3</b> Eletroforese</a></li>
+<li class="chapter" data-level="4.4" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#sequenciamento"><i class="fa fa-check"></i><b>4.4</b> Sequenciamento</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#história-do-sequenciamento-didesoxi-sanger"><i class="fa fa-check"></i><b>4.4.1</b> História do sequenciamento didesoxi Sanger</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html"><i class="fa fa-check"></i><b>5</b> Montagem de sequências</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#cromatogramas"><i class="fa fa-check"></i><b>5.1</b> Cromatogramas</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#conceito-1"><i class="fa fa-check"></i><b>5.1.1</b> Conceito</a></li>
+<li class="chapter" data-level="5.1.2" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#finalidade"><i class="fa fa-check"></i><b>5.1.2</b> Finalidade</a></li>
+<li class="chapter" data-level="5.1.3" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#qualidade-do-sinal"><i class="fa fa-check"></i><b>5.1.3</b> Qualidade do sinal</a></li>
+<li class="chapter" data-level="5.1.4" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#arquivo-.ab1"><i class="fa fa-check"></i><b>5.1.4</b> Arquivo .ab1</a></li>
+<li class="chapter" data-level="5.1.5" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#software-fitchtv"><i class="fa fa-check"></i><b>5.1.5</b> Software FitchTV</a></li>
+<li class="chapter" data-level="5.1.6" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#manual-do-sequenciamento-sanger"><i class="fa fa-check"></i><b>5.1.6</b> Manual do sequenciamento Sanger</a></li>
+<li class="chapter" data-level="5.1.7" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#interpretação-do-cromatograma"><i class="fa fa-check"></i><b>5.1.7</b> Interpretação do cromatograma</a></li>
+<li class="chapter" data-level="5.1.8" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#prática"><i class="fa fa-check"></i><b>5.1.8</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#alinhamento-de-contigs"><i class="fa fa-check"></i><b>5.2</b> Alinhamento de <em>contigs</em></a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#assembly-softwares"><i class="fa fa-check"></i><b>5.2.1</b> Assembly softwares</a></li>
+<li class="chapter" data-level="5.2.2" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#prática-1"><i class="fa fa-check"></i><b>5.2.2</b> Prática</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="formatos-de-arquivo-mais-comuns.html"><a href="formatos-de-arquivo-mais-comuns.html"><i class="fa fa-check"></i><b>6</b> Formatos de arquivo mais comuns</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="formatos-de-arquivo-mais-comuns.html"><a href="formatos-de-arquivo-mais-comuns.html#phylip"><i class="fa fa-check"></i><b>6.1</b> PHYLIP</a></li>
+<li class="chapter" data-level="6.2" data-path="formatos-de-arquivo-mais-comuns.html"><a href="formatos-de-arquivo-mais-comuns.html#fasta"><i class="fa fa-check"></i><b>6.2</b> FASTA</a></li>
+<li class="chapter" data-level="6.3" data-path="formatos-de-arquivo-mais-comuns.html"><a href="formatos-de-arquivo-mais-comuns.html#nexus"><i class="fa fa-check"></i><b>6.3</b> NEXUS</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="alinhamento-múltiplo-e-manual-de-sequências.html"><a href="alinhamento-múltiplo-e-manual-de-sequências.html"><i class="fa fa-check"></i><b>7</b> Alinhamento múltiplo e manual de sequências</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="alinhamento-múltiplo-e-manual-de-sequências.html"><a href="alinhamento-múltiplo-e-manual-de-sequências.html#prática-2"><i class="fa fa-check"></i><b>7.1</b> Prática</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="alinhamento-múltiplo-e-manual-de-sequências.html"><a href="alinhamento-múltiplo-e-manual-de-sequências.html#alinhamento-múltiplo-automático"><i class="fa fa-check"></i><b>7.1.1</b> Alinhamento múltiplo (automático)</a></li>
+<li class="chapter" data-level="7.1.2" data-path="alinhamento-múltiplo-e-manual-de-sequências.html"><a href="alinhamento-múltiplo-e-manual-de-sequências.html#alinhamento-manual"><i class="fa fa-check"></i><b>7.1.2</b> Alinhamento manual</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="codificando-indels.html"><a href="codificando-indels.html"><i class="fa fa-check"></i><b>8</b> Codificando indels</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="codificando-indels.html"><a href="codificando-indels.html#sic"><i class="fa fa-check"></i><b>8.1</b> SIC</a></li>
+<li class="chapter" data-level="8.2" data-path="codificando-indels.html"><a href="codificando-indels.html#mcic"><i class="fa fa-check"></i><b>8.2</b> MCIC</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="concatenando-matrizes.html"><a href="concatenando-matrizes.html"><i class="fa fa-check"></i><b>9</b> Concatenando matrizes</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="concatenando-matrizes.html"><a href="concatenando-matrizes.html#prática-3"><i class="fa fa-check"></i><b>9.1</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="seleção-de-modelos-das-partições.html"><a href="seleção-de-modelos-das-partições.html"><i class="fa fa-check"></i><b>10</b> Seleção de modelos das partições</a></li>
+<li class="chapter" data-level="11" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html"><i class="fa fa-check"></i><b>11</b> Softwares para análises filogenéticas</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#ms-dos"><i class="fa fa-check"></i><b>11.1</b> MS-DOS</a></li>
+<li class="chapter" data-level="11.2" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#iq-tree"><i class="fa fa-check"></i><b>11.2</b> IQ-TREE</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#prática-4"><i class="fa fa-check"></i><b>11.2.1</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#splitstree6"><i class="fa fa-check"></i><b>11.3</b> SplitsTree6</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#prática-5"><i class="fa fa-check"></i><b>11.3.1</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#mrbayes"><i class="fa fa-check"></i><b>11.4</b> MrBayes</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#prática-6"><i class="fa fa-check"></i><b>11.4.1</b> Prática</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="edição-final-de-árvore.html"><a href="edição-final-de-árvore.html"><i class="fa fa-check"></i><b>12</b> Edição final de árvore</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="edição-final-de-árvore.html"><a href="edição-final-de-árvore.html#prática-7"><i class="fa fa-check"></i><b>12.1</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html"><i class="fa fa-check"></i><b>13</b> Introdução ao R</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#programação-orientada-a-objetos"><i class="fa fa-check"></i><b>13.1</b> Programação orientada a objetos</a></li>
+<li class="chapter" data-level="13.2" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#principais-tipos-de-objetos"><i class="fa fa-check"></i><b>13.2</b> Principais tipos de Objetos:</a></li>
+<li class="chapter" data-level="13.3" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#classe"><i class="fa fa-check"></i><b>13.3</b> Classe</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#sistema-de-referência"><i class="fa fa-check"></i><b>13.3.1</b> Sistema de referência</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#linguagem-r"><i class="fa fa-check"></i><b>13.4</b> Linguagem R</a></li>
+<li class="chapter" data-level="13.5" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#console"><i class="fa fa-check"></i><b>13.5</b> Console</a></li>
+<li class="chapter" data-level="13.6" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#criando-objetos"><i class="fa fa-check"></i><b>13.6</b> Criando objetos</a></li>
+<li class="chapter" data-level="13.7" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#funções"><i class="fa fa-check"></i><b>13.7</b> Funções</a>
+<ul>
+<li class="chapter" data-level="13.7.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#sintaxe-da-função"><i class="fa fa-check"></i><b>13.7.1</b> Sintaxe da função</a></li>
+<li class="chapter" data-level="13.7.2" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#funções-básicas"><i class="fa fa-check"></i><b>13.7.2</b> Funções básicas</a></li>
+</ul></li>
+<li class="chapter" data-level="13.8" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#pacotes"><i class="fa fa-check"></i><b>13.8</b> Pacotes</a></li>
+<li class="chapter" data-level="13.9" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#prática-8"><i class="fa fa-check"></i><b>13.9</b> Prática</a>
+<ul>
+<li class="chapter" data-level="13.9.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#indexação-de-objetos"><i class="fa fa-check"></i><b>13.9.1</b> Indexação de objetos</a></li>
+<li class="chapter" data-level="13.9.2" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#operadores-de-lógica"><i class="fa fa-check"></i><b>13.9.2</b> Operadores de lógica</a></li>
+<li class="chapter" data-level="13.9.3" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#inspecionando-os-atributos-um-objeto"><i class="fa fa-check"></i><b>13.9.3</b> Inspecionando os atributos um objeto</a></li>
+<li class="chapter" data-level="13.9.4" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#teste-e-coerção-de-objetos"><i class="fa fa-check"></i><b>13.9.4</b> Teste e Coerção de objetos</a></li>
+</ul></li>
+<li class="chapter" data-level="13.10" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#rstudio"><i class="fa fa-check"></i><b>13.10</b> RStudio</a></li>
+<li class="chapter" data-level="13.11" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#ambiente-de-trabalho"><i class="fa fa-check"></i><b>13.11</b> Ambiente de Trabalho</a></li>
+<li class="chapter" data-level="13.12" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#diretório-de-trabalho"><i class="fa fa-check"></i><b>13.12</b> Diretório de Trabalho</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html"><i class="fa fa-check"></i><b>14</b> Filogenia no R</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacotes-de-filogenia"><i class="fa fa-check"></i><b>14.1</b> Pacotes de filogenia</a></li>
+<li class="chapter" data-level="14.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#escrevendo-árvores-a-partir-de-uma-cadeia-de-texto"><i class="fa fa-check"></i><b>14.2</b> Escrevendo árvores a partir de uma cadeia de texto</a></li>
+<li class="chapter" data-level="14.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#importando-árvores-nos-formatos-s3-e-s4"><i class="fa fa-check"></i><b>14.3</b> Importando árvores nos formatos S3 e S4</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#classe-phylo-s3"><i class="fa fa-check"></i><b>14.3.1</b> Classe phylo (S3)</a></li>
+<li class="chapter" data-level="14.3.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#classe-phylo4-e-phylo4d-s4"><i class="fa fa-check"></i><b>14.3.2</b> Classe phylo4 e phylo4d (S4)</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#personalizando-o-estilo-da-árvore"><i class="fa fa-check"></i><b>14.4</b> Personalizando o estilo da árvore</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ape"><i class="fa fa-check"></i><b>14.4.1</b> Pacote ape</a>
+<ul>
+<li class="chapter" data-level="14.4.1.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos"><i class="fa fa-check"></i><b>14.4.1.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.4.1.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais"><i class="fa fa-check"></i><b>14.4.1.2</b> Terminais</a></li>
+<li class="chapter" data-level="14.4.1.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós"><i class="fa fa-check"></i><b>14.4.1.3</b> Nós</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools"><i class="fa fa-check"></i><b>14.4.2</b> Pacote phytools</a>
+<ul>
+<li class="chapter" data-level="14.4.2.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-1"><i class="fa fa-check"></i><b>14.4.2.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.4.2.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-1"><i class="fa fa-check"></i><b>14.4.2.2</b> Terminais</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ggtree"><i class="fa fa-check"></i><b>14.4.3</b> Pacote ggtree</a>
+<ul>
+<li class="chapter" data-level="14.4.3.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-2"><i class="fa fa-check"></i><b>14.4.3.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.4.3.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-2"><i class="fa fa-check"></i><b>14.4.3.2</b> Terminais</a></li>
+<li class="chapter" data-level="14.4.3.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós-1"><i class="fa fa-check"></i><b>14.4.3.3</b> Nós</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#anotando-dados-na-árvore-usando-r"><i class="fa fa-check"></i><b>14.5</b> Anotando dados na árvore usando R</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ape-1"><i class="fa fa-check"></i><b>14.5.1</b> Pacote ape</a>
+<ul>
+<li class="chapter" data-level="14.5.1.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-3"><i class="fa fa-check"></i><b>14.5.1.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.5.1.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-3"><i class="fa fa-check"></i><b>14.5.1.2</b> Terminais</a></li>
+<li class="chapter" data-level="14.5.1.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós-2"><i class="fa fa-check"></i><b>14.5.1.3</b> Nós</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools-1"><i class="fa fa-check"></i><b>14.5.2</b> Pacote phytools</a>
+<ul>
+<li class="chapter" data-level="14.5.2.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós-3"><i class="fa fa-check"></i><b>14.5.2.1</b> Nós</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#plotando-matrizes-data.frames-e-árvore-ao-lado-da-árvore-usando-r"><i class="fa fa-check"></i><b>14.6</b> Plotando matrizes, data.frames e árvore ao lado da árvore usando R</a>
+<ul>
+<li class="chapter" data-level="14.6.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ape-2"><i class="fa fa-check"></i><b>14.6.1</b> Pacote ape</a>
+<ul>
+<li class="chapter" data-level="14.6.1.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#matriz-e-data.frame"><i class="fa fa-check"></i><b>14.6.1.1</b> Matriz e data.frame</a></li>
+<li class="chapter" data-level="14.6.1.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#anéis-em-árvores-circulares"><i class="fa fa-check"></i><b>14.6.1.2</b> Anéis em árvores circulares</a></li>
+<li class="chapter" data-level="14.6.1.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#tanglegram"><i class="fa fa-check"></i><b>14.6.1.3</b> Tanglegram</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools-2"><i class="fa fa-check"></i><b>14.6.2</b> Pacote phytools</a>
+<ul>
+<li class="chapter" data-level="14.6.2.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#círculos"><i class="fa fa-check"></i><b>14.6.2.1</b> Círculos</a></li>
+<li class="chapter" data-level="14.6.2.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#barras"><i class="fa fa-check"></i><b>14.6.2.2</b> Barras</a></li>
+<li class="chapter" data-level="14.6.2.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#matrizes"><i class="fa fa-check"></i><b>14.6.2.3</b> Matrizes</a></li>
+<li class="chapter" data-level="14.6.2.4" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#boxplots"><i class="fa fa-check"></i><b>14.6.2.4</b> Boxplots</a></li>
+<li class="chapter" data-level="14.6.2.5" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#tanglegram-1"><i class="fa fa-check"></i><b>14.6.2.5</b> Tanglegram</a></li>
+<li class="chapter" data-level="14.6.2.6" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#phylo.to.map"><i class="fa fa-check"></i><b>14.6.2.6</b> Phylo.to.map</a></li>
+<li class="chapter" data-level="14.6.2.7" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#escala-estratigráfica"><i class="fa fa-check"></i><b>14.6.2.7</b> Escala estratigráfica</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#estimação-do-estado-ancestral-usando-r"><i class="fa fa-check"></i><b>14.6.3</b> Estimação do estado ancestral usando R</a>
+<ul>
+<li class="chapter" data-level="14.6.3.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools-3"><i class="fa fa-check"></i><b>14.6.3.1</b> Pacote phytools</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="genebank-ncbi.html"><a href="genebank-ncbi.html"><i class="fa fa-check"></i><b>15</b> GeneBank (NCBI)</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="genebank-ncbi.html"><a href="genebank-ncbi.html#blast"><i class="fa fa-check"></i><b>15.1</b> Blast</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introdução à Filoinformática</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="contextualizando" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Contextualizando<a href="contextualizando.html#contextualizando" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="histórico-e-fundamentos" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Histórico e fundamentos<a href="contextualizando.html#histórico-e-fundamentos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A história da filoinformática insere-se na história da sistemática biológica pós-<strong><span id="htmlwidget-a922a8df6209930e7713" class="tippy html-widget" width="960" height="500"></span> <script type="application/json" data-for="htmlwidget-a922a8df6209930e7713">{"x":{"opts":{"content":"<a>Willi Hennig (1913–1976)<\/a><br><img src=\"./images/hennig.png\" width=\"300\">"},"text":"hennigiana"},"evals":[],"jsHooks":[]}</script></strong> da década de 50–60, isto é, a sistemática filogenética, e, evidentemente, surge após o desenvolvimento da informática, nessa mesma época.</p>
+<div style="color: black; background: lightgray; text-align: justify; border: 5px outset lightgray; padding: 10px;">
+<p>Para uma aprofundada análise da história da classificação biológica…</p>
+<div style="display: flex;">
+<div>
+<p><img src="images/science_as_a_process.jpg" height="300" /></p>
+</div>
+<div>
+<p><img src="images/david_hull.jpg" height="300" /></p>
+</div>
+</div>
+<p><strong>David L. Hull</strong> (1935–2010)</p>
+<p><a href="http://petergodfreysmith.com/wp-content/uploads/2013/06/David-Hull-Obit-PGS-20101.pdf">Obtuário publicado em <em>Biology and Philosophy</em> 25 (2010): 749–753</a></p>
+<p><strong>Systematics War</strong></p>
+<p>Taxonomia evolutiva [Gradismo]: Genealogia e similaridade adaptativa</p>
+<p>Fenética: Similaridade total</p>
+<p>Cladística: Genealogia</p>
+<p><img src="images/systematics_war.png" /></p>
+<p>Não deixe de conferir o livro de Ernst Mayr: <code>Isto é biologia: a ciência do mundo vivo</code></p>
+<div style="display: flex;">
+<div>
+<p><img src="images/isto_e_biologia.jpg" height="300" /></p>
+</div>
+<div>
+<p><img src="images/mayr.jpg" height="300" /></p>
+<p><strong>Ernst W. Mayr</strong> (1904–2005)</p>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>O mundo experimentava uma grande revolução tecnocientífica, que levou a uma nova episteme, o pós-modernismo. A episteme pós-moderna, na esfera das tecnociências foi caracterizada pelo surgimento da cibernética, robótica, biologia molecular e a medicina nuclear, entre outras áreas de desenvolvimento tecnológico.</p>
+<p>A gênese da informática insere-se na história do desenvolvimento do pensamento sistêmico e da lógica, e intrinsecamente correlacionada ao pensamento biológico contemporâneo. Suas raízes filosóficas, epistemológicas, podem ser buscadas na filosofia da linguagem e no positivismo lógico, cujos precursores pertenciam ao Círculo de Viena.</p>
+<div style="color: black; background: lightgray; text-align: justify; border: 5px outset lightgray; padding: 10px;">
+<div style="display: flex;">
+<div>
+<p><img src="images/university_vienna.PNG" /></p>
+</div>
+<div>
+<p><img src="images/vienna_circle.PNG" /></p>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>A informática se desdobra no conhecimento humano a partir de uma racionalidade que se desenvolveu no século XX e que ficou conhecida como “visão sistêmica” ou “pensamento sistêmico”, decorrente dos avanços teóricos especialmente na áreas da biologia e filosofia da ciência.</p>
+<p><strong>Organicismo -&gt; Emergentismo -&gt; Teoria Geral dos Sistemas -&gt; Cibernética -&gt; Informática</strong></p>
+<ul>
+<li><p><strong>Ludwig von Bertalanffy</strong> (1901–1972): Biólogo, precursor da Teoria Geral dos Sistemas.</p>
+<ul>
+<li><p>“Pai do organicismo”?</p></li>
+<li><p>Tudo é parte de algum todo.</p></li>
+</ul></li>
+<li><p><strong>Norbert Wiener</strong> (1894–1909): Cibernética</p>
+<ul>
+<li>Americano</li>
+<li>Foi aluno de Bertrand Russel.</li>
+<li>Em 1948, Wiener publicou o livro <code>Cibernética: ou Controle e Comunicação no Animal e na Máquina</code>:</li>
+</ul></li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Capa_cibernetica.jpg/220px-Capa_cibernetica.jpg" /></p>
+<ul>
+<li><p>A cibernética é o estudo interdisciplinar da estrutura dos sistemas reguladores, suas estruturas, restrições e possibilidades. Norbert Wiener definiu a cibernética em 1948 como “o estudo científico do controle e comunicação no animal e na máquina” <a name=cite-wikiCibernetica></a>(<a href="%7Bhttps://pt.wikipedia.org/wiki/Cibern%C3%A9tica%7D">Wikipedia contributors, 2022g</a>).</p></li>
+<li><p>A cibernética é aplicável quando um sistema em análise incorpora um circuito fechado de sinalização — originalmente chamado de relação “causal circular” — isto é, onde a ação do sistema gera alguma mudança em seu ambiente e essa mudança é refletida no sistema de alguma maneira (<em>feedback</em>) que aciona uma alteração no sistema. A cibernética é relevante para, por exemplo, sistemas mecânicos, físicos, biológicos, cognitivos e sociais (<a href="%7Bhttps://pt.wikipedia.org/wiki/Cibern%C3%A9tica%7D">Wikipedia contributors, 2022g</a>).</p></li>
+<li><p><strong>Alan Turing</strong> (1912–1954): Informática</p>
+<ul>
+<li>Britânico, “pai da computação”</li>
+<li>Criou a “Máquina de Turing”, protótipo dos computadores modernos.</li>
+<li>Desenvolveu um máquina para decifrar o código da “Máquina Eniga”, utilizada pelos nazistas durante a Segunda Guerra Mundial.</li>
+<li>A cibernética desempenhou um papel decisivo no surgimento da revolução tecnológica. Alan Turing, aluno de John von Neumann (outro pioneiro da cibernética), ambos precursores do computador e Claude Shannon, aluno de Norbert Wiener, com a sua Teoria da Informação (<a href="%7Bhttps://pt.wikipedia.org/wiki/Cibern%C3%A9tica%7D">Wikipedia contributors, 2022g</a>).</li>
+</ul></li>
+</ul>
+<p><br></p>
+<p>Em meados da década de 70, um <em>workshop</em> realizado em 1974 no Missouri Botanical Garden, St. Louis, EUA, definiu tendências, prioridades e necessidades no campo da biologia sistemática e evolutiva. O evento foi financiado por pelo <em>Systematic Biology Program</em> da <em>Division of Biological and Medical Sciences</em> da agência governamental americana <em>National Science Foundation</em>. O encontro resultou na publicação do relatório: <em>Trends, Priorities, and Needs in Systematics and Evolutionary Biology</em> <a name=cite-TrendsandPriorities></a>(<a href="https://doi.org/10.1093/sysbio/23.3.416">Anônimo, 1974</a>). Esse foi um dos primeiros esforços para estabelecer uma agenda para a sistemática biológica claramente definida. Entretanto, não se tratava de uma iniciativa global <a name=cite-Eshbaugh></a>(<a href="https://doi.org/10.1007/BF00056336">Eshbaugh, 1995</a>).</p>
+<p>A partir do início dos anos 90, sistematas começaram a se envolver cada vez mais na conservação e no papel desempenhado pela sistemática na solução de problemas da sociedade. O senso de urgência e um apelo à comunidade sistemática de biologia para definir claramente suas prioridades e agenda de pesquisa levaram a uma reunião de aproximadamente uma dúzia de pesquisadores, representando a <em>American Society of Plant Taxonomists</em>, a <em>Society of Systematic Biologists</em> e a <em>Willi Hennig Society</em> do <em>American Museum of Natural History</em>, em março de 1991. No início da reunião, reconheceu-se a necessidade de uma iniciativa abrangente para integrar os esforços em prol de objetivos comuns <a name=cite-Cracraft></a>(<a href="https://www.biodiversitylibrary.org/part/16378">Cracraft, 2002a</a>) (<a href="https://doi.org/10.1007/BF00056336">Eshbaugh, 1995</a>).</p>
+<p>O marco teórico da filoinformática, isto é, o momento no qual os pressupostos gerais e conceitos específicos desse campo do conhecimento começaram a ser desenvolvidos, tem sido demarcado pela publicação da <a href="https://archive.org/details/systematicsagend00syst"><em>Systematics Agenda 2000</em></a>, em 1994 (<a href="https://www.biodiversitylibrary.org/part/16378">Cracraft, 2002a</a>).</p>
+<p><img src="images/SystAgenda2000.jpg" /> Systematics Agenda 2000: Charting the Biosphere. Publicada em 1994.</p>
+<ul>
+<li>Três missões:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p>Descobrir, descrever e inventariar a diversidade global de espécies.</p></li>
+<li><p>Analisar e sintetizar informações em um sistema de classificação preditivo que reflita a história da vida.</p></li>
+<li><p>Organizar informações em uma forma eficientemente recuperável de modo que atenda às necessidades da ciência e da sociedade.</p></li>
+</ol>
+</div>
+<div id="bioinformática-filoinformática" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Bioinformática &gt; Filoinformática<a href="contextualizando.html#bioinformática-filoinformática" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A bioinformática é um campo interdisciplinar que desenvolve métodos e ferramentas de software para a compreensão de dados biológicos, em particular quando os conjuntos de dados são grandes e complexos. Como um campo interdisciplinar da ciência, a bioinformática combina biologia, química, física, ciência da computação, engenharia da informação, matemática e estatística para analisar e interpretar os dados biológicos. A bioinformática tem sido utilizada para análises <strong><em>in silico</em></strong> de consultas biológicas utilizando técnicas computacionais e estatísticas <a name=cite-wikiBioinformatics></a>(<a href="https://en.wikipedia.org/w/index.php?title=Bioinformatics&amp;oldid=1108690744">Wikipedia contributors, 2022a</a>).</p>
+<p>A filoinformática é uma subárea da bioinformática (Bioinformática &gt; Filoinformática).</p>
+</div>
+<div id="passado" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Passado<a href="contextualizando.html#passado" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="display: flex;">
+<div>
+<p><img src="images/databases.png" width="340" /></p>
+</div>
+<div>
+<ul>
+<li>A rápida acumulação de dados e informações sobre a filogenia dos seres vivos compeliu a comunidade científica do campo da Sistemática a buscar o estabelecimento de bases de dados filogenéticas <a name=cite-Sanderson></a>(<a href="https://doi.org/10.1093/sysbio/42.4.562">Sanderson, Baldwin, Bharathan, Campbell, von
+Dohlen, Ferguson, Porter, Wojciechowski, and Donoghue, 1993</a>)</li>
+</ul>
+</div>
+</div>
+<div style="display: flex;">
+<div>
+<p><img src="images/integration.png" width="300" /></p>
+</div>
+<div>
+<ul>
+<li>A emergência desse novo campo de pesquisa surgiu a partir da necessidade e dos esforços para alcançar a integração de dados sobre o conhecimento filogenético mantidos em bancos de dados isolados, independentes, e não-intercambiáveis <a name=cite-Yates></a>(<a href="#bib-Yates">Yates, Salazar-Bravo, and Dragoo, 2004</a>)</li>
+</ul>
+</div>
+</div>
+<div style="display: flex;">
+<div>
+<p><img src="images/interdisciplinar.png" width="150" /></p>
+</div>
+<div>
+<ul>
+<li>A filoinformática é uma empreitada interdisciplinar, liderada pela Informática e Biologia, mas também desenvolvida pela Matemática e Estatística.</li>
+</ul>
+</div>
+</div>
+<div style="display: flex;">
+<div>
+<p><img src="images/closed_source.png" width="62" /></p>
+</div>
+<div>
+<ul>
+<li>Programas com <strong>código fechado</strong> e <strong>preços muito elevados</strong>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="presente" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Presente<a href="contextualizando.html#presente" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="display: flex;">
+<div>
+<p><img src="images/open_source.png" width="130" /></p>
+</div>
+<div>
+<ul>
+<li>Em direção a <strong>programas gratuitos</strong> com <strong>códigos abertos</strong> e <strong>dados livres</strong>. (“<em>Data must be free</em>”)</li>
+</ul>
+</div>
+</div>
+<div style="display: flex;">
+<div>
+<script type="text/javascript">
+
+function swapImage(){
+  if (document.getElementById("pic").src.endsWith('images/make_sense1.png') == true){
+  
+  document.getElementById("pic").src = "images/make_sense2.png";
+
+  } else if (document.getElementById("pic").src.endsWith('images/make_sense2.png') == true){ 
+  
+  document.getElementById("pic").src = "images/make_sense1.png"; 
+                
+  }
+  }
+</script>
+<p><img src="images/make_sense1.png" id="pic" onclick="swapImage()"/></p>
+</div>
+<div>
+<ul>
+<li>“Informações disponíveis” fazem sentido para nós, mas não para os computadores.</li>
+</ul>
+</div>
+</div>
+<p>(Clique na imagem acima)</p>
+<div style="display: flex;">
+<div>
+<p><img src="images/integration2.png" width="90" /></p>
+</div>
+<div>
+<ul>
+<li>A busca pela <strong>integração</strong> dos dados continua.</li>
+</ul>
+</div>
+</div>
+<div style="display: flex;">
+<div>
+<p><img src="images/interoperabilidade.png" width="130" /></p>
+</div>
+<div>
+<ul>
+<li>Busca pela <strong>interoperabilidade</strong></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="futuro" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Futuro<a href="contextualizando.html#futuro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>A próxima revolução do século XXI será dirigida pela Biologia &amp; Informática.</li>
+</ul>
+<blockquote>
+<p>O <strong>Dataísmo</strong> declara que o universo consiste em fluxos de dados e que o valor de qualquer fenômeno ou entidade é determinada pela contribuição que dá para o processamento de dados</p>
+<p>Harari, Y.N. 2016. Homo deus: Uma Breve História do Amanhã</p>
+</blockquote>
+<div id="interoperabilidade" class="section level3 hasAnchor" number="1.5.1">
+<h3><span class="header-section-number">1.5.1</span> Interoperabilidade<a href="contextualizando.html#interoperabilidade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>A interoperabilidade pode ser entendida como uma característica que se refere à capacidade de diversos sistemas e organizações trabalharem em conjunto (interoperar) de modo a garantir que pessoas, organizações e sistemas computacionais interajam para trocar informações de maneira eficaz e eficiente <a name=cite-ePING></a>(<a href="https://eping.governoeletronico.gov.br">Programa de Governo Eletr{^}onico Brasileiro, 2022</a>).</p></li>
+<li><p>Nos sistemas de informações interoperáveis, ao invés de apenas documentos conectados…</p></li>
+</ul>
+<p><img src="images/web_of_data.png" /></p>
+<p>…temos uma arquitetura de dados como autores, bibliografias, documentos e outros objetos acessíveis em uma base que permite o processamento desses dados.</p>
+</div>
+<div id="evolução-da-web" class="section level3 hasAnchor" number="1.5.2">
+<h3><span class="header-section-number">1.5.2</span> Evolução da Web<a href="contextualizando.html#evolução-da-web" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A primeira versão da web Web 1.0, também conhecida como <strong>web sintática ou web somente leitura</strong>, é a era (1990-2000) em que o papel de um usuário é limitado à leitura de informações fornecidas pelos produtores de conteúdo. Não há opção para o usuário ou consumidor comunicar as informações aos produtores de conteúdo. Exemplo de Web 1.0 são sites estáticos e sites pessoais <a name=cite-WebEvolution></a>(<a href="%7Bhttps://medium.com/@vivekmadurai/web-evolution-from-1-0-to-3-0-e84f2c06739%7D">Vivek Madurai, 2018</a>).</p>
+<p>A Web 2.0 também conhecida como <strong>Web Social ou Web de leitura e escrita</strong> é a era (2000-2010 e continua até agora) que facilita a interação entre os usuários da web e os sites internos que permitem que os usuários se comuniquem com outros usuários. Nesta era cada usuário pode ser um produtor de conteúdo e o conteúdo é distribuído e compartilhado entre os sites. Algumas das famosas aplicações Web 2.0 são Facebook, Youtube, Flickr, Twitter etc., As tecnologias web como HTML5, CSS3 e frameworks Javascript como ReactJs, AngularJs, VueJs etc. esta Rede Social. A Web 2.0 é construída em torno dos usuários, o produtor só precisa criar uma maneira de habilitá-los e envolvê-los (<a href="%7Bhttps://medium.com/@vivekmadurai/web-evolution-from-1-0-to-3-0-e84f2c06739%7D">Vivek Madurai, 2018</a>).</p>
+<p>A Web 3.0 também conhecida como <strong>Web Semântica ou leitura-gravação-execução</strong> é a era (2010 e superior) que se refere ao futuro da web. Nesta era, os computadores podem interpretar informações como humanos por meio de Inteligência Artificial e Aprendizado de Máquina. Que ajudam a gerar e distribuir de forma inteligente conteúdo útil adaptado a uma necessidade específica de um usuário (<a href="%7Bhttps://medium.com/@vivekmadurai/web-evolution-from-1-0-to-3-0-e84f2c06739%7D">Vivek Madurai, 2018</a>).</p>
+<p><img src="https://lh6.googleusercontent.com/K5q4uoxO0U7ut5MIOMVr9HedtYMYXGPFULa_ug7yPeiybGXKTdayGcet02b4phoCcf0N_pjPQm0QEwVIeOMu8nLC_yrlDHq5qrHVDKh1NTiJ-Xq0OjI1OvelhyCSbpQ9IzwUiU3X" /></p>
+</div>
+<div id="o-futuro-integrativo-da-sistemática" class="section level3 hasAnchor" number="1.5.3">
+<h3><span class="header-section-number">1.5.3</span> O futuro integrativo da Sistemática<a href="contextualizando.html#o-futuro-integrativo-da-sistemática" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/futuro_integrativo.PNG" /></p>
+<ul>
+<li><p>Exemplo:</p>
+<ul>
+<li><p>Sujeito: tree1</p></li>
+<li><p>Predicado: hasLikelihood</p></li>
+<li><p>Objeto: 2451.342</p></li>
+</ul></li>
+</ul>
+<p>Bases de dados estruturadas como redes ontológicas têm sido desenvolvidas (<em>Plant Ontology</em>, <em>Open Biological Ontologies</em>, <em>Gene Ontology</em>).</p>
+<div id="padrão-darwincore" class="section level4 hasAnchor" number="1.5.3.1">
+<h4><span class="header-section-number">1.5.3.1</span> Padrão DarwinCore<a href="contextualizando.html#padrão-darwincore" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Darwin Core Standard (DwC)
+biodiversity informatics</p>
+</div>
+</div>
+<div id="w3c" class="section level3 hasAnchor" number="1.5.4">
+<h3><span class="header-section-number">1.5.4</span> W3C<a href="contextualizando.html#w3c" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/W3C%C2%AE_Icon.svg/1200px-W3C%C2%AE_Icon.svg.png" width="200" /></p>
+<ul>
+<li><p>O <a href="https://www.w3.org/">Consórcio da Rede Mundial Web (<em>World Wide Web Consortium</em> – W3C)</a> é a principal organização de padronização da <em>World Wide Web</em>.</p>
+<ul>
+<li>Consiste em um consórcio internacional com 450 membros, agrega empresas, órgãos governamentais e organizações independentes com a finalidade de estabelecer padrões para a criação e a interpretação de conteúdos para a Web <a name=cite-wikiW3C></a>(<a href="https://pt.wikipedia.org/wiki/W3C">Wikipedia contributors, 2022c</a>).</li>
+</ul></li>
+</ul>
+<p><img src="https://webfoundation.org/docs/2019/03/TBL-at-Web-Summit_Letter.jpg" /></p>
+<p>O W3C foi fundado por Tim Berners-Lee em 1994 para levar a Web ao seu potencial máximo, por meio do desenvolvimento de protocolos comuns e fóruns abertos que promovam a sua evolução e assegurem a sua <strong>interoperabilidade</strong>. Sites desenvolvidos segundo esses padrões podem ser acessados e visualizados por qualquer pessoa ou tecnologia, independente dos hardware ou software utilizados, como celulares e <strong><span id="htmlwidget-628936988bafba7e360f" class="tippy html-widget" width="960" height="500"></span> <script type="application/json" data-for="htmlwidget-628936988bafba7e360f">{"x":{"opts":{"content":"<i>Personal digital assistants<\/i>"},"text":"PDAs"},"evals":[],"jsHooks":[]}</script></strong>, de maneira rápida e compatível com os novos padrões e tecnologias que possam surgir com a evolução da internet (<a href="https://pt.wikipedia.org/wiki/W3C">Wikipedia contributors, 2022c</a>).</p>
+<div style="color: black; background: lightgray; text-align: justify; border: 5px outset lightgray; padding: 10px;">
+<p>Tim Berners-Lee é o criador da <em>World Wide Web</em>, tendo feito a primeira proposta para sua criação a 12 de março de 1989. Em 25 de dezembro de 1990, com a ajuda de Robert Cailliau e um jovem estudante do CERN, implementou a primeira comunicação bem-sucedida entre um cliente HTTP e o servidor através da internet <a name=cite-wikiTim></a>(<a href="%7Bhttps://pt.wikipedia.org/wiki/Tim%7B_%7DBerners-Lee%7D">Wikipedia contributors, 2022b</a>).</p>
+<p>Proposta de Berners-Lee onde a ideia da Web foi apresentada: <a href="https://cdsweb.cern.ch/record/1405411/files/ARCH-WWW-4-010.pdf">Information Management: A Proposal</a></p>
+<p>Tim Berners-Lee também é o fundador da <a href="https://webfoundation.org"><em>World Wide Web Foundation</em></a>. No aniverário de 30 anos da WWW, Tim Berners-Lee reflete sobre como a web transformou o nosso mundo e o que temos que fazer para construir uma web melhor para servir a humanidade: <a href="https://webfoundation.org/2019/03/web-birthday-30/">30 years on, what’s next #ForTheWeb?</a></p>
+</div>
+</div>
+<div id="web-semântica-web-3.0" class="section level3 hasAnchor" number="1.5.5">
+<h3><span class="header-section-number">1.5.5</span> <em>Web</em> Semântica (Web 3.0)<a href="contextualizando.html#web-semântica-web-3.0" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>O objetivo da <em>Web Semântica</em> é tornar os dados da Internet legíveis por máquinas.</p></li>
+<li><p>Essa visão descreve uma teia de tecnologias vinculadas que englobam dados para permitir que as pessoas criem armazenamentos de dados online, construam vocabulários e escrevam regras para lidar com dados.</p></li>
+<li><p>A Web semântica é uma extensão da <em>World Wide Web</em> que permite aos computadores e humanos trabalharem em cooperação.</p></li>
+</ul>
+<p>Ela interliga significados de palavras e, neste âmbito, tem como finalidade conseguir atribuir um significado (sentido) aos conteúdos publicados na Internet de modo que seja compreensível tanto pelo humano como pelo computador. A ideia da Web semântica surgiu em 2001, quando Tim Berners-Lee, James Hendler e Ora Lassila publicaram um artigo na revista <em>Scientific American</em>, intitulado: “Web Semântica: um novo formato de conteúdo para a Web que tem significado para computadores vai iniciar uma revolução de novas possibilidades” <a href="http://khabib.staff.ugm.ac.id/downloads/lecture/S3/The%20Semantic%20Web.pdf">Berners-Lee et al. 2002</a>.</p>
+<div style="color: black; background: lightgray; text-align: justify; border: 5px outset lightgray; padding: 10px;">
+<ul>
+<li><p>Em discussões recentes sobre Web 3.0, a terminologia tornou-se intercambiável com o termo Web3 no contexto de criptografia, porém suas origens e contextos são diferenciados.</p></li>
+<li><p>A definição de Web 3.0 de Berners-Lee como Web Semântica é a ideia de que os dados da Internet são legíveis por máquina.</p></li>
+<li><p>O termo Web3 foi cunhado em 2014 pelo fundador da Polkadot e cofundador da Ethereum, Gavin Wood, refere-se a um ecossistema online descentralizado baseado em blockchain</p></li>
+<li><p>De acordo com Lemuel Park, cofundador e CTO da empresa de software BrightEdge, Foster City, Califórnia, a Web3 é simplesmente a evolução da Web 3.0. O conceito é impulsionado pela futura web descentralizada, concentrando-se na tecnologia blockchain, criptografia e criptomoedas. Isso inclui ainda tecnologias de AI que ajudam a prever tendências futuras e a aplicação de VR e AR e, agora, o metaverso.</p></li>
+<li><p>Blockchain e criptomoedas estão alimentando grande parte da tendência, especialmente porque o blockchain muda fundamentalmente o modelo de centralizado para descentralizado, e é uma tecnologia que tem transformado toda base da arquitetura da Web.</p></li>
+</ul>
+<p>Fontes:</p>
+<p><a href="https://www.reworked.co/information-management/why-web3-and-web-30-are-not-the-same/">Why Web3 and Web 3.0 Are Not the Same</a></p>
+<p><a href="https://www.leewayhertz.com/web3-vs-web3-0/">Web3 Vs Web 3.0: How Are They Different?</a></p>
+</div>
+</div>
+<div id="sistemas-de-organização-do-conhecimento" class="section level3 hasAnchor" number="1.5.6">
+<h3><span class="header-section-number">1.5.6</span> Sistemas de Organização do Conhecimento<a href="contextualizando.html#sistemas-de-organização-do-conhecimento" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Segundo a W3C, são considerados sistemas de organização do conhecimento:</p>
+<ul>
+<li>tesauros;
+<ul>
+<li><a href="https://www.gov.br/ibict/pt-br/central-de-conteudos/publicacoes/TESAUROCOMPLETOFINALCOMCAPA_24102014.pdf">Pinheiro &amp; Ferrez, 2014. Tesauro Brasileiro de Ciência da Informação. Ministério da Ciência, Tecnologia e Inovação Instituto Brasileiro de Informação em Ciência e Tecnologia - ibict</a></li>
+</ul></li>
+<li>esquemas de classificação;</li>
+<li>listas de assuntos;</li>
+<li>taxonomias;</li>
+<li><strong>ontologias</strong>; e</li>
+<li>outros tipos de vocabulários controlados</li>
+</ul>
+</div>
+<div id="ontologias" class="section level3 hasAnchor" number="1.5.7">
+<h3><span class="header-section-number">1.5.7</span> Ontologias<a href="contextualizando.html#ontologias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="fundamentos-epistemológicos" class="section level4 hasAnchor" number="1.5.7.1">
+<h4><span class="header-section-number">1.5.7.1</span> Fundamentos epistemológicos<a href="contextualizando.html#fundamentos-epistemológicos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>No movimento do Positivismo Lógico, desenvolvido no Círculo de Viena, as bases da filosofia da<br />
+Quine</p>
+<p>Na Ciência da Informação e da Computação, <a name=cite-wikiInteroperabilidadeSemantica></a>(<a href="%7Bhttps://pt.m.wikipedia.org/wiki/Interoperabilidade%7B_%7Dsem%C3%A2ntica%7D">Wikipedia contributors, 2022e</a>).</p>
+<p><strong>interoperabilidade semântica</strong></p>
+</div>
+<div id="web-ontology-language" class="section level4 hasAnchor" number="1.5.7.2">
+<h4><span class="header-section-number">1.5.7.2</span> <em>Web Ontology Language</em><a href="contextualizando.html#web-ontology-language" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="https://triplydb.com/imgs/avatars/d/6000a8bdcbf91b03347f51e2.png?v=1" width="100" /></p>
+<ul>
+<li><p><strong>A W3C Web Ontology Language (OWL) é uma linguagem da Web Semântica projetada para representar conhecimento rico e complexo sobre coisas, grupos de coisas e relações entre coisas</strong> (<a href="#bib-Yates">Yates, Salazar-Bravo, and Dragoo, 2004</a>)..</p></li>
+<li><p>OWL é uma linguagem baseada em lógica computacional tal que o conhecimento expresso em OWL pode ser explorado por programas de computador, por exemplo, para verificar a consistência desse conhecimento ou tornar o conhecimento implícito explícito. Os documentos OWL, conhecidos como ontologias, podem ser publicados na World Wide Web e podem referir-se ou ser referidos a partir de outras ontologias OWL. OWL faz parte da pilha de tecnologia da Web Semântica do W3C, que inclui RDF, RDFS, SPARQL, etc (<a href="#bib-Yates">Yates, Salazar-Bravo, and Dragoo, 2004</a>).</p></li>
+</ul>
+<p>Ontologias biológicas são <strong><span id="htmlwidget-cde64e15269e4451d9ab" class="tippy html-widget" width="960" height="500"></span> <script type="application/json" data-for="htmlwidget-cde64e15269e4451d9ab">{"x":{"opts":{"content":"É um grafo dirigido sem ciclo; isto é, para qualquer vértice v, não há nenhuma ligação dirigida começando e acabando em v. Estes grafos aparecem em modelos onde não faz sentido que um vértice tenha uma ligação com si próprio."},"text":"grafos acíclicos dirigidos"},"evals":[],"jsHooks":[]}</script></strong> de vocabulários controlados. Eles são projetados para capturar conceitos e descrições biológicas de uma maneira que possa ser facilmente categorizada e analisada com computadores.</p>
+<p><img src="images/ontology.png" /></p>
+</div>
+<div id="resource-description-framework" class="section level4 hasAnchor" number="1.5.7.3">
+<h4><span class="header-section-number">1.5.7.3</span> <em>Resource Description Framework</em><a href="contextualizando.html#resource-description-framework" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>O modelo de dados <em>Resource Description Framework</em> (RDF) é um modo de representação e de descrição de recursos que visa à interoperabilidade e o acesso à informação em ambientes digitais.</p></li>
+<li><p>O <em>RDF Schema</em> (<em>Resource Description Framework Schema</em> - RDFS) é um conjunto de classes com certas propriedades usando o modelo de dados de representação de conhecimento extensível RDF que fornece elementos básicos para a descrição de ontologias.</p></li>
+<li><p>Rede de conceitos</p>
+<ul>
+<li><p>Conceitos conectados por sentenças (<em>statements</em>)</p></li>
+<li><p><em>Resource Description Framework</em> (RDF)</p>
+<ul>
+<li><p>Tripla:</p>
+<ul>
+<li>Sentença = Sujeito + predicado (ou propriedade) + objeto</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="extensible-markup-language" class="section level4 hasAnchor" number="1.5.7.4">
+<h4><span class="header-section-number">1.5.7.4</span> <em>Extensible Markup Language</em><a href="contextualizando.html#extensible-markup-language" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>A linguagem <em>Extensible Markup Language</em> (XML) é uma recomendação da W3C para gerar linguagens de marcação para necessidades especiais.</p></li>
+<li><p>É um dos subtipos da <strong>SGML</strong> (acrônimo de <em>Standard Generalized Markup Language</em> ou Linguagem Padronizada de Marcação Genérica) capaz de descrever diversos tipos de dados. Seu propósito principal é a facilidade de compartilhamento de informações por intermédio da internet <a name=cite-wikiXML></a>(<a href="https://pt.wikipedia.org/wiki/XML">Wikipedia contributors, 2022h</a>).</p>
+<ul>
+<li>O HTML e o XML derivam do SGML.</li>
+</ul></li>
+<li><p>A XML é uma tentativa de simplificar SGML para aplicações de aplicação geral, tais como a Web semântica.</p></li>
+</ul>
+<p>Fonte: <a name=cite-Souza_Alvarenga_2004></a><a href="#bib-Souza_Alvarenga_2004">Souza and Alvarenga (2004)</a> <a name=cite-Almeida_2002></a>(<a href="#bib-Almeida_2002">Almeida, 2002</a>).</p>
+</div>
+<div id="obo-foundry" class="section level4 hasAnchor" number="1.5.7.5">
+<h4><span class="header-section-number">1.5.7.5</span> OBO Foundry<a href="contextualizando.html#obo-foundry" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A <em>Open Biological and Biomedical Ontologies Foundry</em> (<em>OBO Foundry</em>) é formada por um grupo de pessoas dedicadas a construir e manter ontologias relacionadas às ciências da vida. A <em>OBO Foundry</em> estabelece um conjunto de princípios para o desenvolvimento de ontologias para a criação de um conjunto de ontologias de referência interoperáveis no domínio biomédico. Atualmente, existem mais de uma centena de ontologias que seguem os princípios da OBO Foundry. Uma das mais difundidas é a <em>Gene Ontology</em> (GO), que descreve a função de genes. Existem também ontologias que descrevem fenótipos (<a href="https://en.wikipedia.org/w/index.php?title=Bioinformatics&amp;oldid=1108690744">Wikipedia contributors, 2022a</a>).</p>
+<p>A maioria dos desenvolvedores de ontologias em OBO usa o formato <em>Web Ontology Language</em> (OWL) para construí-las.</p>
+</div>
+<div id="gene-ontology" class="section level4 hasAnchor" number="1.5.7.6">
+<h4><span class="header-section-number">1.5.7.6</span> Gene Ontology<a href="contextualizando.html#gene-ontology" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A <em>Gene Ontology</em> (GO) é uma importante iniciativa de bioinformática para unificar a representação de genes e atributos de produtos gênicos em todas as espécies. Mais especificamente, o projeto visa:</p>
+<ol style="list-style-type: decimal">
+<li>Manter e desenvolver seu vocabulário controlado de genes e atributos de produtos gênicos;</li>
+<li>Anotar genes e produtos gênicos e assimilar e disseminar dados de anotação; e</li>
+<li>Fornecer ferramentas para facilitar o acesso a todos os aspectos dos dados fornecidos pelo projeto e permitir a interpretação funcional dos dados experimentais usando o GO, por exemplo, por meio de análise de enriquecimento.</li>
+</ol>
+<p>A <em>Gene Ontology</em> foca na função dos genes e produtos gênicos. O GO também estende o esforço usando linguagem de marcação para tornar os dados (não apenas dos genes e seus produtos, mas também de atributos curados) legíveis por máquina, e fazê-lo de forma unificada em todas as espécies (enquanto as convenções de nomenclatura de genes variam de acordo com o táxon biológico) <a name=cite-wikiGO></a>(<a href="%7Bhttps://en.wikipedia.org/wiki/Gene%7B_%7DOntology%7D">Wikipedia contributors, 2022d</a>).</p>
+</div>
+<div id="plant-ontology" class="section level4 hasAnchor" number="1.5.7.7">
+<h4><span class="header-section-number">1.5.7.7</span> Plant Ontology<a href="contextualizando.html#plant-ontology" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="htmlwidget-49615416d20a9a44fa52" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-49615416d20a9a44fa52">{"x":{"nodes":{"id":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],"label":["plant anatomical entity","plant structure","multi-tissue plant structure","plant organ","sporangium","megasporangium","nucellus","microsporangium","pollen sac","fruit","berry fruit","hesperidium fruit","follicle fruit","caryopsis fruit","achene fruit","silique fruit","legume fruit","loment fruit","drupe fruit","nut fruit","pome fruit","pepo fruit","capsule fruit","samara fruit","schizocarp fruit"],"title":["Includes both material entities such as plant structures and immaterial entities such as plant anatomical spaces. CARO:0000000 'anatomical entity' is defined as: A part of a cellular organism that is either an immaterial entity or a material entity with granularity aboove the level of a protein complex.  Or, a substance produced by a cellular organism with granularity above the level of a protein complex.  Refers to BFO:0000004 'independent continuant'.","'Part' includes both proper parts and the whole plant. CARO:0000003 'connected anatomical structure' is defined as: Material anatomical entity that is a single connected structure with inherent 3D shape, generated by coordinated expression of the organism's own genome.","Most multi-tissue plant structures have at least a small connection to other plant structures via a fiat boundary, such as where a leaf (PO:0025034) connects to a shoot axis (PO:0025029), a petal (PO:0009032) connects to a receptacle (PO:0009064), or a branch (PO:0025073) connects to a stem (PO:0009047).  Refers to CARO:0000055 multi-tissue structure, def'n: Anatomical structure that has as parts two or more portions of tissue of at least two different types, and which through specific morphogenetic processes, form a single distinct structural unit demarcated by bona-fide boundries from other structural units of differnt types.","Examples include stem (PO:0009047), leaf (PO:0025034), and root (PO:0009005). May include individual plant cells (PO:0009002) that are not part of a portion of plant tissue (e.g., idioblasts, PO:0000283). A plant organ may have one or more different plant organs as parts, such as a sporophyll (PO:0009026) that may have as part a sporangium (PO:0025094) or a carpel (PO:0009030) that may have as part a plant ovule (PO:0020003).","In bryophytes, particularly in mosses, a sporangium is referred to as a capsule. In seed plants, a sporangium is located in a sporophyll. In pteridophytes, a sporangium is located on the surface of a sporophyll or fertile leaf or borne on a sporangiophore. May be unicellular in some algae.",null,"In seed plants, the megaspores and megagametophyte are retained within the nucellus. If you are annotating to this structure for an angiosperm, please add an additional annotation to plant ovary ovule (PO:0025490). If you are annotating to this structure for an gymnosperm, please add an additional annotation to ovuliferous scale ovule (PO:0025491). If you are annotating to this structure for Zea mays or other grasses, please also add an annotation to the corresponding floret type. Choose the most specific term possible from: spikelet floret (PO:0009082), ear floret (PO:0006354), upper floret of pedicellate spikelet of ear (PO:0006350), upper floret of sessile spikelet of ear (PO:0006352).",null,"A pollen sac is a microsporangium in seed plants. In angiosperms, a single, unfused pollen sac may contain an anther locule or several pollen sacs may fuse so they contain a single anther locule. If you are annotating to this structure for Zea mays or other grasses, please also add an annotation to the corresponding floret type. Choose the most specific term possible from: spikelet floret (PO:0009082), tassel floret (PO:0006310), lower floret of pedicellate spikelet of tassel (PO:0006313), lower floret of sessile spikelet of tassel (PO:0006315), upper floret of pedicellate spikelet of tassel (PO:0006314), upper floret of sessile spikelet of tassel (PO:0006316).","A fruit (PO:0009001) may contain additional plant structures (PO:0009011) that were part of a flower (PO:0009046) and mature along with the gynoecium, such as a receptacle (PO:0009064). A fruit may develop without fertilization in cases of parthenocarpy, apomixis, or other hormone-induced conditions and may not always contain seeds (PO:0009010). When annotating to fruit (PO:0009001) that are referred to as â€˜aggregateâ€™, â€˜multipleâ€™, or â€˜compoundâ€™, please annotate directly to the appropriate plant structure, such as receptacle, hypanthium (PO:0009065) or infructescence (PO:0006342). Fruits only occur in angiosperms.","Examples: pepper (Capsicum annuum), papaya (Carica papaya), avocado (Persea americana), may apple (Podophyllum peltatum), date palm (Phoenix dactylifera), tomato (Solanum lycopersicum), potato (Solanum tuberosum), chocolate (Theobroma cacao), blueberry (Vaccinium spp.), and grape (Vitis vinifera).","A hesperidium fruit (PO:0030109) develops from a superior gynoecium (PO:0009062), and therefore is not surrounded by receptacle (PO:0009064) tissue. Examples: orange, grapefruit, lemon, and lime (Citrus spp.).","Examples: milkweed (Asclepias syriaca) and carolina larkspur (Delphinium carolinianum).","Caryopsis fruit (PO:0030104) is characteristic of the Poaceae (the grass family). Caryopsis fruits develop from a pseudomonomerous gyneocium (PO:0009062), and contain only a single seed due to the abortion of two of the three carpels (PO:0009030). The pericarp of caryopsis fruits of some bamboo species is somewhat fleshy at maturity and is fused to the seed coat; these fruits are referred to in the literature as bacoid caryopses. Examples: barley (Hordeum vulgare), rice (Oryza spp.), wheat (Triticum spp.), corn (Zea mays), sorghum (Sorghum bicolor), oat (Avena spp.), zebra grass (Miscanthus spp.), Tauschâ€™s goatgrass (Aegilops tauschii), stiff brome (Brachypodium distachyon), cutgrass (Leersia perrieri), and foxtail millet (Setaria italica).","Plant structures commonly referred to as â€˜accessoryâ€™ (such as strawberry) or multiple fruits (such as figs..) which are comprised of accrescent receptacle (PO:0009064) or infructescence (PO:0006342) tissue, contain as parts achene fruits (PO:0030107). For example, when annotating for a gene involved in strawberry development, any gene of interest that is involved in the development of the receptacle tissue would be mapped to receptacle (PO:0009064); genes involved in sepal (PO:0009031) persistence or accrescence would map to sepal (PO:0009031), and those involved in fruit characteristics would be mapped to achene (PO:0030107). Examples: sunflower (Helianthus annuus),  strawberry (Fragaria spp.), fig (Ficus sp.), and marijuana (Cannabis sativa).","In contrast to legume fruit (PO:0030100), silique fruit develop from a syncarpous (multicarpellate) gynoecium (PO:0009062) separated by a false septum (replum, PO:0025267), which persists through fruit maturity. Examples: members of Brassicaceae, lyrate rockcress (Arabidopsis lyrata), mouse-ear cress (Arabidopsis thaliana), wild cabbage (Brassica oleracea), field mustard (Brassica rapa), and pink shepherd's purse (Capsella rubella).","Legume fruit (PO:0030100) is characteristic of the plant family Fabaceae. Examples: pigeon pea (Cajanus cajan), chickpea (Cicer arietinum), peanut (Arachis hypogaea), soybean (Glycine max), and lentil (Lens culinaris subsp. culinaris).","The pericarp (PO:0009084) of some legume fruit (PO:0030100), such as peanuts, is constricted between each seed, but these constrictions are due to a lack of support of the pericarp (PO:0009084) in the space between the seeds (PO:0009010). Contrastingly, the constrictions in the pericarp of loment fruits (PO:0030101) are sclerified and contain regions where cell death leads to disarticulation of the fruit (PO:0009001). Examples: some members of Fabaceae, including Mimosa and Desmodium spp.","May develop from an inferior or superior carpel (PO:0009030) and may contain one or more seeds (PO:0009010). Examples: Amborella trichopoda (basal angiosperm), coffee (Coffea canephora), Cornaceae (Davidia spp.), cashew (Anacardium occidentale), coconut (Cocos nucifera), and almond, peach and plum (Prunus spp.).","The common names of some species do not accurately reflect their fruit type. For example, the fruit (PO:0009001) of the peanut plant is a legume fruit (PO:0030100) rather than a nut fruit (PO:0030102). Example: pecan (Carya illinoinensis), walnut (Juglans regia), pistachio (Pistacia vera), lotus (Nelumbo nucifera), and acorn (Quercus spp.).","A pome fruit (PO:0030110) is a specialized type of berry fruit (PO:0030108) which is encapsuled in persistent, accrescent receptacle (PO:0009064) and/or hypanthium (PO:0009065) tissue. Examples: Apple, crab apple, and pear (Malus spp. and Pyrus spp.)","A pepo fruit (PO:0030111) is specialized type of berry fruit (PO:0030108) which is encapsuled by persistent, accrescent receptacle (PO:0009064) tissue. The rind, or tough outer covering, of pepo fruits comprises receptical tissue and at least the exocarp (PO:0009085) layer of the pericarp (PO:0009084). Examples: pumpkin (Cucurbita pepo), cucumber (Cucumis sativus), and watermelon (Citrullus lanatus) and  banana (Musa acuminata).","Capsule fruits (PO:0030091) are divided into subcategories depending upon the location of sutures in the pericarp (PO:0009084) that the seeds (PO:0009010) are released through.","The pericarp (PO:0009084) can be expanded laterally or radially. The wing-shaped fruits of maples (Acer spp.) are often mistakenly identified as samara fruits (PO:0030099), but are instead schizocarp fruits (PO:0030098) with samaroid mericarps (PO:0020075).\\nExamples: green ash (Fraxinus pennsylvanicum) and tree-of-heaven (Ailanthus altissima).","Each individual carpellate unit of a schizocarp fruit (PO:0030098) is a mericarp (PO:0020075). Examples: maple (Acer spp.) and cassava (Manihot esculenta)."]},"edges":{"from":["10","4","2","7","5","6","8","9","3","23","25","24","17","18","20","19","14","13","16","15","11","12","21","22"],"to":["3","3","1","6","4","5","5","8","2","10","10","10","10","17","10","10","10","10","10","10","10","11","11","11"],"label":["is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a","is_a"],"arrows":["to","to","to","to","to","to","to","to","to","to","to","to","to","to","to","to","to","to","to","to","to","to","to","to"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="prêambulo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="filoinformática.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

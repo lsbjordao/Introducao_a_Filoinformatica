@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>13 Introdução ao R | Introdução à Filoinformática</title>
+  <meta name="description" content="13 Introdução ao R | Introdução à Filoinformática" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="13 Introdução ao R | Introdução à Filoinformática" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="13 Introdução ao R | Introdução à Filoinformática" />
+  
+  
+  
+
+<meta name="author" content="Lucas S.B. Jordão" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="edição-final-de-árvore.html"/>
+<link rel="next" href="filogenia-no-r.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/clipboard-1.7.1/clipboard.min.js"></script>
+<link href="libs/primer-tooltips-1.4.0/build.css" rel="stylesheet" />
+<link href="libs/klippy-0.0.0.9500/css/klippy.min.css" rel="stylesheet" />
+<script src="libs/klippy-0.0.0.9500/js/klippy.min.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet" />
+<script src="libs/tippyjs-3.2.0/tippy.all.min.js"></script>
+<script src="libs/tippy-binding-0.1.0/tippy.js"></script>
+<link href="libs/vis-9.1.0/vis-network.min.css" rel="stylesheet" />
+<script src="libs/vis-9.1.0/vis-network.min.js"></script>
+<script src="libs/visNetwork-binding-2.1.2/visNetwork.js"></script>
+<script src="libs/fitvids-2.1.1/fitvids.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="prêambulo.html"><a href="prêambulo.html"><i class="fa fa-check"></i>Prêambulo</a></li>
+<li class="chapter" data-level="1" data-path="contextualizando.html"><a href="contextualizando.html"><i class="fa fa-check"></i><b>1</b> Contextualizando</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="contextualizando.html"><a href="contextualizando.html#histórico-e-fundamentos"><i class="fa fa-check"></i><b>1.1</b> Histórico e fundamentos</a></li>
+<li class="chapter" data-level="1.2" data-path="contextualizando.html"><a href="contextualizando.html#bioinformática-filoinformática"><i class="fa fa-check"></i><b>1.2</b> Bioinformática &gt; Filoinformática</a></li>
+<li class="chapter" data-level="1.3" data-path="contextualizando.html"><a href="contextualizando.html#passado"><i class="fa fa-check"></i><b>1.3</b> Passado</a></li>
+<li class="chapter" data-level="1.4" data-path="contextualizando.html"><a href="contextualizando.html#presente"><i class="fa fa-check"></i><b>1.4</b> Presente</a></li>
+<li class="chapter" data-level="1.5" data-path="contextualizando.html"><a href="contextualizando.html#futuro"><i class="fa fa-check"></i><b>1.5</b> Futuro</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="contextualizando.html"><a href="contextualizando.html#interoperabilidade"><i class="fa fa-check"></i><b>1.5.1</b> Interoperabilidade</a></li>
+<li class="chapter" data-level="1.5.2" data-path="contextualizando.html"><a href="contextualizando.html#evolução-da-web"><i class="fa fa-check"></i><b>1.5.2</b> Evolução da Web</a></li>
+<li class="chapter" data-level="1.5.3" data-path="contextualizando.html"><a href="contextualizando.html#o-futuro-integrativo-da-sistemática"><i class="fa fa-check"></i><b>1.5.3</b> O futuro integrativo da Sistemática</a>
+<ul>
+<li class="chapter" data-level="1.5.3.1" data-path="contextualizando.html"><a href="contextualizando.html#padrão-darwincore"><i class="fa fa-check"></i><b>1.5.3.1</b> Padrão DarwinCore</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5.4" data-path="contextualizando.html"><a href="contextualizando.html#w3c"><i class="fa fa-check"></i><b>1.5.4</b> W3C</a></li>
+<li class="chapter" data-level="1.5.5" data-path="contextualizando.html"><a href="contextualizando.html#web-semântica-web-3.0"><i class="fa fa-check"></i><b>1.5.5</b> <em>Web</em> Semântica (Web 3.0)</a></li>
+<li class="chapter" data-level="1.5.6" data-path="contextualizando.html"><a href="contextualizando.html#sistemas-de-organização-do-conhecimento"><i class="fa fa-check"></i><b>1.5.6</b> Sistemas de Organização do Conhecimento</a></li>
+<li class="chapter" data-level="1.5.7" data-path="contextualizando.html"><a href="contextualizando.html#ontologias"><i class="fa fa-check"></i><b>1.5.7</b> Ontologias</a>
+<ul>
+<li class="chapter" data-level="1.5.7.1" data-path="contextualizando.html"><a href="contextualizando.html#fundamentos-epistemológicos"><i class="fa fa-check"></i><b>1.5.7.1</b> Fundamentos epistemológicos</a></li>
+<li class="chapter" data-level="1.5.7.2" data-path="contextualizando.html"><a href="contextualizando.html#web-ontology-language"><i class="fa fa-check"></i><b>1.5.7.2</b> <em>Web Ontology Language</em></a></li>
+<li class="chapter" data-level="1.5.7.3" data-path="contextualizando.html"><a href="contextualizando.html#resource-description-framework"><i class="fa fa-check"></i><b>1.5.7.3</b> <em>Resource Description Framework</em></a></li>
+<li class="chapter" data-level="1.5.7.4" data-path="contextualizando.html"><a href="contextualizando.html#extensible-markup-language"><i class="fa fa-check"></i><b>1.5.7.4</b> <em>Extensible Markup Language</em></a></li>
+<li class="chapter" data-level="1.5.7.5" data-path="contextualizando.html"><a href="contextualizando.html#obo-foundry"><i class="fa fa-check"></i><b>1.5.7.5</b> OBO Foundry</a></li>
+<li class="chapter" data-level="1.5.7.6" data-path="contextualizando.html"><a href="contextualizando.html#gene-ontology"><i class="fa fa-check"></i><b>1.5.7.6</b> Gene Ontology</a></li>
+<li class="chapter" data-level="1.5.7.7" data-path="contextualizando.html"><a href="contextualizando.html#plant-ontology"><i class="fa fa-check"></i><b>1.5.7.7</b> Plant Ontology</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="filoinformática.html"><a href="filoinformática.html"><i class="fa fa-check"></i><b>2</b> Filoinformática</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="filoinformática.html"><a href="filoinformática.html#conceito"><i class="fa fa-check"></i><b>2.1</b> Conceito</a></li>
+<li class="chapter" data-level="2.2" data-path="filoinformática.html"><a href="filoinformática.html#fontes-de-dados"><i class="fa fa-check"></i><b>2.2</b> Fontes de dados</a></li>
+<li class="chapter" data-level="2.3" data-path="filoinformática.html"><a href="filoinformática.html#perspectivas"><i class="fa fa-check"></i><b>2.3</b> Perspectivas</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="visão-geral-e-roteiro-do-curso.html"><a href="visão-geral-e-roteiro-do-curso.html"><i class="fa fa-check"></i><b>3</b> Visão geral e roteiro do curso</a></li>
+<li class="chapter" data-level="4" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html"><i class="fa fa-check"></i><b>4</b> Técnicas moleculares</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#extração-do-dna"><i class="fa fa-check"></i><b>4.1</b> Extração do DNA</a></li>
+<li class="chapter" data-level="4.2" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#amplificação"><i class="fa fa-check"></i><b>4.2</b> Amplificação</a></li>
+<li class="chapter" data-level="4.3" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#eletroforese"><i class="fa fa-check"></i><b>4.3</b> Eletroforese</a></li>
+<li class="chapter" data-level="4.4" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#sequenciamento"><i class="fa fa-check"></i><b>4.4</b> Sequenciamento</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#história-do-sequenciamento-didesoxi-sanger"><i class="fa fa-check"></i><b>4.4.1</b> História do sequenciamento didesoxi Sanger</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html"><i class="fa fa-check"></i><b>5</b> Montagem de sequências</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#cromatogramas"><i class="fa fa-check"></i><b>5.1</b> Cromatogramas</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#conceito-1"><i class="fa fa-check"></i><b>5.1.1</b> Conceito</a></li>
+<li class="chapter" data-level="5.1.2" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#finalidade"><i class="fa fa-check"></i><b>5.1.2</b> Finalidade</a></li>
+<li class="chapter" data-level="5.1.3" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#qualidade-do-sinal"><i class="fa fa-check"></i><b>5.1.3</b> Qualidade do sinal</a></li>
+<li class="chapter" data-level="5.1.4" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#arquivo-.ab1"><i class="fa fa-check"></i><b>5.1.4</b> Arquivo .ab1</a></li>
+<li class="chapter" data-level="5.1.5" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#software-fitchtv"><i class="fa fa-check"></i><b>5.1.5</b> Software FitchTV</a></li>
+<li class="chapter" data-level="5.1.6" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#manual-do-sequenciamento-sanger"><i class="fa fa-check"></i><b>5.1.6</b> Manual do sequenciamento Sanger</a></li>
+<li class="chapter" data-level="5.1.7" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#interpretação-do-cromatograma"><i class="fa fa-check"></i><b>5.1.7</b> Interpretação do cromatograma</a></li>
+<li class="chapter" data-level="5.1.8" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#prática"><i class="fa fa-check"></i><b>5.1.8</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#alinhamento-de-contigs"><i class="fa fa-check"></i><b>5.2</b> Alinhamento de <em>contigs</em></a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#assembly-softwares"><i class="fa fa-check"></i><b>5.2.1</b> Assembly softwares</a></li>
+<li class="chapter" data-level="5.2.2" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#prática-1"><i class="fa fa-check"></i><b>5.2.2</b> Prática</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="formatos-de-arquivo-mais-comuns.html"><a href="formatos-de-arquivo-mais-comuns.html"><i class="fa fa-check"></i><b>6</b> Formatos de arquivo mais comuns</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="formatos-de-arquivo-mais-comuns.html"><a href="formatos-de-arquivo-mais-comuns.html#phylip"><i class="fa fa-check"></i><b>6.1</b> PHYLIP</a></li>
+<li class="chapter" data-level="6.2" data-path="formatos-de-arquivo-mais-comuns.html"><a href="formatos-de-arquivo-mais-comuns.html#fasta"><i class="fa fa-check"></i><b>6.2</b> FASTA</a></li>
+<li class="chapter" data-level="6.3" data-path="formatos-de-arquivo-mais-comuns.html"><a href="formatos-de-arquivo-mais-comuns.html#nexus"><i class="fa fa-check"></i><b>6.3</b> NEXUS</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="alinhamento-múltiplo-e-manual-de-sequências.html"><a href="alinhamento-múltiplo-e-manual-de-sequências.html"><i class="fa fa-check"></i><b>7</b> Alinhamento múltiplo e manual de sequências</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="alinhamento-múltiplo-e-manual-de-sequências.html"><a href="alinhamento-múltiplo-e-manual-de-sequências.html#prática-2"><i class="fa fa-check"></i><b>7.1</b> Prática</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="alinhamento-múltiplo-e-manual-de-sequências.html"><a href="alinhamento-múltiplo-e-manual-de-sequências.html#alinhamento-múltiplo-automático"><i class="fa fa-check"></i><b>7.1.1</b> Alinhamento múltiplo (automático)</a></li>
+<li class="chapter" data-level="7.1.2" data-path="alinhamento-múltiplo-e-manual-de-sequências.html"><a href="alinhamento-múltiplo-e-manual-de-sequências.html#alinhamento-manual"><i class="fa fa-check"></i><b>7.1.2</b> Alinhamento manual</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="codificando-indels.html"><a href="codificando-indels.html"><i class="fa fa-check"></i><b>8</b> Codificando indels</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="codificando-indels.html"><a href="codificando-indels.html#sic"><i class="fa fa-check"></i><b>8.1</b> SIC</a></li>
+<li class="chapter" data-level="8.2" data-path="codificando-indels.html"><a href="codificando-indels.html#mcic"><i class="fa fa-check"></i><b>8.2</b> MCIC</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="concatenando-matrizes.html"><a href="concatenando-matrizes.html"><i class="fa fa-check"></i><b>9</b> Concatenando matrizes</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="concatenando-matrizes.html"><a href="concatenando-matrizes.html#prática-3"><i class="fa fa-check"></i><b>9.1</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="seleção-de-modelos-das-partições.html"><a href="seleção-de-modelos-das-partições.html"><i class="fa fa-check"></i><b>10</b> Seleção de modelos das partições</a></li>
+<li class="chapter" data-level="11" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html"><i class="fa fa-check"></i><b>11</b> Softwares para análises filogenéticas</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#ms-dos"><i class="fa fa-check"></i><b>11.1</b> MS-DOS</a></li>
+<li class="chapter" data-level="11.2" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#iq-tree"><i class="fa fa-check"></i><b>11.2</b> IQ-TREE</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#prática-4"><i class="fa fa-check"></i><b>11.2.1</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#splitstree6"><i class="fa fa-check"></i><b>11.3</b> SplitsTree6</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#prática-5"><i class="fa fa-check"></i><b>11.3.1</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#mrbayes"><i class="fa fa-check"></i><b>11.4</b> MrBayes</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#prática-6"><i class="fa fa-check"></i><b>11.4.1</b> Prática</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="edição-final-de-árvore.html"><a href="edição-final-de-árvore.html"><i class="fa fa-check"></i><b>12</b> Edição final de árvore</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="edição-final-de-árvore.html"><a href="edição-final-de-árvore.html#prática-7"><i class="fa fa-check"></i><b>12.1</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html"><i class="fa fa-check"></i><b>13</b> Introdução ao R</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#programação-orientada-a-objetos"><i class="fa fa-check"></i><b>13.1</b> Programação orientada a objetos</a></li>
+<li class="chapter" data-level="13.2" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#principais-tipos-de-objetos"><i class="fa fa-check"></i><b>13.2</b> Principais tipos de Objetos:</a></li>
+<li class="chapter" data-level="13.3" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#classe"><i class="fa fa-check"></i><b>13.3</b> Classe</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#sistema-de-referência"><i class="fa fa-check"></i><b>13.3.1</b> Sistema de referência</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#linguagem-r"><i class="fa fa-check"></i><b>13.4</b> Linguagem R</a></li>
+<li class="chapter" data-level="13.5" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#console"><i class="fa fa-check"></i><b>13.5</b> Console</a></li>
+<li class="chapter" data-level="13.6" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#criando-objetos"><i class="fa fa-check"></i><b>13.6</b> Criando objetos</a></li>
+<li class="chapter" data-level="13.7" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#funções"><i class="fa fa-check"></i><b>13.7</b> Funções</a>
+<ul>
+<li class="chapter" data-level="13.7.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#sintaxe-da-função"><i class="fa fa-check"></i><b>13.7.1</b> Sintaxe da função</a></li>
+<li class="chapter" data-level="13.7.2" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#funções-básicas"><i class="fa fa-check"></i><b>13.7.2</b> Funções básicas</a></li>
+</ul></li>
+<li class="chapter" data-level="13.8" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#pacotes"><i class="fa fa-check"></i><b>13.8</b> Pacotes</a></li>
+<li class="chapter" data-level="13.9" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#prática-8"><i class="fa fa-check"></i><b>13.9</b> Prática</a>
+<ul>
+<li class="chapter" data-level="13.9.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#indexação-de-objetos"><i class="fa fa-check"></i><b>13.9.1</b> Indexação de objetos</a></li>
+<li class="chapter" data-level="13.9.2" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#operadores-de-lógica"><i class="fa fa-check"></i><b>13.9.2</b> Operadores de lógica</a></li>
+<li class="chapter" data-level="13.9.3" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#inspecionando-os-atributos-um-objeto"><i class="fa fa-check"></i><b>13.9.3</b> Inspecionando os atributos um objeto</a></li>
+<li class="chapter" data-level="13.9.4" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#teste-e-coerção-de-objetos"><i class="fa fa-check"></i><b>13.9.4</b> Teste e Coerção de objetos</a></li>
+</ul></li>
+<li class="chapter" data-level="13.10" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#rstudio"><i class="fa fa-check"></i><b>13.10</b> RStudio</a></li>
+<li class="chapter" data-level="13.11" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#ambiente-de-trabalho"><i class="fa fa-check"></i><b>13.11</b> Ambiente de Trabalho</a></li>
+<li class="chapter" data-level="13.12" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#diretório-de-trabalho"><i class="fa fa-check"></i><b>13.12</b> Diretório de Trabalho</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html"><i class="fa fa-check"></i><b>14</b> Filogenia no R</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacotes-de-filogenia"><i class="fa fa-check"></i><b>14.1</b> Pacotes de filogenia</a></li>
+<li class="chapter" data-level="14.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#escrevendo-árvores-a-partir-de-uma-cadeia-de-texto"><i class="fa fa-check"></i><b>14.2</b> Escrevendo árvores a partir de uma cadeia de texto</a></li>
+<li class="chapter" data-level="14.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#importando-árvores-nos-formatos-s3-e-s4"><i class="fa fa-check"></i><b>14.3</b> Importando árvores nos formatos S3 e S4</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#classe-phylo-s3"><i class="fa fa-check"></i><b>14.3.1</b> Classe phylo (S3)</a></li>
+<li class="chapter" data-level="14.3.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#classe-phylo4-e-phylo4d-s4"><i class="fa fa-check"></i><b>14.3.2</b> Classe phylo4 e phylo4d (S4)</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#personalizando-o-estilo-da-árvore"><i class="fa fa-check"></i><b>14.4</b> Personalizando o estilo da árvore</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ape"><i class="fa fa-check"></i><b>14.4.1</b> Pacote ape</a>
+<ul>
+<li class="chapter" data-level="14.4.1.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos"><i class="fa fa-check"></i><b>14.4.1.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.4.1.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais"><i class="fa fa-check"></i><b>14.4.1.2</b> Terminais</a></li>
+<li class="chapter" data-level="14.4.1.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós"><i class="fa fa-check"></i><b>14.4.1.3</b> Nós</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools"><i class="fa fa-check"></i><b>14.4.2</b> Pacote phytools</a>
+<ul>
+<li class="chapter" data-level="14.4.2.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-1"><i class="fa fa-check"></i><b>14.4.2.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.4.2.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-1"><i class="fa fa-check"></i><b>14.4.2.2</b> Terminais</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ggtree"><i class="fa fa-check"></i><b>14.4.3</b> Pacote ggtree</a>
+<ul>
+<li class="chapter" data-level="14.4.3.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-2"><i class="fa fa-check"></i><b>14.4.3.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.4.3.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-2"><i class="fa fa-check"></i><b>14.4.3.2</b> Terminais</a></li>
+<li class="chapter" data-level="14.4.3.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós-1"><i class="fa fa-check"></i><b>14.4.3.3</b> Nós</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#anotando-dados-na-árvore-usando-r"><i class="fa fa-check"></i><b>14.5</b> Anotando dados na árvore usando R</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ape-1"><i class="fa fa-check"></i><b>14.5.1</b> Pacote ape</a>
+<ul>
+<li class="chapter" data-level="14.5.1.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-3"><i class="fa fa-check"></i><b>14.5.1.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.5.1.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-3"><i class="fa fa-check"></i><b>14.5.1.2</b> Terminais</a></li>
+<li class="chapter" data-level="14.5.1.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós-2"><i class="fa fa-check"></i><b>14.5.1.3</b> Nós</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools-1"><i class="fa fa-check"></i><b>14.5.2</b> Pacote phytools</a>
+<ul>
+<li class="chapter" data-level="14.5.2.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós-3"><i class="fa fa-check"></i><b>14.5.2.1</b> Nós</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#plotando-matrizes-data.frames-e-árvore-ao-lado-da-árvore-usando-r"><i class="fa fa-check"></i><b>14.6</b> Plotando matrizes, data.frames e árvore ao lado da árvore usando R</a>
+<ul>
+<li class="chapter" data-level="14.6.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ape-2"><i class="fa fa-check"></i><b>14.6.1</b> Pacote ape</a>
+<ul>
+<li class="chapter" data-level="14.6.1.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#matriz-e-data.frame"><i class="fa fa-check"></i><b>14.6.1.1</b> Matriz e data.frame</a></li>
+<li class="chapter" data-level="14.6.1.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#anéis-em-árvores-circulares"><i class="fa fa-check"></i><b>14.6.1.2</b> Anéis em árvores circulares</a></li>
+<li class="chapter" data-level="14.6.1.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#tanglegram"><i class="fa fa-check"></i><b>14.6.1.3</b> Tanglegram</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools-2"><i class="fa fa-check"></i><b>14.6.2</b> Pacote phytools</a>
+<ul>
+<li class="chapter" data-level="14.6.2.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#círculos"><i class="fa fa-check"></i><b>14.6.2.1</b> Círculos</a></li>
+<li class="chapter" data-level="14.6.2.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#barras"><i class="fa fa-check"></i><b>14.6.2.2</b> Barras</a></li>
+<li class="chapter" data-level="14.6.2.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#matrizes"><i class="fa fa-check"></i><b>14.6.2.3</b> Matrizes</a></li>
+<li class="chapter" data-level="14.6.2.4" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#boxplots"><i class="fa fa-check"></i><b>14.6.2.4</b> Boxplots</a></li>
+<li class="chapter" data-level="14.6.2.5" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#tanglegram-1"><i class="fa fa-check"></i><b>14.6.2.5</b> Tanglegram</a></li>
+<li class="chapter" data-level="14.6.2.6" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#phylo.to.map"><i class="fa fa-check"></i><b>14.6.2.6</b> Phylo.to.map</a></li>
+<li class="chapter" data-level="14.6.2.7" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#escala-estratigráfica"><i class="fa fa-check"></i><b>14.6.2.7</b> Escala estratigráfica</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#estimação-do-estado-ancestral-usando-r"><i class="fa fa-check"></i><b>14.6.3</b> Estimação do estado ancestral usando R</a>
+<ul>
+<li class="chapter" data-level="14.6.3.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools-3"><i class="fa fa-check"></i><b>14.6.3.1</b> Pacote phytools</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="genebank-ncbi.html"><a href="genebank-ncbi.html"><i class="fa fa-check"></i><b>15</b> GeneBank (NCBI)</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="genebank-ncbi.html"><a href="genebank-ncbi.html#blast"><i class="fa fa-check"></i><b>15.1</b> Blast</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introdução à Filoinformática</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introdução-ao-r" class="section level1 hasAnchor" number="13">
+<h1><span class="header-section-number">13</span> Introdução ao R<a href="introdução-ao-r.html#introdução-ao-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="images/ross_robert.PNG" /></p>
+<ul>
+<li><p>O <a href="https://www.r-project.org"><svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg></a> foi criado por Ross Ihaka e Robert Gentleman no departamento de Estatística da Universidade de Auckland, Nova Zelândia, mas foi posteriormente desenvolvido por um esforço colaborativo de pessoas em vários locais do mundo.</p></li>
+<li><p>É uma linguagem e um ambiente de desenvolvimento integrado para cálculos estatísticos, gráficos e análises diversas.</p></li>
+<li><p>É gratuito e de livre distribuição.</p></li>
+<li><p>É altamente expansível com o uso de pacotes, que são bibliotecas para funções específicas ou áreas de estudo específicas.</p></li>
+<li><p>Curva de aprendizagem bastante amigável.</p></li>
+<li><p>Enorme quantidade de tutoriais disponíveis.</p></li>
+</ul>
+<div id="programação-orientada-a-objetos" class="section level2 hasAnchor" number="13.1">
+<h2><span class="header-section-number">13.1</span> Programação orientada a objetos<a href="introdução-ao-r.html#programação-orientada-a-objetos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>Programação orientada a objetos.</p></li>
+<li><p>Tudo no <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> são objetos.</p></li>
+</ul>
+</div>
+<div id="principais-tipos-de-objetos" class="section level2 hasAnchor" number="13.2">
+<h2><span class="header-section-number">13.2</span> Principais tipos de Objetos:<a href="introdução-ao-r.html#principais-tipos-de-objetos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>vetores</li>
+<li>listas</li>
+<li>matrizes</li>
+<li>dataframes</li>
+<li>arrays</li>
+<li>funções</li>
+</ul>
+<p><img src="images/Robjects.PNG" /></p>
+<ul>
+<li>Funções são também são objetos, mas executam um conjunto operações determinadas.</li>
+</ul>
+</div>
+<div id="classe" class="section level2 hasAnchor" number="13.3">
+<h2><span class="header-section-number">13.3</span> Classe<a href="introdução-ao-r.html#classe" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Todo objeto tem uma classe.</li>
+</ul>
+<p><img src="images/class.PNG" /></p>
+<ul>
+<li><p>Classe define as propriedades dos objetos.</p></li>
+<li><p>As classes básicas são:</p>
+<ul>
+<li><p>numeric</p>
+<ul>
+<li>integer, double</li>
+</ul></li>
+<li><p>character</p>
+<ul>
+<li>string</li>
+</ul></li>
+<li><p>logical</p>
+<ul>
+<li>TRUE, FALSE</li>
+</ul></li>
+<li><p>factor</p>
+<ul>
+<li><p>variáveis categóricas</p></li>
+<li><p>nº limitado de valores</p></li>
+<li><p>níveis do fator</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a href="images/class_mode_typeof.png"></a></p>
+<ul>
+<li>Outras classes podem ser definidas.</li>
+</ul>
+<div id="sistema-de-referência" class="section level3 hasAnchor" number="13.3.1">
+<h3><span class="header-section-number">13.3.1</span> Sistema de referência<a href="introdução-ao-r.html#sistema-de-referência" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>No R, há um sistema de referência de classes.</li>
+</ul>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Classe S3</th>
+<th>Classe S4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Atributos são acessados usando <code>$</code></td>
+<td>Atributos são acessados usando <code>@</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="linguagem-r" class="section level2 hasAnchor" number="13.4">
+<h2><span class="header-section-number">13.4</span> Linguagem R<a href="introdução-ao-r.html#linguagem-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>Tudo após <code>#</code> não é lido pelo R. Este é um caractere de comentário.</p></li>
+<li><p>O <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> diferencia maiúsculas de minúsculas.</p></li>
+<li><p>Há uma série de operadores pré-programados.</p></li>
+</ul>
+</div>
+<div id="console" class="section level2 hasAnchor" number="13.5">
+<h2><span class="header-section-number">13.5</span> Console<a href="introdução-ao-r.html#console" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>O console do <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> refere-se ao ambiente de desenvolvimento e o <em>prompt</em> de comando (<em>command prompt) </em>é a linha de inserção de comando. O símbolo no <em>prompt</em> de comando é o “<code>&gt;</code>”, porém ele também muda para “<code>+</code>” quando há a entrada de um comando incompleto. Com o sinal de +, o console indica que aguarda a completude do comando inserido.</p></li>
+<li><p>Tudo após o símbolo “#” não é lido pelo R. Esse é o caráter para introdução de notas e comentários.</p></li>
+<li><p>O <a href="https://www.r-project.org"><svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg></a> diferencia maiúsculas de minúsculas.</p></li>
+</ul>
+</div>
+<div id="criando-objetos" class="section level2 hasAnchor" number="13.6">
+<h2><span class="header-section-number">13.6</span> Criando objetos<a href="introdução-ao-r.html#criando-objetos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Para atribuir um valor a um objeto, utilize o operador <code>&lt;-</code> (ou <code>=</code>):</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introdução-ao-r.html#cb5-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb5-2"><a href="introdução-ao-r.html#cb5-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introdução-ao-r.html#cb7-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="dv">5</span></span>
+<span id="cb7-2"><a href="introdução-ao-r.html#cb7-2" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> y</span></code></pre></div>
+<pre><code>## [1] 9</code></pre>
+</div>
+<div id="funções" class="section level2 hasAnchor" number="13.7">
+<h2><span class="header-section-number">13.7</span> Funções<a href="introdução-ao-r.html#funções" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sintaxe-da-função" class="section level3 hasAnchor" number="13.7.1">
+<h3><span class="header-section-number">13.7.1</span> Sintaxe da função<a href="introdução-ao-r.html#sintaxe-da-função" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;">
+<p><code>função()</code></p>
+<p><code>função(argumento1 = valor, argumento2 = valor, ...)</code></p>
+</div>
+<p>Vamos criar uma função como exemplo:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="introdução-ao-r.html#cb9-1" aria-hidden="true" tabindex="-1"></a>função <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">arg1 =</span> <span class="st">&quot;&quot;</span>, <span class="at">arg2 =</span> <span class="st">&quot;&quot;</span>){</span>
+<span id="cb9-2"><a href="introdução-ao-r.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-3"><a href="introdução-ao-r.html#cb9-3" aria-hidden="true" tabindex="-1"></a>  Código_da_função</span>
+<span id="cb9-4"><a href="introdução-ao-r.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-5"><a href="introdução-ao-r.html#cb9-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Vamos observar os argumentos da função com a função <code>args()</code></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="introdução-ao-r.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">args</span>(função) <span class="co"># Mostra os argumentos da função `função`</span></span></code></pre></div>
+<pre><code>## function (arg1 = &quot;&quot;, arg2 = &quot;&quot;) 
+## NULL</code></pre>
+</div>
+<div id="funções-básicas" class="section level3 hasAnchor" number="13.7.2">
+<h3><span class="header-section-number">13.7.2</span> Funções básicas<a href="introdução-ao-r.html#funções-básicas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Versão, licença e citação:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="introdução-ao-r.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">R.Version</span>() <span class="co"># mostra a versão</span></span></code></pre></div>
+<pre><code>## $platform
+## [1] &quot;x86_64-w64-mingw32&quot;
+## 
+## $arch
+## [1] &quot;x86_64&quot;
+## 
+## $os
+## [1] &quot;mingw32&quot;
+## 
+## $system
+## [1] &quot;x86_64, mingw32&quot;
+## 
+## $status
+## [1] &quot;&quot;
+## 
+## $major
+## [1] &quot;4&quot;
+## 
+## $minor
+## [1] &quot;0.2&quot;
+## 
+## $year
+## [1] &quot;2020&quot;
+## 
+## $month
+## [1] &quot;06&quot;
+## 
+## $day
+## [1] &quot;22&quot;
+## 
+## $`svn rev`
+## [1] &quot;78730&quot;
+## 
+## $language
+## [1] &quot;R&quot;
+## 
+## $version.string
+## [1] &quot;R version 4.0.2 (2020-06-22)&quot;
+## 
+## $nickname
+## [1] &quot;Taking Off Again&quot;</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="introdução-ao-r.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">license</span>() <span class="co"># informações sobre a licença</span></span></code></pre></div>
+<pre><code>## 
+## This software is distributed under the terms of the GNU General
+## Public License, either Version 2, June 1991 or Version 3, June 2007.
+## The terms of version 2 of the license are in a file called COPYING
+## which you should have received with
+## this software and which can be displayed by RShowDoc(&quot;COPYING&quot;).
+## Version 3 of the license can be displayed by RShowDoc(&quot;GPL-3&quot;).
+## 
+## Copies of both versions 2 and 3 of the license can be found
+## at https://www.R-project.org/Licenses/.
+## 
+## A small number of files (the API header files listed in
+## R_DOC_DIR/COPYRIGHTS) are distributed under the
+## LESSER GNU GENERAL PUBLIC LICENSE, version 2.1 or later.
+## This can be displayed by RShowDoc(&quot;LGPL-2.1&quot;),
+## or obtained at the URI given.
+## Version 3 of the license can be displayed by RShowDoc(&quot;LGPL-3&quot;).
+## 
+## &#39;Share and Enjoy.&#39;</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="introdução-ao-r.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>() <span class="co"># como citar</span></span></code></pre></div>
+<pre><code>## 
+## To cite R in publications use:
+## 
+##   R Core Team (2020). R: A language and environment for statistical
+##   computing. R Foundation for Statistical Computing, Vienna, Austria.
+##   URL https://www.R-project.org/.
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {R: A Language and Environment for Statistical Computing},
+##     author = {{R Core Team}},
+##     organization = {R Foundation for Statistical Computing},
+##     address = {Vienna, Austria},
+##     year = {2020},
+##     url = {https://www.R-project.org/},
+##   }
+## 
+## We have invested a lot of time and effort in creating R, please cite it
+## when using it for data analysis. See also &#39;citation(&quot;pkgname&quot;)&#39; for
+## citing R packages.</code></pre>
+<p>Funções de ajuda:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="introdução-ao-r.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>() <span class="co"># função ajuda</span></span></code></pre></div>
+<pre><code>## starting httpd help server ... done</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="introdução-ao-r.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help.start</span>() <span class="co"># Manuais e outros materiais</span></span></code></pre></div>
+<pre><code>## If nothing happens, you should open
+## &#39;http://127.0.0.1:10658/doc/html/index.html&#39; yourself</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="introdução-ao-r.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(base) <span class="co"># Manual do pacote &quot;base&quot;</span></span></code></pre></div>
+<p>Funções de data e hora:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="introdução-ao-r.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>() <span class="co"># Obtém data e horário exatos do sistema</span></span></code></pre></div>
+<pre><code>## [1] &quot;2022-10-17 18:52:11 -03&quot;</code></pre>
+</div>
+</div>
+<div id="pacotes" class="section level2 hasAnchor" number="13.8">
+<h2><span class="header-section-number">13.8</span> Pacotes<a href="introdução-ao-r.html#pacotes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pacotes mais baixados:</p>
+<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
+<iframe src="https://www.r-pkg.org/" width="400" height="200" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+<p>Pacotes mais baixados em tempo real:</p>
+<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
+<iframe src="https://gallery.shinyapps.io/087-crandash/" width="400" height="200" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+</div>
+<div id="prática-8" class="section level2 hasAnchor" number="13.9">
+<h2><span class="header-section-number">13.9</span> Prática<a href="introdução-ao-r.html#prática-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="indexação-de-objetos" class="section level3 hasAnchor" number="13.9.1">
+<h3><span class="header-section-number">13.9.1</span> Indexação de objetos<a href="introdução-ao-r.html#indexação-de-objetos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="introdução-ao-r.html#cb25-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">4</span> <span class="co"># cria o objeto &quot;x&quot; atribuindo o valor &quot;4&quot;</span></span>
+<span id="cb25-2"><a href="introdução-ao-r.html#cb25-2" aria-hidden="true" tabindex="-1"></a>x <span class="co"># Observe o objeto criado</span></span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<p>Para concatenar vários valores utilize a função <code>c</code>:</p>
+<p>Concatenar vários valores e atribuí-los a um objeto:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="introdução-ao-r.html#cb27-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>)</span>
+<span id="cb27-2"><a href="introdução-ao-r.html#cb27-2" aria-hidden="true" tabindex="-1"></a>x <span class="co"># Observe o objeto criado</span></span></code></pre></div>
+<pre><code>## [1] 4 5 6 7 8</code></pre>
+<p>Extrair um ou vários valores de um objeto a partir da indexação:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="introdução-ao-r.html#cb29-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">3</span>]</span></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="introdução-ao-r.html#cb31-1" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>)]</span></code></pre></div>
+<pre><code>## [1] 4 7</code></pre>
+<p>Substitua valores de um objeto a partir da indexação:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="introdução-ao-r.html#cb33-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">24</span>, <span class="dv">10</span>, <span class="dv">45</span>, <span class="dv">56</span>, <span class="dv">20</span>, <span class="dv">29</span>, <span class="dv">50</span>, <span class="dv">67</span>, <span class="dv">80</span>, <span class="dv">23</span>, <span class="dv">20</span>, <span class="dv">15</span>, <span class="dv">65</span>, <span class="dv">57</span>, <span class="dv">34</span>, <span class="dv">63</span>, <span class="dv">20</span>)</span>
+<span id="cb33-2"><a href="introdução-ao-r.html#cb33-2" aria-hidden="true" tabindex="-1"></a>y[y<span class="sc">==</span><span class="dv">20</span>] <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="co"># Se algum valor de y é igual a 20, substituir por 10</span></span>
+<span id="cb33-3"><a href="introdução-ao-r.html#cb33-3" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<pre><code>##  [1] 24 10 45 56 10 29 50 67 80 23 10 15 65 57 34 63 10</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="introdução-ao-r.html#cb35-1" aria-hidden="true" tabindex="-1"></a>y[y<span class="sc">==</span><span class="dv">10</span>] <span class="ot">&lt;-</span> <span class="st">&quot;NA&quot;</span> <span class="co"># Apaga todos os valores iguais a 10, substituindo por &quot;NA&quot;</span></span>
+<span id="cb35-2"><a href="introdução-ao-r.html#cb35-2" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<pre><code>##  [1] &quot;24&quot; &quot;NA&quot; &quot;45&quot; &quot;56&quot; &quot;NA&quot; &quot;29&quot; &quot;50&quot; &quot;67&quot; &quot;80&quot; &quot;23&quot; &quot;NA&quot; &quot;15&quot; &quot;65&quot; &quot;57&quot; &quot;34&quot;
+## [16] &quot;63&quot; &quot;NA&quot;</code></pre>
+<p>Deleta o objeto:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="introdução-ao-r.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(x)</span></code></pre></div>
+<p>Pode-se criar objetos com valores numéricos (<code>numeric</code>), conforme mostrado até aqui, mas também objetos com valores de caracteres (<code>character</code>), lógicos (<code>logical</code>) ou fatores (<code>factor</code>).</p>
+<p>Objetos do tipo <code>character</code> podem ser criados utilizando aspas (” “) entre os valores incluídos. Um objeto do tipo <code>factor</code> cria categorias para cada valor encontrado no objeto. Geralmente são usados em diversos pacotes para análises filogenéticas:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="introdução-ao-r.html#cb38-1" aria-hidden="true" tabindex="-1"></a>character <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">&quot;apical&quot;</span>, <span class="st">&quot;apical&quot;</span>, <span class="st">&quot;basal&quot;</span>, <span class="st">&quot;apical&quot;</span>, <span class="st">&quot;apical&quot;</span>, <span class="st">&quot;basal&quot;</span>, <span class="st">&quot;median&quot;</span>)</span>
+<span id="cb38-2"><a href="introdução-ao-r.html#cb38-2" aria-hidden="true" tabindex="-1"></a>character</span></code></pre></div>
+<pre><code>## [1] &quot;apical&quot; &quot;apical&quot; &quot;basal&quot;  &quot;apical&quot; &quot;apical&quot; &quot;basal&quot;  &quot;median&quot;</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="introdução-ao-r.html#cb40-1" aria-hidden="true" tabindex="-1"></a>charact_fact <span class="ot">&lt;-</span> <span class="fu">factor</span>(character)</span>
+<span id="cb40-2"><a href="introdução-ao-r.html#cb40-2" aria-hidden="true" tabindex="-1"></a>charact_fact</span></code></pre></div>
+<pre><code>## [1] apical apical basal  apical apical basal  median
+## Levels: apical basal median</code></pre>
+</div>
+<div id="operadores-de-lógica" class="section level3 hasAnchor" number="13.9.2">
+<h3><span class="header-section-number">13.9.2</span> Operadores de lógica<a href="introdução-ao-r.html#operadores-de-lógica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;">
+<table>
+<thead>
+<tr class="header">
+<th align="right">&lt; |</th>
+<th align="right">less than |</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">&lt;=</td>
+<td align="right">| less than or equal to |</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="right">&gt; |</th>
+<th align="right">greater than |</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">&gt;=</td>
+<td align="right">| greater than or equal to |</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="right">== |</th>
+<th align="right">exactly equal to |</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">!= |</td>
+<td align="right">not equal to |</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="right">!x |</th>
+<th align="right">not x |</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">x |</td>
+<td align="right">y | x OR y |</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">x &amp; y | x AND y | ——– ———</div>
+</div>
+<p>Vamos testar:</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="introdução-ao-r.html#cb42-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb42-2"><a href="introdução-ao-r.html#cb42-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="introdução-ao-r.html#cb44-1" aria-hidden="true" tabindex="-1"></a>x[(x<span class="sc">&gt;</span><span class="dv">8</span>) <span class="sc">|</span> (x<span class="sc">&lt;</span><span class="dv">5</span>)]</span></code></pre></div>
+<pre><code>## [1]  1  2  3  4  9 10</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="introdução-ao-r.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Qual a lógica?</span></span>
+<span id="cb46-2"><a href="introdução-ao-r.html#cb46-2" aria-hidden="true" tabindex="-1"></a>x <span class="sc">&gt;</span> <span class="dv">8</span></span></code></pre></div>
+<pre><code>##  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="introdução-ao-r.html#cb48-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>##  [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="introdução-ao-r.html#cb50-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">&gt;</span> <span class="dv">8</span> <span class="sc">|</span> x <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>##  [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="introdução-ao-r.html#cb52-1" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(T, T, T, T, F, F, F, F, T, T)]</span></code></pre></div>
+<pre><code>## [1]  1  2  3  4  9 10</code></pre>
+<p>Experimente a utilização dos operadores matemáticos simples entre diferentes objetos:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="introdução-ao-r.html#cb54-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="introdução-ao-r.html#cb56-1" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<pre><code>##  [1] &quot;24&quot; &quot;NA&quot; &quot;45&quot; &quot;56&quot; &quot;NA&quot; &quot;29&quot; &quot;50&quot; &quot;67&quot; &quot;80&quot; &quot;23&quot; &quot;NA&quot; &quot;15&quot; &quot;65&quot; &quot;57&quot; &quot;34&quot;
+## [16] &quot;63&quot; &quot;NA&quot;</code></pre>
+</div>
+<div id="inspecionando-os-atributos-um-objeto" class="section level3 hasAnchor" number="13.9.3">
+<h3><span class="header-section-number">13.9.3</span> Inspecionando os atributos um objeto<a href="introdução-ao-r.html#inspecionando-os-atributos-um-objeto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="introdução-ao-r.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">object.size</span>(x) <span class="co"># Tamanho do objeto</span></span></code></pre></div>
+<pre><code>## 96 bytes</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="introdução-ao-r.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(x) <span class="co"># Estrutura do objeto</span></span></code></pre></div>
+<pre><code>##  int [1:10] 1 2 3 4 5 6 7 8 9 10</code></pre>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="introdução-ao-r.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(x) <span class="co"># Comprimento</span></span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="introdução-ao-r.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(x) <span class="co"># Nomes, classes, etc</span></span></code></pre></div>
+<pre><code>## NULL</code></pre>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="introdução-ao-r.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x) <span class="co"># Tipo do objeto</span></span></code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="introdução-ao-r.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(x) <span class="co"># Modo usado pelo R para armazenar objeto na memória</span></span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="introdução-ao-r.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(x) <span class="co"># Tipo usado pelo R para armazenar objeto na memória</span></span></code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<p>Inspecione os objetos criados. Exemplos:</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="introdução-ao-r.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="introdução-ao-r.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="introdução-ao-r.html#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(character)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="introdução-ao-r.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(charact_fact)</span></code></pre></div>
+<pre><code>## [1] &quot;factor&quot;</code></pre>
+</div>
+<div id="teste-e-coerção-de-objetos" class="section level3 hasAnchor" number="13.9.4">
+<h3><span class="header-section-number">13.9.4</span> Teste e Coerção de objetos<a href="introdução-ao-r.html#teste-e-coerção-de-objetos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Com os métodos da função <code>is</code> é possível testar se um objeto corresponde a uma determinada <code>classe</code>. E com os métodos da função <code>as</code> é possível coagir um objeto de uma classe a transformar-se em outra.</p>
+<p>Veja os métodos das funções <code>is</code> e <code>as</code>: (Retire o operador # da frente do comando para rodá-lo)</p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="introdução-ao-r.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">methods</span>(is)</span></code></pre></div>
+<pre><code>## Warning in .S3methods(generic.function, class, envir): function &#39;is&#39; appears not
+## to be S3 generic; found functions that look like S3 methods</code></pre>
+<pre><code>##  [1] is.array                is.atomic               is.BibEntry            
+##  [4] is.call                 is.character            is.complex             
+##  [7] is.data.frame           is.double               is.element             
+## [10] is.empty.model          is.environment          is.expression          
+## [13] is.factor               is.finite               is.function            
+## [16] is.grouped_df           is.infinite             is.integer             
+## [19] is.language             is.leaf                 is.list                
+## [22] is.loaded               is.logical              is.matrix              
+## [25] is.mts                  is.na                   is.na.data.frame       
+## [28] is.na.numeric_version   is.na.POSIXlt           is.na&lt;-                
+## [31] is.na&lt;-.default         is.na&lt;-.factor          is.na&lt;-.numeric_version
+## [34] is.name                 is.nan                  is.null                
+## [37] is.numeric              is.numeric.Date         is.numeric.difftime    
+## [40] is.numeric.POSIXt       is.numeric_version      is.object              
+## [43] is.ordered              is.package_version      is.pairlist            
+## [46] is.primitive            is.qr                   is.R                   
+## [49] is.raster               is.raw                  is.recursive           
+## [52] is.relistable           is.single               is.src                 
+## [55] is.stepfun              is.symbol               is.table               
+## [58] is.tbl                  is.ts                   is.tskernel            
+## [61] is.unsorted             is.vector              
+## see &#39;?methods&#39; for accessing help and source code</code></pre>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="introdução-ao-r.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="co"># methods(as)</span></span></code></pre></div>
+<p>Teste com os objetos já criados:</p>
+</div>
+</div>
+<div id="rstudio" class="section level2 hasAnchor" number="13.10">
+<h2><span class="header-section-number">13.10</span> RStudio<a href="introdução-ao-r.html#rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>O <a href="https://rstudio.com">RStudio</a> é um Ambiente Interativo de Desenvolvimento (IDE) que traz o console R, um editor de <em>script</em>, a exibição dos objetos e funções do ambiente de trabalho, área de plotagem, entre outras funcionalidades e automatizações, dentre as quais:</p>
+<ul>
+<li><p>Identação automática</p></li>
+<li><p>Complementação de parênteses</p></li>
+<li><p>Editor com destaque de sintaxe</p></li>
+<li><p>Auto-completar comandos</p></li>
+</ul>
+<p><img src="images/rstudio1.PNG" /></p>
+</div>
+<div id="ambiente-de-trabalho" class="section level2 hasAnchor" number="13.11">
+<h2><span class="header-section-number">13.11</span> Ambiente de Trabalho<a href="introdução-ao-r.html#ambiente-de-trabalho" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>O ambiente de trabalho (<em>workspace</em>) é o espaço virtual onde os objetos definidos pelo usuário (vetores, matrizes, <em>dataframes</em>, listas, funções) são alocados.</p></li>
+<li><p>No RStudio, podemos observar o ambiente de trabalho e seus objetos na aba <code>Ènvironment</code>.</p></li>
+</ul>
+</div>
+<div id="diretório-de-trabalho" class="section level2 hasAnchor" number="13.12">
+<h2><span class="header-section-number">13.12</span> Diretório de Trabalho<a href="introdução-ao-r.html#diretório-de-trabalho" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>O diretório de trabalho (<em>working directory</em>) define o <em>diretório-raiz</em> do caminho de diretórios para fins de entrada e saída de arquivos. Ele define o <em>caminho relativo</em> para um caminho de diretórios.</p></li>
+<li><p>O <strong>caminho absoluto</strong> tem início na pasta raiz do seu disco local do computador. O caminho absoluto do ambiente de trabalho (<em>workspace</em>) pode ser obtido com a função <code>getwd()</code>. Abaixo vemos o diretório-raiz do presente <em>bookdown</em> no computador local:</p></li>
+</ul>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="introdução-ao-r.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;C:/git repositories/Introducao_a_Filoinformatica&quot;</code></pre>
+<p><img src="images/rstudio2.PNG" /></p>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="introdução-ao-r.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>() <span class="co"># lista todos os objetos/funções do Ambiente de Trabalho</span></span></code></pre></div>
+<pre><code>##  [1] &quot;charact_fact&quot;     &quot;character&quot;        &quot;edges&quot;            &quot;edges.is_a&quot;      
+##  [5] &quot;função&quot;           &quot;graph&quot;            &quot;group&quot;            &quot;group.length&quot;    
+##  [9] &quot;group.n&quot;          &quot;i&quot;                &quot;nodes&quot;            &quot;nodes.id&quot;        
+## [13] &quot;nodes.label&quot;      &quot;nodes.label.this&quot; &quot;nodes.title&quot;      &quot;nodes.title.this&quot;
+## [17] &quot;PO&quot;               &quot;referencias&quot;      &quot;x&quot;                &quot;y&quot;</code></pre>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="introdução-ao-r.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>()) <span class="co"># limpa todo Ambiente de Trabalho</span></span></code></pre></div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="edição-final-de-árvore.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="filogenia-no-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

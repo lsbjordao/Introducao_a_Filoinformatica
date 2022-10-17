@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Referências | Introdução à Filoinformática</title>
+  <meta name="description" content="Referências | Introdução à Filoinformática" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Referências | Introdução à Filoinformática" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Referências | Introdução à Filoinformática" />
+  
+  
+  
+
+<meta name="author" content="Lucas S.B. Jordão" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="genebank-ncbi.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/clipboard-1.7.1/clipboard.min.js"></script>
+<link href="libs/primer-tooltips-1.4.0/build.css" rel="stylesheet" />
+<link href="libs/klippy-0.0.0.9500/css/klippy.min.css" rel="stylesheet" />
+<script src="libs/klippy-0.0.0.9500/js/klippy.min.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet" />
+<script src="libs/tippyjs-3.2.0/tippy.all.min.js"></script>
+<script src="libs/tippy-binding-0.1.0/tippy.js"></script>
+<link href="libs/vis-9.1.0/vis-network.min.css" rel="stylesheet" />
+<script src="libs/vis-9.1.0/vis-network.min.js"></script>
+<script src="libs/visNetwork-binding-2.1.2/visNetwork.js"></script>
+<script src="libs/fitvids-2.1.1/fitvids.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="prêambulo.html"><a href="prêambulo.html"><i class="fa fa-check"></i>Prêambulo</a></li>
+<li class="chapter" data-level="1" data-path="contextualizando.html"><a href="contextualizando.html"><i class="fa fa-check"></i><b>1</b> Contextualizando</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="contextualizando.html"><a href="contextualizando.html#histórico-e-fundamentos"><i class="fa fa-check"></i><b>1.1</b> Histórico e fundamentos</a></li>
+<li class="chapter" data-level="1.2" data-path="contextualizando.html"><a href="contextualizando.html#bioinformática-filoinformática"><i class="fa fa-check"></i><b>1.2</b> Bioinformática &gt; Filoinformática</a></li>
+<li class="chapter" data-level="1.3" data-path="contextualizando.html"><a href="contextualizando.html#passado"><i class="fa fa-check"></i><b>1.3</b> Passado</a></li>
+<li class="chapter" data-level="1.4" data-path="contextualizando.html"><a href="contextualizando.html#presente"><i class="fa fa-check"></i><b>1.4</b> Presente</a></li>
+<li class="chapter" data-level="1.5" data-path="contextualizando.html"><a href="contextualizando.html#futuro"><i class="fa fa-check"></i><b>1.5</b> Futuro</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="contextualizando.html"><a href="contextualizando.html#interoperabilidade"><i class="fa fa-check"></i><b>1.5.1</b> Interoperabilidade</a></li>
+<li class="chapter" data-level="1.5.2" data-path="contextualizando.html"><a href="contextualizando.html#evolução-da-web"><i class="fa fa-check"></i><b>1.5.2</b> Evolução da Web</a></li>
+<li class="chapter" data-level="1.5.3" data-path="contextualizando.html"><a href="contextualizando.html#o-futuro-integrativo-da-sistemática"><i class="fa fa-check"></i><b>1.5.3</b> O futuro integrativo da Sistemática</a>
+<ul>
+<li class="chapter" data-level="1.5.3.1" data-path="contextualizando.html"><a href="contextualizando.html#padrão-darwincore"><i class="fa fa-check"></i><b>1.5.3.1</b> Padrão DarwinCore</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5.4" data-path="contextualizando.html"><a href="contextualizando.html#w3c"><i class="fa fa-check"></i><b>1.5.4</b> W3C</a></li>
+<li class="chapter" data-level="1.5.5" data-path="contextualizando.html"><a href="contextualizando.html#web-semântica-web-3.0"><i class="fa fa-check"></i><b>1.5.5</b> <em>Web</em> Semântica (Web 3.0)</a></li>
+<li class="chapter" data-level="1.5.6" data-path="contextualizando.html"><a href="contextualizando.html#sistemas-de-organização-do-conhecimento"><i class="fa fa-check"></i><b>1.5.6</b> Sistemas de Organização do Conhecimento</a></li>
+<li class="chapter" data-level="1.5.7" data-path="contextualizando.html"><a href="contextualizando.html#ontologias"><i class="fa fa-check"></i><b>1.5.7</b> Ontologias</a>
+<ul>
+<li class="chapter" data-level="1.5.7.1" data-path="contextualizando.html"><a href="contextualizando.html#fundamentos-epistemológicos"><i class="fa fa-check"></i><b>1.5.7.1</b> Fundamentos epistemológicos</a></li>
+<li class="chapter" data-level="1.5.7.2" data-path="contextualizando.html"><a href="contextualizando.html#web-ontology-language"><i class="fa fa-check"></i><b>1.5.7.2</b> <em>Web Ontology Language</em></a></li>
+<li class="chapter" data-level="1.5.7.3" data-path="contextualizando.html"><a href="contextualizando.html#resource-description-framework"><i class="fa fa-check"></i><b>1.5.7.3</b> <em>Resource Description Framework</em></a></li>
+<li class="chapter" data-level="1.5.7.4" data-path="contextualizando.html"><a href="contextualizando.html#extensible-markup-language"><i class="fa fa-check"></i><b>1.5.7.4</b> <em>Extensible Markup Language</em></a></li>
+<li class="chapter" data-level="1.5.7.5" data-path="contextualizando.html"><a href="contextualizando.html#obo-foundry"><i class="fa fa-check"></i><b>1.5.7.5</b> OBO Foundry</a></li>
+<li class="chapter" data-level="1.5.7.6" data-path="contextualizando.html"><a href="contextualizando.html#gene-ontology"><i class="fa fa-check"></i><b>1.5.7.6</b> Gene Ontology</a></li>
+<li class="chapter" data-level="1.5.7.7" data-path="contextualizando.html"><a href="contextualizando.html#plant-ontology"><i class="fa fa-check"></i><b>1.5.7.7</b> Plant Ontology</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="filoinformática.html"><a href="filoinformática.html"><i class="fa fa-check"></i><b>2</b> Filoinformática</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="filoinformática.html"><a href="filoinformática.html#conceito"><i class="fa fa-check"></i><b>2.1</b> Conceito</a></li>
+<li class="chapter" data-level="2.2" data-path="filoinformática.html"><a href="filoinformática.html#fontes-de-dados"><i class="fa fa-check"></i><b>2.2</b> Fontes de dados</a></li>
+<li class="chapter" data-level="2.3" data-path="filoinformática.html"><a href="filoinformática.html#perspectivas"><i class="fa fa-check"></i><b>2.3</b> Perspectivas</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="visão-geral-e-roteiro-do-curso.html"><a href="visão-geral-e-roteiro-do-curso.html"><i class="fa fa-check"></i><b>3</b> Visão geral e roteiro do curso</a></li>
+<li class="chapter" data-level="4" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html"><i class="fa fa-check"></i><b>4</b> Técnicas moleculares</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#extração-do-dna"><i class="fa fa-check"></i><b>4.1</b> Extração do DNA</a></li>
+<li class="chapter" data-level="4.2" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#amplificação"><i class="fa fa-check"></i><b>4.2</b> Amplificação</a></li>
+<li class="chapter" data-level="4.3" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#eletroforese"><i class="fa fa-check"></i><b>4.3</b> Eletroforese</a></li>
+<li class="chapter" data-level="4.4" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#sequenciamento"><i class="fa fa-check"></i><b>4.4</b> Sequenciamento</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="técnicas-moleculares.html"><a href="técnicas-moleculares.html#história-do-sequenciamento-didesoxi-sanger"><i class="fa fa-check"></i><b>4.4.1</b> História do sequenciamento didesoxi Sanger</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html"><i class="fa fa-check"></i><b>5</b> Montagem de sequências</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#cromatogramas"><i class="fa fa-check"></i><b>5.1</b> Cromatogramas</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#conceito-1"><i class="fa fa-check"></i><b>5.1.1</b> Conceito</a></li>
+<li class="chapter" data-level="5.1.2" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#finalidade"><i class="fa fa-check"></i><b>5.1.2</b> Finalidade</a></li>
+<li class="chapter" data-level="5.1.3" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#qualidade-do-sinal"><i class="fa fa-check"></i><b>5.1.3</b> Qualidade do sinal</a></li>
+<li class="chapter" data-level="5.1.4" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#arquivo-.ab1"><i class="fa fa-check"></i><b>5.1.4</b> Arquivo .ab1</a></li>
+<li class="chapter" data-level="5.1.5" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#software-fitchtv"><i class="fa fa-check"></i><b>5.1.5</b> Software FitchTV</a></li>
+<li class="chapter" data-level="5.1.6" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#manual-do-sequenciamento-sanger"><i class="fa fa-check"></i><b>5.1.6</b> Manual do sequenciamento Sanger</a></li>
+<li class="chapter" data-level="5.1.7" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#interpretação-do-cromatograma"><i class="fa fa-check"></i><b>5.1.7</b> Interpretação do cromatograma</a></li>
+<li class="chapter" data-level="5.1.8" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#prática"><i class="fa fa-check"></i><b>5.1.8</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#alinhamento-de-contigs"><i class="fa fa-check"></i><b>5.2</b> Alinhamento de <em>contigs</em></a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#assembly-softwares"><i class="fa fa-check"></i><b>5.2.1</b> Assembly softwares</a></li>
+<li class="chapter" data-level="5.2.2" data-path="montagem-de-sequências.html"><a href="montagem-de-sequências.html#prática-1"><i class="fa fa-check"></i><b>5.2.2</b> Prática</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="formatos-de-arquivo-mais-comuns.html"><a href="formatos-de-arquivo-mais-comuns.html"><i class="fa fa-check"></i><b>6</b> Formatos de arquivo mais comuns</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="formatos-de-arquivo-mais-comuns.html"><a href="formatos-de-arquivo-mais-comuns.html#phylip"><i class="fa fa-check"></i><b>6.1</b> PHYLIP</a></li>
+<li class="chapter" data-level="6.2" data-path="formatos-de-arquivo-mais-comuns.html"><a href="formatos-de-arquivo-mais-comuns.html#fasta"><i class="fa fa-check"></i><b>6.2</b> FASTA</a></li>
+<li class="chapter" data-level="6.3" data-path="formatos-de-arquivo-mais-comuns.html"><a href="formatos-de-arquivo-mais-comuns.html#nexus"><i class="fa fa-check"></i><b>6.3</b> NEXUS</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="alinhamento-múltiplo-e-manual-de-sequências.html"><a href="alinhamento-múltiplo-e-manual-de-sequências.html"><i class="fa fa-check"></i><b>7</b> Alinhamento múltiplo e manual de sequências</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="alinhamento-múltiplo-e-manual-de-sequências.html"><a href="alinhamento-múltiplo-e-manual-de-sequências.html#prática-2"><i class="fa fa-check"></i><b>7.1</b> Prática</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="alinhamento-múltiplo-e-manual-de-sequências.html"><a href="alinhamento-múltiplo-e-manual-de-sequências.html#alinhamento-múltiplo-automático"><i class="fa fa-check"></i><b>7.1.1</b> Alinhamento múltiplo (automático)</a></li>
+<li class="chapter" data-level="7.1.2" data-path="alinhamento-múltiplo-e-manual-de-sequências.html"><a href="alinhamento-múltiplo-e-manual-de-sequências.html#alinhamento-manual"><i class="fa fa-check"></i><b>7.1.2</b> Alinhamento manual</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="codificando-indels.html"><a href="codificando-indels.html"><i class="fa fa-check"></i><b>8</b> Codificando indels</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="codificando-indels.html"><a href="codificando-indels.html#sic"><i class="fa fa-check"></i><b>8.1</b> SIC</a></li>
+<li class="chapter" data-level="8.2" data-path="codificando-indels.html"><a href="codificando-indels.html#mcic"><i class="fa fa-check"></i><b>8.2</b> MCIC</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="concatenando-matrizes.html"><a href="concatenando-matrizes.html"><i class="fa fa-check"></i><b>9</b> Concatenando matrizes</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="concatenando-matrizes.html"><a href="concatenando-matrizes.html#prática-3"><i class="fa fa-check"></i><b>9.1</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="seleção-de-modelos-das-partições.html"><a href="seleção-de-modelos-das-partições.html"><i class="fa fa-check"></i><b>10</b> Seleção de modelos das partições</a></li>
+<li class="chapter" data-level="11" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html"><i class="fa fa-check"></i><b>11</b> Softwares para análises filogenéticas</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#ms-dos"><i class="fa fa-check"></i><b>11.1</b> MS-DOS</a></li>
+<li class="chapter" data-level="11.2" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#iq-tree"><i class="fa fa-check"></i><b>11.2</b> IQ-TREE</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#prática-4"><i class="fa fa-check"></i><b>11.2.1</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#splitstree6"><i class="fa fa-check"></i><b>11.3</b> SplitsTree6</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#prática-5"><i class="fa fa-check"></i><b>11.3.1</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#mrbayes"><i class="fa fa-check"></i><b>11.4</b> MrBayes</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#prática-6"><i class="fa fa-check"></i><b>11.4.1</b> Prática</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="edição-final-de-árvore.html"><a href="edição-final-de-árvore.html"><i class="fa fa-check"></i><b>12</b> Edição final de árvore</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="edição-final-de-árvore.html"><a href="edição-final-de-árvore.html#prática-7"><i class="fa fa-check"></i><b>12.1</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html"><i class="fa fa-check"></i><b>13</b> Introdução ao R</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#programação-orientada-a-objetos"><i class="fa fa-check"></i><b>13.1</b> Programação orientada a objetos</a></li>
+<li class="chapter" data-level="13.2" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#principais-tipos-de-objetos"><i class="fa fa-check"></i><b>13.2</b> Principais tipos de Objetos:</a></li>
+<li class="chapter" data-level="13.3" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#classe"><i class="fa fa-check"></i><b>13.3</b> Classe</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#sistema-de-referência"><i class="fa fa-check"></i><b>13.3.1</b> Sistema de referência</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#linguagem-r"><i class="fa fa-check"></i><b>13.4</b> Linguagem R</a></li>
+<li class="chapter" data-level="13.5" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#console"><i class="fa fa-check"></i><b>13.5</b> Console</a></li>
+<li class="chapter" data-level="13.6" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#criando-objetos"><i class="fa fa-check"></i><b>13.6</b> Criando objetos</a></li>
+<li class="chapter" data-level="13.7" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#funções"><i class="fa fa-check"></i><b>13.7</b> Funções</a>
+<ul>
+<li class="chapter" data-level="13.7.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#sintaxe-da-função"><i class="fa fa-check"></i><b>13.7.1</b> Sintaxe da função</a></li>
+<li class="chapter" data-level="13.7.2" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#funções-básicas"><i class="fa fa-check"></i><b>13.7.2</b> Funções básicas</a></li>
+</ul></li>
+<li class="chapter" data-level="13.8" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#pacotes"><i class="fa fa-check"></i><b>13.8</b> Pacotes</a></li>
+<li class="chapter" data-level="13.9" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#prática-8"><i class="fa fa-check"></i><b>13.9</b> Prática</a>
+<ul>
+<li class="chapter" data-level="13.9.1" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#indexação-de-objetos"><i class="fa fa-check"></i><b>13.9.1</b> Indexação de objetos</a></li>
+<li class="chapter" data-level="13.9.2" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#operadores-de-lógica"><i class="fa fa-check"></i><b>13.9.2</b> Operadores de lógica</a></li>
+<li class="chapter" data-level="13.9.3" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#inspecionando-os-atributos-um-objeto"><i class="fa fa-check"></i><b>13.9.3</b> Inspecionando os atributos um objeto</a></li>
+<li class="chapter" data-level="13.9.4" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#teste-e-coerção-de-objetos"><i class="fa fa-check"></i><b>13.9.4</b> Teste e Coerção de objetos</a></li>
+</ul></li>
+<li class="chapter" data-level="13.10" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#rstudio"><i class="fa fa-check"></i><b>13.10</b> RStudio</a></li>
+<li class="chapter" data-level="13.11" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#ambiente-de-trabalho"><i class="fa fa-check"></i><b>13.11</b> Ambiente de Trabalho</a></li>
+<li class="chapter" data-level="13.12" data-path="introdução-ao-r.html"><a href="introdução-ao-r.html#diretório-de-trabalho"><i class="fa fa-check"></i><b>13.12</b> Diretório de Trabalho</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html"><i class="fa fa-check"></i><b>14</b> Filogenia no R</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacotes-de-filogenia"><i class="fa fa-check"></i><b>14.1</b> Pacotes de filogenia</a></li>
+<li class="chapter" data-level="14.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#escrevendo-árvores-a-partir-de-uma-cadeia-de-texto"><i class="fa fa-check"></i><b>14.2</b> Escrevendo árvores a partir de uma cadeia de texto</a></li>
+<li class="chapter" data-level="14.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#importando-árvores-nos-formatos-s3-e-s4"><i class="fa fa-check"></i><b>14.3</b> Importando árvores nos formatos S3 e S4</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#classe-phylo-s3"><i class="fa fa-check"></i><b>14.3.1</b> Classe phylo (S3)</a></li>
+<li class="chapter" data-level="14.3.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#classe-phylo4-e-phylo4d-s4"><i class="fa fa-check"></i><b>14.3.2</b> Classe phylo4 e phylo4d (S4)</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#personalizando-o-estilo-da-árvore"><i class="fa fa-check"></i><b>14.4</b> Personalizando o estilo da árvore</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ape"><i class="fa fa-check"></i><b>14.4.1</b> Pacote ape</a>
+<ul>
+<li class="chapter" data-level="14.4.1.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos"><i class="fa fa-check"></i><b>14.4.1.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.4.1.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais"><i class="fa fa-check"></i><b>14.4.1.2</b> Terminais</a></li>
+<li class="chapter" data-level="14.4.1.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós"><i class="fa fa-check"></i><b>14.4.1.3</b> Nós</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools"><i class="fa fa-check"></i><b>14.4.2</b> Pacote phytools</a>
+<ul>
+<li class="chapter" data-level="14.4.2.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-1"><i class="fa fa-check"></i><b>14.4.2.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.4.2.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-1"><i class="fa fa-check"></i><b>14.4.2.2</b> Terminais</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ggtree"><i class="fa fa-check"></i><b>14.4.3</b> Pacote ggtree</a>
+<ul>
+<li class="chapter" data-level="14.4.3.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-2"><i class="fa fa-check"></i><b>14.4.3.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.4.3.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-2"><i class="fa fa-check"></i><b>14.4.3.2</b> Terminais</a></li>
+<li class="chapter" data-level="14.4.3.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós-1"><i class="fa fa-check"></i><b>14.4.3.3</b> Nós</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#anotando-dados-na-árvore-usando-r"><i class="fa fa-check"></i><b>14.5</b> Anotando dados na árvore usando R</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ape-1"><i class="fa fa-check"></i><b>14.5.1</b> Pacote ape</a>
+<ul>
+<li class="chapter" data-level="14.5.1.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-3"><i class="fa fa-check"></i><b>14.5.1.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.5.1.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-3"><i class="fa fa-check"></i><b>14.5.1.2</b> Terminais</a></li>
+<li class="chapter" data-level="14.5.1.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós-2"><i class="fa fa-check"></i><b>14.5.1.3</b> Nós</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools-1"><i class="fa fa-check"></i><b>14.5.2</b> Pacote phytools</a>
+<ul>
+<li class="chapter" data-level="14.5.2.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós-3"><i class="fa fa-check"></i><b>14.5.2.1</b> Nós</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#plotando-matrizes-data.frames-e-árvore-ao-lado-da-árvore-usando-r"><i class="fa fa-check"></i><b>14.6</b> Plotando matrizes, data.frames e árvore ao lado da árvore usando R</a>
+<ul>
+<li class="chapter" data-level="14.6.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ape-2"><i class="fa fa-check"></i><b>14.6.1</b> Pacote ape</a>
+<ul>
+<li class="chapter" data-level="14.6.1.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#matriz-e-data.frame"><i class="fa fa-check"></i><b>14.6.1.1</b> Matriz e data.frame</a></li>
+<li class="chapter" data-level="14.6.1.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#anéis-em-árvores-circulares"><i class="fa fa-check"></i><b>14.6.1.2</b> Anéis em árvores circulares</a></li>
+<li class="chapter" data-level="14.6.1.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#tanglegram"><i class="fa fa-check"></i><b>14.6.1.3</b> Tanglegram</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools-2"><i class="fa fa-check"></i><b>14.6.2</b> Pacote phytools</a>
+<ul>
+<li class="chapter" data-level="14.6.2.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#círculos"><i class="fa fa-check"></i><b>14.6.2.1</b> Círculos</a></li>
+<li class="chapter" data-level="14.6.2.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#barras"><i class="fa fa-check"></i><b>14.6.2.2</b> Barras</a></li>
+<li class="chapter" data-level="14.6.2.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#matrizes"><i class="fa fa-check"></i><b>14.6.2.3</b> Matrizes</a></li>
+<li class="chapter" data-level="14.6.2.4" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#boxplots"><i class="fa fa-check"></i><b>14.6.2.4</b> Boxplots</a></li>
+<li class="chapter" data-level="14.6.2.5" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#tanglegram-1"><i class="fa fa-check"></i><b>14.6.2.5</b> Tanglegram</a></li>
+<li class="chapter" data-level="14.6.2.6" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#phylo.to.map"><i class="fa fa-check"></i><b>14.6.2.6</b> Phylo.to.map</a></li>
+<li class="chapter" data-level="14.6.2.7" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#escala-estratigráfica"><i class="fa fa-check"></i><b>14.6.2.7</b> Escala estratigráfica</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#estimação-do-estado-ancestral-usando-r"><i class="fa fa-check"></i><b>14.6.3</b> Estimação do estado ancestral usando R</a>
+<ul>
+<li class="chapter" data-level="14.6.3.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools-3"><i class="fa fa-check"></i><b>14.6.3.1</b> Pacote phytools</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="genebank-ncbi.html"><a href="genebank-ncbi.html"><i class="fa fa-check"></i><b>15</b> GeneBank (NCBI)</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="genebank-ncbi.html"><a href="genebank-ncbi.html#blast"><i class="fa fa-check"></i><b>15.1</b> Blast</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introdução à Filoinformática</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="referências" class="section level1 unnumbered hasAnchor">
+<h1>Referências<a href="referências.html#referências" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<pre><code>## Warning in parseLatex(y): y:1: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning in tools::parseLatex(x): x:1: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning in parseLatex(y): y:1: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning in tools::parseLatex(x): x:1: unexpected &#39;}&#39;
+
+## Warning in tools::parseLatex(x): x:1: unexpected &#39;}&#39;
+
+## Warning in tools::parseLatex(x): x:1: unexpected &#39;}&#39;
+
+## Warning in tools::parseLatex(x): x:1: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning: Almeida_2002: unexpected &#39;}&#39;
+
+## Warning: Almeida_2002: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning in tools::parseLatex(x): x:1: unexpected &#39;}&#39;
+
+## Warning in tools::parseLatex(x): x:1: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning: ePING: unexpected &#39;}&#39;
+
+## Warning: ePING: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning in tools::parseLatex(x): x:1: unexpected &#39;}&#39;
+
+## Warning in tools::parseLatex(x): x:1: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning: Souza_Alvarenga_2004: unexpected &#39;}&#39;
+
+## Warning: Souza_Alvarenga_2004: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning in tools::parseLatex(x): x:1: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning: wikiCibernetica: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning: wikiCibernetica: unexpected END_OF_INPUT &#39;
+## &#39;</code></pre>
+<pre><code>## Warning in tools::parseLatex(x): x:1: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning: wikiInteroperabilidadeSemantica: unexpected &#39;}&#39;</code></pre>
+<pre><code>## Warning: wikiInteroperabilidadeSemantica: unexpected END_OF_INPUT &#39;
+## &#39;</code></pre>
+<p><a name=bib-Almeida_2002></a><a href="#cite-Almeida_2002">Almeida, M.</a> (2002).
+“Uma introdu{c”{~ao ao XML, sua utiliza{cc{~ao na Internet e alguns
+conceitos complementares. In: _Ci. Inf., Bras{’_ilia 31.2, pp. 5-13.</p>
+<p><a
+name=bib-TrendsandPriorities></a><a href="#cite-TrendsandPriorities">Anônimo</a>
+(1974). “Trends, Priorities, and Needs in Systematic and Evolutionary
+Biology”. In: <em>Systematic Biology</em> 23.3, pp. 416-439. ISSN: 1063-5157.
+DOI:
+<a href="https://doi.org/10.1093%2Fsysbio%2F23.3.416">10.1093/sysbio/23.3.416</a>.
+eprint:
+<a href="https://academic.oup.com/sysbio/article-pdf/23/3/416/4672840/23-3-416.pdf" class="uri">https://academic.oup.com/sysbio/article-pdf/23/3/416/4672840/23-3-416.pdf</a>.
+URL:
+<a href="https://doi.org/10.1093/sysbio/23.3.416">https://doi.org/10.1093/sysbio/23.3.416</a>.</p>
+<p><a name=bib-Cornish-Bowden></a><a href="#cite-Cornish-Bowden">Cornish-Bowden,
+A.</a> (1985). “Nomenclature for incompletely
+specified bases in nucleic acid sequences: recommendations 1984”. In:
+<em>Nucleic Acids Research</em> 13.9, pp. 3021-3030. ISSN: 0305-1048. DOI:
+<a href="https://doi.org/10.1093%2Fnar%2F13.9.3021">10.1093/nar/13.9.3021</a>.
+eprint:
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC322779/pdf/pnas00305-0018.pdf" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC322779/pdf/pnas00305-0018.pdf</a>.
+URL:
+<a href="https://doi.org/10.1093/nar/13.9.3021">https://doi.org/10.1093/nar/13.9.3021</a>.</p>
+<p><a name=bib-Cracraft></a><a href="#cite-Cracraft">Cracraft, J.</a> (2002a). “The
+Seven Great Questions of Systematic Biology: An Essential Foundation
+for Conservation and the Sustainable Use of Biodiversity”. In: <em>Annals
+of the Missouri Botanical Garden</em> 89, pp. 127-144. URL:
+<a href="https://www.biodiversitylibrary.org/part/16378">https://www.biodiversitylibrary.org/part/16378</a>.</p>
+<p><a name=bib-Doyles1987></a><a href="#cite-Doyles1987">Doyle, J. and J. Doyle</a>
+(1987). “A rapid DNA isolation procedure for small quantities of fresh
+leaf tissue”. In: <em>Phytochemical Bulletin</em> 19, pp. 11-15.</p>
+<p><a name=bib-Eshbaugh></a><a href="#cite-Eshbaugh">Eshbaugh, W. H.</a> (1995).
+“Systematics Agenda 2000: an historical perspective”. In: <em>Biodiversity
+&amp; Conservation</em> 4.5, pp. 455-462. ISSN: 1572-9710. DOI:
+<a href="https://doi.org/10.1007%2FBF00056336">10.1007/BF00056336</a>. URL:
+<a href="https://doi.org/10.1007/BF00056336">https://doi.org/10.1007/BF00056336</a>.</p>
+<p><a name=bib-Hagemann1999></a><a href="#cite-Hagemann1999">Hagemann, T. L. and S.
+Kwan</a> (1999). “ABISequencing Analysis: Manipulation
+of Sequence Data from the ABIDNASequencer”. In: <em>Molecular
+Biotechnology</em> 13.2, pp. 137-152. DOI:
+<a href="https://doi.org/10.1385%2Fmb%3A13%3A2%3A137">10.1385/mb:13:2:137</a>.
+URL:
+<a href="https://doi.org/10.1385/mb:13:2:137">https://doi.org/10.1385/mb:13:2:137</a>.</p>
+<p><a name=bib-Hall></a><a href="#cite-Hall">Hall, T. A.</a> (1999). “BioEdit: a
+user-friendly biological sequence alignment editor and analysis program
+for Windows 95/98/NT”. In: <em>Nucleic Acids Symposium Series</em> 41, pp.
+95-98.</p>
+<p><a name=bib-Huelsenbeck></a><a href="#cite-Huelsenbeck">Huelsenbeck, J. P. and F.
+Ronquist</a> (2001). “MRBAYES: Bayesian inference of
+phylogenetic trees”. In: <em>Bioinformatics</em> 17.8, pp. 754-755. ISSN:
+1367-4803. DOI:
+<a href="https://doi.org/10.1093%2Fbioinformatics%2F17.8.754">10.1093/bioinformatics/17.8.754</a>.
+eprint:
+<a href="https://academic.oup.com/bioinformatics/article-pdf/17/8/754/8201380/170754.pdf" class="uri">https://academic.oup.com/bioinformatics/article-pdf/17/8/754/8201380/170754.pdf</a>.
+URL:
+<a href="https://doi.org/10.1093/bioinformatics/17.8.754">https://doi.org/10.1093/bioinformatics/17.8.754</a>.</p>
+<p><a name=bib-Huson></a><a href="#cite-Huson">Huson, D. H. and D. Bryant</a> (2005).
+“Application of Phylogenetic Networks in Evolutionary Studies”. In:
+<em>Molecular Biology and Evolution</em> 23.2, pp. 254-267. ISSN: 0737-4038.
+DOI:
+<a href="https://doi.org/10.1093%2Fmolbev%2Fmsj030">10.1093/molbev/msj030</a>.
+eprint:
+<a href="https://academic.oup.com/mbe/article-pdf/23/2/254/3894375/msj030.pdf" class="uri">https://academic.oup.com/mbe/article-pdf/23/2/254/3894375/msj030.pdf</a>.
+URL:
+<a href="https://doi.org/10.1093/molbev/msj030">https://doi.org/10.1093/molbev/msj030</a>.</p>
+<p><a name=bib-Inglis></a><a href="#cite-Inglis">Inglis, P. W., M. d. C. R. Pappas, L. V.
+Resende, et al.</a> (2018). “Fast and inexpensive protocols
+for consistent extraction of high quality DNAand RNAfrom challenging
+plant and fungal samples for high-throughput SNPgenotyping and
+sequencing applications”. En. In: <em>PLoS One</em> 13.10, p. e0206085.</p>
+<p><a name=bib-Maddison></a><a href="#cite-Maddison">Maddison, D. R., D. L. Swofford, and W. P.
+Maddison</a> (1997). “Nexus: An Extensible File Format for
+Systematic Information”. In: <em>Systematic Biology</em> 46.4, pp. 590-621.
+ISSN: 1063-5157. DOI:
+<a href="https://doi.org/10.1093%2Fsysbio%2F46.4.590">10.1093/sysbio/46.4.590</a>.
+eprint:
+<a href="https://academic.oup.com/sysbio/article-pdf/46/4/590/19502018/46-4-590.pdf" class="uri">https://academic.oup.com/sysbio/article-pdf/46/4/590/19502018/46-4-590.pdf</a>.
+URL:
+<a href="https://doi.org/10.1093/sysbio/46.4.590">https://doi.org/10.1093/sysbio/46.4.590</a>.</p>
+<p><a name=bib-Muller></a><a href="#cite-Muller">Müller, K.</a> (2005). “SeqState:
+Primer Design and Sequence Statistics for Phylogenetic DNA Datasets”.
+In: <em>Applied Bioinformatics</em> 4.1, pp. 65-69. ISSN: 1175-5636. DOI:
+<a href="https://doi.org/10.2165%2F00822942-200504010-00008">10.2165/00822942-200504010-00008</a>.
+URL:
+<a href="https://doi.org/10.2165/00822942-200504010-00008">https://doi.org/10.2165/00822942-200504010-00008</a>.</p>
+<p><a name=bib-Piel></a><a href="#cite-Piel">Piel, W. H., M. J. Sanderson, and M. J.
+Donoghue</a> (2003). “The small-world dynamics of tree
+networks and data mining in phyloinformatics”. In: <em>Bioinformatics</em>
+19.9, pp. 1162-1168. ISSN: 1367-4803. DOI:
+<a href="https://doi.org/10.1093%2Fbioinformatics%2Fbtg131">10.1093/bioinformatics/btg131</a>.
+eprint:
+<a href="https://academic.oup.com/bioinformatics/article-pdf/19/9/1162/801444/btg131.pdf" class="uri">https://academic.oup.com/bioinformatics/article-pdf/19/9/1162/801444/btg131.pdf</a>.
+URL:
+<a href="https://doi.org/10.1093/bioinformatics/btg131">https://doi.org/10.1093/bioinformatics/btg131</a>.</p>
+<p><a name=bib-ePING></a><a href="#cite-ePING">Programa de Governo Eletr{^onico
+Brasileiro</a> (2022). _Padr{~_oes de Interoperabilidade de
+Governo Eletr{^onico - ePING - Vers{~ao 2018. [Online; accessed
+13-September-2022]. URL:
+<a href="https://eping.governoeletronico.gov.br">https://eping.governoeletronico.gov.br</a>.</p>
+<p><a name=bib-Sanderson></a><a href="#cite-Sanderson">Sanderson, M. J., B. G. Baldwin, G.
+Bharathan, et al.</a> (1993). “The Growth of Phylogenetic
+Information and the Need for a Phylogenetic Data Base”. In: <em>Systematic
+Biology</em> 42.4, pp. 562-568. ISSN: 1063-5157. DOI:
+<a href="https://doi.org/10.1093%2Fsysbio%2F42.4.562">10.1093/sysbio/42.4.562</a>.
+eprint:
+<a href="https://academic.oup.com/sysbio/article-pdf/42/4/562/4662342/42-4-562.pdf" class="uri">https://academic.oup.com/sysbio/article-pdf/42/4/562/4662342/42-4-562.pdf</a>.
+URL:
+<a href="https://doi.org/10.1093/sysbio/42.4.562">https://doi.org/10.1093/sysbio/42.4.562</a>.</p>
+<p><a name=bib-Souza_Alvarenga_2004></a><a href="#cite-Souza_Alvarenga_2004">Souza, R. and L.
+Alvarenga</a> (2004). “A Web Sem{^”antica e
+suas contribui{cc{~oes para a ci{^encia da informa{c{~ao. In: _Ci.
+Inf., Bras{’_ilia 33.1, pp. 132-141.</p>
+<p><a name=bib-Vaidya></a><a href="#cite-Vaidya">Vaidya, G., D. J. Lohman, and R.
+Meier</a> (2011). “SequenceMatrix: concatenation software
+for the fast assembly of multi-gene datasets with character set and
+codon information”. In: <em>Cladistics</em> 27.2, pp. 171-180. ISSN:
+1096-0031. DOI:
+<a href="https://doi.org/10.1111%2Fj.1096-0031.2010.00329.x">10.1111/j.1096-0031.2010.00329.x</a>.
+URL:
+<a href="https://doi.org/10.1111/j.1096-0031.2010.00329.x">https://doi.org/10.1111/j.1096-0031.2010.00329.x</a>.</p>
+<p><a name=bib-WebEvolution></a><a href="#cite-WebEvolution">Vivek Madurai</a>
+(2018). <em>Web Evolution from 1.0 to 3.0</em>. [Online; accessed
+13-September-2022]. URL:
+<a href="https://medium.com/@vivekmadurai/web-evolution-from-1-0-to-3-0-e84f2c06739">https://medium.com/<span class="citation">@vivekmadurai/web-evolution-from-1-0-to-3-0-e84f2c06739</span></a>.</p>
+<p><a name=bib-wikiBioinformatics></a><a href="#cite-wikiBioinformatics">Wikipedia
+contributors</a> (2022a). <em>Bioinformatics -
+Wikipedia,The Free Encyclopedia</em>. [Online; accessed 10-September-2022].
+URL:
+<a href="https://en.wikipedia.org/w/index.php?title=Bioinformatics&amp;oldid=1108690744">https://en.wikipedia.org/w/index.php?title=Bioinformatics&amp;oldid=1108690744</a>.</p>
+<p><a name=bib-wikiCibernetica></a><a href="#cite-wikiCibernetica">Wikipedia
+contributors</a> (2022g). _Cibern{’_etica - Governo
+Digital. [Online; accessed 12-September-2022]. URL:
+[<a href="https://pt.wikipedia.org/wiki/Cibern" class="uri">https://pt.wikipedia.org/wiki/Cibern</a></p>
+<p><a name=bib-wikiGO></a><a href="#cite-wikiGO">Wikipedia contributors</a> (2022d).
+<em>Gene Ontology - Wikipedia,The Free Encyclopedia</em>. [Online; accessed
+11-September-2022]. URL:
+<a href="https://en.wikipedia.org/wiki/Gene_Ontology">https://en.wikipedia.org/wiki/Gene_Ontology</a>.</p>
+<p><a name=bib-wikiInteroperabilidadeSemantica></a><a href="#cite-wikiInteroperabilidadeSemantica">Wikipedia
+contributors</a> (2022e).
+_Interoperabilidade sem{^_antica - Wikipedia,The Free Encyclopedia.
+[Online; accessed 12-September-2022]. URL:
+[<a href="https://pt.m.wikipedia.org/wiki/Interoperabilidade\_sem" class="uri">https://pt.m.wikipedia.org/wiki/Interoperabilidade\_sem</a></p>
+<p><a name=bib-wikiTim></a><a href="#cite-wikiTim">Wikipedia contributors</a>
+(2022b). <em>Tim Berners-Lee - Wikipedia,The Free Encyclopedia</em>. [Online;
+accessed 11-September-2022]. URL:
+<a href="https://pt.wikipedia.org/wiki/Tim_Berners-Lee">https://pt.wikipedia.org/wiki/Tim_Berners-Lee</a>.</p>
+<p><a name=bib-wikiW3C></a><a href="#cite-wikiW3C">Wikipedia contributors</a>
+(2022c). <em>W3C - Wikipedia,The Free Encyclopedia</em>. [Online; accessed
+11-September-2022]. URL:
+<a href="https://pt.wikipedia.org/wiki/W3C">https://pt.wikipedia.org/wiki/W3C</a>.</p>
+<p><a name=bib-wikiXML></a><a href="#cite-wikiXML">Wikipedia contributors</a>
+(2022h). <em>XML - Wikipedia,The Free Encyclopedia</em>. [Online; accessed
+15-September-2022]. URL:
+<a href="https://pt.wikipedia.org/wiki/XML">https://pt.wikipedia.org/wiki/XML</a>.</p>
+<p><a name=bib-Yates></a><a href="#cite-Yates">Yates, T. L., J. Salazar-Bravo, and J. W.
+Dragoo</a> (2004). “The Importance of knowing the Tree of
+Life”. In: <em>Assembling the Tree of Life</em>. Ed. by J. Cracraft and M. J.
+Donoghue. Oxford: Oxford University Press. Chap. 1, pp. 7-17.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="genebank-ncbi.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
