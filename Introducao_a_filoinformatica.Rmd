@@ -383,8 +383,18 @@ Bases de dados estruturadas como redes ontológicas têm sido desenvolvidas (*Pl
 
 #### Padrão DarwinCore
 
-Darwin Core Standard (DwC)
-biodiversity informatics
+Darwin Core Standard (DwC) é um padrão mantido pelo [*Darwin Core Maintenance Interest Group*](https://www.tdwg.org/community/dwc). Inclui um glossário de termos (em outros contextos, podem ser chamados de propriedades, elementos, campos, colunas, atributos ou conceitos) destinados a facilitar o compartilhamento de informações sobre diversidade biológica, fornecendo identificadores, rótulos e definições. O Darwin Core é baseado principalmente em taxa, sua ocorrência na natureza documentada por observações, espécimes, amostras e informações relacionadas.
+
+[https://dwc.tdwg.org](https://dwc.tdwg.org/)
+
+```{r echo=FALSE}
+library(xaringanExtra)
+embed_xaringan(
+  url = "https://dwc.tdwg.org/",
+  ratio = "4:2"
+)
+```
+
 
 ### W3C
 
@@ -733,10 +743,6 @@ edges <- data.frame(
 
 graph2 <- visNetwork::visNetwork(nodes, edges)
 graph2
-<<<<<<< HEAD
-=======
-
->>>>>>> 01cd31f47181ee54ca7ac183675b393650b2ede7
 
 ```
 
