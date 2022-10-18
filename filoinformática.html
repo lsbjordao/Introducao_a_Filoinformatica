@@ -66,6 +66,8 @@
 <script src="libs/vis-9.1.0/vis-network.min.js"></script>
 <script src="libs/visNetwork-binding-2.1.2/visNetwork.js"></script>
 <script src="libs/fitvids-2.1.1/fitvids.min.js"></script>
+<script src="libs/phylocanvas-quickstart-2.8.1/phylocanvas-quickstart.js"></script>
+<script src="libs/phylocanvas-binding-0.1.3/phylocanvas.js"></script>
 
 
 <style type="text/css">
@@ -172,6 +174,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5.7.5" data-path="contextualizando.html"><a href="contextualizando.html#obo-foundry"><i class="fa fa-check"></i><b>1.5.7.5</b> OBO Foundry</a></li>
 <li class="chapter" data-level="1.5.7.6" data-path="contextualizando.html"><a href="contextualizando.html#gene-ontology"><i class="fa fa-check"></i><b>1.5.7.6</b> Gene Ontology</a></li>
 <li class="chapter" data-level="1.5.7.7" data-path="contextualizando.html"><a href="contextualizando.html#plant-ontology"><i class="fa fa-check"></i><b>1.5.7.7</b> Plant Ontology</a></li>
+<li class="chapter" data-level="1.5.7.8" data-path="contextualizando.html"><a href="contextualizando.html#planteome"><i class="fa fa-check"></i><b>1.5.7.8</b> Planteome</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -300,16 +303,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14.4.1.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais"><i class="fa fa-check"></i><b>14.4.1.2</b> Terminais</a></li>
 <li class="chapter" data-level="14.4.1.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós"><i class="fa fa-check"></i><b>14.4.1.3</b> Nós</a></li>
 </ul></li>
-<li class="chapter" data-level="14.4.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools"><i class="fa fa-check"></i><b>14.4.2</b> Pacote phytools</a>
+<li class="chapter" data-level="14.4.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phylocanvas"><i class="fa fa-check"></i><b>14.4.2</b> Pacote phylocanvas</a></li>
+<li class="chapter" data-level="14.4.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-phytools"><i class="fa fa-check"></i><b>14.4.3</b> Pacote phytools</a>
 <ul>
-<li class="chapter" data-level="14.4.2.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-1"><i class="fa fa-check"></i><b>14.4.2.1</b> Ramos</a></li>
-<li class="chapter" data-level="14.4.2.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-1"><i class="fa fa-check"></i><b>14.4.2.2</b> Terminais</a></li>
+<li class="chapter" data-level="14.4.3.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-1"><i class="fa fa-check"></i><b>14.4.3.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.4.3.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-1"><i class="fa fa-check"></i><b>14.4.3.2</b> Terminais</a></li>
 </ul></li>
-<li class="chapter" data-level="14.4.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ggtree"><i class="fa fa-check"></i><b>14.4.3</b> Pacote ggtree</a>
+<li class="chapter" data-level="14.4.4" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#pacote-ggtree"><i class="fa fa-check"></i><b>14.4.4</b> Pacote ggtree</a>
 <ul>
-<li class="chapter" data-level="14.4.3.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-2"><i class="fa fa-check"></i><b>14.4.3.1</b> Ramos</a></li>
-<li class="chapter" data-level="14.4.3.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-2"><i class="fa fa-check"></i><b>14.4.3.2</b> Terminais</a></li>
-<li class="chapter" data-level="14.4.3.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós-1"><i class="fa fa-check"></i><b>14.4.3.3</b> Nós</a></li>
+<li class="chapter" data-level="14.4.4.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#ramos-2"><i class="fa fa-check"></i><b>14.4.4.1</b> Ramos</a></li>
+<li class="chapter" data-level="14.4.4.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#terminais-2"><i class="fa fa-check"></i><b>14.4.4.2</b> Terminais</a></li>
+<li class="chapter" data-level="14.4.4.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#nós-1"><i class="fa fa-check"></i><b>14.4.4.3</b> Nós</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="14.5" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#anotando-dados-na-árvore-usando-r"><i class="fa fa-check"></i><b>14.5</b> Anotando dados na árvore usando R</a>
