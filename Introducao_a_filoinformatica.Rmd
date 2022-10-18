@@ -104,13 +104,33 @@ Não deixe de conferir o livro de Ernst Mayr: `Isto é biologia: a ciência do m
 
 O mundo experimentava uma grande revolução tecnocientífica, que levou a uma nova episteme, o pós-modernismo. A episteme pós-moderna, na esfera das tecnociências foi caracterizada pelo surgimento da cibernética, robótica, biologia molecular e a medicina nuclear, entre outras áreas de desenvolvimento tecnológico. 
 
-A gênese da informática insere-se na história do desenvolvimento do pensamento sistêmico e da lógica, e intrinsecamente correlacionada ao pensamento biológico contemporâneo. Suas raízes filosóficas, epistemológicas, podem ser buscadas na filosofia da linguagem e no positivismo lógico, cujos precursores pertenciam ao Círculo de Viena.
+A gênese da informática insere-se na história do desenvolvimento do pensamento sistêmico e da lógica, e intrinsecamente correlacionada ao pensamento biológico contemporâneo. Suas raízes filosóficas, epistemológicas, podem ser buscadas na filosofia da linguagem e no positivismo lógico, cujos precursores pertenciam ao Círculo de Viena, que se dedicaram especialmente à **Filosofia da Ciência**.
+
+O Círculo de Viena era composto por cientistas que, apesar de atuarem em várias áreas como física, economia, etc., buscaram resolver problemas sobre os fundamentos da ciência. Com ideias desenvolvidas no Círculo de Viena, a Filosofia da Ciência volta-se à analise do método e da linguagem das ciências. A filosofia passa a ser vista como necessária à análise lógica da linguagem e a descoberta de modos de redução das ambiguidades nas ciências.
+
+o Círculo de Viena adotou uma forma de **empirismo indutivista**, fazendo uso de instrumentos analíticos, como a lógica e a matemática, para auxiliar na formulação dos enunciados científicos.
+
+::: {style="color: black; background: lightgray; text-align: justify; border: 5px outset lightgray; padding: 10px;"}
+
+Fonte para "Círculo de Viena":
+
+- O Círculo de Viena e o início da Filosofia Contemporânea da Ciência: [https://brasilescola.uol.com.br/filosofia/o-circulo-viena-inicio-filosofia-contemporanea-ciencia.htm](https://brasilescola.uol.com.br/filosofia/o-circulo-viena-inicio-filosofia-contemporanea-ciencia.htm)
+
+- Rodrigues, J.P., *sem data*. Neopositivismo – Círculo de Viena: [https://sublimefilosofia.com.br/neopositivismo-o-circulo-de-viena](https://sublimefilosofia.com.br/neopositivismo-o-circulo-de-viena).
+
+:::
+
+<br>
 
 ::: {style="color: black; background: lightgray; text-align: justify; border: 5px outset lightgray; padding: 10px;"}
 
 :::: {style="display: flex;"}
 
 ::: {}
+
+O **Círculo de Viena** foi o nome como ficou conhecido um grupo de filósofos que se juntou informalmente na **Universidade de Viena** de 1922 a 1936 com a coordenação de **Moritz Schlick**. Também foi chamado de "Sociedade Ernst Mach" em homenagem a **Ernst Mach** (*Stanford Encyclopedia of Philosophy*). Em reuniões semanais procuravam reconceitualizar o **Empirismo** a partir das novas descobertas científicas e demonstrar as falsidades da Metafísica. Suas atividades cessam quando Schlick é assassinado por um fanático nazista em 1936 `r Cite(referencias, "wikiCirculoViena")`.
+
+Seu sistema filosófico ficou conhecido como o "**Positivismo Lógico**" ou ainda **Empirismo Lógico** ou **Neopositivismo** `r Cite(referencias, "wikiCirculoViena")`.
 
 ![](images/university_vienna.png)
 
@@ -370,17 +390,6 @@ A Web 3.0 também conhecida como **Web Semântica ou leitura-gravação-execuç�
 
 ![](images/futuro_integrativo.png)
 
-- Exemplo:
-        
-  - Sujeito: tree1
-          
-  - Predicado: hasLikelihood
-          
-  - Objeto: 2451.342
-
-Bases de dados estruturadas como redes ontológicas têm sido desenvolvidas (*Plant Ontology*, *Open Biological Ontologies*, *Gene Ontology*).
-
-
 #### Padrão DarwinCore
 
 Darwin Core Standard (DwC) é um padrão mantido pelo [*Darwin Core Maintenance Interest Group*](https://www.tdwg.org/community/dwc). Inclui um glossário de termos (em outros contextos, podem ser chamados de propriedades, elementos, campos, colunas, atributos ou conceitos) destinados a facilitar o compartilhamento de informações sobre diversidade biológica, fornecendo identificadores, rótulos e definições. O Darwin Core é baseado principalmente em taxa, sua ocorrência na natureza documentada por observações, espécimes, amostras e informações relacionadas.
@@ -464,6 +473,16 @@ Segundo a W3C, são considerados sistemas de organização do conhecimento:
 
 ### Ontologias
 
+Bases de dados estruturadas como redes ontológicas sobre a biodiversidade têm sido muito desenvolvidas nas áreas aplicadas tais quais a medicina, farmácia e agricultura (*OBO Foundry*, *Open Biological Ontologies*, *Gene Ontology*, *Planteome*, *Plant Ontology*).
+
+::: {style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;"}
+
+Há iniciativas nesse sentido na formação de novos taxonomistas e sistematas?
+
+O uso de ontologias parece ser ainda incipiente.
+
+:::
+
 #### Fundamentos epistemológicos
 
 No movimento do Positivismo Lógico, desenvolvido no Círculo de Viena, as bases da filosofia da  
@@ -500,6 +519,15 @@ Ontologias biológicas são **`r tippy("grafos acíclicos dirigidos", tooltip = 
     - Tripla:
     
       - Sentença = Sujeito + predicado (ou propriedade) + objeto
+
+Exemplo de uma sentença com dados filogenéticos:
+        
+- Sujeito: tree1
+        
+- Predicado: hasLikelihood
+          
+- Objeto: 2451.342
+
 
 #### *Extensible Markup Language*
 
@@ -1553,6 +1581,20 @@ Nessa etapa, vamos utilizar o programa o `FigTree` para, em seguida, aprendermos
 Abra as árvores obtidas nas análises filogenéticas previamente executadas com o [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) e experimente as possibilidades de edição.
 
 
+# Árvores filogenéticas das plantas
+
+[https://github.com/camwebb/tree-of-trees](https://github.com/camwebb/tree-of-trees)
+
+Árvore de `r Citet(referencias, "Gastauer2017")`: [R20160415.new](https://github.com/camwebb/tree-of-trees/blob/master/megatrees/R20160415.new)
+
+`r Citet(referencias, "Li2021")`
+
+353 Protein Coding Genes `r Citet(referencias, "Johnson2018")`
+
+Plant and Fungal Trees of Life (PAFTOL) project: [https://www.kew.org/science/our-science/projects/plant-and-fungal-trees-of-life](https://www.kew.org/science/our-science/projects/plant-and-fungal-trees-of-life)
+
+
+
 # Introdução ao R
 
 ![](images/ross_robert.png)
@@ -1905,6 +1947,8 @@ getwd()
 ls() # lista todos os objetos/funções do Ambiente de Trabalho
 
 rm(list = ls()) # limpa todo Ambiente de Trabalho
+
+ls() # lista todos os objetos/funções do Ambiente de Trabalho
 ```
 
 
