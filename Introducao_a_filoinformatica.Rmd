@@ -729,8 +729,8 @@ edges <- data.frame(
   
 )
 
-graph <- visNetwork::visNetwork(nodes, edges)
-graph
+graph2 <- visNetwork::visNetwork(nodes, edges)
+graph2
 
 
 ```
