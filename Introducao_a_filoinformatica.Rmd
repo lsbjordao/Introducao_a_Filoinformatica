@@ -733,6 +733,10 @@ edges <- data.frame(
 
 graph2 <- visNetwork::visNetwork(nodes, edges)
 graph2
+<<<<<<< HEAD
+=======
+
+>>>>>>> 01cd31f47181ee54ca7ac183675b393650b2ede7
 
 ```
 
