@@ -108,7 +108,7 @@ A gênese da informática insere-se na história do desenvolvimento do pensament
 
 O Círculo de Viena era composto por cientistas que, apesar de atuarem em várias áreas como física, economia, etc., buscaram resolver problemas sobre os fundamentos da ciência. Com ideias desenvolvidas no Círculo de Viena, a Filosofia da Ciência volta-se à analise do método e da linguagem das ciências. A filosofia passa a ser vista como necessária à análise lógica da linguagem e a descoberta de modos de redução das ambiguidades nas ciências.
 
-o Círculo de Viena adotou uma forma de **empirismo indutivista**, fazendo uso de instrumentos analíticos, como a lógica e a matemática, para auxiliar na formulação dos enunciados científicos.
+O Círculo de Viena adotou uma forma de **empirismo indutivista**, fazendo uso de instrumentos analíticos, como a lógica e a matemática, para auxiliar na formulação dos enunciados científicos.
 
 ::: {style="color: black; background: lightgray; text-align: justify; border: 5px outset lightgray; padding: 10px;"}
 
@@ -128,9 +128,9 @@ Fonte para "Círculo de Viena":
 
 ::: {}
 
-O **Círculo de Viena** foi o nome como ficou conhecido um grupo de filósofos que se juntou informalmente na **Universidade de Viena** de 1922 a 1936 com a coordenação de **Moritz Schlick**. Também foi chamado de "Sociedade Ernst Mach" em homenagem a **Ernst Mach** (*Stanford Encyclopedia of Philosophy*). Em reuniões semanais procuravam reconceitualizar o **Empirismo** a partir das novas descobertas científicas e demonstrar as falsidades da Metafísica. Suas atividades cessam quando Schlick é assassinado por um fanático nazista em 1936 `r Cite(referencias, "wikiCirculoViena")`.
+O **Círculo de Viena** foi o nome como ficou conhecido um grupo de filósofos que se juntou informalmente na **Universidade de Viena** de 1922 a 1936 com a coordenação de **Moritz Schlick**. Também foi chamado de "Sociedade Ernst Mach" em homenagem a **Ernst Mach** (*Stanford Encyclopedia of Philosophy*). Em reuniões semanais procuravam reconceitualizar o **Empirismo** a partir das novas descobertas científicas e demonstrar as fragilidades da Metafísica. Suas atividades cessam quando Schlick é assassinado por um fanático nazista em 1936 `r Cite(referencias, "wikiCirculoViena")`.
 
-Seu sistema filosófico ficou conhecido como o "**Positivismo Lógico**" ou ainda **Empirismo Lógico** ou **Neopositivismo** `r Cite(referencias, "wikiCirculoViena")`.
+Seu sistema filosófico ficou conhecido como o "**Positivismo Lógico**", ou ainda, "**Empirismo Lógico**" ou "**Neopositivismo**" `r Cite(referencias, "wikiCirculoViena")`.
 
 ![](images/university_vienna.png)
 
@@ -934,13 +934,13 @@ Finalmente, conheceremos o programa `Biodiverse GUI`, que realiza diversos tipos
 
 ![](images/eletroforese1.png)
 
-![]{(images/eletroforese2.jpg){width="400px"}
+![](images/eletroforese2.jpg){width="400px"}
 
 - Para a visualização se utiliza a luz UV de um transiluminador.
 
 ![](images/luz_uv.jpg)
 
-![]{(images/eletroforese.jpg)
+![](images/eletroforese.jpg)
 
 ## Sequenciamento
 
@@ -1010,6 +1010,8 @@ Fonte: [DNA Baser - What are chromatograms?](https://www.dnabaser.com/help/sampl
 
 ### Arquivo .ab1
 
+O arquivo `.ab1` contém o eletroferograma da sequência de DNA, bem como dados brutos e outras informações.
+
 O arquivo `.ab1` são gerados pelos sequenciadores da *Applied Biosystems*. Outros sequenciadores utilizam arquivos nos formatos `.scf` (*Standard Chromatogram Format*) e `.ztr`.
 
 Dois programas foram desenvolvidos especialmente para visualizar os cromatogramas:
@@ -1062,21 +1064,17 @@ O código de ambiguidade de nucleotídeos foi estabelecido pela IUPAC durante o 
 
 ### Prática
 
-- Para essa atividade será preciso baixar o FitchTV.
+- Para essa atividade será preciso baixar o **FitchTV**.
 
-- Vamos utilizar os arquivos listados abaixo, que compõem quatro *primers* sequenciados do marcador molecular pastidial, *trnD-trnT*, de um organismo desconhecido:
+- Vamos abrir alguns arquivos do cromatograma de um organismo desconhecido:
+  * `xx.ab1`
+  * `yy.ab1`
+  * `zz.ab1`
+  * `ww.ab1`
 
-* `xx.ab1`
-* `yy.ab1`
-* `zz.ab1`
-* `ww.ab1`
-
-Siga o passo-a-passo:
-
-1. Abra esses arquivos no programa escolhido.
-2. Execute a função para realizar a montagem dos *primers* (*assemble*).
-3. Inspecione visualmente a montagem dos *primers* do início ao fim.
-
+- Observe o *raw data* dos cromatogramas:
+  1. Clique na aba `View` -> `Raw Data`;
+  2. Na janela que se abre, arraste o `Horizontal Scale` totalmente pra esquerda.
 
 ## Alinhamento de *contigs*
 
@@ -1210,7 +1208,7 @@ Maddison, W.P. & Maddison, D.R., 1992. MacClade: Analysis of Phylogeny and Chara
 
 O alinhamento múltiplo de sequências é a etapa do reconhecimento das homologias moleculares, isto é, a inferência da homologia primária molecular. Essa etapa pode ser executada através de diversos aplicativos, tais quais: Geneious, BioEdit, CodonCode Aligner.
 
-Diversos algoritmos são utilizados, como: ClustalX,... O programa Geneious possui um algoritmo próprio que costuma ser muito eficiente.
+Diversos algoritmos são utilizados, como: Clustal, T-Coffee, MergeAlign. O programa Geneious possui um algoritmo próprio que costuma ser muito eficiente.
 
 ![](images/alignment_apps.png)
 
