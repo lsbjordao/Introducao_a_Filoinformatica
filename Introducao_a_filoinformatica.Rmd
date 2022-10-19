@@ -1,5 +1,5 @@
 ---
-title: "Introdução à Filoinformática"
+title: "Introdução à Filoinformática (*in development*)"
 author: "Lucas S.B. Jordão"
 institute: "ENBT/JBRJ"
 date: "`r format(Sys.Date(), '%d/%m/%Y')`"
@@ -1066,11 +1066,13 @@ O código de ambiguidade de nucleotídeos foi estabelecido pela IUPAC durante o 
 
 - Para essa atividade será preciso baixar o **FitchTV**.
 
-- Vamos abrir alguns arquivos do cromatograma de um organismo desconhecido:
-  * `xx.ab1`
-  * `yy.ab1`
-  * `zz.ab1`
-  * `ww.ab1`
+- Vamos abrir alguns arquivos do cromatograma da região *trnD-T* de um organismo desconhecido (*species_1*):
+
+  - [`species_1_trnD-T(T).ab1`](./files/ab1/species_1_trnD-T(T).ab1)
+  - [`species_1_trnD-T(E).ab1`](./files/ab1/species_1_trnD-T(E).ab1)
+  - [`species_1_trnD-T(Y).ab1`](./files/ab1/species_1_trnD-T(Y).ab1)
+  - [`species_1_trnD-T(D).ab1`](./files/ab1/species_1_trnD-T(D).ab1)
+  
 
 - Observe o *raw data* dos cromatogramas:
   1. Clique na aba `View` -> `Raw Data`;
@@ -1096,12 +1098,12 @@ Existem diversos algoritmos para montagem de sequência , dentre os quais, desta
 
 Para essa atividade será preciso baixar um dos programas que realizam essa tarefa. Contudo, esses programas possuem lincenças pagas. Entretanto, as empresas oferecem um período de teste com todas as funcionalidades ativas. Sugestão para essa atividade: `Geneious` ou `CodonCode Aligner`.
 
-Vamos utilizar os arquivos listados abaixo, que compõem quatro *primers* sequenciados do marcador molecular pastidial, *trnD-trnT*, de um organismo desconhecido:
+Vamos utilizar os arquivos listados abaixo, que compõem quatro *primers* sequenciados do marcador molecular pastidial, *trnD-trnT*, de um organismo desconhecido (*species 1*):
 
-* `xx.ab1`
-* `yy.ab1`
-* `zz.ab1`
-* `ww.ab1`
+- [`species_1_trnD-T(T).ab1`](./files/ab1/species_1_trnD-T(T).ab1)
+- [`species_1_trnD-T(E).ab1`](./files/ab1/species_1_trnD-T(E).ab1)
+- [`species_1_trnD-T(Y).ab1`](./files/ab1/species_1_trnD-T(Y).ab1)
+- [`species_1_trnD-T(D).ab1`](./files/ab1/species_1_trnD-T(D).ab1)
 
 Siga o passo-a-passo:
 
