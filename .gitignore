@@ -37,3 +37,6 @@ rsconnect/
 .Rproj.user
 .Rdata
 .DS_Store
+
+# Codificacao vouchers
+listOfVouchers.txt
