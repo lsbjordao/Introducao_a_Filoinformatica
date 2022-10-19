@@ -1096,7 +1096,7 @@ Existem diversos algoritmos para montagem de sequência , dentre os quais, desta
 
 ### Prática
 
-Para essa atividade será preciso baixar um dos programas que realizam essa tarefa. Contudo, esses programas possuem lincenças pagas. Entretanto, as empresas oferecem um período de teste com todas as funcionalidades ativas. Sugestão para essa atividade: `Geneious` ou `CodonCode Aligner`.
+Para essa atividade será preciso baixar um dos programas que realizam essa tarefa. Contudo, esses programas possuem lincenças pagas. Entretanto, as empresas oferecem um período de teste com todas as funcionalidades ativas. Sugestão para essa atividade: `Sequencher`, `Geneious` ou `CodonCode Aligner`.
 
 Vamos utilizar os arquivos listados abaixo, que compõem quatro *primers* sequenciados do marcador molecular pastidial, *trnD-trnT*, de um organismo desconhecido (*species 1*):
 
@@ -1113,6 +1113,10 @@ Siga o passo-a-passo:
 4. Interprete os cromatogramas e as respectivas sequências e edite manualmente os erros encontrados.
 5. Finalmente, teremos a sequência consenso montada.
 6. Não deixe de salvar o arquivo da montagem no `software` utilizado. Após a etapa do alinhamento, o filogeneticista terá de reconferir essas montagens.
+
+Compare a sua montagem com esta realizada no programa `Sequencher`:
+
+- [`species_1_trnD-T.SPF`](./files/sequencher/species_1_trnD-T.SPF)
 
 
 # Formatos de arquivo mais comuns
@@ -1210,7 +1214,7 @@ Maddison, W.P. & Maddison, D.R., 1992. MacClade: Analysis of Phylogeny and Chara
 
 O alinhamento múltiplo de sequências é a etapa do reconhecimento das homologias moleculares, isto é, a inferência da homologia primária molecular. Essa etapa pode ser executada através de diversos aplicativos, tais quais: Geneious, BioEdit, CodonCode Aligner.
 
-Diversos algoritmos são utilizados, como: Clustal, T-Coffee, MergeAlign. O programa Geneious possui um algoritmo próprio que costuma ser muito eficiente.
+Diversos algoritmos são utilizados, como: Clustal, T-Coffee, MergeAlign, Muscle. O programa Geneious possui um algoritmo próprio que costuma ser muito eficiente.
 
 ![](images/alignment_apps.png)
 
