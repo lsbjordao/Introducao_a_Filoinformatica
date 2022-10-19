@@ -840,8 +840,8 @@ Importe também a árvore das Embriófitas:</p>
 <span id="cb186-2"><a href="filogenia-no-r.html#cb186-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb186-3"><a href="filogenia-no-r.html#cb186-3" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="at">text =</span> <span class="st">&quot;(A:2, B:2, (C:1, D:1) E:1) F;&quot;</span>)</span>
 <span id="cb186-4"><a href="filogenia-no-r.html#cb186-4" aria-hidden="true" tabindex="-1"></a><span class="fu">phylocanvas</span>(tree)</span></code></pre></div>
-<div id="htmlwidget-a675017595e72dabd931" style="width:672px;height:480px;" class="phylocanvas html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a675017595e72dabd931">{"x":{"tree":"(A:2,B:2,(C:1,D:1)E:1)F;","treetype":"rectangular","nodesize":30,"textsize":30,"linewidth":3,"showlabels":true,"alignlabels":false,"nodestyles":null,"nodecollapses":null,"nodehighlights":null,"prunebranch":null,"selectbranch":null,"prunebranch.1":null,"config":{"history":false,"contextMenu":true,"scalebar":{"active":false,"width":100,"height":20,"fillStyle":"black","strokeStyle":"black","lineWidth":1,"fontFamily":"Sans-serif","fontSize":16,"textBaseline":"bottom","textAlign":"center","digits":2,"position":{"bottom":10,"left":10}}}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-bcda908af03cb31fefb0" style="width:672px;height:480px;" class="phylocanvas html-widget"></div>
+<script type="application/json" data-for="htmlwidget-bcda908af03cb31fefb0">{"x":{"tree":"(A:2,B:2,(C:1,D:1)E:1)F;","treetype":"rectangular","nodesize":30,"textsize":30,"linewidth":3,"showlabels":true,"alignlabels":false,"nodestyles":null,"nodecollapses":null,"nodehighlights":null,"prunebranch":null,"selectbranch":null,"prunebranch.1":null,"config":{"history":false,"contextMenu":true,"scalebar":{"active":false,"width":100,"height":20,"fillStyle":"black","strokeStyle":"black","lineWidth":1,"fontFamily":"Sans-serif","fontSize":16,"textBaseline":"bottom","textAlign":"center","digits":2,"position":{"bottom":10,"left":10}}}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="pacote-phytools" class="section level3 hasAnchor" number="15.4.3">
 <h3><span class="header-section-number">15.4.3</span> Pacote phytools<a href="filogenia-no-r.html#pacote-phytools" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1326,13 +1326,13 @@ Importe também a árvore das Embriófitas:</p>
 <span id="cb311-3"><a href="filogenia-no-r.html#cb311-3" aria-hidden="true" tabindex="-1"></a>prop_z <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">22</span>, <span class="dv">0</span>, <span class="fl">0.33</span>)</span>
 <span id="cb311-4"><a href="filogenia-no-r.html#cb311-4" aria-hidden="true" tabindex="-1"></a>prop_w <span class="ot">&lt;-</span> <span class="fu">cbind</span>(prop_x, prop_y, prop_z, <span class="dv">1</span> <span class="sc">-</span> prop_x <span class="sc">-</span> prop_y <span class="sc">-</span> prop_z)</span>
 <span id="cb311-5"><a href="filogenia-no-r.html#cb311-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prop_w)</span></code></pre></div>
-<pre><code>##         prop_x     prop_y    prop_z          
-## [1,] 0.1763148 0.09814281 0.1476341 0.5779083
-## [2,] 0.1537157 0.03628856 0.1403671 0.6696286
-## [3,] 0.2405997 0.25309646 0.1546162 0.3516877
-## [4,] 0.1917160 0.30967007 0.2101889 0.2884251
-## [5,] 0.2438811 0.31723701 0.2393681 0.1995138
-## [6,] 0.2489042 0.12283327 0.1173382 0.5109243</code></pre>
+<pre><code>##           prop_x    prop_y     prop_z          
+## [1,] 0.070583099 0.1571505 0.01662749 0.7556389
+## [2,] 0.030207043 0.1735435 0.20803619 0.5882133
+## [3,] 0.310053896 0.1363818 0.21265076 0.3409136
+## [4,] 0.146223501 0.1332338 0.17352687 0.5470158
+## [5,] 0.005731269 0.1314294 0.17939775 0.6834416
+## [6,] 0.229208658 0.2406302 0.30384073 0.2263204</code></pre>
 <div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb313-1"><a href="filogenia-no-r.html#cb313-1" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">3</span>))</span>
 <span id="cb313-2"><a href="filogenia-no-r.html#cb313-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Monocots, <span class="st">&quot;c&quot;</span>)</span>
 <span id="cb313-3"><a href="filogenia-no-r.html#cb313-3" aria-hidden="true" tabindex="-1"></a><span class="fu">nodelabels</span>(<span class="at">thermo =</span> prop_w, <span class="at">cex =</span> <span class="fl">1.4</span>)</span>
@@ -1405,27 +1405,27 @@ Importe também a árvore das Embriófitas:</p>
 <span id="cb323-2"><a href="filogenia-no-r.html#cb323-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">runif</span>(m, <span class="dv">0</span>, <span class="fl">0.5</span>); Y <span class="ot">&lt;-</span> <span class="fu">runif</span>(m, <span class="dv">0</span>, <span class="fl">0.5</span>)</span>
 <span id="cb323-3"><a href="filogenia-no-r.html#cb323-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(X, Y, <span class="dv">1</span> <span class="sc">-</span> X <span class="sc">-</span> Y)</span>
 <span id="cb323-4"><a href="filogenia-no-r.html#cb323-4" aria-hidden="true" tabindex="-1"></a>X</span></code></pre></div>
-<pre><code>##                X          Y           
-##  [1,] 0.14334830 0.06647291 0.79017879
-##  [2,] 0.08157219 0.46620212 0.45222569
-##  [3,] 0.36097939 0.06883077 0.57018984
-##  [4,] 0.41893764 0.23983971 0.34122265
-##  [5,] 0.09994241 0.23196526 0.66809234
-##  [6,] 0.38086273 0.12926824 0.48986903
-##  [7,] 0.47133371 0.39136547 0.13730083
-##  [8,] 0.26439999 0.13907307 0.59652693
-##  [9,] 0.35016019 0.27641448 0.37342533
-## [10,] 0.44589205 0.46880733 0.08530062
-## [11,] 0.29436645 0.15432799 0.55130556
-## [12,] 0.01707476 0.39834075 0.58458449
-## [13,] 0.15479847 0.21152958 0.63367195
-## [14,] 0.31871798 0.26059407 0.42068795
-## [15,] 0.23934083 0.26103478 0.49962439
-## [16,] 0.18258385 0.15244359 0.66497256
-## [17,] 0.08698455 0.08592170 0.82709374
-## [18,] 0.10134318 0.11810585 0.78055097
-## [19,] 0.25108518 0.44259428 0.30632054
-## [20,] 0.04572330 0.14596488 0.80831182</code></pre>
+<pre><code>##                  X          Y           
+##  [1,] 0.4881262723 0.40353072 0.10834301
+##  [2,] 0.0445867089 0.16702039 0.78839290
+##  [3,] 0.4409211369 0.43502895 0.12404992
+##  [4,] 0.2871963712 0.05344526 0.65935837
+##  [5,] 0.2727457287 0.36289820 0.36435607
+##  [6,] 0.4576605604 0.44264214 0.09969730
+##  [7,] 0.0546519122 0.41035013 0.53499796
+##  [8,] 0.2375097488 0.36151159 0.40097866
+##  [9,] 0.3512242490 0.05909220 0.58968355
+## [10,] 0.4708397826 0.46278995 0.06637027
+## [11,] 0.4198779038 0.02941786 0.55070424
+## [12,] 0.2107329488 0.33630436 0.45296269
+## [13,] 0.2150466801 0.20814436 0.57680896
+## [14,] 0.4582191840 0.09117783 0.45060298
+## [15,] 0.4214436593 0.22039481 0.35816153
+## [16,] 0.3754521724 0.33059797 0.29394986
+## [17,] 0.1356462607 0.45415461 0.41019913
+## [18,] 0.2738178134 0.07880243 0.64737976
+## [19,] 0.0009015989 0.09535251 0.90374589
+## [20,] 0.2866204096 0.12124598 0.59213361</code></pre>
 <div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="filogenia-no-r.html#cb325-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(X) <span class="ot">&lt;-</span> tx<span class="sc">$</span>tip.label</span>
 <span id="cb325-2"><a href="filogenia-no-r.html#cb325-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tx, <span class="at">x.lim =</span> <span class="dv">6</span>)</span>
 <span id="cb325-3"><a href="filogenia-no-r.html#cb325-3" aria-hidden="true" tabindex="-1"></a>co <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="fu">diag</span>(<span class="dv">3</span>))</span>
@@ -1672,47 +1672,47 @@ Importe também a árvore das Embriófitas:</p>
 <span id="cb364-3"><a href="filogenia-no-r.html#cb364-3" aria-hidden="true" tabindex="-1"></a>lat <span class="ot">&lt;-</span> <span class="fu">fastBM</span>(tree, <span class="at">sig2 =</span> <span class="dv">10</span>, <span class="at">bounds =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">90</span>, <span class="dv">90</span>))</span>
 <span id="cb364-4"><a href="filogenia-no-r.html#cb364-4" aria-hidden="true" tabindex="-1"></a>long <span class="ot">&lt;-</span> <span class="fu">fastBM</span>(tree, <span class="at">sig2 =</span> <span class="dv">80</span>, <span class="at">bounds =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">180</span>, <span class="dv">180</span>))</span>
 <span id="cb364-5"><a href="filogenia-no-r.html#cb364-5" aria-hidden="true" tabindex="-1"></a>xx <span class="ot">&lt;-</span> <span class="fu">phylo.to.map</span>(tree, <span class="fu">cbind</span>(lat, long), <span class="at">plot =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## objective: 196</code></pre>
-<pre><code>## objective: 154</code></pre>
-<pre><code>## objective: 144
-## objective: 144</code></pre>
-<pre><code>## objective: 142
-## objective: 142</code></pre>
-<pre><code>## objective: 140
-## objective: 140</code></pre>
-<pre><code>## objective: 138
-## objective: 138
-## objective: 138</code></pre>
-<pre><code>## objective: 136</code></pre>
-<pre><code>## objective: 134</code></pre>
-<pre><code>## objective: 126
-## objective: 126
-## objective: 126
-## objective: 126
-## objective: 126
-## objective: 126
-## objective: 126
-## objective: 126
-## objective: 126
-## objective: 126</code></pre>
-<pre><code>## objective: 124</code></pre>
-<pre><code>## objective: 122</code></pre>
-<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="filogenia-no-r.html#cb376-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(xx, <span class="at">type =</span> <span class="st">&quot;phylogram&quot;</span>, <span class="at">asp =</span> <span class="fl">1.3</span>, <span class="at">mar =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.5</span>, <span class="fl">3.1</span>, <span class="fl">0.1</span>))</span></code></pre></div>
+<pre><code>## objective: 224
+## objective: 224
+## objective: 224
+## objective: 224
+## objective: 224
+## objective: 224
+## objective: 224</code></pre>
+<pre><code>## objective: 178
+## objective: 178
+## objective: 178</code></pre>
+<pre><code>## objective: 128
+## objective: 128
+## objective: 128
+## objective: 128
+## objective: 128</code></pre>
+<pre><code>## objective: 120
+## objective: 120
+## objective: 120
+## objective: 120</code></pre>
+<pre><code>## objective: 114
+## objective: 114
+## objective: 114
+## objective: 114
+## objective: 114
+## objective: 114</code></pre>
+<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="filogenia-no-r.html#cb370-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(xx, <span class="at">type =</span> <span class="st">&quot;phylogram&quot;</span>, <span class="at">asp =</span> <span class="fl">1.3</span>, <span class="at">mar =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.5</span>, <span class="fl">3.1</span>, <span class="fl">0.1</span>))</span></code></pre></div>
 <p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-186-1.png" width="672" /></p>
 <p>Veja um exemplo pronto com dados reais (Fig. <span class="math inline">\(\ref{fig:Phylo.to.map}\)</span>):</p>
 </div>
 <div id="escala-estratigráfica" class="section level4 hasAnchor" number="15.6.2.7">
 <h4><span class="header-section-number">15.6.2.7</span> Escala estratigráfica<a href="filogenia-no-r.html#escala-estratigráfica" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Plote a escala estratigráfica, com dados gerados aleatoriamente, com a função <code>geo.legend</code>() [<a href="http://blog.phytools.org/2017/05/new-features-in-geolegend-for-adding.html" class="uri">http://blog.phytools.org/2017/05/new-features-in-geolegend-for-adding.html</a>]:</p>
-<div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb377-1"><a href="filogenia-no-r.html#cb377-1" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">pbtree</span>(<span class="at">b =</span> <span class="fl">0.03</span>, <span class="at">d =</span> <span class="fl">0.01</span>, <span class="at">n =</span> <span class="dv">200</span>)</span>
-<span id="cb377-2"><a href="filogenia-no-r.html#cb377-2" aria-hidden="true" tabindex="-1"></a>h <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="fu">nodeHeights</span>(tree))</span>
-<span id="cb377-3"><a href="filogenia-no-r.html#cb377-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Primeiro ajuste a legenda sem plotar a árvore:</span></span>
-<span id="cb377-4"><a href="filogenia-no-r.html#cb377-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plotTree</span>(tree, <span class="at">plot =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb377-5"><a href="filogenia-no-r.html#cb377-5" aria-hidden="true" tabindex="-1"></a>obj <span class="ot">&lt;-</span> <span class="fu">geo.legend</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">cex =</span> <span class="fl">1.2</span>, <span class="at">plot =</span> T)</span></code></pre></div>
+<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="filogenia-no-r.html#cb371-1" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">pbtree</span>(<span class="at">b =</span> <span class="fl">0.03</span>, <span class="at">d =</span> <span class="fl">0.01</span>, <span class="at">n =</span> <span class="dv">200</span>)</span>
+<span id="cb371-2"><a href="filogenia-no-r.html#cb371-2" aria-hidden="true" tabindex="-1"></a>h <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="fu">nodeHeights</span>(tree))</span>
+<span id="cb371-3"><a href="filogenia-no-r.html#cb371-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Primeiro ajuste a legenda sem plotar a árvore:</span></span>
+<span id="cb371-4"><a href="filogenia-no-r.html#cb371-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plotTree</span>(tree, <span class="at">plot =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb371-5"><a href="filogenia-no-r.html#cb371-5" aria-hidden="true" tabindex="-1"></a>obj <span class="ot">&lt;-</span> <span class="fu">geo.legend</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">cex =</span> <span class="fl">1.2</span>, <span class="at">plot =</span> T)</span></code></pre></div>
 <p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-187-1.png" width="672" /></p>
-<div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="filogenia-no-r.html#cb378-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plote a árvore e a legenda estratigráfica:</span></span>
-<span id="cb378-2"><a href="filogenia-no-r.html#cb378-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotTree</span>(tree, <span class="at">ftype =</span> <span class="st">&quot;off&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span><span class="fu">Ntip</span>(tree), <span class="fu">Ntip</span>(tree)), <span class="at">lwd =</span> <span class="dv">1</span>)</span>
-<span id="cb378-3"><a href="filogenia-no-r.html#cb378-3" aria-hidden="true" tabindex="-1"></a><span class="fu">geo.legend</span>(<span class="at">leg =</span> obj<span class="sc">$</span>leg, <span class="at">colors =</span> obj<span class="sc">$</span>colors, <span class="at">cex =</span> <span class="fl">1.2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="filogenia-no-r.html#cb372-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plote a árvore e a legenda estratigráfica:</span></span>
+<span id="cb372-2"><a href="filogenia-no-r.html#cb372-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotTree</span>(tree, <span class="at">ftype =</span> <span class="st">&quot;off&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span><span class="fu">Ntip</span>(tree), <span class="fu">Ntip</span>(tree)), <span class="at">lwd =</span> <span class="dv">1</span>)</span>
+<span id="cb372-3"><a href="filogenia-no-r.html#cb372-3" aria-hidden="true" tabindex="-1"></a><span class="fu">geo.legend</span>(<span class="at">leg =</span> obj<span class="sc">$</span>leg, <span class="at">colors =</span> obj<span class="sc">$</span>colors, <span class="at">cex =</span> <span class="fl">1.2</span>)</span></code></pre></div>
 <p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-187-2.png" width="672" /></p>
 </div>
 </div>

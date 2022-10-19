@@ -1098,25 +1098,34 @@ Existem diversos algoritmos para montagem de sequência , dentre os quais, desta
 
 Para essa atividade será preciso baixar um dos programas que realizam essa tarefa. Contudo, esses programas possuem lincenças pagas. Entretanto, as empresas oferecem um período de teste com todas as funcionalidades ativas. Sugestão para essa atividade: `Sequencher`, `Geneious` ou `CodonCode Aligner`.
 
-Vamos utilizar os arquivos listados abaixo, que compõem quatro *primers* sequenciados do marcador molecular pastidial, *trnD-trnT*, de um organismo desconhecido (*species 1*):
+- Vamos utilizar os arquivos listados abaixo, que compõem quatro *primers* sequenciados do *locus* *trnD-trnT* de um organismo desconhecido (*species 1*):
 
-- [`species_1_trnD-T(T).ab1`](./files/ab1/species_1_trnD-T(T).ab1)
-- [`species_1_trnD-T(E).ab1`](./files/ab1/species_1_trnD-T(E).ab1)
-- [`species_1_trnD-T(Y).ab1`](./files/ab1/species_1_trnD-T(Y).ab1)
-- [`species_1_trnD-T(D).ab1`](./files/ab1/species_1_trnD-T(D).ab1)
+  - [`species_1_trnD-T(T).ab1`](./files/ab1/species_1_trnD-T(T).ab1)
+  - [`species_1_trnD-T(E).ab1`](./files/ab1/species_1_trnD-T(E).ab1)
+  - [`species_1_trnD-T(Y).ab1`](./files/ab1/species_1_trnD-T(Y).ab1)
+  - [`species_1_trnD-T(D).ab1`](./files/ab1/species_1_trnD-T(D).ab1)
 
-Siga o passo-a-passo:
+- Siga o passo-a-passo:
 
-1. Abra esses arquivos no programa escolhido.
-2. Execute a função para realizar a montagem dos *primers* (*assemble*).
-3. Inspecione visualmente a montagem dos *primers* do início ao fim.
-4. Interprete os cromatogramas e as respectivas sequências e edite manualmente os erros encontrados.
-5. Finalmente, teremos a sequência consenso montada.
-6. Não deixe de salvar o arquivo da montagem no `software` utilizado. Após a etapa do alinhamento, o filogeneticista terá de reconferir essas montagens.
+  1. Abra esses arquivos no programa escolhido.
+  2. Execute a função para realizar a montagem dos *primers* (*assemble*).
+  3. Inspecione visualmente a montagem dos *primers* do início ao fim.
+  4. Interprete os cromatogramas e as respectivas sequências e edite manualmente os erros encontrados.
+  5. Finalmente, teremos a sequência consenso montada.
+  6. Não deixe de salvar o arquivo da montagem no `software` utilizado. Após a etapa do alinhamento, o filogeneticista terá de reconferir essas montagens.
 
-Compare a sua montagem com esta realizada no programa `Sequencher`:
+- Compare a sua montagem com esta, realizada no programa `Sequencher`:
 
-- [`species_1_trnD-T.SPF`](./files/sequencher/species_1_trnD-T.SPF)
+  - [`species_1_trnD-T.SPF`](./files/sequencher/species_1_trnD-T.SPF)
+
+- Faça também a montagem do ITS:
+
+  - [`species_2_ITS(An4).ab1`](./files/ab1/species_2_ITS(An4).ab1)
+  - [`species_2_ITS(An5).ab1`](./files/ab1/species_2_ITS(An5).ab1)
+
+- Compare a sua montagem do ITS com esta, realizada no programa `Sequencher`:
+
+  - [`species_2_ITS.SPF`](./files/ab1/species_2_ITS.SPF)
 
 
 # Formatos de arquivo mais comuns
