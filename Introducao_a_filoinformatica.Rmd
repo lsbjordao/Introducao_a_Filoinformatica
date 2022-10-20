@@ -160,6 +160,8 @@ Fonte para "Círculo de Viena":
 
 ::: {}
 
+![](images/vienna_circle.png)
+
 O **Círculo de Viena** foi o nome como ficou conhecido um grupo de filósofos que se juntou informalmente na **Universidade de Viena** de 1922 a 1936 com a coordenação de **Moritz Schlick**. Também foi chamado de "Sociedade Ernst Mach" em homenagem a **Ernst Mach** (*Stanford Encyclopedia of Philosophy*). Em reuniões semanais procuravam reconceitualizar o **Empirismo** a partir das novas descobertas científicas e demonstrar as fragilidades da Metafísica. Suas atividades cessam quando Schlick é assassinado por um fanático nazista em 1936 `r Cite(referencias, "wikiCirculoViena")`.
 
 Seu sistema filosófico ficou conhecido como o "**Positivismo Lógico**", ou ainda, "**Empirismo Lógico**" ou "**Neopositivismo**" `r Cite(referencias, "wikiCirculoViena")`.
@@ -169,8 +171,6 @@ Seu sistema filosófico ficou conhecido como o "**Positivismo Lógico**", ou ain
 :::
 
 ::: {}
-
-![](images/vienna_circle.png)
 
 :::
 
