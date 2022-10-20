@@ -42,15 +42,8 @@ Por que / Para que contextualizar?
 
 > *To change our future, we should change how we teach history to children*
 >
-> Yuval Noah Harari, 2022. Artigo publicado no *The Guardian*, na coluna *Opinion History*:
+> Yuval Noah Harari, 2022. Artigo publicado no *The Guardian*, na coluna *Opinion History*: [https://www.theguardian.com/commentisfree/2022/oct/18/change-future-teach-history-children](https://www.theguardian.com/commentisfree/2022/oct/18/change-future-teach-history-children)
 
-```{r echo=FALSE}
-library(xaringanExtra)
-embed_xaringan(
-  url = "https://www.theguardian.com/commentisfree/2022/oct/18/change-future-teach-history-children",
-  ratio = "4:2"
-)
-```
 
 ## Histórico e fundamentos
 
@@ -116,11 +109,11 @@ Não deixe de conferir o livro de Ernst Mayr: `Isto é biologia: a ciência do m
 
 <br>
 
-O mundo experimentava uma grande revolução tecnocientífica, que levou a uma nova episteme, o pós-modernismo. A episteme pós-moderna, na esfera das tecnociências foi caracterizada pelo surgimento da cibernética, robótica, biologia molecular e a medicina nuclear, entre outras áreas de desenvolvimento tecnológico. 
+O mundo experimentava uma grande revolução tecnocientífica, que levou a uma nova episteme, o pós-modernismo. A pós-modernidade, na esfera das tecnociências, foi caracterizada pelo surgimento da cibernética, informática, robótica, biologia molecular e a medicina nuclear, entre outras áreas de desenvolvimento tecnológico.
 
-A gênese da informática insere-se na história do desenvolvimento do pensamento sistêmico e da lógica, e intrinsecamente correlacionada ao pensamento biológico contemporâneo. Suas raízes filosóficas, epistemológicas, podem ser buscadas na filosofia da linguagem e no positivismo lógico, cujos precursores pertenciam ao Círculo de Viena, que se dedicaram especialmente à **Filosofia da Ciência**.
+A gênese da informática insere-se na história do desenvolvimento do pensamento sistêmico e da lógica, e intrinsecamente correlacionada ao pensamento biológico contemporâneo. Suas raízes filosóficas, epistemológicas, podem ser buscadas na filosofia da linguagem e no positivismo lógico, cujos precursores pertenciam ao **Círculo de Viena**, que se dedicaram especialmente à **Filosofia da Ciência**.
 
-O Círculo de Viena era composto por cientistas que, apesar de atuarem em várias áreas como física, economia, etc., buscaram resolver problemas sobre os fundamentos da ciência. Com ideias desenvolvidas no Círculo de Viena, a Filosofia da Ciência volta-se à analise do método e da linguagem das ciências. A filosofia passa a ser vista como necessária à análise lógica da linguagem e a descoberta de modos de redução das ambiguidades nas ciências.
+O Círculo de Viena era composto por cientistas que, apesar de atuarem em várias áreas como física, economia, etc., buscaram resolver problemas sobre os fundamentos da ciência. Com as ideias desenvolvidas no Círculo de Viena, a Filosofia da Ciência volta-se à analise do método e da linguagem das ciências. A filosofia passa a ser vista como necessária à análise lógica da linguagem e a descoberta de modos de redução das ambiguidades nas ciências.
 
 O Círculo de Viena adotou uma forma de **empirismo indutivista**, fazendo uso de instrumentos analíticos, como a lógica e a matemática, para auxiliar na formulação dos enunciados científicos.
 
