@@ -1154,6 +1154,8 @@ Para essa atividade será preciso baixar um dos programas que realizam essa tare
 
   - [`species_1_trnD-T.SPF`](./files/sequencher/species_1_trnD-T.SPF)
 
+<br>
+
 - Faça também a montagem do ITS:
 
   - [`species_2_ITS(An4).ab1`](./files/ab1/species_2_ITS(An4).ab1)
