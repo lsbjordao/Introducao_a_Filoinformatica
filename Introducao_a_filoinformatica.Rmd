@@ -38,6 +38,20 @@ A sistemática filogenética é atualmente um campo científico em plena expans�
 
 # Contextualizando
 
+Por que / Para que contextualizar?
+
+> *To change our future, we should change how we teach history to children*
+>
+> Yuval Noah Harari, 2022. Artigo publicado no *The Guardian*, na coluna *Opinion History*:
+
+```{r echo=FALSE}
+library(xaringanExtra)
+embed_xaringan(
+  url = "https://www.theguardian.com/commentisfree/2022/oct/18/change-future-teach-history-children",
+  ratio = "4:2"
+)
+```
+
 ## Histórico e fundamentos
 
 A história da filoinformática insere-se na história da sistemática biológica pós-**`r tippy('hennigiana', tooltip = '<a>Willi Hennig (1913–1976)</a><br><img src="./images/hennig.png" width="300">')`** da década de 50--60, isto é, a sistemática filogenética, e, evidentemente, surge após o desenvolvimento da informática, nessa mesma época.
