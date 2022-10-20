@@ -710,6 +710,110 @@ graph
 
 ```
 
+Ancestrais de 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(ontologyIndex)
+library(ontologyPlot)
+library(dplyr)
+
+PO <- get_ontology(
+  
+  "http://purl.obolibrary.org/obo/po.obo",
+  propagate_relationships = "is_a",
+  extract_tags = "everything",
+  merge_equivalent_terms = TRUE
+  
+)
+
+group <- get_ancestors(
+  
+  PO, 
+  c(
+    
+    "PO:0020020", 
+    "PO:0025277", 
+    "PO:0025279",
+    "PO:0025280"
+    
+    
+  )
+  
+)
+
+group.length <- length(group)
+group.n <- 1:group.length
+
+
+nodes.id <- group.n
+
+nodes.label <- NULL
+for(i in group.n){
+  
+  nodes.label.this <- PO$name[which(group[i] == PO$id)]
+  nodes.label <- c(nodes.label, nodes.label.this)
+  
+}
+
+nodes.title <- NULL
+for(i in group.n){
+  
+  nodes.title.this <- PO$comment[which(group[i] == PO$id)]
+  nodes.title <- c(nodes.title, nodes.title.this)
+  
+}
+
+nodes <- data.frame(
+  
+  id = nodes.id,
+  label = nodes.label,
+  title = nodes.title
+  
+)
+
+
+edges.is_a <- data.frame(
+  
+  from = names(PO$is_a),
+  to = as.character(PO$is_a)
+  
+)
+
+edges.is_a <- edges.is_a %>% dplyr::filter(from %in% group)
+
+for(i in group.n){
+  
+  edges.is_a$from[i] <- which(edges.is_a$from[i] == rownames(nodes))
+  
+}
+
+edges.is_a$to <- sub("BFO.*", "", edges.is_a$to)
+  
+for(i in group.n){
+  
+  if(length(which(edges.is_a$to[i] == rownames(nodes))) == 0){} else {
+    
+    edges.is_a$to[i] <- which(edges.is_a$to[i] == rownames(nodes))
+    
+  }
+  
+}
+
+
+edges <- data.frame(
+  
+  from = edges.is_a$from, 
+  to = edges.is_a$to,
+  label = "is_a",
+  arrows = "to"
+  
+)
+
+graph3 <- visNetwork::visNetwork(nodes, edges)
+graph3
+
+```
+
 Descendentes de `vascular system` ([PO:0000034](http://purl.obolibrary.org/obo/PO_0000034))
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
