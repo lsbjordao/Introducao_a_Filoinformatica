@@ -593,6 +593,8 @@ A *Gene Ontology* foca na função dos genes e produtos gênicos. O GO também e
 
 [https://archive.plantontology.org](https://archive.plantontology.org/)
 
+Ancestrais ("pais") de `nucellus` ([PO:0020020](http://purl.obolibrary.org/obo/PO_0020020)). `pollen sac` ([PO:0025277](http://purl.obolibrary.org/obo/PO_0025277)) + Descendentes ("filhos") de `fruit` ([PO:0009001](http://purl.obolibrary.org/obo/PO_0009001)).
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(ontologyIndex)
 library(ontologyPlot)
@@ -708,9 +710,9 @@ graph
 
 ```
 
-Outro
+Descendentes de `vascular system` ([PO:0000034](http://purl.obolibrary.org/obo/PO_0000034))
 
-```{r message=FALSE, warning=FALSE, include=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 
 library(ontologyIndex)
 library(ontologyPlot)
@@ -729,7 +731,7 @@ PO <- get_ontology(
 group <- get_descendants(
   
   PO,
-  c("PO:0025001")
+  c("PO:0000034")
   
 )
 
