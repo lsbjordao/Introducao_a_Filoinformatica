@@ -75,11 +75,36 @@ Para uma aprofundada análise da história da classificação biológica...
 
 **Systematics War**
 
-Taxonomia evolutiva [Gradismo]: Genealogia e similaridade adaptativa
+- Taxonomia evolutiva [Gradismo]: Genealogia e similaridade adaptativa
 
-Fenética: Similaridade total
+- Fenética: Similaridade total
 
-Cladística: Genealogia
+> We live in a world of stridently competing commercial messages,
+pressed upon us in favor of one product or another. High-pressure
+salesmanship and hyperbole are not restricted to the world of
+business. In fact, "success in science depends not only on rational
+argument but on a mixture of subterfuge, rhetoric, and propaganda"
+(attributed to Feyerabend by Broad 1979).
+>
+> Moss, W.W., 1983. Taxa Taxonomists, and Taxonomy. *Numerical Taxonomy*, 72–75. [doi:10.1007/978-3-642-69024-2_8](doi:10.1007/978-3-642-69024-2_8)
+
+> **Taxonomists**. Taxonomists have always had the reputation of being
+difficult. Intransigence may be rooted in the necessity of defending
+prolonged self-immersion in a taxon that others find a total bore; it
+is frustrating to have one's life work greeted with a yawn. Numerical
+taxonomists have proved to be just as prickly as conventional
+taxonomists, possibly more so because some of the brightest people in
+systematics are involved in the current taxonomic battles. The
+political maneuvering and character assassination that characterize
+certain taxonomists today may not be atypical for science; they
+certainly provide a fine example of its seamier side. If Feyerabend
+is correct, it may be even a requirement of human nature that
+scientific progress occur in this manner. Nevertheless, numerical
+taxonomists are part of a larger community of systematic and evolutionary biologists, and of biology as a whole.
+>
+> Moss, W.W., 1983. Taxa Taxonomists, and Taxonomy. *Numerical Taxonomy*, 72–75. [doi:10.1007/978-3-642-69024-2_8](doi:10.1007/978-3-642-69024-2_8)
+
+- Cladística: Genealogia
 
 
 ![](images/systematics_war.png)
