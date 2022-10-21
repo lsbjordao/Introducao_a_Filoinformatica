@@ -1096,6 +1096,7 @@ Finalmente, conheceremos o programa `Biodiverse GUI`, que realiza diversos tipos
 - Para a visualização se utiliza a luz UV de um transiluminador.
 
 ![](images/luz_uv.jpg)
+A concentração da amostra é crucial para o sucesso da reação de sequencimento. Usar muito pouco DNA é um erro que leva a nenhum sinal ou a sinais fracos, mas usar muito é um erro também!
 
 ![](images/eletroforese.jpg)
 
@@ -1121,7 +1122,9 @@ O sequenciador ABI utiliza o método de sequenciamento tradicional, proposto por
   - A DNA polimerase adiciona um desoxinucleotídeo ou o correspondente 2',3'-didesoxinucleotídeo em cada etapa da extensão da cadeia.
   - A adição de um desoxinucleotídeo ou um didesoxinucleotídeo depende da concentração relativa de ambas as moléculas. Quando um desoxinucleotídeo (A, C, G ou T) é adicionado à extremidade 3', a extensão da cadeia pode continuar. No entanto, quando um didesoxinucleotídeo (ddA, ddC, ddG ou ddT) é adicionado à extremidade 3', a extensão da cadeia termina. O sequenciamento dideoxy Sanger resulta na formação de produtos de extensão de vários comprimentos terminados com dideoxynucleotídeos no final de 3'.
 
-O sequenciador ABI (*Applied Biosystems*) é um instrumento baseado em laser que utiliza marcadores fluorescentes para analisar os produtos de uma reação de sequenciamento à medida que migram através de um gel. Depois que os dados são coletados a partir de uma execução de sequenciamento, o programa Analysis identifica e rastreia as pistas de amostra do gel e, subsequentemente, normaliza e integra os dados brutos (*raw data*) em um cromatograma da sequência final. Para o usuário, há são basicamente dois tipos de arquivos que podem ser manipulados para melhorar potencialmente os resultados da análise. O Gel O arquivo consiste em uma imagem gerada por computador do gel de sequenciamento com os padrões de bandas de DNA fluorescentes. Esta imagem permite ao usuário visualizar e editar as linhas de rastreamento geradas e usadas pelo Analysis para coletar pontos de dados para cada amostra. Arquivos de amostra individuais são armazenados para cada uma das amostras analisadas e incluir o cromatograma, dados brutos e anotações e informações sobre a amostra e a sequência corre. Geralmente, os produtos de uma reação de sequenciamento são facilmente resolvidos e o software Analysis interpreta a sequência de nucleotídeos correta. Chamadas de base ambíguas tendem a ocorrer perto do final da sequência e podem ser editados ou excluídos pelo usuário antes de exportar os dados para outras comparações ou alinhamentos. Ocasionalmente, as linhas de rastreamento dentro da imagem do gel podem precisar ser ajustadas ou movidas. Os dados da amostra são em seguida, reextraído do Arquivo de Gel e analisado novamente. Esta revisão explica a operação geral do Analysis em termos de visualização e edição de um cromatograma, refazendo o rastreamento das pistas de um arquivo de gel e analisando o dados da amostra final `r Cite(referencias, "Hagemann1999")`.
+O sequenciador ABI (*Applied Biosystems*) é um instrumento baseado em laser que utiliza marcadores fluorescentes para analisar os produtos de uma reação de sequenciamento à medida que migram através de um gel. Depois que os dados são coletados a partir de uma execução de sequenciamento, o programa *Analysis* da *Applied Biosystems* identifica e rastreia os rastros (*traces*) de amostra do gel e, subsequentemente, normaliza e integra os dados brutos (*raw data*) em um cromatograma da sequência final.
+
+Bases ambíguas tendem a ocorrer perto do final da sequência e podem ser editados ou excluídos pelo usuário antes de exportar os dados para outras comparações ou alinhamentos `r Cite(referencias, "Hagemann1999")`.
 
 # Montagem de sequências
 
@@ -1237,6 +1240,10 @@ O código de ambiguidade de nucleotídeos foi estabelecido pela IUPAC durante o 
   1. Clique na aba `View` -> `Raw Data`;
   2. Na janela que se abre, arraste o `Horizontal Scale` totalmente pra esquerda.
 
+<br>
+
+Há arquivos `.ab1` nesse site: [https://www.vanderbilt.edu/wolbachiaproject/lab-5-dna-sequences](https://www.vanderbilt.edu/wolbachiaproject/lab-5-dna-sequences).
+
 ## Alinhamento de *contigs*
 
 ***Contigs***
@@ -1288,6 +1295,9 @@ Para essa atividade será preciso baixar um dos programas que realizam essa tare
 
   - [`species_2_ITS.SPF`](./files/ab1/species_2_ITS.SPF)
 
+<br>
+
+Monte as sequências usando os arquivos `.ab1` em:  [https://www.vanderbilt.edu/wolbachiaproject/lab-5-dna-sequences](https://www.vanderbilt.edu/wolbachiaproject/lab-5-dna-sequences).
 
 # Formatos de arquivo mais comuns
 
