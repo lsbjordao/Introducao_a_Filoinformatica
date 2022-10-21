@@ -593,7 +593,16 @@ A *Gene Ontology* foca na função dos genes e produtos gênicos. O GO também e
 
 [https://archive.plantontology.org](https://archive.plantontology.org/)
 
-Ancestrais ("pais") de `nucellus` ([PO:0020020](http://purl.obolibrary.org/obo/PO_0020020)). `pollen sac` ([PO:0025277](http://purl.obolibrary.org/obo/PO_0025277)) + Descendentes ("filhos") de `fruit` ([PO:0009001](http://purl.obolibrary.org/obo/PO_0009001)).
+Ancestrais ("pais") de:
+
+- `nucellus` ([PO:0020020](http://purl.obolibrary.org/obo/PO_0020020))
+- `pollen sac` ([PO:0025277](http://purl.obolibrary.org/obo/PO_0025277))
+
++ 
+
+Descendentes ("filhos") de:
+
+- `fruit` ([PO:0009001](http://purl.obolibrary.org/obo/PO_0009001)).
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(ontologyIndex)
@@ -710,7 +719,17 @@ graph
 
 ```
 
-Ancestrais de 
+Ancestrais de:
+
+- Esporângios:
+  
+  - `nucellus` ([PO:0020020](http://purl.obolibrary.org/obo/PO_0020020))
+  - `pollen sac` ([PO:0025277](http://purl.obolibrary.org/obo/PO_0025277))
+
+- Gametófitos:
+  
+  - `embryo sac` ([PO:0025074](http://purl.obolibrary.org/obo/PO_0025074))
+  - `pollen` ([PO:0025281](http://purl.obolibrary.org/obo/PO_0025281))
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(ontologyIndex)
