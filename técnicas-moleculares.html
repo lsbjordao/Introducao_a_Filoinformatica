@@ -393,10 +393,12 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><p>Maceração</p>
 <ul>
-<li><p>Colocar 20–30 mg de material desidratado em sílica em microtubo (<em>eppendorf</em>) de 2 ml e 8–10 esferas de aço (2 mm)
-<img src="images/eppendorf_beads.PNG" width="100" /></p></li>
-<li><p>Macerar no <em>Mini-Beadbeater</em> (BioSpec)
-<img src="images/beadbeater.PNG" width="500" /></p></li>
+<li>Colocar 20–30 mg de material desidratado em sílica em microtubo (<em>eppendorf</em>) de 2 ml e 8–10 esferas de aço (2 mm)</li>
+</ul>
+<p><img src="images/eppendorf_beads.PNG" width="100" /></p>
+<ul>
+<li>Macerar no <em>Mini-Beadbeater</em> (BioSpec)
+<img src="images/beadbeater.PNG" width="500" /></li>
 </ul></li>
 </ul></li>
 <li><p>Adição do tampão CTAB</p></li>
@@ -457,7 +459,7 @@ A concentração da amostra é crucial para o sucesso da reação de sequencimen
 <h2><span class="header-section-number">4.4</span> Sequenciamento<a href="técnicas-moleculares.html#sequenciamento" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="história-do-sequenciamento-didesoxi-sanger" class="section level3 hasAnchor" number="4.4.1">
 <h3><span class="header-section-number">4.4.1</span> História do sequenciamento didesoxi Sanger<a href="técnicas-moleculares.html#história-do-sequenciamento-didesoxi-sanger" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>O sequenciador ABI utiliza o método de sequenciamento tradicional, proposto por Frederick e Sanger na década de 70, para gerar sequências entre 300 e 850pb. Na reação de sequenciamento são utilizados, além dos nucleotídeos comuns, nucleotídeos modificados e marcados com fluorescência, chamados dideoxirribonucleotídeos. Cada nucleotídeo (A, C, G,T) é marcado com um fluoróforo distinto. Durante a reação de extensão do fragmento de DNA, quando um nucleotídeo modificado é incorporado ao fragmento, o que ocorre de forma aleatória, a reação é interrompida. Os fragmentos de DNA gerados serão, portanto, de tamanhos diversos. Depois de separados por eletroforese capilar, uma câmera CCD acoplada ao equipamento irá identificar a fluorescência emitida pelo nucleotídeo marcado e assim caracterizá-lo (<a href="https://www.einstein.br/pesquisa/pesquisa-experimental/plataformas/plataforma-sequenciamento" class="uri">https://www.einstein.br/pesquisa/pesquisa-experimental/plataformas/plataforma-sequenciamento</a>).</p>
+<p>O sequenciador ABI utiliza o método de sequenciamento tradicional, proposto por Frederick e Sanger na década de 70, para gerar sequências entre 300 e 850pb. Na reação de sequenciamento são utilizados, além dos nucleotídeos comuns, nucleotídeos modificados e marcados com fluorescência, chamados dideoxirribonucleotídeos. Cada nucleotídeo (A, C, G, T) é marcado com um fluoróforo distinto. Durante a reação de extensão do fragmento de DNA, quando um nucleotídeo modificado é incorporado ao fragmento, o que ocorre de forma aleatória, a reação é interrompida. Os fragmentos de DNA gerados serão, portanto, de tamanhos diversos. Depois de separados por eletroforese capilar, uma câmera CCD acoplada ao equipamento irá identificar a fluorescência emitida pelo nucleotídeo marcado e assim caracterizá-lo (<a href="https://www.einstein.br/pesquisa/pesquisa-experimental/plataformas/plataforma-sequenciamento" class="uri">https://www.einstein.br/pesquisa/pesquisa-experimental/plataformas/plataforma-sequenciamento</a>).</p>
 <p><img src="images/sequenciamento.PNG" /></p>
 <ul>
 <li><p>Os princípios de replicação do DNA foram usados por Sanger et al. no desenvolvimento do processo agora conhecido como sequenciamento didesoxi Sanger.</p></li>
@@ -471,7 +473,8 @@ A concentração da amostra é crucial para o sucesso da reação de sequencimen
 <li>A adição de um desoxinucleotídeo ou um didesoxinucleotídeo depende da concentração relativa de ambas as moléculas. Quando um desoxinucleotídeo (A, C, G ou T) é adicionado à extremidade 3’, a extensão da cadeia pode continuar. No entanto, quando um didesoxinucleotídeo (ddA, ddC, ddG ou ddT) é adicionado à extremidade 3’, a extensão da cadeia termina. O sequenciamento dideoxy Sanger resulta na formação de produtos de extensão de vários comprimentos terminados com dideoxynucleotídeos no final de 3’.</li>
 </ul></li>
 </ul>
-<p>O sequenciador ABI (<em>Applied Biosystems</em>) é um instrumento baseado em laser que utiliza marcadores fluorescentes para analisar os produtos de uma reação de sequenciamento à medida que migram através de um gel. Depois que os dados são coletados a partir de uma execução de sequenciamento, o programa Analysis identifica e rastreia as pistas de amostra do gel e, subsequentemente, normaliza e integra os dados brutos (<em>raw data</em>) em um cromatograma da sequência final. Para o usuário, há são basicamente dois tipos de arquivos que podem ser manipulados para melhorar potencialmente os resultados da análise. O Gel O arquivo consiste em uma imagem gerada por computador do gel de sequenciamento com os padrões de bandas de DNA fluorescentes. Esta imagem permite ao usuário visualizar e editar as linhas de rastreamento geradas e usadas pelo Analysis para coletar pontos de dados para cada amostra. Arquivos de amostra individuais são armazenados para cada uma das amostras analisadas e incluir o cromatograma, dados brutos e anotações e informações sobre a amostra e a sequência corre. Geralmente, os produtos de uma reação de sequenciamento são facilmente resolvidos e o software Analysis interpreta a sequência de nucleotídeos correta. Chamadas de base ambíguas tendem a ocorrer perto do final da sequência e podem ser editados ou excluídos pelo usuário antes de exportar os dados para outras comparações ou alinhamentos. Ocasionalmente, as linhas de rastreamento dentro da imagem do gel podem precisar ser ajustadas ou movidas. Os dados da amostra são em seguida, reextraído do Arquivo de Gel e analisado novamente. Esta revisão explica a operação geral do Analysis em termos de visualização e edição de um cromatograma, refazendo o rastreamento das pistas de um arquivo de gel e analisando o dados da amostra final <a name=cite-Hagemann1999></a>(<a href="https://doi.org/10.1385/mb:13:2:137">Hagemann and Kwan, 1999</a>).</p>
+<p>O sequenciador ABI (<em>Applied Biosystems</em>) é um instrumento baseado em laser que utiliza marcadores fluorescentes para analisar os produtos de uma reação de sequenciamento à medida que migram através de um gel. Depois que os dados são coletados a partir de uma execução de sequenciamento, o programa <em>Analysis</em> da <em>Applied Biosystems</em> identifica e rastreia os rastros (<em>traces</em>) de amostra do gel e, subsequentemente, normaliza e integra os dados brutos (<em>raw data</em>) em um cromatograma da sequência final.</p>
+<p>Bases ambíguas tendem a ocorrer perto do final da sequência e podem ser editados ou excluídos pelo usuário antes de exportar os dados para outras comparações ou alinhamentos <a name=cite-Hagemann1999></a>(<a href="https://doi.org/10.1385/mb:13:2:137">Hagemann and Kwan, 1999</a>).</p>
 </div>
 </div>
 </div>

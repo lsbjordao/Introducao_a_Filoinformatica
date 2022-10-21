@@ -386,7 +386,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="conceito-1" class="section level3 hasAnchor" number="5.1.1">
 <h3><span class="header-section-number">5.1.1</span> Conceito<a href="montagem-de-sequências.html#conceito-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li>Rastro do sinal dos nucleotídeos marcados por corante de acordo com a intensidade, indicada por quatro cores correspondentes às quatro bases nitrogenadas.</li>
+<li>Rastro (<em>trace</em>) do sinal dos nucleotídeos marcados por corante de acordo com a intensidade, indicada por quatro cores correspondentes às quatro bases nitrogenadas.</li>
 </ul>
 </div>
 <div id="finalidade" class="section level3 hasAnchor" number="5.1.2">
@@ -395,7 +395,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>Verificar a qualidade do sinal</li>
 <li>Detecção dos picos</li>
 </ul>
-<p>A baixa qualidade do sinal é denominado de ruído (“<em>noise</em>”, em inglês). O ruído é caracterizado por picos pouco acentuados, com altura mais baixa e mais largos.</p>
+<p>A baixa qualidade do sinal é denominado de ruído (<em>noise</em>). O ruído é caracterizado por picos pouco acentuados, com altura mais baixa e mais largos.</p>
 </div>
 <div id="qualidade-do-sinal" class="section level3 hasAnchor" number="5.1.3">
 <h3><span class="header-section-number">5.1.3</span> Qualidade do sinal<a href="montagem-de-sequências.html#qualidade-do-sinal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -432,6 +432,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="http://technelysium.com.au/wp/chromas">Chromas</a></li>
 <li><a href="https://finchtv.software.informer.com/1.4">FinchTV</a></li>
 </ul>
+<p>… mas diversos programas podem realizar a tarefa.</p>
 </div>
 <div id="software-fitchtv" class="section level3 hasAnchor" number="5.1.5">
 <h3><span class="header-section-number">5.1.5</span> Software FitchTV<a href="montagem-de-sequências.html#software-fitchtv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -440,7 +441,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="images/fitchtv.PNG" width="300" /></p>
 </div>
 <div>
-<p>O <a href="https://finchtv.software.informer.com/1.4">FinchTV 1.4</a> é um programa open-source para visualização da qualidade e intensidade dos sinais obtidos. Com ele, é possível analisar os dados brutos do cromatograma (<em>raw data</em>).</p>
+<p>O <a href="https://finchtv.software.informer.com/a%20duração%20dessa%20etapa%20é%20variável1.4">FinchTV 1.4</a> é um programa <em>open-source</em> para visualização da qualidade e intensidade dos sinais obtidos. Com ele, é possível analisar os dados brutos do cromatograma (<em>raw data</em>).</p>
 </div>
 </div>
 <p><img src="images/cromatograma_fitch.png" /></p>
@@ -456,9 +457,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="interpretação-do-cromatograma" class="section level3 hasAnchor" number="5.1.7">
 <h3><span class="header-section-number">5.1.7</span> Interpretação do cromatograma<a href="montagem-de-sequências.html#interpretação-do-cromatograma" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>O processo automatizado de detecção de <em>contigs</em> através do algoritmo <em>base calling</em> de um software é sujeito à erros. E não é raro ocorrerem. Isso deve-se à baixa qualidade do sinal em certas regiões do cromatograma. A qualidade do sinal varia em função de inúmeros fatores e, geralmente, está relacionada à etapa das reações de sequenciamento. Compostos secundários, concentração inadequada de DNA amplificado, presença de contaminantes ou impurezas, ou qualquer outra razão misteriosa, pode atrapalhar as reações de sequenciamento, levando a uma baixa qualidade do sinal. Portanto, o filogeneticista precisa revisar visualmente e manualmente toda a sequência montada automaticamente por um software. Ademais, também é da própria natureza da tecnologia de sequenciamento Sanger, que a qualidade e resolução do sinal começa baixa, mas vai gradativamente melhorando a partir do início da reação, porém começa a decair após um determinado ponto. Consequentemente, a depender da qualidade do cromatograma, a duração dessa etapa é variável.</p>
-<p>Após o alinhamento múltiplo das sequências, é preciso reconferir os cromatogramas das sequências montadas. Por isso, é fundamental salvá-las no <em>software</em> utilizado. Cada <em>software</em> salvará como um arquivo específico, que não pode ser lido por outros programas. A tarefa de reconferir as montagens após o alinhamento múltiplo é trabalhosa, mas essencial para a correta codificação das homologias moleculares, uma vez que nem sempre e nem em todas os <code>loci</code> apresentam uma resolução inequívoca.</p>
-<p>O código de ambiguidade de nucleotídeos foi estabelecido pela IUPAC durante o Comitê de Nomenclatura da União Internacional de Bioquímica (NC-IUB), em 1984 <a name=cite-Cornish-Bowden></a>(<a href="https://doi.org/10.1093/nar/13.9.3021">Cornish-Bowden, 1985</a>).</p>
+<p>O processo automatizado de detecção de <em>contigs</em> através do algoritmo <em>base calling</em> de um software é sujeito à erros. E não é raro ocorrerem. Isso deve-se à baixa qualidade do sinal em certas regiões do cromatograma. A qualidade do sinal varia em função de inúmeros fatores e, geralmente, está relacionada à etapa das reações de sequenciamento. Compostos secundários, concentração inadequada de DNA amplificado, presença de contaminantes ou impurezas, ou qualquer outra razão misteriosa, pode atrapalhar as reações de sequenciamento, levando a uma baixa qualidade do sinal. Portanto, o filogeneticista precisa revisar visualmente e manualmente toda a sequência montada automaticamente por um software. Ademais, também é da própria natureza da tecnologia de sequenciamento Sanger, que a qualidade e resolução do sinal começa baixa, mas vai gradativamente melhorando a partir do início da reação, porém começa a decair após um determinado ponto. Consequentemente, a depender da qualidade do cromatograma, a duração dessa tarefa de montagem das sequências pode variar.</p>
+<p>Ademais, após o alinhamento múltiplo das sequências, é preciso reconferir os cromatogramas das sequências montadas. Por isso, é fundamental salvá-las no <em>software</em> utilizado. Cada <em>software</em> salvará como um arquivo específico, que não pode ser lido por outros programas. A tarefa de reconferir as montagens após o alinhamento múltiplo é trabalhosa, mas essencial para a correta codificação das homologias moleculares.</p>
+<p>Como decorrência do problema eventual de baixa resolução no cromatograma em algumas posições, um código de ambiguidade de nucleotídeos foi estabelecido pela IUPAC durante o Comitê de Nomenclatura da União Internacional de Bioquímica (NC-IUB), em 1984 <a name=cite-Cornish-Bowden></a>(<a href="https://doi.org/10.1093/nar/13.9.3021">Cornish-Bowden, 1985</a>).</p>
 <p><img src="images/iupac.png" /></p>
 </div>
 <div id="prática" class="section level3 hasAnchor" number="5.1.8">
