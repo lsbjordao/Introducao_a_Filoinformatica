@@ -184,6 +184,10 @@ A informática se desdobra no conhecimento humano a partir de uma racionalidade 
 
 **Organicismo -> Emergentismo -> Teoria Geral dos Sistemas -> Cibernética -> Informática**
 
+Londres. *The Theoretical Biology Club*, esse era o nome que Joseph Needham dava às suas reuniões. O objetivo desse núcleo de cientistas (Ross G. Harrison, Joseph Needham, Paul Weiss, Joseph Woodger, John Haldane) era afastar o campo da metáfora da máquina e da metafísica do vitalismo para a filosofia empiricamente orientada da biologia organísmica.
+
+![](images/life_organic.png)
+
 - **Ludwig von Bertalanffy** (1901--1972): Biólogo, precursor da Teoria Geral dos Sistemas.
 
   - "Pai do organicismo"?
@@ -222,11 +226,11 @@ Por seu turno,
 
   - Sim: `r Citet(referencias, "Terra2010")`
   
-  - Não: `r Citet(referencias, c("Santos2008", "Santos_Klassa2012"))`, `r Citet(referencias, "Santos_Klassa2012")`
+  - Não: `r Citet(referencias, c("Santos2008", "Santos_Klassa2012"))`
 
 Em meados da década de 70, um *workshop* realizado em 1974 no Missouri Botanical Garden, St. Louis, EUA, definiu tendências, prioridades e necessidades no campo da biologia sistemática e evolutiva. O evento foi financiado por pelo *Systematic Biology Program* da *Division of Biological and Medical Sciences* da agência governamental americana *National Science Foundation*. O encontro resultou na publicação do relatório: *Trends, Priorities, and Needs in Systematics and Evolutionary Biology* `r Cite(referencias, "TrendsandPriorities")`. Esse foi um dos primeiros esforços para estabelecer uma agenda para a sistemática biológica claramente definida. Entretanto, não se tratava de uma iniciativa global `r Cite(referencias, "Eshbaugh")`.
 
-A partir do início dos anos 90, sistematas começaram a se envolver cada vez mais na conservação e no papel desempenhado pela sistemática na solução de problemas da sociedade. O senso de urgência e um apelo à comunidade sistemática de biologia para definir claramente suas prioridades e agenda de pesquisa levaram a uma reunião de aproximadamente uma dúzia de pesquisadores, representando a *American Society of Plant Taxonomists*, a *Society of Systematic Biologists* e a *Willi Hennig Society* do *American Museum of Natural History*, em março de 1991. No início da reunião, reconheceu-se a necessidade de uma iniciativa abrangente para integrar os esforços em prol de objetivos comuns `r Cite(referencias, "Cracraft")` `r Cite(referencias, "Eshbaugh")`.
+A partir do início dos anos 90, sistematas começaram a se envolver cada vez mais na conservação e no papel desempenhado pela sistemática na solução de problemas da sociedade. O senso de urgência e um apelo à comunidade sistemática de biologia para definir claramente suas prioridades e agenda de pesquisa levaram a uma reunião de aproximadamente uma dúzia de pesquisadores, representando a *American Society of Plant Taxonomists*, a *Society of Systematic Biologists* e a *Willi Hennig Society* do *American Museum of Natural History*, em março de 1991. No início da reunião, reconheceu-se a necessidade de uma iniciativa abrangente para integrar os esforços em prol de objetivos comuns `r Cite(referencias, c("Cracraft", "Eshbaugh"))`.
 
 O marco teórico da filoinformática, isto é, o momento no qual os pressupostos gerais e conceitos específicos desse campo do conhecimento começaram a ser desenvolvidos, tem sido demarcado pela publicação da [*Systematics Agenda 2000*](https://archive.org/details/systematicsagend00syst), em 1994 `r Cite(referencias, "Cracraft")`.
 
@@ -586,7 +590,7 @@ Exemplo de uma sentença com dados filogenéticos:
 
 - A XML é uma tentativa de simplificar SGML para aplicações de aplicação geral, tais como a Web semântica.
 
-Fonte: `r Citet(referencias, "Souza_Alvarenga_2004")` `r Cite(referencias, "Almeida_2002")`.
+Fonte: `r Citet(referencias, c("Souza_Alvarenga_2004", "Almeida_2002"))`.
 
 #### OBO Foundry
 
@@ -1280,7 +1284,7 @@ Existem diversos algoritmos para montagem de sequência , dentre os quais, desta
 
 ### Prática
 
-Para essa atividade será preciso baixar um dos programas que realizam essa tarefa. Contudo, esses programas possuem lincenças pagas. Entretanto, as empresas oferecem um período de teste com todas as funcionalidades ativas. Sugestão para essa atividade: `Sequencher`, `Geneious` ou `CodonCode Aligner`.
+Para essa atividade será preciso baixar um dos programas que realizam essa tarefa. Contudo, esses programas possuem licenças pagas. Entretanto, as empresas oferecem um período de teste com todas as funcionalidades ativas. Sugestão para essa atividade: `Sequencher`, `Geneious` ou `CodonCode Aligner`.
 
 - Vamos utilizar os arquivos listados abaixo, que compõem quatro *primers* sequenciados do *locus* *trnD-trnT* de um organismo desconhecido (*species 1*):
 
@@ -1372,7 +1376,7 @@ GATATTTAT----------ATTTAT------ATAGATTTATA-------------TGTAT
 
 ## NEXUS
 
-- Lançado em 1987 por Wayne & David Maddison e David L. Swofford.
+- Lançado em 1987 por Wayne & David Maddison e David L. Swofford^(criador do PAUP)^.
 
 ![](images/Maddisons.jpg)
 
@@ -1404,6 +1408,14 @@ END;
 ![](images/maclade.jpg){width=30%}
 
 Maddison, W.P. & Maddison, D.R., 1992. MacClade: Analysis of Phylogeny and Character Evolution. Version 3
+
+:::
+
+::: {style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;"}
+
+![](images/mesquite.png)
+
+Maddison, W.P. & Maddison, D.R., 2002. Mesquite: a modular system for evolutionary analysis. Version 0.991. http://mesquiteproject.org
 
 :::
 
@@ -3443,7 +3455,9 @@ Agora veja esse estilo:
 plot(obj, link.type = "curved", link.lwd = 3, link.lty = 1, lwd = 2, link.col = make.transparent("blue", 0.25), fsize = 1.2)
 ```
 
+
 #### Phylo.to.map
+
 Conheça a função `phylo.to.map`() para plotar um mapa com  coordenadas geográficas ao lado da árvore. No código abaixo, estamos gerando dados aleatórios:
 ```{r}
 tree <- pbtree(n = 26, scale = 100)
@@ -3462,7 +3476,9 @@ Veja um exemplo pronto com dados reais (Fig. \ref{fig:Phylo.to.map}):
 	\label{fig:Phylo.to.map}
 \end{figure}
 
+
 #### Escala estratigráfica
+
 Plote a escala estratigráfica, com dados gerados aleatoriamente, com a função `geo.legend`() [http://blog.phytools.org/2017/05/new-features-in-geolegend-for-adding.html]:
 ```{r}
 tree <- pbtree(b = 0.03, d = 0.01, n = 200)
@@ -3476,6 +3492,7 @@ geo.legend(leg = obj$leg, colors = obj$colors, cex = 1.2)
 ```
 
 ### Estimação do estado ancestral usando R
+
 As análises de estimação do estado ancestral, ou reconstrução do caráter ancestral do ponto-de-vista da parsimônia, são utilizadas para investigar a evolução de caracteres. Como serão utilizados métodos probabilísticos, o termo correto é estimação e não reconstrução.
 
 #### Pacote phytools
