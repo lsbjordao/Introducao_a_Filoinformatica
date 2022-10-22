@@ -210,7 +210,7 @@ A informática se desdobra no conhecimento humano a partir de uma racionalidade 
 
 <br>
 
-- O primeiro transistor foi demonstrado com sucesso em 23 de dezembro de 1947, nos Laboratórios Bell em *Murray Hill*, Nova Jersey.
+- O primeiro transistor foi criado com sucesso em 23 de dezembro de 1947, nos Laboratórios *Bell* em *Murray Hill*, Nova Jersey.
   
   - Hautsch, O., 2010. [O que é um transistor e porque ele é importante para o computador?](https://www.tecmundo.com.br/o-que-e/3596-o-que-e-um-transistor-e-porque-ele-e-importante-para-o-computador-.htm)
 
@@ -220,9 +220,9 @@ Por seu turno,
 
 - **A emergência da cladística hennigiana, foi revolução científica kuhnina ou não foi?**
 
-  - Sim: `r Cite(referencias, "Terra2010")`
+  - Sim: `r Citet(referencias, "Terra2010")`
   
-  - Não: `r Cite(referencias, "Santos2008")`, `r Cite(referencias, "Santos_Klassa2012")`
+  - Não: `r Citet(referencias, c("Santos2008", "Santos_Klassa2012"))`, `r Citet(referencias, "Santos_Klassa2012")`
 
 Em meados da década de 70, um *workshop* realizado em 1974 no Missouri Botanical Garden, St. Louis, EUA, definiu tendências, prioridades e necessidades no campo da biologia sistemática e evolutiva. O evento foi financiado por pelo *Systematic Biology Program* da *Division of Biological and Medical Sciences* da agência governamental americana *National Science Foundation*. O encontro resultou na publicação do relatório: *Trends, Priorities, and Needs in Systematics and Evolutionary Biology* `r Cite(referencias, "TrendsandPriorities")`. Esse foi um dos primeiros esforços para estabelecer uma agenda para a sistemática biológica claramente definida. Entretanto, não se tratava de uma iniciativa global `r Cite(referencias, "Eshbaugh")`.
 
