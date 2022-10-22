@@ -216,6 +216,14 @@ A informática se desdobra no conhecimento humano a partir de uma racionalidade 
 
 <br>
 
+Por seu turno, 
+
+- **A emergência da cladística hennigiana, foi revolução científica kuhnina ou não foi?**
+
+  - Sim: `r Cite(referencias, "Terra2010")`
+  
+  - Não: `r Cite(referencias, "Santos2008")`, `r Cite(referencias, "Santos_Klassa2012")`
+
 Em meados da década de 70, um *workshop* realizado em 1974 no Missouri Botanical Garden, St. Louis, EUA, definiu tendências, prioridades e necessidades no campo da biologia sistemática e evolutiva. O evento foi financiado por pelo *Systematic Biology Program* da *Division of Biological and Medical Sciences* da agência governamental americana *National Science Foundation*. O encontro resultou na publicação do relatório: *Trends, Priorities, and Needs in Systematics and Evolutionary Biology* `r Cite(referencias, "TrendsandPriorities")`. Esse foi um dos primeiros esforços para estabelecer uma agenda para a sistemática biológica claramente definida. Entretanto, não se tratava de uma iniciativa global `r Cite(referencias, "Eshbaugh")`.
 
 A partir do início dos anos 90, sistematas começaram a se envolver cada vez mais na conservação e no papel desempenhado pela sistemática na solução de problemas da sociedade. O senso de urgência e um apelo à comunidade sistemática de biologia para definir claramente suas prioridades e agenda de pesquisa levaram a uma reunião de aproximadamente uma dúzia de pesquisadores, representando a *American Society of Plant Taxonomists*, a *Society of Systematic Biologists* e a *Willi Hennig Society* do *American Museum of Natural History*, em março de 1991. No início da reunião, reconheceu-se a necessidade de uma iniciativa abrangente para integrar os esforços em prol de objetivos comuns `r Cite(referencias, "Cracraft")` `r Cite(referencias, "Eshbaugh")`.
