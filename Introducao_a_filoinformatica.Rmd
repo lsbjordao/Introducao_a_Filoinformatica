@@ -231,15 +231,15 @@ Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que J
 
 <br>
 
-Por seu turno, a **Sistemática Filogenética** (cladística), postulada por Willi Hennig, foi originalmente concebida, mesmo que apenas em princípios com a publicação de *Grundzüge einer Theorie der phylogenetischen Systematik*, em 1950.
+Por seu turno, a **Sistemática Filogenética** (cladística), postulada por Willi Hennig, foi originalmente concebida, mesmo que apenas em princípios, com a publicação de *Grundzüge einer Theorie der phylogenetischen Systematik*, em 1950.
 
 - A intenção de Hennig era tornar a Sistemática uma ciência com métodos objetivos e reprodutíveis, afastando-a das hipóteses *ad hoc*, idiossincráticas. Por isso, ele desenvolveu não apenas um nov método, mas também ocupou-se de sua justificação teórica.
 
-- Hennig era excepcionalmente preocupado com questões metafísicas `r Cite(referencias, "Tremblay2013")`.
+- Hennig era excepcionalmente preocupado com questões filosóficas `r Cite(referencias, "Tremblay2013")`.
 
   - Era muito comum na Alemanha do século XX os biólogos se ocuparem com questões filosóficas, principalmente como resultado da tendência interdisciplinar na cultura acadêmica naquela época.
   
-  - Hennig estava extremamente comprometido com a dimensão ontológica do seu sistema filogenético.
+  - Hennig estava extremamente comprometido com a dimensão ontológica e epistemológica do seu sistema filogenético.
   
   - Hennig tinha um interesse profundo em Filosofia, mas não era um filósofo de formação. Usou uma  abordagem eclética, buscando ideias em diferentes fontes `r Cite(referencias, "Schmitt2013")`.
   
