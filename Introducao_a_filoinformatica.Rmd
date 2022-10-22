@@ -192,7 +192,7 @@ Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que J
 
 - **Ludwig von Bertalanffy** (1901--1972): precursor da Teoria Geral dos Sistemas.
 
-![images/Bertalanffy.jpg]
+![](images/Bertalanffy.jpg)
   
   - Austríaco, biólogo
   - "Pai do organicismo"?
@@ -219,7 +219,8 @@ Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que J
   - Britânico, "pai da computação"
   - Criou a "Máquina de Turing", protótipo dos computadores modernos.
   - Desenvolveu um máquina para decifrar o código da "Máquina Enigma" (1918), utilizada pelos nazistas durante a Segunda Guerra Mundial.
-  - A cibernética desempenhou um papel decisivo no surgimento da revolução tecnológica. Alan Turing, aluno de John von Neumann (outro pioneiro da cibernética), ambos precursores do computador, e Claude Shannon, aluno de Norbert Wiener, com a sua Teoria da Informação `r Cite(referencias, "wikiCibernetica")`.
+  - A cibernética desempenhou um papel decisivo no surgimento da revolução tecnológica.
+  - Foi aluno de John von Neumann (outro pioneiro da cibernética). Ambos e Claude Shannon, aluno de Norbert Wiener, com a sua Teoria da Informação, foram os precursores do computador `r Cite(referencias, "wikiCibernetica")`.
   - Em 1943, constrói a primeira geração de computadores modernos (a válvula).
 
 <br>
