@@ -192,7 +192,7 @@ Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que J
 
 - **Ludwig von Bertalanffy** (1901--1972): precursor da Teoria Geral dos Sistemas.
 
-![](images/Bertalanffy.jpg)
+![](images/Bertalanffy.jpg){width="300px"}
   
   - Austríaco, biólogo
   - "Pai do organicismo"?
@@ -200,7 +200,7 @@ Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que J
 
 - **Norbert Wiener** (1894--1909): Cibernética
 
-![](images/Wiener.jpg)
+![](images/Wiener.jpg){width="300px"}
 
   - Americano
   - Foi aluno de **`r tippy('Bertrand Russell', tooltip = '<a style="color: blue;">Bertrand Russell (1872–1970)</a><br><img src="./images/Russell.png" width="300">')`**.
@@ -214,7 +214,7 @@ Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que J
 
 - **Alan Turing** (1912--1954): Informática
 
-![](images/Turing.jpg)
+![](images/Turing.jpg){width="300px"}
 
   - Britânico, "pai da computação"
   - Criou a "Máquina de Turing", protótipo dos computadores modernos.
@@ -231,7 +231,7 @@ Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que J
 
 <br>
 
-Por seu turno, a **Sistemática Filogenética** (cladística), postulada por Willi Hennig, foi originalmente concebida, mesmo que apenas em princípios, com a publicação de *Grundzüge einer Theorie der phylogenetischen Systematik*, em 1950.
+Por seu turno, a **Sistemática Filogenética** (cladística), postulada por **Willi Hennig**, foi originalmente concebida, mesmo que apenas em princípios, com a publicação de *Grundzüge einer Theorie der phylogenetischen Systematik*, em 1950.
 
 - A intenção de Hennig era tornar a Sistemática uma ciência com métodos objetivos e reprodutíveis, afastando-a das hipóteses *ad hoc*, idiossincráticas. Por isso, ele desenvolveu não apenas um nov método, mas também ocupou-se de sua justificação teórica.
 
@@ -245,7 +245,7 @@ Por seu turno, a **Sistemática Filogenética** (cladística), postulada por Wil
   
     - Cursou apenas uma disciplina de Filosofia na Universidade.
     
-    - Correspondências com sua esposa, amigos, dentre os quais Klaus Günther.
+    - Correspondências com sua esposa, amigos, dentre os quais, Klaus Günther.
     
 
   
