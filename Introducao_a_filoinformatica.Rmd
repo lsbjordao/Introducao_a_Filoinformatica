@@ -47,7 +47,7 @@ Por que / Para que contextualizar?
 
 ## Histórico e fundamentos
 
-A história da filoinformática insere-se na história da sistemática biológica pós-**`r tippy('hennigiana', tooltip = '<a>Willi Hennig (1913–1976)</a><br><img src="./images/hennig.png" width="300">')`** da década de 50--60, isto é, a sistemática filogenética, e, evidentemente, surge após o desenvolvimento da informática, nessa mesma época.
+A história da filoinformática insere-se na história da sistemática biológica pós-hennigiana da década de 50--60, isto é, a sistemática filogenética, e, evidentemente, surge após o desenvolvimento da informática, nessa mesma época.
 
 ::: {style="color: black; background: lightgray; text-align: justify; border: 5px outset lightgray; padding: 10px;"}
 
@@ -134,7 +134,7 @@ Não deixe de conferir o livro de Ernst Mayr: `Isto é biologia: a ciência do m
 
 <br>
 
-O mundo experimentava uma grande revolução tecnocientífica, que levou a uma nova episteme, o pós-modernismo. A pós-modernidade, no âmbito das tecnociências `r Cite(referencias, "Luz2014")`, foi caracterizada pelo surgimento da cibernética, informática, robótica, biologia molecular e a medicina nuclear, entre outras áreas de desenvolvimento tecnológico.
+O mundo experimentava uma grande revolução tecnocientífica que levou a uma nova episteme, o pós-modernismo. A pós-modernidade, no âmbito das tecnociências `r Cite(referencias, "Luz2014")`, foi caracterizada pelo surgimento da cibernética, informática, robótica, biologia molecular e a medicina nuclear, entre outras áreas de desenvolvimento tecnológico.
 
 A gênese da informática insere-se na história do desenvolvimento do pensamento sistêmico e da lógica, e intrinsecamente correlacionada ao pensamento biológico contemporâneo. Suas raízes filosóficas, epistemológicas, podem ser buscadas na filosofia da linguagem e no positivismo lógico, cujos precursores pertenciam ao **Círculo de Viena**, que se dedicaram especialmente à **Filosofia da Ciência**.
 
@@ -184,19 +184,26 @@ A informática se desdobra no conhecimento humano a partir de uma racionalidade 
 
 **Organicismo -> Emergentismo -> Teoria Geral dos Sistemas -> Cibernética -> Informática**
 
-Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que Joseph Needham dava às suas reuniões. O objetivo desse núcleo de cientistas (Ross G. Harrison, Joseph Needham, Paul Weiss, Joseph Woodger, John Haldane) era afastar o campo da metáfora da máquina e da metafísica do vitalismo para a filosofia empiricamente orientada da biologia organísmica.
+Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que Joseph Needham dava às suas reuniões. O objetivo desse núcleo de cientistas (Ross G. Harrison, Joseph Needham, Paul Weiss, Joseph Woodger, John Haldane) era afastar o campo da metáfora da máquina (**mecanicismo -> fisicalismo**) e da metafísica do **vitalismo** para a filosofia empiricamente orientada da biologia organísmica (**organicismo**).
 
 ![](images/life_organic.png)
 
-- **Ludwig von Bertalanffy** (1901--1972): Biólogo, precursor da Teoria Geral dos Sistemas.
+<br>
 
+- **Ludwig von Bertalanffy** (1901--1972): precursor da Teoria Geral dos Sistemas.
+
+![images/Bertalanffy.jpg]
+  
+  - Austríaco, biólogo
   - "Pai do organicismo"?
-
   - Tudo é parte de algum todo.
 
 - **Norbert Wiener** (1894--1909): Cibernética
+
+![](images/Wiener.jpg)
+
   - Americano
-  - Foi aluno de Bertrand Russel.
+  - Foi aluno de **`r tippy('Bertrand Russell', tooltip = '<a style="color: blue;">Bertrand Russell (1872–1970)</a><br><img src="./images/Russell.png" width="300">')`**.
   - Em 1948, Wiener publicou o livro `Cibernética: ou Controle e Comunicação no Animal e na Máquina`:
 
   ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Capa_cibernetica.jpg/220px-Capa_cibernetica.jpg)
@@ -206,6 +213,9 @@ Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que J
   - A cibernética é aplicável quando um sistema em análise incorpora um circuito fechado de sinalização --- originalmente chamado de relação "causal circular" --- isto é, onde a ação do sistema gera alguma mudança em seu ambiente e essa mudança é refletida no sistema de alguma maneira (*feedback*) que aciona uma alteração no sistema. A cibernética é relevante para, por exemplo, sistemas mecânicos, físicos, biológicos, cognitivos e sociais `r Cite(referencias, "wikiCibernetica")`.
 
 - **Alan Turing** (1912--1954): Informática
+
+![](images/Turing.jpg)
+
   - Britânico, "pai da computação"
   - Criou a "Máquina de Turing", protótipo dos computadores modernos.
   - Desenvolveu um máquina para decifrar o código da "Máquina Enigma" (1918), utilizada pelos nazistas durante a Segunda Guerra Mundial.
@@ -220,7 +230,50 @@ Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que J
 
 <br>
 
-Por seu turno, 
+Por seu turno, a **Sistemática Filogenética** (cladística), postulada por Willi Hennig, foi originalmente concebida, mesmo que apenas em princípios com a publicação de *Grundzüge einer Theorie der phylogenetischen Systematik*, em 1950.
+
+- A intenção de Hennig era tornar a Sistemática uma ciência com métodos objetivos e reprodutíveis, afastando-a das hipóteses *ad hoc*, idiossincráticas. Por isso, ele desenvolveu não apenas um nov método, mas também ocupou-se de sua justificação teórica.
+
+- Hennig era excepcionalmente preocupado com questões metafísicas `r Cite(referencias, "Tremblay2013")`.
+
+  - Era muito comum na Alemanha do século XX os biólogos se ocuparem com questões filosóficas, principalmente como resultado da tendência interdisciplinar na cultura acadêmica naquela época.
+  
+  - Hennig estava extremamente comprometido com a dimensão ontológica do seu sistema filogenético.
+  
+  - Hennig tinha um interesse profundo em Filosofia, mas não era um filósofo de formação. Usou uma  abordagem eclética, buscando ideias em diferentes fontes `r Cite(referencias, "Schmitt2013")`.
+  
+    - Cursou apenas uma disciplina de Filosofia na Universidade.
+    
+    - Correspondências com sua esposa, amigos, dentre os quais Klaus Günther.
+    
+
+  
+:::: {style="display: flex;"}
+
+::: {}
+
+![](images/Hennig1950.jpg){height="300px"}
+
+:::
+
+::: {}
+
+![](images/hennig.png){height="300px"}
+
+**Willi Hennig** (1913–1976)
+
+:::
+
+::::
+
+
+
+
+> O trabalho de Hennig está escrito em alemão bastante difícil, algumas frases sendo praticamente ininteligíveis. Em nenhum lugar se refere aos escritos de Huxley, Mayr, Rensch, Simpson e outros autores que cobriram em parte o mesmo terreno nas décadas anteriores. Novos termos e definições são introduzidos casualmente, mas não há um índice que guie a pessoa para as páginas relevantes. Não surpreendentemente, o volume foi inicialmente ignorado universalmente, exceto por alguns autores alemães. Não se tornou mais conhecido até 1965 e 1966, quando foram publicadas versões em inglês da metodologia de Hennig. Na década de 1970, um culto virtual de Hennig se desenvolveu, embora alguns de seus chamados seguidores tenham se afastado bastante dos princípios originais de Hennig.
+>
+>`r Cite(referencias, "Mayr1982")`
+
+Darwin-Henning Classification: A Reply to Ernst Mayr
 
 - **A emergência da cladística hennigiana, foi revolução científica kuhnina ou não foi?**
 
