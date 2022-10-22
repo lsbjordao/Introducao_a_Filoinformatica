@@ -134,7 +134,7 @@ Não deixe de conferir o livro de Ernst Mayr: `Isto é biologia: a ciência do m
 
 <br>
 
-O mundo experimentava uma grande revolução tecnocientífica, que levou a uma nova episteme, o pós-modernismo. A pós-modernidade, na esfera das tecnociências `r Cite(referencias, "Luz2014")`, foi caracterizada pelo surgimento da cibernética, informática, robótica, biologia molecular e a medicina nuclear, entre outras áreas de desenvolvimento tecnológico.
+O mundo experimentava uma grande revolução tecnocientífica, que levou a uma nova episteme, o pós-modernismo. A pós-modernidade, no âmbito das tecnociências `r Cite(referencias, "Luz2014")`, foi caracterizada pelo surgimento da cibernética, informática, robótica, biologia molecular e a medicina nuclear, entre outras áreas de desenvolvimento tecnológico.
 
 A gênese da informática insere-se na história do desenvolvimento do pensamento sistêmico e da lógica, e intrinsecamente correlacionada ao pensamento biológico contemporâneo. Suas raízes filosóficas, epistemológicas, podem ser buscadas na filosofia da linguagem e no positivismo lógico, cujos precursores pertenciam ao **Círculo de Viena**, que se dedicaram especialmente à **Filosofia da Ciência**.
 
@@ -184,7 +184,7 @@ A informática se desdobra no conhecimento humano a partir de uma racionalidade 
 
 **Organicismo -> Emergentismo -> Teoria Geral dos Sistemas -> Cibernética -> Informática**
 
-Londres. *The Theoretical Biology Club*, esse era o nome que Joseph Needham dava às suas reuniões. O objetivo desse núcleo de cientistas (Ross G. Harrison, Joseph Needham, Paul Weiss, Joseph Woodger, John Haldane) era afastar o campo da metáfora da máquina e da metafísica do vitalismo para a filosofia empiricamente orientada da biologia organísmica.
+Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que Joseph Needham dava às suas reuniões. O objetivo desse núcleo de cientistas (Ross G. Harrison, Joseph Needham, Paul Weiss, Joseph Woodger, John Haldane) era afastar o campo da metáfora da máquina e da metafísica do vitalismo para a filosofia empiricamente orientada da biologia organísmica.
 
 ![](images/life_organic.png)
 
