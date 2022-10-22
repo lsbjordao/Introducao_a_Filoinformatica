@@ -2557,7 +2557,10 @@ phylocanvas(tree)
 ```
 
 ### Pacote phytools
-O pacote [phytools](https://cran.r-project.org/web/packages/phytools/index.html)
+
+O pacote [phytools](https://cran.r-project.org/web/packages/phytools/index.html) foi desenvolvido por Liam J. Revell.
+
+![](images/revell.jpg)
 
 * [Blog oficial](http://blog.phytools.org/)
 
@@ -3276,6 +3279,7 @@ cophyloplot(tree1, tree2, assoc = association, length.line = 4, space = 28, gap 
 ```
 
 ### Pacote phytools
+
 O pacote phytools possui a função `dotTree`() e mais três métodos específicos da função `plotTree`() para plotar círculos, barras, matrizes e *boxplots*: `plotTree.barplot`(), `plotTree.datamatrix`() e `plotTree.boxplot`():
 
 #### Círculos
