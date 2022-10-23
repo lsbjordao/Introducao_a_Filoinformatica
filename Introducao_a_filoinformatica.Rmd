@@ -335,13 +335,13 @@ Fotografia de Gareth Nelson (à dir.) junto a Lars Brundin (à esq.), tirada por
 
 ::::
 
-- 
+- Gareth Nelson foi, sobretudo, um defensor do método.
 
-> Darwin's philosophy of classification is differently interpreted. Mayr (1974:120), for example, states "Evolutionary taxonomists have long been convinced that they strictly follow Darwinian principles of classification by giving equal consideration to branching and to phyletic change." By "evolutionary taxonomists," Mayr means those taxonomists who might agree with his philosophy of classification (e.g., Mayr, 1969). Mayr (1974:95) states, also: "The synthetic or evolutionary method of classification thus combines components of cladistics and of phenetics... The method in which cladistic and phenetic components are combined was originated by Darwin." I have elsewhere suggested that Darwin's philosophy of classification agrees better with Hennig (1950, 1966) than with Mayr (Nelson, 1971); the implication is that Mayr's "synthetic or evolutionary method of classification" is not of Darwinian but rather of Mayrian manufacture.
->
-> Darwin-Henning Classification: A Reply to Ernst Mayr, `r Citet(referencias, "Nelson1974")`.
+  > Darwin's philosophy of classification is differently interpreted. Mayr (1974:120), for example, states "Evolutionary taxonomists have long been convinced that they strictly follow Darwinian principles of classification by giving equal consideration to branching and to phyletic change." By "evolutionary taxonomists," Mayr means those taxonomists who might agree with his philosophy of classification (e.g., Mayr, 1969). Mayr (1974:95) states, also: "The synthetic or evolutionary method of classification thus combines components of cladistics and of phenetics... The method in which cladistic and phenetic components are combined was originated by Darwin." I have elsewhere suggested that Darwin's philosophy of classification agrees better with Hennig (1950, 1966) than with Mayr (Nelson, 1971); the implication is that Mayr's "synthetic or evolutionary method of classification" is not of Darwinian but rather of Mayrian manufacture.
+  >
+  > Darwin-Henning Classification: A Reply to Ernst Mayr, `r Citet(referencias, "Nelson1974")`.
 
-- Como a sistemática se tornou filogenética... `r Citet(referencias, "Eldredge2010")`.
+- Como a sistemática se tornou filogenética...
 
   > The furor engendered by the upstart arrival of Hennig's ideas has long since died down—and phylogenetic systematics is now the de facto order of the day. By the 1980s, recognizing that the essence of the analytic approach is the precise mapping of the distribution of characteristics in the attempt to separate relatively derived (advanced) from primitive features (and from "convergent" or "homoplastic" characters as well)—with groups to be defined and recognized solely on shared possession of "derived" features, algorithms that did the job on computers began to replace hand drawn cladograms on paper (whether napkins or otherwise).
   >
