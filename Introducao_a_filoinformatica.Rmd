@@ -366,10 +366,46 @@ Fotografia de Gareth Nelson (à dir.) junto a Lars Brundin (à esq.), tirada por
     
     - O evento foi financiado por pelo *Systematic Biology Program* da *Division of Biological and Medical Sciences* da agência governamental americana *National Science Foundation*. O encontro resultou na publicação do relatório: *Trends, Priorities, and Needs in Systematics and Evolutionary Biology* `r Cite(referencias, "TrendsandPriorities")`.
   
-- Na década de 80, grandes avanços ocorrem na Sistemática Filogenética, com a publicação de importantes livros teórico-didáticos e o surgimento dos primeiros programas de computadores para realização de análises filogenéticas (ver item \@ref{softwares_filogenia}).
+- Na década de 80, grandes avanços ocorrem na Sistemática Filogenética, com a publicação de importantes livros teórico-didáticos e o surgimento dos primeiros programas de computadores para realização de análises filogenéticas (ver item \@ref(softwares_filogenia)).
 
 ![](images/books.png)
+  - A filogenética fez a transição para uma estrutura baseada em probabilidade com o artigo *Evolutionary trees from DNA sequences: A maximum likelihood approach* de **Joseph Felsenstein** (1942--), publicado em 1981: `r Citet(referencias, "Felsenstein1981")`.
+  
+  - Este trabalho inovador lançou as bases para o campo emergente da filogenética estatística, fornecendo uma maneira tratável de encontrar estimativas de máxima probabilidade (ML) de árvores evolutivas a partir de dados de sequência de DNA `r Cite(referencias, c("Holland2013", "Posada2021"))`.
 
+:::: {style="display: flex;"}
+
+::: {}
+
+![](images/Felsenstein.jpg)
+
+:::
+
+::: {}
+
+![](images/Felsenstein2004.jpg)
+
+Felsenstein (2004)
+
+:::
+
+::::
+
+  - Importante teórico foi o paleoictiólogo **Collin Patterson** (1933–-1998).
+  
+    - Conhecido por ter formulado o "teste de homologia" `r Cite(referencias, c("Holland2013", "Patterson1982"))`, basedo em três atributos:
+    
+      1. similaridade
+      2. conjunção
+      3. congruência
+  
+  ![](images/Patterson.jpg){width="300px"}
+  
+  ![](images/problems_in_phylogenetics.jpg){width="300px"}
+  - Já no início da década de 90, outra contribuição importante para a formulação do conceito de homologia foi postulado por **Mario de Pinna**, em 1991 `r Cite(referencias, "Pinna1991")`.
+  
+  ![](images/depinna.jpg)
+  
 - A partir do início dos anos 90, sistematas começaram a se envolver cada vez mais na conservação e no papel desempenhado pela sistemática na solução de problemas da sociedade. O senso de urgência e um apelo à comunidade sistemática de biologia para definir claramente suas prioridades e agenda de pesquisa levaram a uma reunião de aproximadamente uma dúzia de pesquisadores, representando a *American Society of Plant Taxonomists*, a *Society of Systematic Biologists* e a *Willi Hennig Society* do *American Museum of Natural History*, em março de 1991. No início da reunião, reconheceu-se a necessidade de uma iniciativa abrangente para integrar os esforços em prol de objetivos comuns `r Cite(referencias, c("Cracraft", "Eshbaugh"))`.
 
 - O marco teórico da filoinformática, isto é, o momento no qual os pressupostos gerais e conceitos específicos desse campo do conhecimento começaram a ser desenvolvidos, tem sido demarcado pela publicação da [*Systematics Agenda 2000*](https://archive.org/details/systematicsagend00syst), em 1994 `r Cite(referencias, "Cracraft")`.
