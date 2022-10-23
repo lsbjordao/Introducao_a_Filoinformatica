@@ -399,7 +399,7 @@ Felsenstein (2004)
 
   - Importante teórico foi o paleoictiólogo **Collin Patterson** (1933--1998).
   
-  :::: {style="display: flex;"}
+:::: {style="display: flex;"}
 
 ::: {}
 
@@ -457,15 +457,7 @@ Joysey & Friday (1982)
   
     - Propôs os conceitos de **homologia primária** e **homologia secundária**.
     
-    - Veja a emérita aula no Fórum de Sistemática e Evolução - USP, em 2012:
-      
-    ```{r echo=FALSE}
-library(xaringanExtra)
-embed_xaringan(
-  url = "https://www.youtube.com/watch?v=UmbFLVjnJs0",
-  ratio = "4:2"
-)
-```
+    - Veja a emérita aula no Fórum de Sistemática e Evolução - USP, em 2012: https://www.youtube.com/watch?v=UmbFLVjnJs0
   
 - A partir do início dos anos 90, sistematas começaram a se envolver cada vez mais na conservação e no papel desempenhado pela sistemática na solução de problemas da sociedade. O senso de urgência e um apelo à comunidade sistemática de biologia para definir claramente suas prioridades e agenda de pesquisa levaram a uma reunião de aproximadamente uma dúzia de pesquisadores, representando a *American Society of Plant Taxonomists*, a *Society of Systematic Biologists* e a *Willi Hennig Society* do *American Museum of Natural History*, em março de 1991. No início da reunião, reconheceu-se a necessidade de uma iniciativa abrangente para integrar os esforços em prol de objetivos comuns `r Cite(referencias, c("Cracraft", "Eshbaugh"))`.
 
@@ -724,7 +716,7 @@ Tim Berners-Lee também é o fundador da [*World Wide Web Foundation*](https://w
 
 - A Web semântica é uma extensão da *World Wide Web* que permite aos computadores e humanos trabalharem em cooperação.
 
-Ela interliga significados de palavras e, neste âmbito, tem como finalidade conseguir atribuir um significado (sentido) aos conteúdos publicados na Internet de modo que seja compreensível tanto pelo humano como pelo computador. A ideia da Web semântica surgiu em 2001, quando Tim Berners-Lee, James Hendler e Ora Lassila publicaram um artigo na revista *Scientific American*, intitulado: "Web Semântica: um novo formato de conteúdo para a Web que tem significado para computadores vai iniciar uma revolução de novas possibilidades" [Berners-Lee et al. 2002](http://khabib.staff.ugm.ac.id/downloads/lecture/S3/The%20Semantic%20Web.pdf).
+Ela interliga significados de palavras e, neste âmbito, tem como finalidade conseguir atribuir um significado (sentido) aos conteúdos publicados na Internet de modo que seja compreensível tanto pelo humano como pelo computador. A ideia da Web semântica surgiu em 2001, quando Tim Berners-Lee, James Hendler e Ora Lassila publicaram um artigo na revista *Scientific American*, intitulado: "Web Semântica: um novo formato de conteúdo para a Web que tem significado para computadores vai iniciar uma revolução de novas possibilidades" ([Berners-Lee et al. 2002](http://khabib.staff.ugm.ac.id/downloads/lecture/S3/The%20Semantic%20Web.pdf)).
 
 ::: {style="color: black; background: lightgray; text-align: justify; border: 5px outset lightgray; padding: 10px;"}
 
