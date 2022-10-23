@@ -489,11 +489,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="criando-objetos" class="section level2 hasAnchor" number="14.6">
 <h2><span class="header-section-number">14.6</span> Criando objetos<a href="introdução-ao-r.html#criando-objetos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Para atribuir um valor a um objeto, utilize o operador <code>&lt;-</code> (ou <code>=</code>):</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introdução-ao-r.html#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">4</span></span>
-<span id="cb6-2"><a href="introdução-ao-r.html#cb6-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introdução-ao-r.html#cb5-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb5-2"><a href="introdução-ao-r.html#cb5-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>## [1] 4</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introdução-ao-r.html#cb8-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="dv">5</span></span>
-<span id="cb8-2"><a href="introdução-ao-r.html#cb8-2" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> y</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introdução-ao-r.html#cb7-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="dv">5</span></span>
+<span id="cb7-2"><a href="introdução-ao-r.html#cb7-2" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> y</span></code></pre></div>
 <pre><code>## [1] 9</code></pre>
 </div>
 <div id="funções" class="section level2 hasAnchor" number="14.7">
@@ -505,20 +505,20 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p><code>função(argumento1 = valor, argumento2 = valor, ...)</code></p>
 </div>
 <p>Vamos criar uma função como exemplo:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="introdução-ao-r.html#cb10-1" aria-hidden="true" tabindex="-1"></a>função <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">arg1 =</span> <span class="st">&quot;&quot;</span>, <span class="at">arg2 =</span> <span class="st">&quot;&quot;</span>){</span>
-<span id="cb10-2"><a href="introdução-ao-r.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-3"><a href="introdução-ao-r.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  Código_da_função</span>
-<span id="cb10-4"><a href="introdução-ao-r.html#cb10-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-5"><a href="introdução-ao-r.html#cb10-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="introdução-ao-r.html#cb9-1" aria-hidden="true" tabindex="-1"></a>função <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">arg1 =</span> <span class="st">&quot;&quot;</span>, <span class="at">arg2 =</span> <span class="st">&quot;&quot;</span>){</span>
+<span id="cb9-2"><a href="introdução-ao-r.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-3"><a href="introdução-ao-r.html#cb9-3" aria-hidden="true" tabindex="-1"></a>  Código_da_função</span>
+<span id="cb9-4"><a href="introdução-ao-r.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-5"><a href="introdução-ao-r.html#cb9-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Vamos observar os argumentos da função com a função <code>args()</code></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="introdução-ao-r.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">args</span>(função) <span class="co"># Mostra os argumentos da função `função`</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="introdução-ao-r.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">args</span>(função) <span class="co"># Mostra os argumentos da função `função`</span></span></code></pre></div>
 <pre><code>## function (arg1 = &quot;&quot;, arg2 = &quot;&quot;) 
 ## NULL</code></pre>
 </div>
 <div id="funções-básicas" class="section level3 hasAnchor" number="14.7.2">
 <h3><span class="header-section-number">14.7.2</span> Funções básicas<a href="introdução-ao-r.html#funções-básicas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Versão, licença e citação:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="introdução-ao-r.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">R.Version</span>() <span class="co"># mostra a versão</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="introdução-ao-r.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">R.Version</span>() <span class="co"># mostra a versão</span></span></code></pre></div>
 <pre><code>## $platform
 ## [1] &quot;x86_64-w64-mingw32&quot;
 ## 
@@ -560,7 +560,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## $nickname
 ## [1] &quot;Taking Off Again&quot;</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="introdução-ao-r.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">license</span>() <span class="co"># informações sobre a licença</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="introdução-ao-r.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">license</span>() <span class="co"># informações sobre a licença</span></span></code></pre></div>
 <pre><code>## 
 ## This software is distributed under the terms of the GNU General
 ## Public License, either Version 2, June 1991 or Version 3, June 2007.
@@ -580,7 +580,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## Version 3 of the license can be displayed by RShowDoc(&quot;LGPL-3&quot;).
 ## 
 ## &#39;Share and Enjoy.&#39;</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="introdução-ao-r.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>() <span class="co"># como citar</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="introdução-ao-r.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>() <span class="co"># como citar</span></span></code></pre></div>
 <pre><code>## 
 ## To cite R in publications use:
 ## 
@@ -603,15 +603,15 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## when using it for data analysis. See also &#39;citation(&quot;pkgname&quot;)&#39; for
 ## citing R packages.</code></pre>
 <p>Funções de ajuda:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="introdução-ao-r.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>() <span class="co"># função ajuda</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="introdução-ao-r.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>() <span class="co"># função ajuda</span></span></code></pre></div>
 <pre><code>## starting httpd help server ... done</code></pre>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="introdução-ao-r.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help.start</span>() <span class="co"># Manuais e outros materiais</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="introdução-ao-r.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help.start</span>() <span class="co"># Manuais e outros materiais</span></span></code></pre></div>
 <pre><code>## If nothing happens, you should open
-## &#39;http://127.0.0.1:27895/doc/html/index.html&#39; yourself</code></pre>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="introdução-ao-r.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(base) <span class="co"># Manual do pacote &quot;base&quot;</span></span></code></pre></div>
+## &#39;http://127.0.0.1:23601/doc/html/index.html&#39; yourself</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="introdução-ao-r.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(base) <span class="co"># Manual do pacote &quot;base&quot;</span></span></code></pre></div>
 <p>Funções de data e hora:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="introdução-ao-r.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>() <span class="co"># Obtém data e horário exatos do sistema</span></span></code></pre></div>
-<pre><code>## [1] &quot;2022-10-23 20:20:01 -03&quot;</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="introdução-ao-r.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>() <span class="co"># Obtém data e horário exatos do sistema</span></span></code></pre></div>
+<pre><code>## [1] &quot;2022-10-23 20:37:16 -03&quot;</code></pre>
 </div>
 </div>
 <div id="pacotes" class="section level2 hasAnchor" number="14.8">
@@ -631,37 +631,37 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">14.9</span> Prática<a href="introdução-ao-r.html#prática-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="indexação-de-objetos" class="section level3 hasAnchor" number="14.9.1">
 <h3><span class="header-section-number">14.9.1</span> Indexação de objetos<a href="introdução-ao-r.html#indexação-de-objetos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="introdução-ao-r.html#cb26-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">4</span> <span class="co"># cria o objeto &quot;x&quot; atribuindo o valor &quot;4&quot;</span></span>
-<span id="cb26-2"><a href="introdução-ao-r.html#cb26-2" aria-hidden="true" tabindex="-1"></a>x <span class="co"># Observe o objeto criado</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="introdução-ao-r.html#cb25-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">4</span> <span class="co"># cria o objeto &quot;x&quot; atribuindo o valor &quot;4&quot;</span></span>
+<span id="cb25-2"><a href="introdução-ao-r.html#cb25-2" aria-hidden="true" tabindex="-1"></a>x <span class="co"># Observe o objeto criado</span></span></code></pre></div>
 <pre><code>## [1] 4</code></pre>
 <p>Para concatenar vários valores utilize a função <code>c</code>:</p>
 <p>Concatenar vários valores e atribuí-los a um objeto:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="introdução-ao-r.html#cb28-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>)</span>
-<span id="cb28-2"><a href="introdução-ao-r.html#cb28-2" aria-hidden="true" tabindex="-1"></a>x <span class="co"># Observe o objeto criado</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="introdução-ao-r.html#cb27-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>)</span>
+<span id="cb27-2"><a href="introdução-ao-r.html#cb27-2" aria-hidden="true" tabindex="-1"></a>x <span class="co"># Observe o objeto criado</span></span></code></pre></div>
 <pre><code>## [1] 4 5 6 7 8</code></pre>
 <p>Extrair um ou vários valores de um objeto a partir da indexação:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="introdução-ao-r.html#cb30-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="introdução-ao-r.html#cb29-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">3</span>]</span></code></pre></div>
 <pre><code>## [1] 6</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="introdução-ao-r.html#cb32-1" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="introdução-ao-r.html#cb31-1" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>)]</span></code></pre></div>
 <pre><code>## [1] 4 7</code></pre>
 <p>Substitua valores de um objeto a partir da indexação:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="introdução-ao-r.html#cb34-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">24</span>, <span class="dv">10</span>, <span class="dv">45</span>, <span class="dv">56</span>, <span class="dv">20</span>, <span class="dv">29</span>, <span class="dv">50</span>, <span class="dv">67</span>, <span class="dv">80</span>, <span class="dv">23</span>, <span class="dv">20</span>, <span class="dv">15</span>, <span class="dv">65</span>, <span class="dv">57</span>, <span class="dv">34</span>, <span class="dv">63</span>, <span class="dv">20</span>)</span>
-<span id="cb34-2"><a href="introdução-ao-r.html#cb34-2" aria-hidden="true" tabindex="-1"></a>y[y<span class="sc">==</span><span class="dv">20</span>] <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="co"># Se algum valor de y é igual a 20, substituir por 10</span></span>
-<span id="cb34-3"><a href="introdução-ao-r.html#cb34-3" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="introdução-ao-r.html#cb33-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">24</span>, <span class="dv">10</span>, <span class="dv">45</span>, <span class="dv">56</span>, <span class="dv">20</span>, <span class="dv">29</span>, <span class="dv">50</span>, <span class="dv">67</span>, <span class="dv">80</span>, <span class="dv">23</span>, <span class="dv">20</span>, <span class="dv">15</span>, <span class="dv">65</span>, <span class="dv">57</span>, <span class="dv">34</span>, <span class="dv">63</span>, <span class="dv">20</span>)</span>
+<span id="cb33-2"><a href="introdução-ao-r.html#cb33-2" aria-hidden="true" tabindex="-1"></a>y[y<span class="sc">==</span><span class="dv">20</span>] <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="co"># Se algum valor de y é igual a 20, substituir por 10</span></span>
+<span id="cb33-3"><a href="introdução-ao-r.html#cb33-3" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
 <pre><code>##  [1] 24 10 45 56 10 29 50 67 80 23 10 15 65 57 34 63 10</code></pre>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="introdução-ao-r.html#cb36-1" aria-hidden="true" tabindex="-1"></a>y[y<span class="sc">==</span><span class="dv">10</span>] <span class="ot">&lt;-</span> <span class="st">&quot;NA&quot;</span> <span class="co"># Apaga todos os valores iguais a 10, substituindo por &quot;NA&quot;</span></span>
-<span id="cb36-2"><a href="introdução-ao-r.html#cb36-2" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="introdução-ao-r.html#cb35-1" aria-hidden="true" tabindex="-1"></a>y[y<span class="sc">==</span><span class="dv">10</span>] <span class="ot">&lt;-</span> <span class="st">&quot;NA&quot;</span> <span class="co"># Apaga todos os valores iguais a 10, substituindo por &quot;NA&quot;</span></span>
+<span id="cb35-2"><a href="introdução-ao-r.html#cb35-2" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
 <pre><code>##  [1] &quot;24&quot; &quot;NA&quot; &quot;45&quot; &quot;56&quot; &quot;NA&quot; &quot;29&quot; &quot;50&quot; &quot;67&quot; &quot;80&quot; &quot;23&quot; &quot;NA&quot; &quot;15&quot; &quot;65&quot; &quot;57&quot; &quot;34&quot;
 ## [16] &quot;63&quot; &quot;NA&quot;</code></pre>
 <p>Deleta o objeto:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="introdução-ao-r.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="introdução-ao-r.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(x)</span></code></pre></div>
 <p>Pode-se criar objetos com valores numéricos (<code>numeric</code>), conforme mostrado até aqui, mas também objetos com valores de caracteres (<code>character</code>), lógicos (<code>logical</code>) ou fatores (<code>factor</code>).</p>
 <p>Objetos do tipo <code>character</code> podem ser criados utilizando aspas (” “) entre os valores incluídos. Um objeto do tipo <code>factor</code> cria categorias para cada valor encontrado no objeto. Geralmente são usados em diversos pacotes para análises filogenéticas:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="introdução-ao-r.html#cb39-1" aria-hidden="true" tabindex="-1"></a>character <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">&quot;apical&quot;</span>, <span class="st">&quot;apical&quot;</span>, <span class="st">&quot;basal&quot;</span>, <span class="st">&quot;apical&quot;</span>, <span class="st">&quot;apical&quot;</span>, <span class="st">&quot;basal&quot;</span>, <span class="st">&quot;median&quot;</span>)</span>
-<span id="cb39-2"><a href="introdução-ao-r.html#cb39-2" aria-hidden="true" tabindex="-1"></a>character</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="introdução-ao-r.html#cb38-1" aria-hidden="true" tabindex="-1"></a>character <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">&quot;apical&quot;</span>, <span class="st">&quot;apical&quot;</span>, <span class="st">&quot;basal&quot;</span>, <span class="st">&quot;apical&quot;</span>, <span class="st">&quot;apical&quot;</span>, <span class="st">&quot;basal&quot;</span>, <span class="st">&quot;median&quot;</span>)</span>
+<span id="cb38-2"><a href="introdução-ao-r.html#cb38-2" aria-hidden="true" tabindex="-1"></a>character</span></code></pre></div>
 <pre><code>## [1] &quot;apical&quot; &quot;apical&quot; &quot;basal&quot;  &quot;apical&quot; &quot;apical&quot; &quot;basal&quot;  &quot;median&quot;</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="introdução-ao-r.html#cb41-1" aria-hidden="true" tabindex="-1"></a>charact_fact <span class="ot">&lt;-</span> <span class="fu">factor</span>(character)</span>
-<span id="cb41-2"><a href="introdução-ao-r.html#cb41-2" aria-hidden="true" tabindex="-1"></a>charact_fact</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="introdução-ao-r.html#cb40-1" aria-hidden="true" tabindex="-1"></a>charact_fact <span class="ot">&lt;-</span> <span class="fu">factor</span>(character)</span>
+<span id="cb40-2"><a href="introdução-ao-r.html#cb40-2" aria-hidden="true" tabindex="-1"></a>charact_fact</span></code></pre></div>
 <pre><code>## [1] apical apical basal  apical apical basal  median
 ## Levels: apical basal median</code></pre>
 </div>
@@ -727,58 +727,58 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="line-block">x &amp; y | x AND y | ——– ———</div>
 </div>
 <p>Vamos testar:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="introdução-ao-r.html#cb43-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb43-2"><a href="introdução-ao-r.html#cb43-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="introdução-ao-r.html#cb42-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb42-2"><a href="introdução-ao-r.html#cb42-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="introdução-ao-r.html#cb45-1" aria-hidden="true" tabindex="-1"></a>x[(x<span class="sc">&gt;</span><span class="dv">8</span>) <span class="sc">|</span> (x<span class="sc">&lt;</span><span class="dv">5</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="introdução-ao-r.html#cb44-1" aria-hidden="true" tabindex="-1"></a>x[(x<span class="sc">&gt;</span><span class="dv">8</span>) <span class="sc">|</span> (x<span class="sc">&lt;</span><span class="dv">5</span>)]</span></code></pre></div>
 <pre><code>## [1]  1  2  3  4  9 10</code></pre>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="introdução-ao-r.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Qual a lógica?</span></span>
-<span id="cb47-2"><a href="introdução-ao-r.html#cb47-2" aria-hidden="true" tabindex="-1"></a>x <span class="sc">&gt;</span> <span class="dv">8</span></span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="introdução-ao-r.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Qual a lógica?</span></span>
+<span id="cb46-2"><a href="introdução-ao-r.html#cb46-2" aria-hidden="true" tabindex="-1"></a>x <span class="sc">&gt;</span> <span class="dv">8</span></span></code></pre></div>
 <pre><code>##  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE</code></pre>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="introdução-ao-r.html#cb49-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="introdução-ao-r.html#cb48-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>##  [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="introdução-ao-r.html#cb51-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">&gt;</span> <span class="dv">8</span> <span class="sc">|</span> x <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="introdução-ao-r.html#cb50-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">&gt;</span> <span class="dv">8</span> <span class="sc">|</span> x <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>##  [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE  TRUE  TRUE</code></pre>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="introdução-ao-r.html#cb53-1" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(T, T, T, T, F, F, F, F, T, T)]</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="introdução-ao-r.html#cb52-1" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(T, T, T, T, F, F, F, F, T, T)]</span></code></pre></div>
 <pre><code>## [1]  1  2  3  4  9 10</code></pre>
 <p>Experimente a utilização dos operadores matemáticos simples entre diferentes objetos:</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="introdução-ao-r.html#cb55-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="introdução-ao-r.html#cb54-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="introdução-ao-r.html#cb57-1" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="introdução-ao-r.html#cb56-1" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
 <pre><code>##  [1] &quot;24&quot; &quot;NA&quot; &quot;45&quot; &quot;56&quot; &quot;NA&quot; &quot;29&quot; &quot;50&quot; &quot;67&quot; &quot;80&quot; &quot;23&quot; &quot;NA&quot; &quot;15&quot; &quot;65&quot; &quot;57&quot; &quot;34&quot;
 ## [16] &quot;63&quot; &quot;NA&quot;</code></pre>
 </div>
 <div id="inspecionando-os-atributos-um-objeto" class="section level3 hasAnchor" number="14.9.3">
 <h3><span class="header-section-number">14.9.3</span> Inspecionando os atributos um objeto<a href="introdução-ao-r.html#inspecionando-os-atributos-um-objeto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="introdução-ao-r.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">object.size</span>(x) <span class="co"># Tamanho do objeto</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="introdução-ao-r.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">object.size</span>(x) <span class="co"># Tamanho do objeto</span></span></code></pre></div>
 <pre><code>## 96 bytes</code></pre>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="introdução-ao-r.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(x) <span class="co"># Estrutura do objeto</span></span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="introdução-ao-r.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(x) <span class="co"># Estrutura do objeto</span></span></code></pre></div>
 <pre><code>##  int [1:10] 1 2 3 4 5 6 7 8 9 10</code></pre>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="introdução-ao-r.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(x) <span class="co"># Comprimento</span></span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="introdução-ao-r.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(x) <span class="co"># Comprimento</span></span></code></pre></div>
 <pre><code>## [1] 10</code></pre>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="introdução-ao-r.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(x) <span class="co"># Nomes, classes, etc</span></span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="introdução-ao-r.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(x) <span class="co"># Nomes, classes, etc</span></span></code></pre></div>
 <pre><code>## NULL</code></pre>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="introdução-ao-r.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x) <span class="co"># Tipo do objeto</span></span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="introdução-ao-r.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x) <span class="co"># Tipo do objeto</span></span></code></pre></div>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="introdução-ao-r.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(x) <span class="co"># Modo usado pelo R para armazenar objeto na memória</span></span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="introdução-ao-r.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(x) <span class="co"># Modo usado pelo R para armazenar objeto na memória</span></span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="introdução-ao-r.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(x) <span class="co"># Tipo usado pelo R para armazenar objeto na memória</span></span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="introdução-ao-r.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(x) <span class="co"># Tipo usado pelo R para armazenar objeto na memória</span></span></code></pre></div>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
 <p>Inspecione os objetos criados. Exemplos:</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="introdução-ao-r.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="introdução-ao-r.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="introdução-ao-r.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y)</span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="introdução-ao-r.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(y)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="introdução-ao-r.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(character)</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="introdução-ao-r.html#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(character)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="introdução-ao-r.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(charact_fact)</span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="introdução-ao-r.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(charact_fact)</span></code></pre></div>
 <pre><code>## [1] &quot;factor&quot;</code></pre>
 </div>
 <div id="teste-e-coerção-de-objetos" class="section level3 hasAnchor" number="14.9.4">
 <h3><span class="header-section-number">14.9.4</span> Teste e Coerção de objetos<a href="introdução-ao-r.html#teste-e-coerção-de-objetos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Com os métodos da função <code>is</code> é possível testar se um objeto corresponde a uma determinada <code>classe</code>. E com os métodos da função <code>as</code> é possível coagir um objeto de uma classe a transformar-se em outra.</p>
 <p>Veja os métodos das funções <code>is</code> e <code>as</code>: (Retire o operador # da frente do comando para rodá-lo)</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="introdução-ao-r.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">methods</span>(is)</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="introdução-ao-r.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">methods</span>(is)</span></code></pre></div>
 <pre><code>## Warning in .S3methods(generic.function, class, envir): function &#39;is&#39; appears not
 ## to be S3 generic; found functions that look like S3 methods</code></pre>
 <pre><code>##  [1] is.array                is.atomic               is.BibEntry            
@@ -803,7 +803,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## [58] is.tbl                  is.ts                   is.tskernel            
 ## [61] is.unsorted             is.vector              
 ## see &#39;?methods&#39; for accessing help and source code</code></pre>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="introdução-ao-r.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="co"># methods(as)</span></span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="introdução-ao-r.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="co"># methods(as)</span></span></code></pre></div>
 <p>Teste com os objetos já criados:</p>
 </div>
 </div>
@@ -831,19 +831,19 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><p>O diretório de trabalho (<em>working directory</em>) define o <em>diretório-raiz</em> do caminho de diretórios para fins de entrada e saída de arquivos. Ele define o <em>caminho relativo</em> para um caminho de diretórios.</p></li>
 <li><p>O <strong>caminho absoluto</strong> tem início na pasta raiz do seu disco local do computador. O caminho absoluto do ambiente de trabalho (<em>workspace</em>) pode ser obtido com a função <code>getwd()</code>. Abaixo vemos o diretório-raiz do presente <em>bookdown</em> no computador local:</p></li>
 </ul>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="introdução-ao-r.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="introdução-ao-r.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;C:/git repositories/Introducao_a_Filoinformatica&quot;</code></pre>
 <p><img src="images/rstudio2.PNG" /></p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="introdução-ao-r.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>() <span class="co"># lista todos os objetos/funções do Ambiente de Trabalho</span></span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="introdução-ao-r.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>() <span class="co"># lista todos os objetos/funções do Ambiente de Trabalho</span></span></code></pre></div>
 <pre><code>##  [1] &quot;charact_fact&quot;     &quot;character&quot;        &quot;edges&quot;            &quot;edges.is_a&quot;      
 ##  [5] &quot;função&quot;           &quot;graph&quot;            &quot;graph2&quot;           &quot;graph3&quot;          
 ##  [9] &quot;group&quot;            &quot;group.length&quot;     &quot;group.n&quot;          &quot;i&quot;               
 ## [13] &quot;nodes&quot;            &quot;nodes.id&quot;         &quot;nodes.label&quot;      &quot;nodes.label.this&quot;
 ## [17] &quot;nodes.title&quot;      &quot;nodes.title.this&quot; &quot;PO&quot;               &quot;referencias&quot;     
 ## [21] &quot;x&quot;                &quot;y&quot;</code></pre>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="introdução-ao-r.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>()) <span class="co"># limpa todo Ambiente de Trabalho</span></span>
-<span id="cb89-2"><a href="introdução-ao-r.html#cb89-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb89-3"><a href="introdução-ao-r.html#cb89-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>() <span class="co"># lista todos os objetos/funções do Ambiente de Trabalho</span></span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="introdução-ao-r.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>()) <span class="co"># limpa todo Ambiente de Trabalho</span></span>
+<span id="cb88-2"><a href="introdução-ao-r.html#cb88-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-3"><a href="introdução-ao-r.html#cb88-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>() <span class="co"># lista todos os objetos/funções do Ambiente de Trabalho</span></span></code></pre></div>
 <pre><code>## character(0)</code></pre>
 </div>
 </div>

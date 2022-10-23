@@ -418,33 +418,32 @@ Joysey & Friday (1982)
 ::::
 
     
-    - Um dos primeiros trabalhos que focaram no conceito de homologia.
+  - Um dos primeiros trabalhos que focaram no conceito de homologia.
       
-      - Investiga a tradicional noção de homologia sob a nova luz da sistemática filogenética moderna (de Pinna, 2012).
+    - Investiga a tradicional noção de homologia sob a nova luz da sistemática filogenética moderna (de Pinna, 2012).
       
-      - "Homologia é sinapomorfia"
+    - "Homologia é sinapomorfia"
     
-    - Conhecido por ter formulado o "teste de homologia" `r Cite(referencias, c("Holland2013", "Patterson1982"))`, basedo em três atributos:
+  - Conhecido por ter formulado o "teste de homologia" `r Cite(referencias, c("Holland2013", "Patterson1982"))`, basedo em três atributos:
     
-      1. similaridade
+    1. similaridade
       
-        - topográfica [posicional], ontogenética, composicional
+      - topográfica [posicional], ontogenética, composicional
       
-      2. conjunção
+    2. conjunção
       
-        - Uma homologia não pode coexistir em um mesmo organismo
+      - Uma homologia não pode coexistir em um mesmo organismo
         
-          > "A homologia de braços humanos e asas de pássaros como membros anteriores de tetrápodes seria refutada pela existência de anjos com braços e asas"
-        
-          ![](images/angel.png) Imagem publicada em *On the Nature of Limbs: A Discourse*, de Richard Owen.
+        > "A homologia de braços humanos e asas de pássaros como membros anteriores de tetrápodes seria refutada pela existência de anjos com braços e asas"
+        ![](images/angel.png) Imagem publicada em *On the Nature of Limbs: A Discourse*, de Richard Owen.
       
-      3. congruência
+    3. congruência
       
-        - Coerência de declarações de caráter (com outras homologias)
+      - Coerência de declarações de caráter (com outras homologias)
       
-      - Paralelismo é uma falha no teste de congruência
+    - Paralelismo é uma falha no teste de congruência
       
-      - Convergência é uma falha no teste de similaridade e congruência
+    - Convergência é uma falha no teste de similaridade e congruência
 
 
 - Já no início da década de 90, outra contribuição importante para a formulação do conceito filogenético (originalmente proposto por Hennig) de homologia foi postulado por **Mario de Pinna**, em 1991: *Concepts and tests of homology in the cladistic paradigm* `r Cite(referencias, "Pinna1991")`.
