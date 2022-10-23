@@ -272,6 +272,12 @@ Por seu turno, a **Sistemática Filogenética** (cladística), postulada por **W
 
 - A intenção de Hennig era tornar a Sistemática uma ciência com métodos objetivos e reprodutíveis, afastando-a das hipóteses *ad hoc*, idiossincráticas. Por isso, ele desenvolveu não apenas um novo método, mas também ocupou-se de sua justificação teórica.
 
+- Os sistemas de classificação devem refletir unicamente a genealogia.
+
+- Reformou o conceito de "grupo natural", restringindo a sua definição, considerando como um grupo válido exclusivamente um grupo que contenha um ancestral e todos os seus descendentes.
+
+  - Grupos válidos precisam compartilhar um ancestral comum exclusivo.
+
 - Hennig era excepcionalmente preocupado com questões filosóficas `r Cite(referencias, "Tremblay2013")`.
 
   - Era muito comum na Alemanha do século XX os biólogos se ocuparem com questões filosóficas, principalmente como resultado da tendência interdisciplinar na cultura acadêmica naquela época.
@@ -393,13 +399,7 @@ Felsenstein (2004)
 
   - Importante teórico foi o paleoictiólogo **Collin Patterson** (1933--1998).
   
-    - Conhecido por ter formulado o "teste de homologia" `r Cite(referencias, c("Holland2013", "Patterson1982"))`, basedo em três atributos:
-    
-      1. similaridade
-      2. conjunção
-      3. congruência
-
-:::: {style="display: flex;"}
+  :::: {style="display: flex;"}
 
 ::: {}
 
@@ -416,8 +416,48 @@ Joysey & Friday (1982)
 :::
 
 ::::
+
+    
+    - Um dos primeiros trabalhos que focaram no conceito de homologia.
+      
+      - Investiga a tradicional noção de homologia sob a nova luz da sistemática filogenética moderna (de Pinna, 2012).
+      
+      - "Homologia é sinapomorfia"
+    
+    - Conhecido por ter formulado o "teste de homologia" `r Cite(referencias, c("Holland2013", "Patterson1982"))`, basedo em três atributos:
+    
+      1. similaridade
+      
+        - topográfica [posicional], ontogenética, composicional
+      
+      2. conjunção
+      
+        - Uma homologia não pode coexistir em um mesmo organismo
+        
+          > "A homologia de braços humanos e asas de pássaros como membros anteriores de tetrápodes seria refutada pela existência de anjos com braços e asas"
+        
+          ![](images/angel.png) Imagem publicada em *On the Nature of Limbs: A Discourse*, de Richard Owen.
+      
+      3. congruência
+      
+        - Coerência de declarações de caráter (com outras homologias)
+      
+      - Paralelismo é uma falha no teste de congruência
+      
+      - Convergência é uma falha no teste de similaridade e congruência
+
+
+- Já no início da década de 90, outra contribuição importante para a formulação do conceito filogenético (originalmente proposto por Hennig) de homologia foi postulado por **Mario de Pinna**, em 1991: *Concepts and tests of homology in the cladistic paradigm* `r Cite(referencias, "Pinna1991")`.
   
-  - Já no início da década de 90, outra contribuição importante para a formulação do conceito de homologia foi postulado por **Mario de Pinna**, em 1991 `r Cite(referencias, "Pinna1991")`.
+  - Ele propõe como justificativa para a equivalência entre homologia e sinapomorfia, corroborando e difundindo a ideia de que "homologia é sinapomorfia".
+    
+  - Veja também a importante revisão de "conceito de homologia" em `r Citet(referencias, "Brower2012")`.
+  
+    - Propôs os conceitos de **homologia primária** e **homologia secundária**.
+    
+    - Veja a emérita aula no Fórum de Sistemática e Evolução - USP, em 2012:
+      
+    ![](https://www.youtube.com/watch?v=UmbFLVjnJs0)
   
   ![](images/depinna.jpg)
   
