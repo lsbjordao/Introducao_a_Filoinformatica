@@ -448,6 +448,8 @@ Joysey & Friday (1982)
 
 
 - Já no início da década de 90, outra contribuição importante para a formulação do conceito filogenético (originalmente proposto por Hennig) de homologia foi postulado por **Mario de Pinna**, em 1991: *Concepts and tests of homology in the cladistic paradigm* `r Cite(referencias, "Pinna1991")`.
+
+![](images/depinna.jpg)
   
   - Ele propõe como justificativa para a equivalência entre homologia e sinapomorfia, corroborando e difundindo a ideia de que "homologia é sinapomorfia".
     
@@ -457,9 +459,13 @@ Joysey & Friday (1982)
     
     - Veja a emérita aula no Fórum de Sistemática e Evolução - USP, em 2012:
       
-    ![](https://www.youtube.com/watch?v=UmbFLVjnJs0)
-  
-  ![](images/depinna.jpg)
+    ```{r echo=FALSE}
+library(xaringanExtra)
+embed_xaringan(
+  url = "https://www.youtube.com/watch?v=UmbFLVjnJs0",
+  ratio = "4:2"
+)
+```
   
 - A partir do início dos anos 90, sistematas começaram a se envolver cada vez mais na conservação e no papel desempenhado pela sistemática na solução de problemas da sociedade. O senso de urgência e um apelo à comunidade sistemática de biologia para definir claramente suas prioridades e agenda de pesquisa levaram a uma reunião de aproximadamente uma dúzia de pesquisadores, representando a *American Society of Plant Taxonomists*, a *Society of Systematic Biologists* e a *Willi Hennig Society* do *American Museum of Natural History*, em março de 1991. No início da reunião, reconheceu-se a necessidade de uma iniciativa abrangente para integrar os esforços em prol de objetivos comuns `r Cite(referencias, c("Cracraft", "Eshbaugh"))`.
 
