@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Formatos de arquivo mais comuns | Introdução à Filoinformática (in development)</title>
-  <meta name="description" content="6 Formatos de arquivo mais comuns | Introdução à Filoinformática (in development)" />
+  <title>11 Softwares para análises filogenéticas | Introdução à Filoinformática (in development)</title>
+  <meta name="description" content="11 Softwares para análises filogenéticas | Introdução à Filoinformática (in development)" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Formatos de arquivo mais comuns | Introdução à Filoinformática (in development)" />
+  <meta property="og:title" content="11 Softwares para análises filogenéticas | Introdução à Filoinformática (in development)" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Formatos de arquivo mais comuns | Introdução à Filoinformática (in development)" />
+  <meta name="twitter:title" content="11 Softwares para análises filogenéticas | Introdução à Filoinformática (in development)" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="montagem-de-sequências.html"/>
-<link rel="next" href="alinhamento-múltiplo-e-manual-de-sequências.html"/>
+<link rel="prev" href="seleção-de-modelos-das-partições.html"/>
+<link rel="next" href="edição-final-de-árvore.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -378,83 +378,268 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="formatos-de-arquivo-mais-comuns" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">6</span> Formatos de arquivo mais comuns<a href="formatos-de-arquivo-mais-comuns.html#formatos-de-arquivo-mais-comuns" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="softwares_filogenia" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">11</span> Softwares para análises filogenéticas<a href="softwares_filogenia.html#softwares_filogenia" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Desde 1980, uma série de <em>softwares</em> vem sendo desenvolvidos para rodar análises filogenéticas.</p>
+<p><img src="images/phylloapps.png" /></p>
+<p>Phylip</p>
+<p><img src="images/phylip.jpg" /></p>
+<p>Hennig86</p>
+<p><img src="images/hennig86.PNG" /></p>
+<p>NONA</p>
+<p><img src="images/nona.PNG" /></p>
+<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
+<iframe src="https://phylobotanist.blogspot.com/2016/04/the-popularity-of-phylogenetic-programs.html" width="400" height="200" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
 <ul>
-<li><p>Os mais conhecidos arquivos para armazenar dados filogenéticos (filodados) são:</p>
+<li><a href="http://evolution.genetics.washington.edu/phylip/software.html">Felsenstein/Kuhner lab</a></li>
+</ul>
+<p>Base atualizada com lista de programas por seções.</p>
+<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
+<iframe src="http://evolution.genetics.washington.edu/phylip/software.html" width="400" height="200" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+<div id="ms-dos" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> MS-DOS<a href="softwares_filogenia.html#ms-dos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><strong>Fasta</strong> (.fst .fasta)</li>
-<li><strong>Phyllip</strong> (.phy)</li>
-<li><strong>Nexus</strong> (.nex)</li>
+<li><p>Diversos programas de análises filogenéticas foram desenvolvidos para o ambiente do DOS (<em>Disk Operating System</em>).</p></li>
+<li><p>O <em>prompt</em> de comando do <em>DOS shell</em> é representado por <code>C:\&gt;</code>.</p>
+<ul>
+<li>A letra C refere-se à unidade de disco;</li>
+<li>Os dois-pontos e a contra-barra indicam o caminho do diretório-raiz da unidade C.</li>
 </ul></li>
-<li><p>Esses arquivos são os “<em>input files</em>” para os processamentos das análises filogenéticas.</p></li>
-<li><p>Eles devem ser editados num editor de texto plano (<em>plain text editor</em>), sem formatações e estilos.</p></li>
 </ul>
-<div id="phylip" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> PHYLIP<a href="formatos-de-arquivo-mais-comuns.html#phylip" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Lançado em 1980 por <a href="https://felsenst.github.io/">Joe Felsenstein</a>.</li>
-</ul>
-<p><img src="https://felsenst.github.io/Joe2011Disappointmenta.jpg" /></p>
-<pre><code>3 62
-Mimosa_afranioi ----------------------------------------CATTCAAACCTTTTTTA-----
-Mimosa_campicola --------------------------------------TTCATTCAAACCTTTTTTA----
-Mimosa_candollei CCAGGAAAAAAGTGTACAGCATGCATATTCTTA-CGATTTCATTCAAACCTTTTCTA----</code></pre>
-</div>
-<div id="fasta" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> FASTA<a href="formatos-de-arquivo-mais-comuns.html#fasta" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><p>Lançado em 1985 por David Lipman e William R. Pearson.</p></li>
-<li><p>Formato mais simples para sequências nucleotídicas ou proteicas.</p></li>
-<li><p>O nome do terminal ou a etiqueta (<em>label</em>) é precedida pelo caractere do sinal de maior <code>&gt;</code>.</p></li>
-<li><p>Admite o caractere vazio (<em>gap</em>): <code>-</code>.</p></li>
-<li><p>Extensões usadas: <code>.fas</code>, <code>.fasta</code>.</p></li>
-</ul>
-<pre><code>&gt;Mimosa_afranioi
-----------------------------------------CATTCAAACCTTTTTTA---
---TTTCGATTTTAGATTAGAATTGTCTTGTTCTAACTGGCGGAGGCGGGACTAATATGTT
-GATATTTAT----------ATTTATATAGATATAGATTTATA-------------TGGAT
-&gt;Mimosa_campicola
---------------------------------------TTCATTCAAACCTTTTTTA---
---TTTAGATT--AGAATAGAATTGTCTTGTTCTAACTGGCGGAGGCGGGACTAATATGTT
-GATATTTATATAGATATAGATTTATATAGATATAGATTTATA-------------TGGAT
-&gt;Mimosa_candollei
-CCAGGAAAAAAGTGTACAGCATGCATATTCTTA-CGATTTCATTCAAACCTTTTCTA---
---TTTCGATTTTAGATTCGAATTGTCTTGTTCTAACTGGCGGAGGCGGGACTAATATGTT
-GATATTTAT----------ATTTAT------ATAGATTTATA-------------TGTAT</code></pre>
-</div>
-<div id="nexus" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> NEXUS<a href="formatos-de-arquivo-mais-comuns.html#nexus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Lançado em 1987 por Wayne &amp; David Maddison e David L. Swofford ^(criador do PAUP)^.</li>
-</ul>
-<p><img src="images/Maddisons.jpg" /></p>
-<p><a name=cite-Maddison></a><a href="https://doi.org/10.1093/sysbio/46.4.590">Maddison, Swofford, and Maddison (1997)</a></p>
-<pre><code>#NEXUS
-BEGIN TAXA;
-    TITLE Taxa;
-    DIMENSIONS NTAX=3;
-    TAXLABELS
-        afranioi campicola candollei;
-END;
-BEGIN CHARACTERS;
-    TITLE  Character_Matrix;
-    DIMENSIONS  NCHAR=62;
-    FORMAT DATATYPE = DNA GAP = - MISSING = ?;
-    MATRIX
-Mimosa_afranioi ---------------------------------------CATTCAAACCTTTTTTA-----
-Mimosa_campicola    --------------------------------------TTCATTCAAACCTTTTTTA----
-Mimosa_candollei    CCAGGAAAAAAGTGTACAGCATGCATATTCTTA-CGATTTCATTCAAACCTTTTCTA----
-;
-END;
-</code></pre>
 <div style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;">
-<p><img src="images/maclade.jpg" style="width:30.0%" /></p>
-<p>Maddison, W.P. &amp; Maddison, D.R., 1992. MacClade: Analysis of Phylogeny and Character Evolution. Version 3</p>
+<p>Seleção do driver</p>
+<blockquote>
+<p><code>c:</code></p>
+</blockquote>
+<p>Acessa um diretório a partir do diretório atual:</p>
+<blockquote>
+<p><code>cd [diretório]</code></p>
+</blockquote>
+<p>Retorna um diretório:</p>
+<blockquote>
+<p><code>cd..</code></p>
+</blockquote>
+<p>Retorna ao diretório-raiz da unidade de disco:</p>
+<blockquote>
+<p><code>cd/</code></p>
+</blockquote>
+<p>Acessa um diretório:</p>
+<blockquote>
+<p><code>cd/[diretório]</code></p>
+</blockquote>
+<p>Exibe os diretórios e arquivos locais:</p>
+<blockquote>
+<p><code>dir</code></p>
+</blockquote>
+<p>…, lado a lado:</p>
+<blockquote>
+<p><code>dir/w</code></p>
+</blockquote>
+<p>…, pausadamente:</p>
+<blockquote>
+<p><code>dir/p</code></p>
+</blockquote>
+<p>…, lado a lado, pausadamente:</p>
+<blockquote>
+<p><code>dir/w/p</code></p>
+</blockquote>
+<p>Mostra todos os arquivos com determinada extensão:</p>
+<blockquote>
+<p><code>dir *.[extensão]</code></p>
+</blockquote>
+<p>Mostra os argumentos da função <code>dir</code>:</p>
+<blockquote>
+<p><code>dir/?</code></p>
+</blockquote>
+</div>
+</div>
+<div id="iq-tree" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> IQ-TREE<a href="softwares_filogenia.html#iq-tree" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>O <a href="http://www.iqtree.org/">IQ-TREE</a> é um dos programas mais utilizados para condução de análises filogenéticas baseada no método da Máxima verossimilhança.</p></li>
+<li><p>Veja o <a href="http://www.iqtree.org/doc/iqtree-doc.pdf">Manual</a></p></li>
+<li><p>A primeira versão foi lançada em 2011. O IQ-Tree é o sucessor dos softwares IQPNNI (desde 2004) e do TREE-PUZZLE (desde 1995).</p></li>
+</ul>
+<p><img src="images/IqtreeContributors.PNG" /></p>
+<div id="prática-5" class="section level3 hasAnchor" number="11.2.1">
+<h3><span class="header-section-number">11.2.1</span> Prática<a href="softwares_filogenia.html#prática-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Vamos testar o IQ-TREE utilizando o exemplo embutido no programa:</li>
+</ul>
+<div style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;">
+<ol style="list-style-type: decimal">
+<li><p>Coloque os arquivo com a matriz alinhada no mesmo diretório que o programa IQ-Tree. Isso evita que se tenha de especificar o caminho do arquivo a ser lido (input).</p></li>
+<li><p>Realize uma análise-teste com o exemplo do próprio programa, o arquivo <code>example.phy</code>, mas antes abra-o em um editor de texto plano (como o Bloco de Notas do Windows) para verificar seu conteúdo.</p></li>
+<li><p>Em seguida, execute os comandos abaixo:</p></li>
+</ol>
+<p>Lista completa de funções do programa</p>
+<blockquote>
+<p><code>iqtree -h</code></p>
+</blockquote>
+<p>Inferir a árvore de máxima verossimilhança utilizando o melhor modelo selecionado pelo ModelFinder</p>
+<blockquote>
+<p><code>iqtree -s example.phy</code></p>
+</blockquote>
+<p>Executar apenas a busca pelo melhor modelo utilizando o ModelFinder</p>
+<blockquote>
+<p><code>iqtree -s example.phy -m MF</code></p>
+</blockquote>
+<p>Executar diferentes métodos para estimação do suporte dos ramos</p>
+<blockquote>
+<p><code>iqtree -s example.phy -alrt 10000 -bb 10000 -lbp 10000 -abayes</code></p>
+</blockquote>
 </div>
 <div style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;">
-<p><img src="images/mesquite.png" /></p>
-<p>Maddison, W.P. &amp; Maddison, D.R., 2002. Mesquite: a modular system for evolutionary analysis. Version 0.991. <a href="http://mesquiteproject.org" class="uri">http://mesquiteproject.org</a></p>
+<p>Arquivo input</p>
+<blockquote>
+<p><code>iqtree -spp mimosa.nex</code></p>
+</blockquote>
+<p>Reescrever os arquivos, apagando os dados previamente gerados</p>
+<blockquote>
+<p><code>iqtree -spp mimosa.nex -redo</code></p>
+</blockquote>
+<p>Seleção do terminal externo</p>
+<blockquote>
+<p><code>iqtree -spp mimosa.nex -redo -o Mimosa_invisa_invisa</code></p>
+</blockquote>
+<p>Métricas de suporte dos ramos</p>
+<blockquote>
+<p><code>iqtree -spp mimosa.nex -redo -o invisa_invisa -allnni -alrt 10000 -bb  10000 -lbp 10000 -abayes -bnni</code></p>
+</blockquote>
+<p>Estabelecendo <em>constraints</em></p>
+<blockquote>
+<p><code>iqtree -spp mimosa.nex -redo -o invisa_invisa -g mimosa.constr1</code></p>
+</blockquote>
+<p>Concatenar arquivos</p>
+<blockquote>
+<p><code>type mimosa0.nex.treefile mimosa1.nex.treefile mimosa2.nex.treefile mimosa3.nex.treefile &gt; mimosa.treels</code></p>
+</blockquote>
+<p>Executar os testes de topologia</p>
+<blockquote>
+<p><code>iqtree -spp mimosa.nex -z mimosa.treels -o invisa_invisa -allnni -alrt 10000 -bb 10000 -abayes -lbp 10000 -bsam GENESITE -zb 10000 -au -zw</code></p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="splitstree6" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> SplitsTree6<a href="softwares_filogenia.html#splitstree6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="prática-6" class="section level3 hasAnchor" number="11.3.1">
+<h3><span class="header-section-number">11.3.1</span> Prática<a href="softwares_filogenia.html#prática-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>O arquivo <code>.splits.nex</code> gerado pelo <code>IQ-TREE</code> pode ser carregado pelo <a href="https://software-ab.informatik.uni-tuebingen.de/download/splitstree4/welcome.html">SplitsTree6</a> <a name=cite-Huson></a>(<a href="https://doi.org/10.1093/molbev/msj030">Huson and Bryant, 2005</a>), um programa com interface gráfica com usuário e simples de usar.</p></li>
+<li><p>Diferentemente das árvores filogenéticas, as redes filogenéticas conseguem representar as incongruências e incertezas do conjunto total de árvores obtidas na análise filogenética, e são produzidas a partir de métodos de distância específicos. Trata-se de uma ferramenta exploratória interessante que tem sido utilizada até mesmo fora do campo da biologia comparativa.</p></li>
+</ul>
+</div>
+</div>
+<div id="mrbayes" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> MrBayes<a href="softwares_filogenia.html#mrbayes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>A primeira versão do <a href="https://nbisweden.github.io/MrBayes/index.html">MrBayes</a> <a name=cite-Huelsenbeck></a>(<a href="https://doi.org/10.1093/bioinformatics/17.8.754">Huelsenbeck and Ronquist, 2001</a>) foi lançada em 2000. Este talvez seja o mais conhecido programa de análise bayesiana para filogenias.</p></li>
+<li><p>O MrBayes possui um console próprio onde são inseridas as linhas de comando.</p></li>
+</ul>
+<p><img src="images/MrBayes.jpg" />
+- O ideal é manter o arquivo da matriz de dados a ser analisada no mesmo diretório do MrBayes.</p>
+<div id="prática-7" class="section level3 hasAnchor" number="11.4.1">
+<h3><span class="header-section-number">11.4.1</span> Prática<a href="softwares_filogenia.html#prática-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Abra o MrBayes e execute os comandos abaixo:</p>
+<div style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;">
+<p>Sobre o programa:</p>
+<blockquote>
+<p><code>about</code></p>
+</blockquote>
+<p>Citações dos diferentes módulos do programa:</p>
+<blockquote>
+<p><code>citations</code></p>
+</blockquote>
+<p>Gera um arquivo .txt com a referência completa das funções no diretório Documents:</p>
+<blockquote>
+<p><code>manual</code></p>
+</blockquote>
+<p>Exibe as principais funções do programa:</p>
+<blockquote>
+<p><code>help</code></p>
+</blockquote>
+</div></li>
+<li><p>Com a função “help” os diversos parâmetros são exibidos:</p>
+<div style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;">
+<p>Exibe explicação e os parâmetros do modelo de verossimilhança:</p>
+<blockquote>
+<p><code>help lset</code></p>
+</blockquote>
+<p>Exibe explicação e os parâmetros a prioris do modelo filogenético:</p>
+<blockquote>
+<p><code>help prset</code></p>
+</blockquote>
+<p>Exibe explicação e os parâmetros da análise MCMC:</p>
+<blockquote>
+<p><code>help mcmc</code></p>
+</blockquote>
+<p>Exibe explicação e os parâmetros da função sump:</p>
+<blockquote>
+<p><code>help sump</code></p>
+</blockquote>
+<p>Exibe explicação e os parâmetros da função sumt:</p>
+<blockquote>
+<p><code>help sumt</code></p>
+</blockquote>
+</div></li>
+<li><p>Execute uma análise filogenética utilizando o exemplo trazido pelo próprio MrBayes, o arquivo <code>primatex.nex</code>:</p>
+<div style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;">
+<p>Carrega dados do arquivo NEXUS</p>
+<blockquote>
+<p><code>execute primates.nex</code></p>
+</blockquote>
+<p>Altera o modelo evolutivo para GTR+G+I (Variação na taxa de substituição entre sítios de nucleotídeos proporção de sítios invariáveis)</p>
+<blockquote>
+<p><code>lset nst 6 rates=invgamma</code></p>
+</blockquote>
+<p>Conferir os parâmetros do modelo</p>
+<blockquote>
+<p><code>showmodel</code></p>
+</blockquote>
+<p>Para alterar os parâmetros do modelo, use prset, indique o nome do parâmetro, insira o símbolo de igual “=”, e indique o valor</p>
+<blockquote>
+<p><code>prset</code></p>
+</blockquote>
+<p>Inicia a análise Monte Carlo via cadeias de Markov alterando alguns parâmetros</p>
+<blockquote>
+<p><code>mcmc ngen=20000 samplefreq=100 printfreq=100 diagnfreq=1000</code></p>
+</blockquote>
+<p>Resume os valores dos parâmetros usando o mesmo burn-in que o diagnóstico no comando “mcmc”</p>
+<blockquote>
+<p><code>sump</code></p>
+</blockquote>
+<p>Resume as árvores usando o mesmo burn-in que o comando mcmc</p>
+<blockquote>
+<p><code>sumt</code></p>
+</blockquote>
+</div></li>
+</ul>
+<div style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;">
+<blockquote>
+<p><code>run mimosa.nex</code></p>
+</blockquote>
+<blockquote>
+<p><code>lset</code></p>
+</blockquote>
+<blockquote>
+<p><code>prset</code></p>
+</blockquote>
+<blockquote>
+<p><code>mcmc</code></p>
+</blockquote>
+<blockquote>
+<p><code>sump</code></p>
+</blockquote>
+<blockquote>
+<p><code>sumt</code></p>
+</blockquote>
+</div>
 </div>
 </div>
 </div>
@@ -463,8 +648,8 @@ END;
           </div>
         </div>
       </div>
-<a href="montagem-de-sequências.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="alinhamento-múltiplo-e-manual-de-sequências.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="seleção-de-modelos-das-partições.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="edição-final-de-árvore.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

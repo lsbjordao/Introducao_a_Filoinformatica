@@ -270,7 +270,7 @@ Londres, década de 30. *The Theoretical Biology Club* --- esse era o nome que J
 
 Por seu turno, a **Sistemática Filogenética** (cladística), postulada por **Willi Hennig**, foi originalmente concebida, mesmo que apenas em princípios, com a publicação de *Grundzüge einer Theorie der phylogenetischen Systematik*, em 1950.
 
-- A intenção de Hennig era tornar a Sistemática uma ciência com métodos objetivos e reprodutíveis, afastando-a das hipóteses *ad hoc*, idiossincráticas. Por isso, ele desenvolveu não apenas um nov método, mas também ocupou-se de sua justificação teórica.
+- A intenção de Hennig era tornar a Sistemática uma ciência com métodos objetivos e reprodutíveis, afastando-a das hipóteses *ad hoc*, idiossincráticas. Por isso, ele desenvolveu não apenas um novo método, mas também ocupou-se de sua justificação teórica.
 
 - Hennig era excepcionalmente preocupado com questões filosóficas `r Cite(referencias, "Tremblay2013")`.
 
@@ -284,8 +284,6 @@ Por seu turno, a **Sistemática Filogenética** (cladística), postulada por **W
     
     - Correspondências com sua esposa, amigos, dentre os quais, Klaus Günther.
     
-
-  
 :::: {style="display: flex;"}
 
 ::: {}
@@ -304,14 +302,52 @@ Por seu turno, a **Sistemática Filogenética** (cladística), postulada por **W
 
 ::::
 
+- O trabalho de Hennig apenas ficou conhecido com a publicação de *Phylogenetic Systematics*, em 1965, publicado em inglês, e suas ideias passaram a serem difundidas por outros taxonomistas:
+
+  > O trabalho de Hennig está escrito em alemão bastante difícil, algumas frases sendo praticamente ininteligíveis. Em nenhum lugar se refere aos escritos de Huxley, Mayr, Rensch, Simpson e outros autores que cobriram em parte o mesmo terreno nas décadas anteriores. Novos termos e definições são introduzidos casualmente, mas não há um índice que guie a pessoa para as páginas relevantes. Não surpreendentemente, o volume foi inicialmente ignorado universalmente, exceto por alguns autores alemães. Não se tornou mais conhecido até 1965 e 1966, quando foram publicadas versões em inglês da metodologia de Hennig. Na década de 1970, um culto virtual de Hennig se desenvolveu, embora alguns de seus chamados seguidores tenham se afastado bastante dos princípios originais de Hennig.
+  >
+  >`r Cite(referencias, "Mayr1982")`
+
+- Marco histórico da divulgação do programa de pesquisa Hennigiano foi a apresentação da tese de doutorado de Lars Brundin (1907--1993) no *4^th^ Nobel Symposium Current Problems of Lower Vertebrate Phylogeny*, realizado em 12--16 de junho de 1967.
+  - Tese de Doutorado 1966: **Transantarctic Relationships and Their Significance, as Evidenced by Chironomid Midges, with a Monograph of the Subfamilies Podonominae and Aphroteniinae and the Austral Heptagyiae**.
+  - Formalizou o método que ficou conhecido como **Biogeografia Filogenética** `r Citet(referencias, "Mattox2011")`.
+  
+![](images/brundin1967.png)
+  
+- A tese de Brundin utilizando os método hennigiano chamou a atenção de **Gareth Nelson** (1937--), ictiologista, e grande difusor dos princípios da sistemática filogenética.
 
 
+![](images/gareth.jpg)
 
-> O trabalho de Hennig está escrito em alemão bastante difícil, algumas frases sendo praticamente ininteligíveis. Em nenhum lugar se refere aos escritos de Huxley, Mayr, Rensch, Simpson e outros autores que cobriram em parte o mesmo terreno nas décadas anteriores. Novos termos e definições são introduzidos casualmente, mas não há um índice que guie a pessoa para as páginas relevantes. Não surpreendentemente, o volume foi inicialmente ignorado universalmente, exceto por alguns autores alemães. Não se tornou mais conhecido até 1965 e 1966, quando foram publicadas versões em inglês da metodologia de Hennig. Na década de 1970, um culto virtual de Hennig se desenvolveu, embora alguns de seus chamados seguidores tenham se afastado bastante dos princípios originais de Hennig.
+:::: {style="display: flex;"}
+
+::: {}
+
+![](images/brundin_gareth.jpg)
+
+:::
+
+::: {}
+
+Fotografia de Gareth Nelson (à dir.) junto a Lars Brundin (à esq.), tirada por Christopher Humphries em 1988, próximo ao Museu Sueco de História Natural em Estocolmo [publicada originalmente em Nelson (2000)] `r Citet(referencias, "Mattox2011")`.
+
+:::
+
+::::
+
+- 
+
+> Darwin's philosophy of classification is differently interpreted. Mayr (1974:120), for example, states "Evolutionary taxonomists have long been convinced that they strictly follow Darwinian principles of classification by giving equal consideration to branching and to phyletic change." By "evolutionary taxonomists," Mayr means those taxonomists who might agree with his philosophy of classification (e.g., Mayr, 1969). Mayr (1974:95) states, also: "The synthetic or evolutionary method of classification thus combines components of cladistics and of phenetics... The method in which cladistic and phenetic components are combined was originated by Darwin." I have elsewhere suggested that Darwin's philosophy of classification agrees better with Hennig (1950, 1966) than with Mayr (Nelson, 1971); the implication is that Mayr's "synthetic or evolutionary method of classification" is not of Darwinian but rather of Mayrian manufacture.
 >
->`r Cite(referencias, "Mayr1982")`
+> Darwin-Henning Classification: A Reply to Ernst Mayr, `r Citet(referencias, "Nelson1974")`.
 
-Darwin-Henning Classification: A Reply to Ernst Mayr
+- Como a sistemática se tornou filogenética... `r Citet(referencias, "Eldredge2010")`.
+
+  > The furor engendered by the upstart arrival of Hennig's ideas has long since died down—and phylogenetic systematics is now the de facto order of the day. By the 1980s, recognizing that the essence of the analytic approach is the precise mapping of the distribution of characteristics in the attempt to separate relatively derived (advanced) from primitive features (and from "convergent" or "homoplastic" characters as well)—with groups to be defined and recognized solely on shared possession of "derived" features, algorithms that did the job on computers began to replace hand drawn cladograms on paper (whether napkins or otherwise).
+  >
+  >`r Citet(referencias, "Eldredge2010")`
+  
+- De grande importância é a edição especial sobre como ensinar filogenia da periódico científico [*Evolution: Education and Outreach*](https://link.springer.com/journal/12052/volumes-and-issues/3-4), editado por Daniel R. Brooks, em 2010.
 
 - **A emergência da cladística hennigiana, foi revolução científica kuhnina ou não foi?**
 
@@ -319,13 +355,26 @@ Darwin-Henning Classification: A Reply to Ernst Mayr
   
   - Não: `r Citet(referencias, c("Santos2008", "Santos_Klassa2012"))`
 
-Em meados da década de 70, um *workshop* realizado em 1974 no Missouri Botanical Garden, St. Louis, EUA, definiu tendências, prioridades e necessidades no campo da biologia sistemática e evolutiva. O evento foi financiado por pelo *Systematic Biology Program* da *Division of Biological and Medical Sciences* da agência governamental americana *National Science Foundation*. O encontro resultou na publicação do relatório: *Trends, Priorities, and Needs in Systematics and Evolutionary Biology* `r Cite(referencias, "TrendsandPriorities")`. Esse foi um dos primeiros esforços para estabelecer uma agenda para a sistemática biológica claramente definida. Entretanto, não se tratava de uma iniciativa global `r Cite(referencias, "Eshbaugh")`.
+<br>
 
-A partir do início dos anos 90, sistematas começaram a se envolver cada vez mais na conservação e no papel desempenhado pela sistemática na solução de problemas da sociedade. O senso de urgência e um apelo à comunidade sistemática de biologia para definir claramente suas prioridades e agenda de pesquisa levaram a uma reunião de aproximadamente uma dúzia de pesquisadores, representando a *American Society of Plant Taxonomists*, a *Society of Systematic Biologists* e a *Willi Hennig Society* do *American Museum of Natural History*, em março de 1991. No início da reunião, reconheceu-se a necessidade de uma iniciativa abrangente para integrar os esforços em prol de objetivos comuns `r Cite(referencias, c("Cracraft", "Eshbaugh"))`.
+
+- Um dos primeiros esforços para estabelecer uma agenda para a sistemática biológica claramente definida ocorreu em meados da década de 70. Entretanto, não se tratava de uma iniciativa global `r Cite(referencias, "Eshbaugh")`.
+
+  - O *workshop* realizado em 1974 no Missouri Botanical Garden, St. Louis, EUA, pode ser considerado um marco para a Filoinformática.
+  
+    - Nele, foram definidas tendências, prioridades e necessidades no campo da biologia sistemática e evolutiva. 
+    
+    - O evento foi financiado por pelo *Systematic Biology Program* da *Division of Biological and Medical Sciences* da agência governamental americana *National Science Foundation*. O encontro resultou na publicação do relatório: *Trends, Priorities, and Needs in Systematics and Evolutionary Biology* `r Cite(referencias, "TrendsandPriorities")`.
+  
+- Na década de 80, grandes avanços ocorrem na Sistemática Filogenética, com a publicação de importantes livros teórico-didáticos e o surgimento dos primeiros programas de computadores para realização de análises filogenéticas (ver item \ref{softwares_filogenia}).
+
+![](books.png)
+
+- A partir do início dos anos 90, sistematas começaram a se envolver cada vez mais na conservação e no papel desempenhado pela sistemática na solução de problemas da sociedade. O senso de urgência e um apelo à comunidade sistemática de biologia para definir claramente suas prioridades e agenda de pesquisa levaram a uma reunião de aproximadamente uma dúzia de pesquisadores, representando a *American Society of Plant Taxonomists*, a *Society of Systematic Biologists* e a *Willi Hennig Society* do *American Museum of Natural History*, em março de 1991. No início da reunião, reconheceu-se a necessidade de uma iniciativa abrangente para integrar os esforços em prol de objetivos comuns `r Cite(referencias, c("Cracraft", "Eshbaugh"))`.
 
 O marco teórico da filoinformática, isto é, o momento no qual os pressupostos gerais e conceitos específicos desse campo do conhecimento começaram a ser desenvolvidos, tem sido demarcado pela publicação da [*Systematics Agenda 2000*](https://archive.org/details/systematicsagend00syst), em 1994 `r Cite(referencias, "Cracraft")`.
 
-![](images/SystAgenda2000.jpg) Systematics Agenda 2000: Charting the Biosphere. Publicada em 1994.
+![](images/SystAgenda2000.jpg) *Systematics Agenda 2000: Charting the Biosphere*. Publicada em 1994.
 
 - Três missões:
 
@@ -627,7 +676,17 @@ O uso de ontologias parece ser ainda incipiente.
 
 #### Fundamentos epistemológicos
 
-No movimento do Positivismo Lógico, desenvolvido no Círculo de Viena, as bases da filosofia da  
+
+
+Frege
+
+Russell
+https://pt.wikipedia.org/wiki/Bertrand_Russell
+https://pt.wikipedia.org/wiki/Logicismo
+https://pt.wikipedia.org/wiki/Descri%C3%A7%C3%B5es_definidas
+https://pt.wikipedia.org/wiki/Descritivismo
+teoria dos conjuntos https://pt.wikipedia.org/wiki/Teoria_dos_conjuntos
+
 Quine
 
 Na Ciência da Informação e da Computação,  `r Cite(referencias, "wikiInteroperabilidadeSemantica")`.
@@ -1091,7 +1150,7 @@ Campo que abrange todas as etapas, tarefas e usos de ferramentas computacionais 
 
 - Filoepidemiologia / Filodinâmica
 
-![](images/covid1.jpeg)
+![](images/covid1.png)
 
 [Forster, P., 2020. Phylogenetic network analysis of SARS-CoV-2 genomes](https://doi.org/10.1073/pnas.2004999117)
 
@@ -1467,7 +1526,7 @@ GATATTTAT----------ATTTAT------ATAGATTTATA-------------TGTAT
 
 ## NEXUS
 
-- Lançado em 1987 por Wayne & David Maddison e David L. Swofford^(criador do PAUP)^.
+- Lançado em 1987 por Wayne & David Maddison e David L. Swofford ^(criador do PAUP)^.
 
 ![](images/Maddisons.jpg)
 
@@ -1583,7 +1642,7 @@ Os principais resultados são gravados no arquivo
 
 
 
-# Softwares para análises filogenéticas
+# Softwares para análises filogenéticas {#softwares_filogenia}
 
 Desde 1980, uma série de *softwares* vem sendo desenvolvidos para rodar análises filogenéticas.
 
@@ -3591,6 +3650,11 @@ As análises de estimação do estado ancestral, ou reconstrução do caráter a
 ##### Dados contínuos
 
 ##### Dados discretos
+
+
+# Exercícios
+
+
 
 # GeneBank (NCBI)
 

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Formatos de arquivo mais comuns | Introdução à Filoinformática (in development)</title>
-  <meta name="description" content="6 Formatos de arquivo mais comuns | Introdução à Filoinformática (in development)" />
+  <title>16 Exercícios | Introdução à Filoinformática (in development)</title>
+  <meta name="description" content="16 Exercícios | Introdução à Filoinformática (in development)" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Formatos de arquivo mais comuns | Introdução à Filoinformática (in development)" />
+  <meta property="og:title" content="16 Exercícios | Introdução à Filoinformática (in development)" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Formatos de arquivo mais comuns | Introdução à Filoinformática (in development)" />
+  <meta name="twitter:title" content="16 Exercícios | Introdução à Filoinformática (in development)" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="montagem-de-sequências.html"/>
-<link rel="next" href="alinhamento-múltiplo-e-manual-de-sequências.html"/>
+<link rel="prev" href="filogenia-no-r.html"/>
+<link rel="next" href="genebank-ncbi.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -378,93 +378,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="formatos-de-arquivo-mais-comuns" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">6</span> Formatos de arquivo mais comuns<a href="formatos-de-arquivo-mais-comuns.html#formatos-de-arquivo-mais-comuns" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<ul>
-<li><p>Os mais conhecidos arquivos para armazenar dados filogenéticos (filodados) são:</p>
-<ul>
-<li><strong>Fasta</strong> (.fst .fasta)</li>
-<li><strong>Phyllip</strong> (.phy)</li>
-<li><strong>Nexus</strong> (.nex)</li>
-</ul></li>
-<li><p>Esses arquivos são os “<em>input files</em>” para os processamentos das análises filogenéticas.</p></li>
-<li><p>Eles devem ser editados num editor de texto plano (<em>plain text editor</em>), sem formatações e estilos.</p></li>
-</ul>
-<div id="phylip" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> PHYLIP<a href="formatos-de-arquivo-mais-comuns.html#phylip" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Lançado em 1980 por <a href="https://felsenst.github.io/">Joe Felsenstein</a>.</li>
-</ul>
-<p><img src="https://felsenst.github.io/Joe2011Disappointmenta.jpg" /></p>
-<pre><code>3 62
-Mimosa_afranioi ----------------------------------------CATTCAAACCTTTTTTA-----
-Mimosa_campicola --------------------------------------TTCATTCAAACCTTTTTTA----
-Mimosa_candollei CCAGGAAAAAAGTGTACAGCATGCATATTCTTA-CGATTTCATTCAAACCTTTTCTA----</code></pre>
-</div>
-<div id="fasta" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> FASTA<a href="formatos-de-arquivo-mais-comuns.html#fasta" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><p>Lançado em 1985 por David Lipman e William R. Pearson.</p></li>
-<li><p>Formato mais simples para sequências nucleotídicas ou proteicas.</p></li>
-<li><p>O nome do terminal ou a etiqueta (<em>label</em>) é precedida pelo caractere do sinal de maior <code>&gt;</code>.</p></li>
-<li><p>Admite o caractere vazio (<em>gap</em>): <code>-</code>.</p></li>
-<li><p>Extensões usadas: <code>.fas</code>, <code>.fasta</code>.</p></li>
-</ul>
-<pre><code>&gt;Mimosa_afranioi
-----------------------------------------CATTCAAACCTTTTTTA---
---TTTCGATTTTAGATTAGAATTGTCTTGTTCTAACTGGCGGAGGCGGGACTAATATGTT
-GATATTTAT----------ATTTATATAGATATAGATTTATA-------------TGGAT
-&gt;Mimosa_campicola
---------------------------------------TTCATTCAAACCTTTTTTA---
---TTTAGATT--AGAATAGAATTGTCTTGTTCTAACTGGCGGAGGCGGGACTAATATGTT
-GATATTTATATAGATATAGATTTATATAGATATAGATTTATA-------------TGGAT
-&gt;Mimosa_candollei
-CCAGGAAAAAAGTGTACAGCATGCATATTCTTA-CGATTTCATTCAAACCTTTTCTA---
---TTTCGATTTTAGATTCGAATTGTCTTGTTCTAACTGGCGGAGGCGGGACTAATATGTT
-GATATTTAT----------ATTTAT------ATAGATTTATA-------------TGTAT</code></pre>
-</div>
-<div id="nexus" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> NEXUS<a href="formatos-de-arquivo-mais-comuns.html#nexus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Lançado em 1987 por Wayne &amp; David Maddison e David L. Swofford ^(criador do PAUP)^.</li>
-</ul>
-<p><img src="images/Maddisons.jpg" /></p>
-<p><a name=cite-Maddison></a><a href="https://doi.org/10.1093/sysbio/46.4.590">Maddison, Swofford, and Maddison (1997)</a></p>
-<pre><code>#NEXUS
-BEGIN TAXA;
-    TITLE Taxa;
-    DIMENSIONS NTAX=3;
-    TAXLABELS
-        afranioi campicola candollei;
-END;
-BEGIN CHARACTERS;
-    TITLE  Character_Matrix;
-    DIMENSIONS  NCHAR=62;
-    FORMAT DATATYPE = DNA GAP = - MISSING = ?;
-    MATRIX
-Mimosa_afranioi ---------------------------------------CATTCAAACCTTTTTTA-----
-Mimosa_campicola    --------------------------------------TTCATTCAAACCTTTTTTA----
-Mimosa_candollei    CCAGGAAAAAAGTGTACAGCATGCATATTCTTA-CGATTTCATTCAAACCTTTTCTA----
-;
-END;
-</code></pre>
-<div style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;">
-<p><img src="images/maclade.jpg" style="width:30.0%" /></p>
-<p>Maddison, W.P. &amp; Maddison, D.R., 1992. MacClade: Analysis of Phylogeny and Character Evolution. Version 3</p>
-</div>
-<div style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;">
-<p><img src="images/mesquite.png" /></p>
-<p>Maddison, W.P. &amp; Maddison, D.R., 2002. Mesquite: a modular system for evolutionary analysis. Version 0.991. <a href="http://mesquiteproject.org" class="uri">http://mesquiteproject.org</a></p>
-</div>
-</div>
+<div id="exercícios" class="section level1 hasAnchor" number="16">
+<h1><span class="header-section-number">16</span> Exercícios<a href="exercícios.html#exercícios" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="montagem-de-sequências.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="alinhamento-múltiplo-e-manual-de-sequências.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="filogenia-no-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="genebank-ncbi.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
