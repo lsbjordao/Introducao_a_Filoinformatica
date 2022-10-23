@@ -302,7 +302,7 @@ Por seu turno, a **Sistemática Filogenética** (cladística), postulada por **W
 
 ::::
 
-- O trabalho de Hennig apenas ficou conhecido com a publicação de *Phylogenetic Systematics*, em 1965, publicado em inglês, e suas ideias passaram a serem difundidas por outros taxonomistas:
+- O trabalho de Hennig ficou mais conhecido somente com a publicação do livro *Phylogenetic Systematics*, em 1965, publicado em inglês, e quando suas ideias passaram a serem difundidas por outros taxonomistas:
 
   > O trabalho de Hennig está escrito em alemão bastante difícil, algumas frases sendo praticamente ininteligíveis. Em nenhum lugar se refere aos escritos de Huxley, Mayr, Rensch, Simpson e outros autores que cobriram em parte o mesmo terreno nas décadas anteriores. Novos termos e definições são introduzidos casualmente, mas não há um índice que guie a pessoa para as páginas relevantes. Não surpreendentemente, o volume foi inicialmente ignorado universalmente, exceto por alguns autores alemães. Não se tornou mais conhecido até 1965 e 1966, quando foram publicadas versões em inglês da metodologia de Hennig. Na década de 1970, um culto virtual de Hennig se desenvolveu, embora alguns de seus chamados seguidores tenham se afastado bastante dos princípios originais de Hennig.
   >
@@ -323,7 +323,7 @@ Por seu turno, a **Sistemática Filogenética** (cladística), postulada por **W
 
 ::: {}
 
-![](images/brundin_gareth.jpg)
+![](images/brundin_gareth.jpg){width="300px"}
 
 :::
 
@@ -391,17 +391,32 @@ Felsenstein (2004)
 
 ::::
 
-  - Importante teórico foi o paleoictiólogo **Collin Patterson** (1933–-1998).
+  - Importante teórico foi o paleoictiólogo **Collin Patterson** (1933--1998).
   
     - Conhecido por ter formulado o "teste de homologia" `r Cite(referencias, c("Holland2013", "Patterson1982"))`, basedo em três atributos:
     
       1. similaridade
       2. conjunção
       3. congruência
+
+:::: {style="display: flex;"}
+
+::: {}
+
+![](images/Patterson.jpg){width="300px"}
+
+:::
+
+::: {}
+
+![](images/problems_in_phylogenetics.jpg){width="300px"}
+
+Joysey & Friday (1982)
+
+:::
+
+::::
   
-  ![](images/Patterson.jpg){width="300px"}
-  
-  ![](images/problems_in_phylogenetics.jpg){width="300px"}
   - Já no início da década de 90, outra contribuição importante para a formulação do conceito de homologia foi postulado por **Mario de Pinna**, em 1991 `r Cite(referencias, "Pinna1991")`.
   
   ![](images/depinna.jpg)
@@ -604,11 +619,11 @@ function swapImage(){
 
 ### Evolução da Web
 
-A primeira versão da web Web 1.0, também conhecida como **web sintática ou web somente leitura**, é a era (1990-2000) em que o papel de um usuário é limitado à leitura de informações fornecidas pelos produtores de conteúdo. Não há opção para o usuário ou consumidor comunicar as informações aos produtores de conteúdo. Exemplo de Web 1.0 são sites estáticos e sites pessoais `r Cite(referencias, "WebEvolution")`.
+A primeira versão da web --- Web 1.0 ---, também conhecida como **Web Sintática ou Web somente leitura**, é a era (1990-2000) em que o papel de um usuário é limitado à leitura de informações fornecidas pelos produtores de conteúdo. Não há opção para o usuário ou consumidor comunicar as informações aos produtores de conteúdo. Exemplo de Web 1.0 são sites estáticos e sites pessoais `r Cite(referencias, "WebEvolution")`.
 
 A Web 2.0 também conhecida como **Web Social ou Web de leitura e escrita** é a era (2000-2010 e continua até agora) que facilita a interação entre os usuários da web e os sites internos que permitem que os usuários se comuniquem com outros usuários. Nesta era cada usuário pode ser um produtor de conteúdo e o conteúdo é distribuído e compartilhado entre os sites. Algumas das famosas aplicações Web 2.0 são Facebook, Youtube, Flickr, Twitter etc., As tecnologias web como HTML5, CSS3 e frameworks Javascript como ReactJs, AngularJs, VueJs etc. esta Rede Social. A Web 2.0 é construída em torno dos usuários, o produtor só precisa criar uma maneira de habilitá-los e envolvê-los `r Cite(referencias, "WebEvolution")`.
 
-A Web 3.0 também conhecida como **Web Semântica ou leitura-gravação-execução** é a era (2010 e superior) que se refere ao futuro da web. Nesta era, os computadores podem interpretar informações como humanos por meio de Inteligência Artificial e Aprendizado de Máquina. Que ajudam a gerar e distribuir de forma inteligente conteúdo útil adaptado a uma necessidade específica de um usuário `r Cite(referencias, "WebEvolution")`.
+A Web 3.0 também conhecida como **Web Semântica ou leitura-gravação-execução** é a era (2010 e superior) que se refere ao futuro da web. Nesta era, os computadores podem interpretar informações como humanos por meio de Inteligência Artificial e Aprendizado de Máquina, que ajudam a gerar e distribuir de forma inteligente conteúdo útil adaptado a uma necessidade específica dos usuários `r Cite(referencias, "WebEvolution")`.
 
 ![](https://lh6.googleusercontent.com/K5q4uoxO0U7ut5MIOMVr9HedtYMYXGPFULa_ug7yPeiybGXKTdayGcet02b4phoCcf0N_pjPQm0QEwVIeOMu8nLC_yrlDHq5qrHVDKh1NTiJ-Xq0OjI1OvelhyCSbpQ9IzwUiU3X)
 
