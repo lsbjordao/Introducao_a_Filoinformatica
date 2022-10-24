@@ -372,9 +372,10 @@ Fotografia de Gareth Nelson (à dir.) junto a Lars Brundin (à esq.), tirada por
     
     - O evento foi financiado por pelo *Systematic Biology Program* da *Division of Biological and Medical Sciences* da agência governamental americana *National Science Foundation*. O encontro resultou na publicação do relatório: *Trends, Priorities, and Needs in Systematics and Evolutionary Biology* `r Cite(referencias, "TrendsandPriorities")`.
   
-- Na década de 80, grandes avanços ocorrem na Sistemática Filogenética, com a publicação de importantes livros teórico-didáticos e o surgimento dos primeiros programas de computadores para realização de análises filogenéticas (ver item \@ref(softwares_filogenia)).
+- Na década de 80, grandes avanços ocorrem na Sistemática Filogenética, com a publicação de importantes livros teórico-didáticos e o surgimento dos primeiros programas de computadores para realização de análises filogenéticas.
 
 ![](images/books.png)
+  
   - A filogenética fez a transição para uma estrutura baseada em probabilidade com o artigo *Evolutionary trees from DNA sequences: A maximum likelihood approach* de **Joseph Felsenstein** (1942--), publicado em 1981: `r Citet(referencias, "Felsenstein1981")`.
   
   - Este trabalho inovador lançou as bases para o campo emergente da filogenética estatística, fornecendo uma maneira tratável de encontrar estimativas de máxima probabilidade (ML) de árvores evolutivas a partir de dados de sequência de DNA `r Cite(referencias, c("Holland2013", "Posada2021"))`.
@@ -764,20 +765,54 @@ O uso de ontologias parece ser ainda incipiente.
 
 #### Fundamentos epistemológicos
 
+- Gottlob Frege (1848--1925)
+
+:::: {style="display: flex;"}
+
+::: {}
+
+![](images/frege.jpg){width="130px"}
+
+:::
+
+::: {}
+
+- Alemão
+- Um dos principais criadores da lógica matemática moderna
+- O grande contributo de Frege para a lógica matemática foi a criação de um sistema de representação simbólica (Begriffsschrift, conceitografia ou ideografia) para representar formalmente a estrutura dos enunciados lógicos e suas relações, e a contribuição para a implementação do cálculo dos predicados `r Cite(referencias, "wikiFrege")`.
+
+:::
+
+::::
+
+- Bertrand Russell (1872--1970)
+
+:::: {style="display: flex;"}
+
+::: {}
+
+![](images/Russell.jpg){width="130px"}
+
+:::
+
+::: {}
+
+- Britânico
+
+- Elaborou algumas das mais influentes teses filosóficas do século XX, e, com elas, ajudou a fomentar uma das suas tradições filosóficas, a assim chamada **Filosofia Analítica**.
+  
+  - Dentre essas teses, destacam-se a tese logicista, ou da lógica simbólica, de fundamentação da Matemática. Segundo Russell, todas as verdades matemáticas --- e não apenas as da aritmética, como pensava Frege --- poderiam ser deduzidas a partir de umas poucas verdades lógicas, e todos os conceitos matemáticos reduzidos a uns poucos conceitos lógicos primitivos.
+
+- Concebeu a teoria das **descrições definidas**. A análise lógica precisa de frases declarativas contendo descrições definidas `r Cite(referencias, "wikiRussell")`.
 
 
-Frege
+:::
 
-Russell
-https://pt.wikipedia.org/wiki/Bertrand_Russell
-https://pt.wikipedia.org/wiki/Logicismo
-https://pt.wikipedia.org/wiki/Descri%C3%A7%C3%B5es_definidas
-https://pt.wikipedia.org/wiki/Descritivismo
-teoria dos conjuntos https://pt.wikipedia.org/wiki/Teoria_dos_conjuntos
+::::
 
 Quine
 
-Na Ciência da Informação e da Computação,  `r Cite(referencias, "wikiInteroperabilidadeSemantica")`.
+`r Cite(referencias, "wikiInteroperabilidadeSemantica")`.
 
 **interoperabilidade semântica**
 
@@ -1730,7 +1765,7 @@ Os principais resultados são gravados no arquivo
 
 
 
-# Softwares para análises filogenéticas {#softwares_filogenia}
+# Softwares para análises filogenéticas
 
 Desde 1980, uma série de *softwares* vem sendo desenvolvidos para rodar análises filogenéticas.
 
