@@ -3803,7 +3803,7 @@ edgelabels()
 plants.tree$node.label
 
 grep("fabales", plants.tree$node.label)
-plants.tree$edge[,2]
+plants.tree$edge
 plants.tree$edge[257,1]
 
 tree <- extract.clade(phy = plants.tree, node = 565)
@@ -3811,7 +3811,7 @@ plot(tree)
 nodelabels(tree$node.label, frame = "none", cex = 0.7)
 
 
-tree <- extract.clade(phy = plants.tree, node = 568)
+tree <- extract.clade(phy = plants.tree, node = 566)
 plot(tree)
 nodelabels(tree$node.label, frame = "none", cex = 0.7)
 ```
