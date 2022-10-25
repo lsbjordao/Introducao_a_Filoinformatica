@@ -1397,7 +1397,7 @@ A concentração da amostra é crucial para o sucesso da reação de sequencimen
 
 ### História do sequenciamento didesoxi Sanger
 
-O sequenciador ABI utiliza o método de sequenciamento tradicional, proposto por Frederick e Sanger na década de 70, para gerar sequências entre 300 e 850pb. Na reação de sequenciamento são utilizados, além dos nucleotídeos comuns, nucleotídeos modificados e marcados com fluorescência, chamados dideoxirribonucleotídeos. Cada nucleotídeo (A, C, G, T) é marcado com um fluoróforo distinto. Durante a reação de extensão do fragmento de DNA, quando um nucleotídeo modificado é incorporado ao fragmento, o que ocorre de forma aleatória, a reação é interrompida. Os fragmentos de DNA gerados serão, portanto, de tamanhos diversos. Depois de separados por eletroforese capilar, uma câmera CCD acoplada ao equipamento irá identificar a fluorescência emitida pelo nucleotídeo marcado e assim caracterizá-lo (https://www.einstein.br/pesquisa/pesquisa-experimental/plataformas/plataforma-sequenciamento).
+O sequenciador ABI utiliza o método de sequenciamento tradicional, proposto por Frederick e Sanger na década de 70, para gerar sequências entre 300 e 850pb. Na reação de sequenciamento são utilizados, além dos nucleotídeos comuns, nucleotídeos modificados e marcados com fluorescência, chamados dideoxirribonucleotídeos. Cada nucleotídeo (A, C, G, T) é marcado com um fluoróforo distinto. Durante a reação de extensão do fragmento de DNA, quando um nucleotídeo modificado é incorporado ao fragmento, o que ocorre de forma aleatória, a reação é interrompida. Os fragmentos de DNA gerados serão, portanto, de tamanhos diversos. Depois de separados por eletroforese capilar, uma câmera CCD (detector) acoplada ao equipamento irá identificar a fluorescência emitida pelo nucleotídeo marcado e assim caracterizá-lo (https://www.einstein.br/pesquisa/pesquisa-experimental/plataformas/plataforma-sequenciamento).
 
 ![](images/sequenciamento.png)
 
@@ -3777,7 +3777,44 @@ As análises de estimação do estado ancestral, ou reconstrução do caráter a
 
 # Exercícios
 
+```{r}
+plants.tree <- "((((((((((((((Eudicots), Monocots), Magnoliids), Chloranthales), Autrobaileyales), Nymphaeales), Amborellales),((((Gnetales, Conifers), Gingkoales), Cycadales))),(((Sphenophytes, Marattiales), Filicales),(Ophioglossaceae, Psilophytes))),(Selaginellales, Lycopodiales)),(Bryophyta)),(Anthocerophyta)),(Marchantiophyta)));"
 
+plants.tree <- read.tree(text = plants.tree)
+
+plot(plants.tree)
+edgelabels()
+
+tree1 <- extract.clade(phy = plants.tree, node = 29)
+plot(tree1)
+
+# Tente a seleção do nó interativamente
+# tree2 <- extract.clade(plants.tree, interactive = T)
+# plot(tree2)
+```
+
+
+```{r}
+plants.tree <- read.tree("./files/trees/apg.tree")
+
+plot(plants.tree)
+edgelabels()
+
+plants.tree$node.label
+
+grep("fabales", plants.tree$node.label)
+plants.tree$edge[,2]
+plants.tree$edge[257,1]
+
+tree <- extract.clade(phy = plants.tree, node = 565)
+plot(tree)
+nodelabels(tree$node.label, frame = "none", cex = 0.7)
+
+
+tree <- extract.clade(phy = plants.tree, node = 568)
+plot(tree)
+nodelabels(tree$node.label, frame = "none", cex = 0.7)
+```
 
 # GeneBank (NCBI)
 

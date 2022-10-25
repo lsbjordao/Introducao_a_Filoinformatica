@@ -380,6 +380,487 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="exercícios" class="section level1 hasAnchor" number="16">
 <h1><span class="header-section-number">16</span> Exercícios<a href="exercícios.html#exercícios" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb373-1"><a href="exercícios.html#cb373-1" aria-hidden="true" tabindex="-1"></a>plants.tree <span class="ot">&lt;-</span> <span class="st">&quot;((((((((((((((Eudicots), Monocots), Magnoliids), Chloranthales), Autrobaileyales), Nymphaeales), Amborellales),((((Gnetales, Conifers), Gingkoales), Cycadales))),(((Sphenophytes, Marattiales), Filicales),(Ophioglossaceae, Psilophytes))),(Selaginellales, Lycopodiales)),(Bryophyta)),(Anthocerophyta)),(Marchantiophyta)));&quot;</span></span>
+<span id="cb373-2"><a href="exercícios.html#cb373-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb373-3"><a href="exercícios.html#cb373-3" aria-hidden="true" tabindex="-1"></a>plants.tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="at">text =</span> plants.tree)</span>
+<span id="cb373-4"><a href="exercícios.html#cb373-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb373-5"><a href="exercícios.html#cb373-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(plants.tree)</span>
+<span id="cb373-6"><a href="exercícios.html#cb373-6" aria-hidden="true" tabindex="-1"></a><span class="fu">edgelabels</span>()</span></code></pre></div>
+<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-189-1.png" width="672" /></p>
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="exercícios.html#cb374-1" aria-hidden="true" tabindex="-1"></a>tree1 <span class="ot">&lt;-</span> <span class="fu">extract.clade</span>(<span class="at">phy =</span> plants.tree, <span class="at">node =</span> <span class="dv">29</span>)</span>
+<span id="cb374-2"><a href="exercícios.html#cb374-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree1)</span></code></pre></div>
+<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-189-2.png" width="672" /></p>
+<div class="sourceCode" id="cb375"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb375-1"><a href="exercícios.html#cb375-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tente a seleção do nó interativamente</span></span>
+<span id="cb375-2"><a href="exercícios.html#cb375-2" aria-hidden="true" tabindex="-1"></a><span class="co"># tree2 &lt;- extract.clade(plants.tree, interactive = T)</span></span>
+<span id="cb375-3"><a href="exercícios.html#cb375-3" aria-hidden="true" tabindex="-1"></a><span class="co"># plot(tree2)</span></span></code></pre></div>
+<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="exercícios.html#cb376-1" aria-hidden="true" tabindex="-1"></a>plants.tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="st">&quot;./files/trees/apg.tree&quot;</span>)</span>
+<span id="cb376-2"><a href="exercícios.html#cb376-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb376-3"><a href="exercícios.html#cb376-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(plants.tree)</span>
+<span id="cb376-4"><a href="exercícios.html#cb376-4" aria-hidden="true" tabindex="-1"></a><span class="fu">edgelabels</span>()</span></code></pre></div>
+<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-190-1.png" width="672" /></p>
+<div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb377-1"><a href="exercícios.html#cb377-1" aria-hidden="true" tabindex="-1"></a>plants.tree<span class="sc">$</span>node.label</span></code></pre></div>
+<pre><code>##   [1] &quot;angiosperms&quot;                          
+##   [2] &quot;nymphaeales_to_asterales&quot;             
+##   [3] &quot;nymphaeales&quot;                          
+##   [4] &quot;cabombaceae_to_nymphaeaceae&quot;          
+##   [5] &quot;austrobaileyales_to_asterales&quot;        
+##   [6] &quot;austrobaileyales&quot;                     
+##   [7] &quot;schisandraceae_to_trimeniaceae&quot;       
+##   [8] &quot;magnoliales_to_asterales&quot;             
+##   [9] &quot;magnoliids&quot;                           
+##  [10] &quot;magnoliales_to_laurales&quot;              
+##  [11] &quot;magnoliales&quot;                          
+##  [12] &quot;magnoliaceae_to_annonaceae&quot;           
+##  [13] &quot;degeneriaceae_to_annonaceae&quot;          
+##  [14] &quot;degeneriaceae_to_himantandraceae&quot;     
+##  [15] &quot;eupomatiaceae_to_annonaceae&quot;          
+##  [16] &quot;laurales&quot;                             
+##  [17] &quot;siparunaceae_to_lauraceae&quot;            
+##  [18] &quot;siparunaceae_to_atherospermataceae&quot;   
+##  [19] &quot;gomortegaceae_to_atherospermataceae&quot;  
+##  [20] &quot;monimiaceae_to_lauraceae&quot;             
+##  [21] &quot;hernandiaceae_to_lauraceae&quot;           
+##  [22] &quot;piperales_to_canellales&quot;              
+##  [23] &quot;piperales&quot;                            
+##  [24] &quot;asaraceae_to_aristolochiaceae&quot;        
+##  [25] &quot;lactoridaceae_to_aristolochiaceae&quot;    
+##  [26] &quot;piperaceae_to_saururaceae&quot;            
+##  [27] &quot;canellales&quot;                           
+##  [28] &quot;poales_to_asterales&quot;                  
+##  [29] &quot;monocots&quot;                             
+##  [30] &quot;alismatales_to_poales&quot;                
+##  [31] &quot;petrosaviales_to_poales&quot;              
+##  [32] &quot;pandanales_to_poales&quot;                 
+##  [33] &quot;liliales_to_poales&quot;                   
+##  [34] &quot;asparagales_to_poales&quot;                
+##  [35] &quot;commelinids&quot;                          
+##  [36] &quot;arecales&quot;                             
+##  [37] &quot;poales_to_zingiberales&quot;               
+##  [38] &quot;poales&quot;                               
+##  [39] &quot;typhaceae_to_bromeliaceae&quot;            
+##  [40] &quot;rapateaceae_to_poaceae&quot;               
+##  [41] &quot;xyridaceae_to_poaceae&quot;                
+##  [42] &quot;xyridaceae_to_cyperaceae&quot;             
+##  [43] &quot;xyridaceae_to_eriocaulaceae&quot;          
+##  [44] &quot;mayacaceae_to_cyperaceae&quot;             
+##  [45] &quot;thurniaceae_to_cyperaceae&quot;            
+##  [46] &quot;juncaceae_to_cyperaceae&quot;              
+##  [47] &quot;anarthriaceae_to_poaceae&quot;             
+##  [48] &quot;anarthriaceae_to_restionaceae&quot;        
+##  [49] &quot;centrolepidaceae_to_restionaceae&quot;     
+##  [50] &quot;flagellariaceae_to_poaceae&quot;           
+##  [51] &quot;joinvilleaceae_to_poaceae&quot;            
+##  [52] &quot;joinvilleaceae_to_ecdeiocoleaceae&quot;    
+##  [53] &quot;commelinales_to_zingiberales&quot;         
+##  [54] &quot;commelinales&quot;                         
+##  [55] &quot;commelinaceae_to_hanguanaceae&quot;        
+##  [56] &quot;philydraceae_to_pontederiaceae&quot;       
+##  [57] &quot;haemodoraceae_to_pontederiaceae&quot;      
+##  [58] &quot;zingiberales&quot;                         
+##  [59] &quot;musaceae_to_costaceae&quot;                
+##  [60] &quot;musaceae_to_lowiaceae&quot;                
+##  [61] &quot;strelitziaceae_to_lowiaceae&quot;          
+##  [62] &quot;cannaceae_to_costaceae&quot;               
+##  [63] &quot;cannaceae_to_marantaceae&quot;             
+##  [64] &quot;zingiberaceae_to_costaceae&quot;           
+##  [65] &quot;asparagales&quot;                          
+##  [66] &quot;boryaceae_to_asparagaceae&quot;            
+##  [67] &quot;boryaceae_to_hypoxidaceae&quot;            
+##  [68] &quot;blandfordiaceae_to_hypoxidaceae&quot;      
+##  [69] &quot;lanariaceae_to_hypoxidaceae&quot;          
+##  [70] &quot;asteliaceae_to_hypoxidaceae&quot;          
+##  [71] &quot;ixioliriaceae_to_asparagaceae&quot;        
+##  [72] &quot;ixioliriaceae_to_tecophilaeaceae&quot;     
+##  [73] &quot;doryanthaceae_to_asparagaceae&quot;        
+##  [74] &quot;iridaceae_to_asparagaceae&quot;            
+##  [75] &quot;xeronemataceae_to_asparagaceae&quot;       
+##  [76] &quot;asphodelaceae_to_asparagaceae&quot;        
+##  [77] &quot;asphodelaceae_to_xanthorrhoeaceae&quot;    
+##  [78] &quot;amaryllidaceae_to_asparagaceae&quot;       
+##  [79] &quot;liliales&quot;                             
+##  [80] &quot;melanthiaceae_to_liliaceae&quot;           
+##  [81] &quot;petermanniaceae_to_alstroemeriaceae&quot;  
+##  [82] &quot;colchicaceae_to_alstroemeriaceae&quot;     
+##  [83] &quot;rhipogonaceae_to_liliaceae&quot;           
+##  [84] &quot;rhipogonaceae_to_philesiaceae&quot;        
+##  [85] &quot;smilacaceae_to_liliaceae&quot;             
+##  [86] &quot;dioscoreales_to_pandanales&quot;           
+##  [87] &quot;dioscoreales&quot;                         
+##  [88] &quot;burmanniaceae_to_dioscoreaceae&quot;       
+##  [89] &quot;pandanales&quot;                           
+##  [90] &quot;stemonaceae_to_cyclanthaceae&quot;         
+##  [91] &quot;pandanaceae_to_cyclanthaceae&quot;         
+##  [92] &quot;alismatales&quot;                          
+##  [93] &quot;tofieldiaceae_to_potamogetonaceae&quot;    
+##  [94] &quot;hydrocharitaceae_to_potamogetonaceae&quot; 
+##  [95] &quot;hydrocharitaceae_to_alismataceae&quot;     
+##  [96] &quot;hydrocharitaceae_to_butomaceae&quot;       
+##  [97] &quot;scheuchzeriaceae_to_potamogetonaceae&quot; 
+##  [98] &quot;aponogetonaceae_to_potamogetonaceae&quot;  
+##  [99] &quot;juncaginaceae_to_potamogetonaceae&quot;    
+## [100] &quot;maundiaceae_to_potamogetonaceae&quot;      
+## [101] &quot;posidoniaceae_to_potamogetonaceae&quot;    
+## [102] &quot;posidoniaceae_to_cymodoceaceae&quot;       
+## [103] &quot;ruppiaceae_to_cymodoceaceae&quot;          
+## [104] &quot;zosteraceae_to_potamogetonaceae&quot;      
+## [105] &quot;ceratophyllales_to_asterales&quot;         
+## [106] &quot;eudicots&quot;                             
+## [107] &quot;ranunculales&quot;                         
+## [108] &quot;lardizabalaceae_to_papaveraceae&quot;      
+## [109] &quot;lardizabalaceae_to_ranunculaceae&quot;     
+## [110] &quot;lardizabalaceae_to_circaeasteraceae&quot;  
+## [111] &quot;menispermaceae_to_ranunculaceae&quot;      
+## [112] &quot;berberidaceae_to_ranunculaceae&quot;       
+## [113] &quot;proteales_to_asterales&quot;               
+## [114] &quot;proteales&quot;                            
+## [115] &quot;nelumbonaceae_to_proteaceae&quot;          
+## [116] &quot;platanaceae_to_proteaceae&quot;            
+## [117] &quot;trochodendrales_to_asterales&quot;         
+## [118] &quot;buxales_to_asterales&quot;                 
+## [119] &quot;gunnerales_to_asterales&quot;              
+## [120] &quot;gunnerales&quot;                           
+## [121] &quot;superrosids_to_superasterids&quot;         
+## [122] &quot;superrosids&quot;                          
+## [123] &quot;rosids&quot;                               
+## [124] &quot;malvids_to_fabids&quot;                    
+## [125] &quot;fabids&quot;                               
+## [126] &quot;nitrogenfixing_to_COM&quot;                
+## [127] &quot;nitrogenfixing&quot;                       
+## [128] &quot;fabales&quot;                              
+## [129] &quot;fabaceae_to_polygalaceae&quot;             
+## [130] &quot;surianaceae_to_polygalaceae&quot;          
+## [131] &quot;rosales_to_fagales&quot;                   
+## [132] &quot;rosales&quot;                              
+## [133] &quot;rhamnaceae_to_urticaceae&quot;             
+## [134] &quot;barbeyaceae_to_dirachmaceae&quot;          
+## [135] &quot;elaeagnaceae_to_dirachmaceae&quot;         
+## [136] &quot;ulmaceae_to_urticaceae&quot;               
+## [137] &quot;cannabaceae_to_urticaceae&quot;            
+## [138] &quot;moraceae_to_urticaceae&quot;               
+## [139] &quot;cucurbitales_to_fagales&quot;              
+## [140] &quot;fagales&quot;                              
+## [141] &quot;fagaceae_to_casuarinaceae&quot;            
+## [142] &quot;myricaceae_to_casuarinaceae&quot;          
+## [143] &quot;myricaceae_to_juglandaceae&quot;           
+## [144] &quot;ticodendraceae_to_casuarinaceae&quot;      
+## [145] &quot;ticodendraceae_to_betulaceae&quot;         
+## [146] &quot;cucurbitales&quot;                         
+## [147] &quot;corynocarpaceae_to_begoniaceae&quot;       
+## [148] &quot;corynocarpaceae_to_coriariaceae&quot;      
+## [149] &quot;corynocarpaceae_to_apodanthaceae&quot;     
+## [150] &quot;cucurbitaceae_to_begoniaceae&quot;         
+## [151] &quot;tetramelaceae_to_begoniaceae&quot;         
+## [152] &quot;datiscaceae_to_begoniaceae&quot;           
+## [153] &quot;COM&quot;                                  
+## [154] &quot;oxalidales_to_malpighiales&quot;           
+## [155] &quot;oxalidales&quot;                           
+## [156] &quot;connaraceae_to_elaeocarpaceae&quot;        
+## [157] &quot;connaraceae_to_oxalidaceae&quot;           
+## [158] &quot;cunoniaceae_to_elaeocarpaceae&quot;        
+## [159] &quot;brunelliaceae_to_elaeocarpaceae&quot;      
+## [160] &quot;brunelliaceae_to_cephalotaceae&quot;       
+## [161] &quot;malpighiales&quot;                         
+## [162] &quot;ctenolophonaceae_to_podostemaceae&quot;    
+## [163] &quot;ctenolophonaceae_to_rhizophoraceae&quot;   
+## [164] &quot;erythroxylaceae_to_rhizophoraceae&quot;    
+## [165] &quot;irvingiaceae_to_pandaceae&quot;            
+## [166] &quot;ochnaceae_to_podostemaceae&quot;           
+## [167] &quot;bonnetiaceae_to_podostemaceae&quot;        
+## [168] &quot;bonnetiaceae_to_clusiaceae&quot;           
+## [169] &quot;calophyllaceae_to_podostemaceae&quot;      
+## [170] &quot;hypericaceae_to_podostemaceae&quot;        
+## [171] &quot;humiriaceae_to_ixonanthaceae&quot;         
+## [172] &quot;humiriaceae_to_salicaceae&quot;            
+## [173] &quot;achariaceae_to_salicaceae&quot;            
+## [174] &quot;goupiaceae_to_salicaceae&quot;             
+## [175] &quot;goupiaceae_to_violaceae&quot;              
+## [176] &quot;passifloraceae_to_salicaceae&quot;         
+## [177] &quot;lacistemataceae_to_salicaceae&quot;        
+## [178] &quot;peraceae_to_ixonanthaceae&quot;            
+## [179] &quot;peraceae_to_euphorbiaceae&quot;            
+## [180] &quot;rafflesiaceae_to_euphorbiaceae&quot;       
+## [181] &quot;phyllanthaceae_to_ixonanthaceae&quot;      
+## [182] &quot;phyllanthaceae_to_picrodendraceae&quot;    
+## [183] &quot;linaceae_to_ixonanthaceae&quot;            
+## [184] &quot;lophopyxidaceae_to_chrysobalanaceae&quot;  
+## [185] &quot;lophopyxidaceae_to_putranjivaceae&quot;    
+## [186] &quot;centroplacaceae_to_malpighiaceae&quot;     
+## [187] &quot;elatinaceae_to_malpighiaceae&quot;         
+## [188] &quot;balanopaceae_to_chrysobalanaceae&quot;     
+## [189] &quot;trigoniaceae_to_chrysobalanaceae&quot;     
+## [190] &quot;trigoniaceae_to_dichapetalaceae&quot;      
+## [191] &quot;euphroniaceae_to_chrysobalanaceae&quot;    
+## [192] &quot;celastrales&quot;                          
+## [193] &quot;zygophyllales&quot;                        
+## [194] &quot;malvids&quot;                              
+## [195] &quot;geraniales_to_myrtales&quot;               
+## [196] &quot;geraniales&quot;                           
+## [197] &quot;melianthaceae_to_greyiaceae&quot;          
+## [198] &quot;vivianiaceae_to_greyiaceae&quot;           
+## [199] &quot;francoaceae_to_greyiaceae&quot;            
+## [200] &quot;myrtales&quot;                             
+## [201] &quot;onagraceae_to_penaeaceae&quot;             
+## [202] &quot;onagraceae_to_lythraceae&quot;             
+## [203] &quot;myrtaceae_to_penaeaceae&quot;              
+## [204] &quot;myrtaceae_to_vochysiaceae&quot;            
+## [205] &quot;melastomataceae_to_penaeaceae&quot;        
+## [206] &quot;crypteroniaceae_to_penaeaceae&quot;        
+## [207] &quot;alzateaceae_to_penaeaceae&quot;            
+## [208] &quot;crossosomatales_to_malvales&quot;          
+## [209] &quot;crossosomatales&quot;                      
+## [210] &quot;staphyleaceae_to_crossosomataceae&quot;    
+## [211] &quot;guamatelaceae_to_crossosomataceae&quot;    
+## [212] &quot;stachyuraceae_to_crossosomataceae&quot;    
+## [213] &quot;aphloiaceae_to_strasburgeriaceae&quot;     
+## [214] &quot;geissolomataceae_to_strasburgeriaceae&quot;
+## [215] &quot;picramniales_to_malvales&quot;             
+## [216] &quot;sapindales_to_malvales&quot;               
+## [217] &quot;huerteales_to_malvales&quot;               
+## [218] &quot;brassicales_to_malvales&quot;              
+## [219] &quot;malvales&quot;                             
+## [220] &quot;thymelaeaceae_to_malvaceae&quot;           
+## [221] &quot;sphaerosepalaceae_to_malvaceae&quot;       
+## [222] &quot;cistaceae_to_dipterocarpaceae&quot;        
+## [223] &quot;sarcolaenaceae_to_dipterocarpaceae&quot;   
+## [224] &quot;cytinaceae_to_muntingiaceae&quot;          
+## [225] &quot;brassicales&quot;                          
+## [226] &quot;akaniaceae_to_tropaeolaceae&quot;          
+## [227] &quot;moringaceae_to_brassicaceae&quot;          
+## [228] &quot;moringaceae_to_caricaceae&quot;            
+## [229] &quot;setchellanthaceae_to_brassicaceae&quot;    
+## [230] &quot;limnanthaceae_to_brassicaceae&quot;        
+## [231] &quot;koeberliniaceae_to_brassicaceae&quot;      
+## [232] &quot;koeberliniaceae_to_salvadoraceae&quot;     
+## [233] &quot;bataceae_to_salvadoraceae&quot;            
+## [234] &quot;emblingiaceae_to_brassicaceae&quot;        
+## [235] &quot;pentadiplandraceae_to_brassicaceae&quot;   
+## [236] &quot;resedaceae_to_gyrostemonaceae&quot;        
+## [237] &quot;capparaceae_to_brassicaceae&quot;          
+## [238] &quot;cleomaceae_to_brassicaceae&quot;           
+## [239] &quot;huerteales&quot;                           
+## [240] &quot;gerrardinaceae_to_petenaeaceae&quot;       
+## [241] &quot;tapisciaceae_to_dipentodontaceae&quot;     
+## [242] &quot;sapindales&quot;                           
+## [243] &quot;nitrariaceae_to_rutaceae&quot;             
+## [244] &quot;kirkiaceae_to_rutaceae&quot;               
+## [245] &quot;kirkiaceae_to_anacardiaceae&quot;          
+## [246] &quot;burseraceae_to_anacardiaceae&quot;         
+## [247] &quot;sapindaceae_to_rutaceae&quot;              
+## [248] &quot;simaroubaceae_to_rutaceae&quot;            
+## [249] &quot;saxifragales&quot;                         
+## [250] &quot;paeoniaceae_to_saxifragaceae&quot;         
+## [251] &quot;paeoniaceae_to_daphniphyllaceae&quot;      
+## [252] &quot;altingiaceae_to_daphniphyllaceae&quot;     
+## [253] &quot;hamamelidaceae_to_daphniphyllaceae&quot;   
+## [254] &quot;cercidiphyllaceae_to_daphniphyllaceae&quot;
+## [255] &quot;crassulaceae_to_saxifragaceae&quot;        
+## [256] &quot;crassulaceae_to_haloragaceae&quot;         
+## [257] &quot;aphanopetalaceae_to_haloragaceae&quot;     
+## [258] &quot;tetracarpaeaceae_to_haloragaceae&quot;     
+## [259] &quot;penthoraceae_to_haloragaceae&quot;         
+## [260] &quot;cynomoriaceae_to_saxifragaceae&quot;       
+## [261] &quot;iteaceae_to_saxifragaceae&quot;            
+## [262] &quot;grossulariaceae_to_saxifragaceae&quot;     
+## [263] &quot;superasterids&quot;                        
+## [264] &quot;berberidopsidales&quot;                    
+## [265] &quot;santalales_to_asterales&quot;              
+## [266] &quot;santalales&quot;                           
+## [267] &quot;coulaceae_to_santalaceae&quot;             
+## [268] &quot;ximeniaceae_to_santalaceae&quot;           
+## [269] &quot;octoknemaceae_to_santalaceae&quot;         
+## [270] &quot;schoepfiaceae_to_santalaceae&quot;         
+## [271] &quot;schoepfiaceae_to_loranthaceae&quot;        
+## [272] &quot;schoepfiaceae_to_misodendraceae&quot;      
+## [273] &quot;opiliaceae_to_santalaceae&quot;            
+## [274] &quot;balanophoraceae_to_santalaceae&quot;       
+## [275] &quot;comandraceae_to_viscaceae&quot;            
+## [276] &quot;thesiaceae_to_cervantesiaceae&quot;        
+## [277] &quot;nanodeaceae_to_viscaceae&quot;             
+## [278] &quot;santalaceae_to_viscaceae&quot;             
+## [279] &quot;amphorogynaceae_to_viscaceae&quot;         
+## [280] &quot;caryophyllales_to_asterales&quot;          
+## [281] &quot;caryophyllales&quot;                       
+## [282] &quot;droseraceae_to_polygonaceae&quot;          
+## [283] &quot;droseraceae_to_dioncophyllaceae&quot;      
+## [284] &quot;nepenthaceae_to_dioncophyllaceae&quot;     
+## [285] &quot;drosophyllaceae_to_dioncophyllaceae&quot;  
+## [286] &quot;ancistrocladaceae_to_dioncophyllaceae&quot;
+## [287] &quot;frankeniaceae_to_polygonaceae&quot;        
+## [288] &quot;frankeniaceae_to_tamaricaceae&quot;        
+## [289] &quot;plumbaginaceae_to_polygonaceae&quot;       
+## [290] &quot;rhabdodendraceae_to_cactaceae&quot;        
+## [291] &quot;simmondsiaceae_to_cactaceae&quot;          
+## [292] &quot;asteropeiaceae_to_cactaceae&quot;          
+## [293] &quot;asteropeiaceae_to_physenaceae&quot;        
+## [294] &quot;macarthuriaceae_to_cactaceae&quot;         
+## [295] &quot;microteaceae_to_cactaceae&quot;            
+## [296] &quot;caryophyllaceae_to_cactaceae&quot;         
+## [297] &quot;caryophyllaceae_to_amaranthaceae&quot;     
+## [298] &quot;achatocarpaceae_to_amaranthaceae&quot;     
+## [299] &quot;stegnospermataceae_to_cactaceae&quot;      
+## [300] &quot;limeaceae_to_cactaceae&quot;               
+## [301] &quot;lophiocarpaceae_to_cactaceae&quot;         
+## [302] &quot;lophiocarpaceae_to_nyctaginaceae&quot;     
+## [303] &quot;kewaceae_to_nyctaginaceae&quot;            
+## [304] &quot;barbeuiaceae_to_nyctaginaceae&quot;        
+## [305] &quot;aizoaceae_to_nyctaginaceae&quot;           
+## [306] &quot;gisekiaceae_to_nyctaginaceae&quot;         
+## [307] &quot;molluginaceae_to_cactaceae&quot;           
+## [308] &quot;montiaceae_to_cactaceae&quot;              
+## [309] &quot;halophytaceae_to_cactaceae&quot;           
+## [310] &quot;halophytaceae_to_basellaceae&quot;         
+## [311] &quot;talinaceae_to_cactaceae&quot;              
+## [312] &quot;anacampserotaceae_to_cactaceae&quot;       
+## [313] &quot;portulacaceae_to_cactaceae&quot;           
+## [314] &quot;asterids&quot;                             
+## [315] &quot;cornales&quot;                             
+## [316] &quot;loasaceae_to_grubbiaceae&quot;             
+## [317] &quot;loasaceae_to_hydrangeaceae&quot;           
+## [318] &quot;curtisiaceae_to_grubbiaceae&quot;          
+## [319] &quot;ericales_to_asterales&quot;                
+## [320] &quot;ericales&quot;                             
+## [321] &quot;balsaminaceae_to_tetrameristaceae&quot;    
+## [322] &quot;marcgraviaceae_to_tetrameristaceae&quot;   
+## [323] &quot;polemoniaceae_to_ericaceae&quot;           
+## [324] &quot;polemoniaceae_to_fouquieriaceae&quot;      
+## [325] &quot;sladeniaceae_to_ericaceae&quot;            
+## [326] &quot;sladeniaceae_to_pentaphylacaceae&quot;     
+## [327] &quot;sapotaceae_to_primulaceae&quot;            
+## [328] &quot;ebenaceae_to_primulaceae&quot;             
+## [329] &quot;theaceae_to_ericaceae&quot;                
+## [330] &quot;symplocaceae_to_ericaceae&quot;            
+## [331] &quot;symplocaceae_to_diapensiaceae&quot;        
+## [332] &quot;styracaceae_to_diapensiaceae&quot;         
+## [333] &quot;sarraceniaceae_to_ericaceae&quot;          
+## [334] &quot;sarraceniaceae_to_actinidiaceae&quot;      
+## [335] &quot;roridulaceae_to_actinidiaceae&quot;        
+## [336] &quot;clethraceae_to_ericaceae&quot;             
+## [337] &quot;cyrillaceae_to_ericaceae&quot;             
+## [338] &quot;lamids_to_campanulids&quot;                
+## [339] &quot;campanulids&quot;                          
+## [340] &quot;aquifoliales&quot;                         
+## [341] &quot;cardiopteridaceae_to_stemonuraceae&quot;   
+## [342] &quot;aquifoliaceae_to_phyllonomaceae&quot;      
+## [343] &quot;helwingiaceae_to_phyllonomaceae&quot;      
+## [344] &quot;asterales_to_paracryphiales&quot;          
+## [345] &quot;asterales&quot;                            
+## [346] &quot;rousseaceae_to_campanulaceae&quot;         
+## [347] &quot;pentaphragmataceae_to_asteraceae&quot;     
+## [348] &quot;alseuosmiaceae_to_asteraceae&quot;         
+## [349] &quot;alseuosmiaceae_to_argophyllaceae&quot;     
+## [350] &quot;phellinaceae_to_argophyllaceae&quot;       
+## [351] &quot;stylidiaceae_to_asteraceae&quot;           
+## [352] &quot;menyanthaceae_to_asteraceae&quot;          
+## [353] &quot;goodeniaceae_to_asteraceae&quot;           
+## [354] &quot;calyceraceae_to_asteraceae&quot;           
+## [355] &quot;bruniales_to_paracryphiales&quot;          
+## [356] &quot;bruniales&quot;                            
+## [357] &quot;apiales_to_paracryphiales&quot;            
+## [358] &quot;apiales&quot;                              
+## [359] &quot;torricelliaceae_to_apiaceae&quot;          
+## [360] &quot;griseliniaceae_to_apiaceae&quot;           
+## [361] &quot;pittosporaceae_to_apiaceae&quot;           
+## [362] &quot;araliaceae_to_apiaceae&quot;               
+## [363] &quot;myodocarpaceae_to_apiaceae&quot;           
+## [364] &quot;dipsacales_to_paracryphiales&quot;         
+## [365] &quot;dipsacales&quot;                           
+## [366] &quot;lamids&quot;                               
+## [367] &quot;metteniusales_to_solanales&quot;           
+## [368] &quot;garryales_to_solanales&quot;               
+## [369] &quot;boraginales_to_solanales&quot;             
+## [370] &quot;solanales&quot;                            
+## [371] &quot;montiniaceae_to_hydroleaceae&quot;         
+## [372] &quot;sphenocleaceae_to_hydroleaceae&quot;       
+## [373] &quot;convolvulaceae_to_solanaceae&quot;         
+## [374] &quot;lamiales&quot;                             
+## [375] &quot;carlemanniaceae_to_orobanchaceae&quot;     
+## [376] &quot;carlemanniaceae_to_oleaceae&quot;          
+## [377] &quot;tetrachondraceae_to_orobanchaceae&quot;    
+## [378] &quot;platanthera_to_orobanchaceae&quot;         
+## [379] &quot;peltanthera_to_gesneriaceae&quot;          
+## [380] &quot;calceolariaceae_to_gesneriaceae&quot;      
+## [381] &quot;plantaginaceae_to_orobanchaceae&quot;      
+## [382] &quot;scrophulariaceae_to_orobanchaceae&quot;    
+## [383] &quot;stilbaceae_to_orobanchaceae&quot;          
+## [384] &quot;byblidaceae_to_orobanchaceae&quot;         
+## [385] &quot;byblidaceae_to_linderniaceae&quot;         
+## [386] &quot;pedaliaceae_to_orobanchaceae&quot;         
+## [387] &quot;pedaliaceae_to_acanthaceae&quot;           
+## [388] &quot;bignoniaceae_to_orobanchaceae&quot;        
+## [389] &quot;schlegeliaceae_to_orobanchaceae&quot;      
+## [390] &quot;schlegeliaceae_to_verbenaceae&quot;        
+## [391] &quot;schlegeliaceae_to_lentibulariaceae&quot;   
+## [392] &quot;thomandersiaceae_to_verbenaceae&quot;      
+## [393] &quot;lamiaceae_to_orobanchaceae&quot;           
+## [394] &quot;mazaceae_to_orobanchaceae&quot;            
+## [395] &quot;phrymaceae_to_orobanchaceae&quot;          
+## [396] &quot;paulowniaceae_to_orobanchaceae&quot;       
+## [397] &quot;gentianales&quot;                          
+## [398] &quot;loganiaceae_to_apocynaceae&quot;           
+## [399] &quot;loganiaceae_to_gelsemiaceae&quot;          
+## [400] &quot;gentianaceae_to_apocynaceae&quot;          
+## [401] &quot;garryales&quot;                            
+## [402] &quot;icacinales&quot;</code></pre>
+<div class="sourceCode" id="cb379"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb379-1"><a href="exercícios.html#cb379-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="st">&quot;fabales&quot;</span>, plants.tree<span class="sc">$</span>node.label)</span></code></pre></div>
+<pre><code>## [1] 128</code></pre>
+<div class="sourceCode" id="cb381"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb381-1"><a href="exercícios.html#cb381-1" aria-hidden="true" tabindex="-1"></a>plants.tree<span class="sc">$</span>edge[,<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>##   [1]   1 440 441   2 442   3   4 443 444   5 445   6   7 446 447 448 449   8
+##  [19] 450   9 451 452  10  11 453  12  13 454  14 455 456  15 457  16  17 458
+##  [37]  18 459  19  20 460 461 462  21 463  22  23  24 464  25  26 465  27  28
+##  [55]  29 466 467 468 469 470 471 472 473 474  30  31 475 476 477  32  33 478
+##  [73]  34 479 480 481  35  36 482  37 483  38 484  39  40 485 486  41 487  42
+##  [91]  43 488  44 489 490  45  46  47 491 492 493  48  49 494  50 495  51  52
+## [109] 496  53 497 498  54 499  55  56 500 501  57  58 502  59  60 503  61 504
+## [127] 505  62 506  63 507  64 508  65  66 509 510  67  68 511  69 512  70 513
+## [145]  71 514 515  72  73 516  74  75 517  76  77 518  78 519  79 520  80  81
+## [163] 521 522  82  83 523  84  85 524 525  86 526  87  88 527  89  90 528  91
+## [181] 529  92  93  94 530  95 531  96 532 533 534  97  98  99 535 100 536 101
+## [199] 537 102 538 103 539 540 104 541 105 106 542 107 108 109 543 110 544 545
+## [217] 111 546 547 548 112 113 549 114 550 115 116 117 551 552 118 553 119 554
+## [235] 120 121 555 122 556 123 557 558 124 125 559 560 561 562 563 564 565 566
+## [253] 126 567 127 568 128 129 569 570 130 571 572 131 573 132 133 134 574 135
+## [271] 575 136 576 137 138 577 578 139 579 140 580 581 141 142 582 583 143 144
+## [289] 145 584 146 585 586 587 147 148 149 588 150 589 151 590 152 153 591 592
+## [307] 593 154 594 595 155 156 596 157 597 598 158 159 160 599 600 601 161 602
+## [325] 162 163 603 164 165 604 166 605 606 167 168 607 169 608 170 171 609 610
+## [343] 172 611 173 612 613 174 175 614 176 615 177 178 616 617 179 618 180 181
+## [361] 619 620 182 183 621 184 185 622 623 186 187 188 624 189 625 190 191 626
+## [379] 192 627 628 193 194 629 195 196 630 197 198 631 199 200 632 633 634 201
+## [397] 635 202 636 203 637 204 205 638 206 639 640 207 208 641 642 209 210 643
+## [415] 211 644 212 645 213 214 646 647 648 215 649 216 650 217 218 651 219 652
+## [433] 220 221 653 222 654 655 656 657 223 658 224 659 225 226 660 227 661 228
+## [451] 229 662 230 231 232 663 664 233 234 665 666 235 236 667 237 668 238 669
+## [469] 670 239 671 240 241 672 242 673 243 674 244 245 246 675 247 676 248 249
+## [487] 677 678 250 251 679 252 253 680 254 681 255 682 683 256 684 257 258 685
+## [505] 259 686 260 261 262 263 687 264 688 689 265 690 266 691 267 692 268 269
+## [523] 693 694 270 695 271 696 272 697 273 274 698 275 699 276 700 277 278 279
+## [541] 701 702 280 281 703 704 282 283 705 284 706 285 286 287 707 288 708 709
+## [559] 710 289 290 291 711 292 712 293 713 294 714 295 296 715 297 716 298 717
+## [577] 299 300 718 719 720 721 301 722 302 723 303 724 304 305 725 726 306 307
+## [595] 727 308 309 728 310 729 311 730 731 312 313 732 314 733 315 734 735 316
+## [613] 736 317 318 737 319 738 320 739 740 321 741 322 742 323 743 324 744 325
+## [631] 326 327 328 329 745 330 746 331 747 748 332 333 334 749 335 750 336 751
+## [649] 337 338 752 753 754 755 339 340 341 342 756 343 344 345 757 758 759 346
+## [667] 760 347 348 761 762 349 350 351 763 764 352 353 765 354 766 355 356 767
+## [685] 357 358 768 769 359 770 360 361 771 772 362 773 363 364 774 365 775 366
+## [703] 367 776 777 778 779 368 369 780 370 781 371 372 782 783 784 373 374 785
+## [721] 375 786 787 376 788 377 378 789 379 790 380 791 381 792 382 383 384 793
+## [739] 794 385 386 795 796 387 797 388 798 389 799 390 800 391 801 392 393 802
+## [757] 803 394 395 396 804 805 806 807 808 809 397 810 398 399 811 400 401 812
+## [775] 402 813 814 403 404 815 405 816 817 406 818 407 408 819 409 820 410 821
+## [793] 411 822 823 412 413 824 825 414 415 416 826 417 827 828 829 418 419 830
+## [811] 420 421 831 422 832 423 833 424 834 425 426 427 835 428 836 837 429 430
+## [829] 838 431 432 433 839 434 435 436 840 437 438</code></pre>
+<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="exercícios.html#cb383-1" aria-hidden="true" tabindex="-1"></a>plants.tree<span class="sc">$</span>edge[<span class="dv">257</span>,<span class="dv">1</span>]</span></code></pre></div>
+<pre><code>## [1] 568</code></pre>
+<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="exercícios.html#cb385-1" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">extract.clade</span>(<span class="at">phy =</span> plants.tree, <span class="at">node =</span> <span class="dv">565</span>)</span>
+<span id="cb385-2"><a href="exercícios.html#cb385-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree)</span>
+<span id="cb385-3"><a href="exercícios.html#cb385-3" aria-hidden="true" tabindex="-1"></a><span class="fu">nodelabels</span>(tree<span class="sc">$</span>node.label, <span class="at">frame =</span> <span class="st">&quot;none&quot;</span>, <span class="at">cex =</span> <span class="fl">0.7</span>)</span></code></pre></div>
+<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-190-2.png" width="672" /></p>
+<div class="sourceCode" id="cb386"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb386-1"><a href="exercícios.html#cb386-1" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">extract.clade</span>(<span class="at">phy =</span> plants.tree, <span class="at">node =</span> <span class="dv">568</span>)</span>
+<span id="cb386-2"><a href="exercícios.html#cb386-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree)</span>
+<span id="cb386-3"><a href="exercícios.html#cb386-3" aria-hidden="true" tabindex="-1"></a><span class="fu">nodelabels</span>(tree<span class="sc">$</span>node.label, <span class="at">frame =</span> <span class="st">&quot;none&quot;</span>, <span class="at">cex =</span> <span class="fl">0.7</span>)</span></code></pre></div>
+<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-190-3.png" width="672" /></p>
 </div>
             </section>
 
