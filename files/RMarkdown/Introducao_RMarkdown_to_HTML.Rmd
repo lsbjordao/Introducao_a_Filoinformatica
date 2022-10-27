@@ -1,0 +1,311 @@
+---
+title: "Introdução ao R Markdown para HTML"
+author: "Lucas S.B. Jordão"
+date: "13/05/2021"
+output: 
+  bookdown::html_document2:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introdução
+Observe que no cabeçalho YAML, o documento output é: `bookdown::html_document2`. O output em HTML geralmente é indicado como `html_document`. Neste documento, incluímos a rimeira forma, que depende da instalação do interessante pacote **bookdown**, proximamente relacionado ao **R Markdown**, que usa esse mesmo código para produzir livros digitais em formato HTML. Contudo, no presente documento, utilizamos para possibilitar a ferramenta de referência cruzada (Seção \@ref(sec:cross-ref)).
+
+Com um output em HTML, o Markdown pode embutir linguagens CSS e JavaScript.
+
+# Citação
+Para escrever uma citação use: `> Texto`.
+
+O código abaixo^[Não esqueça de deixar uma linha em branco flanqueando esse bloco, acima e abaixo.]...  
+
+```
+> "*A persistência é o caminho do êxito*"  
+> **Charles Chaplin**
+```
+...compila o seguinte:  
+
+> "*A persistência é o caminho do êxito*"  
+> **Charles Chaplin**
+
+# Código em pedaços
+A possibilidade de embutir a linguagem de programação em um documento que utiliza linguagem de marcação traz implicações profundas para a ciência e pesquisa.  
+Nesses tipo de documentos, como o *R Markdown*, os códigos de programação são feitos em pedaços (*code chunks*).
+
+```
+Esse campo é destinado à apresentação de códigos, mas não são executados para fins de processamento.
+```
+
+Para criar um pedaço de código utiliza-se o seguinte código:  
+O "r" significa que o código pertence à linguagem R.  
+
+<code>&grave;&grave;&grave;\{r\}
+Código R
+&grave;&grave;&grave;</code>
+
+Também é possível nomear o pedaço, assim:
+
+<code>&grave;&grave;&grave;\{r nome_do_pedaço_de_código\}
+Código R
+&grave;&grave;&grave;</code>
+
+É possível também controlar o output do pedaço do código usando argumantos específicos:
+
+- `echo = TRUE`: Mostra o código e o *output*
+- `echo = FALSE`: Mostra apenas o *output*, sem o código
+- `include = FALSE`: Apenas roda o código, mas não mostra nem o código nem o *output*
+- `warning = TRUE`: Mostra os avisos ao rodar um código
+- `warning = FALSE`: Omite os avisos ao rodar um código
+- `message = TRUE`: Mostra as mensagens ao rodar um código
+- `message = FALSE`: Omite as mensagens ao rodar um código
+
+Exemplo:
+
+<code>&grave;&grave;&grave;\{r echo = TRUE, warning = FALSE\}
+Código R
+&grave;&grave;&grave;</code>  
+
+No R Studio, para modificar interativamente essas configurações do pedaço de código, clique no ícone da 'engrenagem' que aparece no lado direito do bloco de código.  
+
+## Incluindo botão de copiar código
+O pacote klippy permite incluir um botão para copiar todo o código.  
+Não se esqueça de instalar o pacote antes.
+
+```{r echo=TRUE}
+library(klippy)
+klippy(tooltip_message = 'Clique para copiar', tooltip_success = 'Copiado')
+```
+
+# Tabelas em HTMLs
+Vamos usar o *dataset* (objeto) denominado 'iris', incluído no pacote `base` do R:  
+
+## Estilo básico
+```{r echo=TRUE, warning=FALSE}
+library(knitr)
+kable(iris[1:6, ], caption = "Tabela 'kable' do pacote 'knitr'")
+```
+
+## Estilo clássico
+```{r echo=TRUE, warning=FALSE}
+library(kableExtra)
+kbl(iris[1:6, ]) %>%
+  kable_classic(full_width = T)
+```
+
+## Estilo Listrado
+```{r echo=TRUE}
+kbl(iris[1:6, ]) %>%
+  kable_styling(bootstrap_options = "striped")
+```
+
+## Estilo Luz Flutuante
+```{r echo=TRUE}
+kbl(iris[1:6, ]) %>%
+  kable_styling(bootstrap_options = "hover")
+```
+
+## Estilo Listrado + Luz Flutuante
+```{r echo=TRUE}
+kbl(iris[1:6, ]) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+## Congelando os títulos das colunas e colorindo as linhas  
+
+Para congelar os títulos, usa-se o argumento 'fixed_thead = T' na função kable_styling().
+Para colorir a linha, usa-se a função 'row_spec()' com argumento 'background = "lightgreen"'.
+O operador %>% concatena funções que podem ser agrupadas, formando cadeias de funções.  
+
+```{r echo=FALSE, include=TRUE}
+kbl(iris[1:20, ]) %>%
+  kable_styling(fixed_thead = T) %>%
+  row_spec(1, background = "lightgreen") %>%
+  row_spec(3, background = "lightgreen") %>%
+  row_spec(5, background = "lightgreen") %>%
+  row_spec(7, background = "lightgreen") %>%
+  row_spec(9, background = "lightgreen") %>%
+  row_spec(11, background = "lightgreen") %>%
+  row_spec(13, background = "lightgreen") %>%
+  row_spec(15, background = "lightgreen") %>%
+  row_spec(17, background = "lightgreen") %>%
+  row_spec(19, background = "lightgreen")
+```
+
+# Importando dados para um documento R Markdown
+Qualquer arquivo pode ser importado para um documento R Markdown, desde que tenha sido gravado como um objeto específico do ambiente de trabalho do R, como o arquivo .rds.  
+
+Fundamental na importação do arquivo num documento R Markdown, é que o caminho do arquivo deve estar completo. Do contrário, um erro será mostrado.  Nesse caso, observe a direção correta da barra. É possível usar tanto "\\\\" quanto "/" no caminho do arquivo (e.g. também daria certo escrever: "C:\\\\R\\\\R-4.0.0\\\\working\\\\Mimosa_RJ.rds")
+
+```{r}
+Mimosa_RJ <- readRDS("C:/R/R-4.0.0/working/Mimosa_RJ.rds")
+kable(Mimosa_RJ[1:20,]) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), font_size = 9)
+```
+
+# Adicionando ícones
+
+Para adicionar ícones no documento, instale o pacote `icons`:
+
+```
+install.packages("remotes")
+remotes::install_github("mitchelloharawild/icons")
+download_fontawesome()
+```
+
+Há duas formas de adicionar um ícone:
+
+Via pedaço de código:
+
+```
+library(icons)
+fontawesome("rocket", style = "solid")
+```
+Veja:  
+
+```{r message=FALSE, warning=FALSE}
+library(icons)
+fontawesome("rocket", style = "solid")
+```
+
+OU  
+
+Via código dentro de linha (*inline*): <code>&grave;r icons::fontawesome("laugh-wink", style = "solid")&grave;</code>
+
+Nesse caso, um ícone pode acompanhar um texto: `r icons::fontawesome("laugh-wink", style = "solid")`.  
+
+O `r icons::icon_style(fontawesome("r-project"), scale = 2, fill = "blue")` é um programa incrível!  
+
+Visite: [https://fontawesome.com](https://fontawesome.com).  
+
+# Criando as referências cruzadas {#sec:cross-ref}
+Para utilizar a referência cruzada é preciso utilizar o pacote `bookdown`. Não esqueça de instalar!  
+Para realizar a referência cruzada é preciso que a imagem ou tabela tenha um cabeçalho (*caption*).  
+
+## Figuras
+
+Esta é a figura \@ref(fig:espirradeira).  
+
+```{r espirradeira, fig.cap = "Espirradeira. Foto: Cristina Braga."}
+knitr::include_graphics("espirradeira.png")
+```
+
+## Tabelas
+
+Esta é a tabela \@ref(tab:MimosaRJ).  
+
+```{r MimosaRJ, echo=FALSE}
+kable(iris[1:10,], caption = "Tamanho da flor de *Iris sp.*")
+```
+
+## Seções e subseções {#sec:subsecao}
+
+O seção \@ref(sec:cross-ref) está com referência cruzada. A subseção \@ref(sec:subsecao) também.
+
+# Menus colapsáveis e expandíveis
+Visite o site [W^3^schools](https://www.w3schools.com). Nele, há diversas elementos de HTML, CSS, JS, etc, prontos para copiar e colar.
+
+## Em HTML
+
+### Triângulo simples
+```
+<details>
+  <summary>**Menu**</summary>
+    *Texto*
+</details>
+```
+
+<details>
+  <summary>**Menu**</summary>
+    *Texto* 
+</details>
+
+### Botão
+````
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+    **Menu_Botão**
+  </a>
+</p>
+<div class="collapse" id="collapseExample1">
+  <div class="card card-body">
+
+  **Texto**
+  Abaixo as 15 primeiras linhas do objeto 'iris':
+
+```{r}
+iris[1:15,]
+# OBS: O bloco de código logo acima no documento final em HTML, que mostra o objeto 'iris[1:15,]', não deve ser incluído na versão em código R Markdown (.Rmd).
+```
+
+  </div>
+</div>
+````
+
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
+    **Menu_Botão**
+  </a>
+</p>
+<div class="collapse" id="collapse1">
+  <div class="card card-body">
+
+  *Texto*  
+  Abaixo as 15 primeiras linhas do objeto 'iris':
+```{r}
+iris[1:15,]
+```
+
+  </div>
+</div>
+
+
+## Formulários
+### Input: texto livre
+
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("user_input").value;
+    }
+  </script>
+
+  </head>
+<body>
+
+  <form>
+    <label><b>Enter a Message</b></label>
+    <input type="text" name="message" id="user_input">
+  </form>
+
+  <input type="submit" onclick="showInput();"><br/>
+  <label>Your input: </label>
+  <p><span id='display'></span></p>
+</body>
+</html>
+
+### Input: caixa de seleção unitária
+
+<select name="carBrands">
+<option value="Ford" SELECTED>Ford Motor Company
+<option value="GM">General Motors
+<option value="Honda">Honda Motor Company
+</select>
+
+### Input: caixa de seleção múltipla
+
+<select name="carBrands" size=5 multiple=T>
+<option value="Ford" SELECTED>Ford Motor Company
+<option value="GM">General Motors
+<option value="Honda">Honda Motor Company
+<option value="Toyota">Toyota Motor Company
+<option value="Ford">Jaguar
+<option value="Mazda">Mazda
+<option value="Volvo">Volvo
+</select>
+

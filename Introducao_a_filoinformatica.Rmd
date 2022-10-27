@@ -1795,7 +1795,7 @@ O arquivo `.nex` resultante do procedimento de codificação do SeqState precisa
 
 - Distingue entre a taxa de transições e transversões (usando o parâmetro κ), e permite frequências de base desiguais.
 
-## Modelo General Time Reversible (HKY) 1986
+## Modelo General Time Reversible (GTR) 1986
 
 - Modelo de substituição mais utilizado.
 
@@ -3935,7 +3935,7 @@ plants.tree <- "((((((((((((((Eudicots), Monocots), Magnoliids), Chloranthales),
 plants.tree <- read.tree(text = plants.tree)
 
 plot(plants.tree)
-edgelabels()
+nodelabels()
 
 tree1 <- extract.clade(phy = plants.tree, node = 29)
 plot(tree1)
