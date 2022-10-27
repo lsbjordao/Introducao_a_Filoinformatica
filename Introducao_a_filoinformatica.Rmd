@@ -2678,15 +2678,41 @@ Por outro lado, inúmeras árvores podem ser armazenadas como um objeto de class
 
 A classe `phylo4` armazena apenas árvores, enquanto a classe `phylo4d` armazena tanto árvores quanto outros dados associados, como um *dataframe* contendo dados sobbre os ramos e terminais.
 
-### Pacote treeio
+### Importando do IQTree
+
+```{r message=FALSE, warning=FALSE}
+library(treeio)
+library(phytools)
+library(ggtree)
+library(ggplot2)
+
+tree <- read.iqtree("files/trees/example.phy.contree")
+tree@phylo <- force.ultrametric(tree@phylo)
+tree@data$bootstrap <- as.numeric(tree@phylo$node.label)
+tree.plot <- ggtree(tree, size = 3, aes(color = bootstrap))  +
+  scale_color_continuous(low = "red", high = "blue") +
+  geom_treescale(fontsize = 10, width = 0.01) +
+  geom_nodelab(aes(x = branch, label = round(bootstrap, 1)), vjust = -0.5, size = 10) +  
+  theme(legend.position= c(0.1, 0.8), legend.key.size = unit(1.5, "cm")) +
+  theme(legend.text = element_text(size  = 10)) +
+  theme(legend.title = element_text(size = 10)) +
+  geom_tiplab(size = 10, color = "black", hjust = 1)
+
+tree.plot
+```
+
+
+### Importando do MrBayes
 
 ```{r}
 library(treeio)
-tree <- read.iqtree("files/trees/example.phy.treefile")
-tree@phylo <- force.ultrametric(tree@phylo)
-tree@data$bootstrap <- as.numeric(tree@phylo$node.label)
-plot(tree)
+
+file <- system.file("extdata/MrBayes", "Gq_nxs.tre", package="treeio")
+tree.mrbayes <- read.mrbayes(file)
+plot(tree.mrbayes@phylo)
+
 ```
+
 
 ## Personalizando o estilo da árvore
 Agora que temos um conjunto de objetos de classe `phylo` e `phylo4`, vamos aprender a alterar o design das árvores utilizando alguns dos principais pacotes para filogenia. Vamos conhecer um pacote de cada vez.

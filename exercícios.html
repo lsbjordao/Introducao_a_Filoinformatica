@@ -264,6 +264,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.4.2.7" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#prática-3-gerando-o-output"><i class="fa fa-check"></i><b>11.4.2.7</b> Prática 3: Gerando o output</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="11.5" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html#raxmlgui-2.0-jmodeltest-2"><i class="fa fa-check"></i><b>11.5</b> raxmlGUI 2.0 + jModelTest 2</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="edição-final-de-árvore.html"><a href="edição-final-de-árvore.html"><i class="fa fa-check"></i><b>12</b> Edição final de árvore</a>
 <ul>
@@ -306,6 +307,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="15.3.1" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#classe-phylo-s3"><i class="fa fa-check"></i><b>15.3.1</b> Classe phylo (S3)</a></li>
 <li class="chapter" data-level="15.3.2" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#classe-phylo4-e-phylo4d-s4"><i class="fa fa-check"></i><b>15.3.2</b> Classe phylo4 e phylo4d (S4)</a></li>
+<li class="chapter" data-level="15.3.3" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#importando-do-iqtree"><i class="fa fa-check"></i><b>15.3.3</b> Importando do IQTree</a></li>
+<li class="chapter" data-level="15.3.4" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#importando-do-mrbayes"><i class="fa fa-check"></i><b>15.3.4</b> Importando do MrBayes</a></li>
 </ul></li>
 <li class="chapter" data-level="15.4" data-path="filogenia-no-r.html"><a href="filogenia-no-r.html#personalizando-o-estilo-da-árvore"><i class="fa fa-check"></i><b>15.4</b> Personalizando o estilo da árvore</a>
 <ul>
@@ -391,26 +394,26 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="exercícios" class="section level1 hasAnchor" number="16">
 <h1><span class="header-section-number">16</span> Exercícios<a href="exercícios.html#exercícios" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="exercícios.html#cb383-1" aria-hidden="true" tabindex="-1"></a>plants.tree <span class="ot">&lt;-</span> <span class="st">&quot;((((((((((((((Eudicots), Monocots), Magnoliids), Chloranthales), Autrobaileyales), Nymphaeales), Amborellales),((((Gnetales, Conifers), Gingkoales), Cycadales))),(((Sphenophytes, Marattiales), Filicales),(Ophioglossaceae, Psilophytes))),(Selaginellales, Lycopodiales)),(Bryophyta)),(Anthocerophyta)),(Marchantiophyta)));&quot;</span></span>
-<span id="cb383-2"><a href="exercícios.html#cb383-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb383-3"><a href="exercícios.html#cb383-3" aria-hidden="true" tabindex="-1"></a>plants.tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="at">text =</span> plants.tree)</span>
-<span id="cb383-4"><a href="exercícios.html#cb383-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb383-5"><a href="exercícios.html#cb383-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(plants.tree)</span>
-<span id="cb383-6"><a href="exercícios.html#cb383-6" aria-hidden="true" tabindex="-1"></a><span class="fu">edgelabels</span>()</span></code></pre></div>
-<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-189-1.png" width="672" /></p>
-<div class="sourceCode" id="cb384"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb384-1"><a href="exercícios.html#cb384-1" aria-hidden="true" tabindex="-1"></a>tree1 <span class="ot">&lt;-</span> <span class="fu">extract.clade</span>(<span class="at">phy =</span> plants.tree, <span class="at">node =</span> <span class="dv">29</span>)</span>
-<span id="cb384-2"><a href="exercícios.html#cb384-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree1)</span></code></pre></div>
-<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-189-2.png" width="672" /></p>
-<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="exercícios.html#cb385-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tente a seleção do nó interativamente</span></span>
-<span id="cb385-2"><a href="exercícios.html#cb385-2" aria-hidden="true" tabindex="-1"></a><span class="co"># tree2 &lt;- extract.clade(plants.tree, interactive = T)</span></span>
-<span id="cb385-3"><a href="exercícios.html#cb385-3" aria-hidden="true" tabindex="-1"></a><span class="co"># plot(tree2)</span></span></code></pre></div>
+<div class="sourceCode" id="cb381"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb381-1"><a href="exercícios.html#cb381-1" aria-hidden="true" tabindex="-1"></a>plants.tree <span class="ot">&lt;-</span> <span class="st">&quot;((((((((((((((Eudicots), Monocots), Magnoliids), Chloranthales), Autrobaileyales), Nymphaeales), Amborellales),((((Gnetales, Conifers), Gingkoales), Cycadales))),(((Sphenophytes, Marattiales), Filicales),(Ophioglossaceae, Psilophytes))),(Selaginellales, Lycopodiales)),(Bryophyta)),(Anthocerophyta)),(Marchantiophyta)));&quot;</span></span>
+<span id="cb381-2"><a href="exercícios.html#cb381-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb381-3"><a href="exercícios.html#cb381-3" aria-hidden="true" tabindex="-1"></a>plants.tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="at">text =</span> plants.tree)</span>
+<span id="cb381-4"><a href="exercícios.html#cb381-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb381-5"><a href="exercícios.html#cb381-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(plants.tree)</span>
+<span id="cb381-6"><a href="exercícios.html#cb381-6" aria-hidden="true" tabindex="-1"></a><span class="fu">edgelabels</span>()</span></code></pre></div>
+<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-191-1.png" width="672" /></p>
+<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="exercícios.html#cb382-1" aria-hidden="true" tabindex="-1"></a>tree1 <span class="ot">&lt;-</span> <span class="fu">extract.clade</span>(<span class="at">phy =</span> plants.tree, <span class="at">node =</span> <span class="dv">29</span>)</span>
+<span id="cb382-2"><a href="exercícios.html#cb382-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree1)</span></code></pre></div>
+<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-191-2.png" width="672" /></p>
+<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="exercícios.html#cb383-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tente a seleção do nó interativamente</span></span>
+<span id="cb383-2"><a href="exercícios.html#cb383-2" aria-hidden="true" tabindex="-1"></a><span class="co"># tree2 &lt;- extract.clade(plants.tree, interactive = T)</span></span>
+<span id="cb383-3"><a href="exercícios.html#cb383-3" aria-hidden="true" tabindex="-1"></a><span class="co"># plot(tree2)</span></span></code></pre></div>
 <p><br></p>
-<div class="sourceCode" id="cb386"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb386-1"><a href="exercícios.html#cb386-1" aria-hidden="true" tabindex="-1"></a>plants.tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="st">&quot;./files/trees/apg.tree&quot;</span>)</span>
-<span id="cb386-2"><a href="exercícios.html#cb386-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb386-3"><a href="exercícios.html#cb386-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(plants.tree)</span>
-<span id="cb386-4"><a href="exercícios.html#cb386-4" aria-hidden="true" tabindex="-1"></a><span class="fu">edgelabels</span>()</span></code></pre></div>
-<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-190-1.png" width="672" /></p>
-<div class="sourceCode" id="cb387"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb387-1"><a href="exercícios.html#cb387-1" aria-hidden="true" tabindex="-1"></a>plants.tree<span class="sc">$</span>node.label</span></code></pre></div>
+<div class="sourceCode" id="cb384"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb384-1"><a href="exercícios.html#cb384-1" aria-hidden="true" tabindex="-1"></a>plants.tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="st">&quot;./files/trees/apg.tree&quot;</span>)</span>
+<span id="cb384-2"><a href="exercícios.html#cb384-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb384-3"><a href="exercícios.html#cb384-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(plants.tree)</span>
+<span id="cb384-4"><a href="exercícios.html#cb384-4" aria-hidden="true" tabindex="-1"></a><span class="fu">edgelabels</span>()</span></code></pre></div>
+<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-192-1.png" width="672" /></p>
+<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="exercícios.html#cb385-1" aria-hidden="true" tabindex="-1"></a>plants.tree<span class="sc">$</span>node.label</span></code></pre></div>
 <pre><code>##   [1] &quot;angiosperms&quot;                          
 ##   [2] &quot;nymphaeales_to_asterales&quot;             
 ##   [3] &quot;nymphaeales&quot;                          
@@ -813,9 +816,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## [400] &quot;gentianaceae_to_apocynaceae&quot;          
 ## [401] &quot;garryales&quot;                            
 ## [402] &quot;icacinales&quot;</code></pre>
-<div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb389-1"><a href="exercícios.html#cb389-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="st">&quot;fabales&quot;</span>, plants.tree<span class="sc">$</span>node.label)</span></code></pre></div>
+<div class="sourceCode" id="cb387"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb387-1"><a href="exercícios.html#cb387-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span>(<span class="st">&quot;fabales&quot;</span>, plants.tree<span class="sc">$</span>node.label)</span></code></pre></div>
 <pre><code>## [1] 128</code></pre>
-<div class="sourceCode" id="cb391"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb391-1"><a href="exercícios.html#cb391-1" aria-hidden="true" tabindex="-1"></a>plants.tree<span class="sc">$</span>edge</span></code></pre></div>
+<div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb389-1"><a href="exercícios.html#cb389-1" aria-hidden="true" tabindex="-1"></a>plants.tree<span class="sc">$</span>edge</span></code></pre></div>
 <pre><code>##        [,1] [,2]
 ##   [1,]  439    1
 ##   [2,]  439  440
@@ -1656,18 +1659,18 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## [837,]  804  840
 ## [838,]  840  437
 ## [839,]  840  438</code></pre>
-<div class="sourceCode" id="cb393"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb393-1"><a href="exercícios.html#cb393-1" aria-hidden="true" tabindex="-1"></a>plants.tree<span class="sc">$</span>edge[<span class="dv">257</span>,<span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb391"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb391-1"><a href="exercícios.html#cb391-1" aria-hidden="true" tabindex="-1"></a>plants.tree<span class="sc">$</span>edge[<span class="dv">257</span>,<span class="dv">1</span>]</span></code></pre></div>
 <pre><code>## [1] 568</code></pre>
 <p><strong>Clado das Fixadoras de Nitrogênio (clado CFN)</strong> FABA-ROSA-CUCU-FAGA</p>
-<div class="sourceCode" id="cb395"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb395-1"><a href="exercícios.html#cb395-1" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">extract.clade</span>(<span class="at">phy =</span> plants.tree, <span class="at">node =</span> <span class="dv">565</span>)</span>
-<span id="cb395-2"><a href="exercícios.html#cb395-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree)</span>
-<span id="cb395-3"><a href="exercícios.html#cb395-3" aria-hidden="true" tabindex="-1"></a><span class="fu">nodelabels</span>(tree<span class="sc">$</span>node.label, <span class="at">frame =</span> <span class="st">&quot;none&quot;</span>, <span class="at">cex =</span> <span class="fl">0.7</span>)</span></code></pre></div>
-<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-191-1.png" width="672" /></p>
+<div class="sourceCode" id="cb393"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb393-1"><a href="exercícios.html#cb393-1" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">extract.clade</span>(<span class="at">phy =</span> plants.tree, <span class="at">node =</span> <span class="dv">565</span>)</span>
+<span id="cb393-2"><a href="exercícios.html#cb393-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree)</span>
+<span id="cb393-3"><a href="exercícios.html#cb393-3" aria-hidden="true" tabindex="-1"></a><span class="fu">nodelabels</span>(tree<span class="sc">$</span>node.label, <span class="at">frame =</span> <span class="st">&quot;none&quot;</span>, <span class="at">cex =</span> <span class="fl">0.7</span>)</span></code></pre></div>
+<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-193-1.png" width="672" /></p>
 <p><strong>Ordem Fabales</strong></p>
-<div class="sourceCode" id="cb396"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb396-1"><a href="exercícios.html#cb396-1" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">extract.clade</span>(<span class="at">phy =</span> plants.tree, <span class="at">node =</span> <span class="dv">566</span>)</span>
-<span id="cb396-2"><a href="exercícios.html#cb396-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree)</span>
-<span id="cb396-3"><a href="exercícios.html#cb396-3" aria-hidden="true" tabindex="-1"></a><span class="fu">nodelabels</span>(tree<span class="sc">$</span>node.label, <span class="at">frame =</span> <span class="st">&quot;none&quot;</span>, <span class="at">cex =</span> <span class="fl">0.7</span>)</span></code></pre></div>
-<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-192-1.png" width="672" /></p>
+<div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb394-1"><a href="exercícios.html#cb394-1" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">extract.clade</span>(<span class="at">phy =</span> plants.tree, <span class="at">node =</span> <span class="dv">566</span>)</span>
+<span id="cb394-2"><a href="exercícios.html#cb394-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree)</span>
+<span id="cb394-3"><a href="exercícios.html#cb394-3" aria-hidden="true" tabindex="-1"></a><span class="fu">nodelabels</span>(tree<span class="sc">$</span>node.label, <span class="at">frame =</span> <span class="st">&quot;none&quot;</span>, <span class="at">cex =</span> <span class="fl">0.7</span>)</span></code></pre></div>
+<p><img src="Introducao_a_filoinformatica_files/figure-html/unnamed-chunk-194-1.png" width="672" /></p>
 </div>
             </section>
 
