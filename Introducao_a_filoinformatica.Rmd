@@ -2682,7 +2682,7 @@ A classe `phylo4` armazena apenas árvores, enquanto a classe `phylo4d` armazena
 
 ```{r}
 library(treeio)
-tree <- read.iqtree("files/trees/example.nex")
+tree <- read.iqtree("files/trees/example.phy.treefile")
 tree@phylo <- force.ultrametric(tree@phylo)
 tree@data$bootstrap <- as.numeric(tree@phylo$node.label)
 plot(tree)
