@@ -1759,21 +1759,6 @@ O arquivo `.nex` resultante do procedimento de codificação do SeqState precisa
 
 # Modelos de evolução de sequências
 
-- Para especificação do modelo evolutivo, use o comando `lset`
-
-- Os parâmetros de modelo mais utilizads são:
-
-  1. número de tipos de substituição
-  
-    - **1** = Jukes-Cantor
-    - **2** = HKY
-    - **6** = GTR
-  
-  2. modelo de variação de taxa entre sítios (*sites*)
-    - **I** = Taxas de sítios invariáveis
-    - **G** = Taxas de distribuição gama entre os sítios
-    - **I+G** = Combinação
-
 ## As 6 substituições
 
 `r Citet(referencias, "Holmes2001")`
@@ -1792,25 +1777,25 @@ O arquivo `.nex` resultante do procedimento de codificação do SeqState precisa
   - Mutações sem sentido (*nonsense*).
     - Ocorre um substituição de um par de nucleotídeos dentro de uma região codificante de proteína que muda um códon para um aminoácido em um códon de término.
     
-### Modelo Jukes/Cantor (JC) 1969
+## Modelo Jukes/Cantor (JC) 1969
 
 - Assume que as bases ocorrem com igual frequência e a taxa de substituição de uma base para qualquer outra é a mesma.
 
 ![](images/jukesCantor.png)
 
 
-### Modelo Kimura (K80) 1980
+## Modelo Kimura (K80) 1980
 
 - Referido como "modelo de dois parâmetros de Kimura"
 
 - Assume frequências distintas para transições e transversões
     
 
-### Modelo Hasegawa-Kishino-Yano (HKY) 1985
+## Modelo Hasegawa-Kishino-Yano (HKY) 1985
 
 - Distingue entre a taxa de transições e transversões (usando o parâmetro κ), e permite frequências de base desiguais.
 
-### Modelo General Time Reversible (HKY) 1986
+## Modelo General Time Reversible (HKY) 1986
 
 - Modelo de substituição mais utilizado.
 
@@ -2097,6 +2082,21 @@ Executar os testes de topologia
 
 
 ### Prática 2: Modelo de substituição
+
+- Para especificação do modelo evolutivo, use o comando `lset`
+
+- Os parâmetros de modelo mais utilizads são:
+
+  1. número de tipos de substituição
+  
+    - **1** = Jukes-Cantor
+    - **2** = HKY
+    - **6** = GTR
+  
+  2. modelo de variação de taxa entre sítios (*sites*)
+    - **I** = Taxas de sítios invariáveis
+    - **G** = Taxas de distribuição gama entre os sítios
+    - **I+G** = Combinação
 
 - Para configurar o modelo GTR+G, use:
 

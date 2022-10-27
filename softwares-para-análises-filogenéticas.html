@@ -240,13 +240,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="modelos-de-evolução-de-sequências.html"><a href="modelos-de-evolução-de-sequências.html"><i class="fa fa-check"></i><b>10</b> Modelos de evolução de sequências</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="modelos-de-evolução-de-sequências.html"><a href="modelos-de-evolução-de-sequências.html#as-6-substituições"><i class="fa fa-check"></i><b>10.1</b> As 6 substituições</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="modelos-de-evolução-de-sequências.html"><a href="modelos-de-evolução-de-sequências.html#modelo-jukescantor-jc-1969"><i class="fa fa-check"></i><b>10.1.1</b> Modelo Jukes/Cantor (JC) 1969</a></li>
-<li class="chapter" data-level="10.1.2" data-path="modelos-de-evolução-de-sequências.html"><a href="modelos-de-evolução-de-sequências.html#modelo-kimura-k80-1980"><i class="fa fa-check"></i><b>10.1.2</b> Modelo Kimura (K80) 1980</a></li>
-<li class="chapter" data-level="10.1.3" data-path="modelos-de-evolução-de-sequências.html"><a href="modelos-de-evolução-de-sequências.html#modelo-hasegawa-kishino-yano-hky-1985"><i class="fa fa-check"></i><b>10.1.3</b> Modelo Hasegawa-Kishino-Yano (HKY) 1985</a></li>
-<li class="chapter" data-level="10.1.4" data-path="modelos-de-evolução-de-sequências.html"><a href="modelos-de-evolução-de-sequências.html#modelo-general-time-reversible-hky-1986"><i class="fa fa-check"></i><b>10.1.4</b> Modelo General Time Reversible (HKY) 1986</a></li>
-</ul></li>
+<li class="chapter" data-level="10.1" data-path="modelos-de-evolução-de-sequências.html"><a href="modelos-de-evolução-de-sequências.html#as-6-substituições"><i class="fa fa-check"></i><b>10.1</b> As 6 substituições</a></li>
+<li class="chapter" data-level="10.2" data-path="modelos-de-evolução-de-sequências.html"><a href="modelos-de-evolução-de-sequências.html#modelo-jukescantor-jc-1969"><i class="fa fa-check"></i><b>10.2</b> Modelo Jukes/Cantor (JC) 1969</a></li>
+<li class="chapter" data-level="10.3" data-path="modelos-de-evolução-de-sequências.html"><a href="modelos-de-evolução-de-sequências.html#modelo-kimura-k80-1980"><i class="fa fa-check"></i><b>10.3</b> Modelo Kimura (K80) 1980</a></li>
+<li class="chapter" data-level="10.4" data-path="modelos-de-evolução-de-sequências.html"><a href="modelos-de-evolução-de-sequências.html#modelo-hasegawa-kishino-yano-hky-1985"><i class="fa fa-check"></i><b>10.4</b> Modelo Hasegawa-Kishino-Yano (HKY) 1985</a></li>
+<li class="chapter" data-level="10.5" data-path="modelos-de-evolução-de-sequências.html"><a href="modelos-de-evolução-de-sequências.html#modelo-general-time-reversible-hky-1986"><i class="fa fa-check"></i><b>10.5</b> Modelo General Time Reversible (HKY) 1986</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="softwares-para-análises-filogenéticas.html"><a href="softwares-para-análises-filogenéticas.html"><i class="fa fa-check"></i><b>11</b> Softwares para análises filogenéticas</a>
 <ul>
@@ -645,7 +643,25 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="prática-2-modelo-de-substituição" class="section level3 hasAnchor" number="11.4.2">
 <h3><span class="header-section-number">11.4.2</span> Prática 2: Modelo de substituição<a href="softwares-para-análises-filogenéticas.html#prática-2-modelo-de-substituição" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li>Para configurar o modelo GTR+G, use:</li>
+<li><p>Para especificação do modelo evolutivo, use o comando <code>lset</code></p></li>
+<li><p>Os parâmetros de modelo mais utilizads são:</p>
+<ol style="list-style-type: decimal">
+<li>número de tipos de substituição</li>
+</ol>
+<ul>
+<li><strong>1</strong> = Jukes-Cantor</li>
+<li><strong>2</strong> = HKY</li>
+<li><strong>6</strong> = GTR</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>modelo de variação de taxa entre sítios (<em>sites</em>)</li>
+</ol>
+<ul>
+<li><strong>I</strong> = Taxas de sítios invariáveis</li>
+<li><strong>G</strong> = Taxas de distribuição gama entre os sítios</li>
+<li><strong>I+G</strong> = Combinação</li>
+</ul></li>
+<li><p>Para configurar o modelo GTR+G, use:</p></li>
 </ul>
 <div style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;">
 <p>lset nst=6 rates=gamma</p>
