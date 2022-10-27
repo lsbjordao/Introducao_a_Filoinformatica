@@ -1942,6 +1942,10 @@ Executar diferentes métodos para estimação do suporte dos ramos
 
 :::
 
+<br> 
+
+Exemplo com dados particionados (matriz combinada)
+
 ::: {style="color: black; background: lightblue; text-align: justify; border: 5px outset lightgray; padding: 10px;"}
 
 
