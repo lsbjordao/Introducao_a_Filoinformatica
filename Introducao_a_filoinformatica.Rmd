@@ -3948,18 +3948,53 @@ plot(tree1)
 <br>
 
 ```{r}
-plants.tree <- read.tree("./files/trees/apg.tree")
+library(ape)
 
-plot(plants.tree)
-edgelabels()
+apg.tree <- read.tree("./files/trees/apg.tree")
 
-plants.tree$node.label
+nome <- "nitrogenfixing"
+  
+busca_clado <- grep(nome, apg.tree$node.label)
 
-grep("fabales", plants.tree$node.label)
-plants.tree$edge
-plants.tree$edge[257,1]
+apg.tree$node.label[busca_clado]
+
+if(length(busca_clado) > 1){
+  
+  node <- max(busca_clado + length(apg.tree$tip.label))
+  
+} else {
+  
+  node <- busca_clado + length(apg.tree$tip.label)
+  
+}
+
+tree <- extract.clade(phy = apg.tree, node = node)
+
+plot(tree)
 ```
 
+
+```{r}
+nome <- "fabales"
+  
+busca_clado <- grep(nome, plants.tree$node.label)
+
+plants.tree$node.label[busca_clado]
+
+if(length(busca_clado) > 1){
+  
+  node <- max(busca_clado + length(plants.tree$tip.label))
+  
+} else {
+  
+  node <- busca_clado + length(plants.tree$tip.label)
+  
+}
+
+tree <- extract.clade(phy = plants.tree, node = node)
+
+plot(tree)
+```
 **Clado das Fixadoras de Nitrogênio (clado CFN)** FABA-ROSA-CUCU-FAGA
 
 ```{r}
@@ -3975,6 +4010,19 @@ tree <- extract.clade(phy = plants.tree, node = 566)
 plot(tree)
 nodelabels(tree$node.label, frame = "none", cex = 0.7)
 ```
+
+
+nome <- "lamiales"
+
+busca_nome <- grep(nome, plants.tree$node.label)
+
+busca_edge <- grep(busca_nome, plants.tree$edge[, 2])
+
+busca_node <- plants.tree$edge[busca_edge, 1]
+
+tree <- extract.clade(phy = plants.tree, node = busca_node)
+
+plot(tree)
 
 # GeneBank (NCBI)
 
