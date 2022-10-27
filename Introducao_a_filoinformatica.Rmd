@@ -1756,13 +1756,67 @@ O *software* [SequenceMatrix](http://www.ggvaidya.com/taxondna/) `r Cite(referen
 
 O arquivo `.nex` resultante do procedimento de codificação do SeqState precisa ser aberto em um editor de texto mais especializado para programação. Experimente o [Notepad2](http://www.flos-freeware.ch).
 
-# Seleção de modelos das partições
 
-PartitionFinder
-![](images/PartitionFinder.png)
-Os principais resultados são gravados no arquivo
-`best_scheme.txt`.
+# Modelos de evolução de sequências
 
+- Para especificação do modelo evolutivo, use o comando `lset`
+
+- Os parâmetros de modelo mais utilizads são:
+
+  1. número de tipos de substituição
+  
+    - **1** = Jukes-Cantor
+    - **2** = HKY
+    - **6** = GTR
+  
+  2. modelo de variação de taxa entre sítios (*sites*)
+    - **I** = Taxas de sítios invariáveis
+    - **G** = Taxas de distribuição gama entre os sítios
+    - **I+G** = Combinação
+
+## As 6 substituições
+
+`r Citet(referencias, "Holmes2001")`
+
+![](images/six_subst.png)
+
+- Substituições do tipo transição são mais frequentes que transversões.
+  - Transição:
+    - Entre purinas: adenina (A) e guanina (G);
+    - Entre pirimidinas: citosina (C) e timina (T).
+  - Transversões:
+    - Entre purinas e pirimidinas.
+- Ademais, as **mutações silenciosas** são mais frequentes do que:
+  - Mutações de sentido errado (*missense*) ou não sinônimas;
+    - Resulta na substituição de um aminoácido por outro.
+  - Mutações sem sentido (*nonsense*).
+    - Ocorre um substituição de um par de nucleotídeos dentro de uma região codificante de proteína que muda um códon para um aminoácido em um códon de término.
+    
+### Modelo Jukes/Cantor (JC) 1969
+
+- Assume que as bases ocorrem com igual frequência e a taxa de substituição de uma base para qualquer outra é a mesma.
+
+![](images/jukesCantor.png)
+
+
+### Modelo Kimura (K80) 1980
+
+- Referido como "modelo de dois parâmetros de Kimura"
+
+- Assume frequências distintas para transições e transversões
+    
+
+### Modelo Hasegawa-Kishino-Yano (HKY) 1985
+
+- Distingue entre a taxa de transições e transversões (usando o parâmetro κ), e permite frequências de base desiguais.
+
+### Modelo General Time Reversible (HKY) 1986
+
+- Modelo de substituição mais utilizado.
+
+- Modelo mais neutro, independente, de sítios finitos e reversível no tempo
+
+- Todos seis tipos de substituição têm taxas diferentes
 
 
 # Softwares para análises filogenéticas
@@ -2042,69 +2096,7 @@ Executar os testes de topologia
   :::
 
 
-### Modelo de evolução de sequências
-
-- Para especificação do modelo evolutivo, use o comando `lset`
-
-- Os parâmetros de modelo mais utilizads são:
-
-  1. número de tipos de substituição
-  
-    - **1** = Jukes-Cantor
-    - **2** = HKY
-    - **6** = GTR
-  
-  2. modelo de variação de taxa entre sítios (*sites*)
-    - **I** = Taxas de sítios invariáveis
-    - **G** = Taxas de distribuição gama entre os sítios
-    - **I+G** = Combinação
-
-#### As 6 substituições
-
-`r Citet(referencias, "Holmes2001")`
-
-![](images/six_subst.png)
-
-- Substituições do tipo transição são mais frequentes que transversões.
-  - Transição:
-    - Entre purinas: adenina (A) e guanina (G);
-    - Entre pirimidinas: citosina (C) e timina (T).
-  - Transversões:
-    - Entre purinas e pirimidinas.
-- Ademais, as **mutações silenciosas** são mais frequentes do que:
-  - Mutações de sentido errado (*missense*) ou não sinônimas;
-    - Resulta na substituição de um aminoácido por outro.
-  - Mutações sem sentido (*nonsense*).
-    - Ocorre um substituição de um par de nucleotídeos dentro de uma região codificante de proteína que muda um códon para um aminoácido em um códon de término.
-    
-#### Modelo Jukes/Cantor (JC) 1969
-
-- Assume que as bases ocorrem com igual frequência e a taxa de substituição de uma base para qualquer outra é a mesma.
-
-![](images/jukesCantor.png)
-
-
-#### Modelo Kimura (K80) 1980
-
-- Referido como "modelo de dois parâmetros de Kimura"
-
-- Assume frequências distintas para transições e transversões
-    
-
-#### Modelo Hasegawa-Kishino-Yano (HKY) 1985
-
-- Distingue entre a taxa de transições e transversões (usando o parâmetro κ), e permite frequências de base desiguais.
-
-#### Modelo General Time Reversible (HKY) 1986
-
-- Modelo de substituição mais utilizado.
-
-- Modelo mais neutro, independente, de sítios finitos e reversível no tempo
-
-- Todos seis tipos de substituição têm taxas diferentes
-
-
-#### Prática 2: Modelo de substituição
+### Prática 2: Modelo de substituição
 
 - Para configurar o modelo GTR+G, use:
 
@@ -2138,7 +2130,7 @@ lset nst=mixed rates=gamma
 
 - O salto reversível não está configurado atualmente para diferentes modelos de variação de taxa entre sítios.
 
-#### Prática 3: Gerando o output
+### Prática 3: Gerando o output
 
 - Depois de executar uma análise MCMC no MrBayes, certifique-se de que as cadeias de Markov convergiram através do software Tracer.
 
@@ -2161,9 +2153,20 @@ sumt burnin=1000
 :::
 
 
+## Softwares para seleção de modelos evolutivos
+
 ## raxmlGUI 2.0 + jModelTest 2
 
 [https://antonellilab.github.io/raxmlGUI/](https://antonellilab.github.io/raxmlGUI/)
+
+
+### PartitionFinder
+
+PartitionFinder
+![](images/PartitionFinder.png)
+Os principais resultados são gravados no arquivo
+`best_scheme.txt`.
+
 
 # Edição final de árvore
 
