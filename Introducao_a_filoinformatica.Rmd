@@ -2678,6 +2678,15 @@ Por outro lado, inúmeras árvores podem ser armazenadas como um objeto de class
 
 A classe `phylo4` armazena apenas árvores, enquanto a classe `phylo4d` armazena tanto árvores quanto outros dados associados, como um *dataframe* contendo dados sobbre os ramos e terminais.
 
+### Pacote treeio
+
+```{r}
+library(treeio)
+tree <- read.iqtree("./files/tree/example.nex")
+tree@phylo <- force.ultrametric(tree@phylo)
+tree@data$bootstrap <- as.numeric(tree@phylo$node.label)
+plot(tree)
+```
 
 ## Personalizando o estilo da árvore
 Agora que temos um conjunto de objetos de classe `phylo` e `phylo4`, vamos aprender a alterar o design das árvores utilizando alguns dos principais pacotes para filogenia. Vamos conhecer um pacote de cada vez.
