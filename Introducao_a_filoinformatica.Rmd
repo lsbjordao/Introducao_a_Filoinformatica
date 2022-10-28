@@ -3930,13 +3930,38 @@ As análises de estimação do estado ancestral, ou reconstrução do caráter a
 # Exercícios
 
 ```{r}
+library(ape)
+
 plants.tree <- "((((((((((((((Eudicots), Monocots), Magnoliids), Chloranthales), Autrobaileyales), Nymphaeales), Amborellales),((((Gnetales, Conifers), Gingkoales), Cycadales))),(((Sphenophytes, Marattiales), Filicales),(Ophioglossaceae, Psilophytes))),(Selaginellales, Lycopodiales)),(Bryophyta)),(Anthocerophyta)),(Marchantiophyta)));"
 
 plants.tree <- read.tree(text = plants.tree)
 
 plot(plants.tree)
-nodelabels()
+```
 
+- Os nomes dos terminais (`tip labels`) são numerados em ordem consecutiva começando do 1:
+
+```{r}
+plot(plants.tree)
+tiplabels()
+```
+
+- Os nós (`nodes`) são numerados em ordem consecutiva começando do número consecutivo ao número de terminais:
+
+```{r}
+length(plants.tree$tip.label) + 1
+```
+
+- Vejam os rótulos (*labels*) dos nós:
+
+```{r}
+plot(plants.tree)
+nodelabels()
+```
+
+- Vamos extrair os clados com base no número (rótulo) do nó:
+
+```{r}
 tree1 <- extract.clade(phy = plants.tree, node = 29)
 plot(tree1)
 
