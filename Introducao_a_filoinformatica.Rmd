@@ -4058,4 +4058,4 @@ PrintBibliography(referencias)
 
 **Turma 1: ENBT/JBRJ: 24 a 28 de outubro de 2022**
 
-![](images/turma1.png)
+![](images/turma1.jpg)
