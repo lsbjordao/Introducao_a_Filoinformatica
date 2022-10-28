@@ -3970,8 +3970,6 @@ if(length(busca_clado) > 1){
   
 }
 
-apg.tree$node.label[node]
-
 tree <- extract.clade(phy = apg.tree, node = node)
 
 plot(tree)
@@ -3998,8 +3996,6 @@ if(length(busca_clado) > 1){
   node <- busca_clado + length(apg.tree$tip.label)
   
 }
-
-apg.tree$node.label[node]
 
 tree <- extract.clade(phy = apg.tree, node = node)
 
