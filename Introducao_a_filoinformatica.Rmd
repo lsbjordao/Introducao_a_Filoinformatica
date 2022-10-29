@@ -355,7 +355,7 @@ Fotografia de Gareth Nelson (à dir.) junto a Lars Brundin (à esq.), tirada por
   
 - De grande importância é a edição especial sobre como ensinar filogenia da periódico científico [*Evolution: Education and Outreach*](https://link.springer.com/journal/12052/volumes-and-issues/3-4), editado por Daniel R. Brooks, em 2010.
 
-- **A emergência da cladística hennigiana, foi revolução científica kuhnina ou não foi?**
+- A emergência da cladística hennigiana foi revolução científica kuhnina ou não foi?
 
   - Sim: `r Citet(referencias, "Terra2010")`
   
@@ -720,7 +720,7 @@ Ela interliga significados de palavras e, neste âmbito, tem como finalidade con
 
 ::: {style="color: black; background: lightgray; text-align: justify; border: 5px outset lightgray; padding: 10px;"}
 
-- Em discussões recentes sobre Web 3.0, a terminologia tornou-se intercambiável com o termo Web3 no contexto de criptografia, porém suas origens e contextos são diferenciados.
+- Em discussões recentes sobre Web 3.0, a terminologia tornou-se intercambiável com o termo Web3 no contexto de criptografia, porém suas origens são diferenciadas.
 
 - A definição de Web 3.0 de Berners-Lee como Web Semântica é a ideia de que os dados da Internet são legíveis por máquina.
 
@@ -2222,49 +2222,56 @@ Plant and Fungal Trees of Life (PAFTOL) project: [https://www.kew.org/science/ou
 
 - Tudo no `r fa("r-project", fill = "steelblue")` são objetos.
 
-## Principais tipos de Objetos:
+- Objetos possuem uma **estrutura de dados** que armazenam **variáveis**.
 
-  - vetores
-  - listas
-  - matrizes
-  - dataframes
-  - arrays
-  - funções
+- As variáveis são categorizadas como confome o **tipo dos dados**
+
+
+## Principais estruturas de dados
+
+As variáveis são armazenadas em tipos de estruturas de dados:
+
+- vetores
+- listas
+- matrizes
+- dataframes
+- arrays
 
 ![](images/Robjects.png)
 
 - Funções são também são objetos, mas executam um conjunto operações determinadas.
 
+## Principais tipos de dados
+
+As váriáveis pode ser de diferentes tipos:
+  
+- numeric
+  
+  - integer, double
+    
+- character
+  
+  - string
+    
+- logical
+  
+  - TRUE, FALSE
+    
+- factor
+  
+  - variáveis categóricas
+    
+  - nº limitado de valores
+    
+  - níveis do fator
 
 ## Classe
 
 - Todo objeto tem uma classe.
+  - Diz-se que um objeto é uma instância de uma classe.
+    - Uma classe define as propriedades do objeto.
 
 ![](images/class.png)
-
-- Classe define as propriedades dos objetos.
-
-- As classes básicas são:
-  
-  - numeric
-  
-    - integer, double
-    
-  - character
-  
-    - string
-    
-  - logical
-  
-    - TRUE, FALSE
-    
-  - factor
-  
-    - variáveis categóricas
-    
-    - nº limitado de valores
-    
-    - níveis do fator
 
 [](images/class_mode_typeof.png)
 
