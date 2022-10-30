@@ -1284,25 +1284,21 @@ Campo que abrange todas as etapas, tarefas e usos de ferramentas computacionais 
 
 # Visão geral e roteiro do curso
 
-Daremos um enfoque principalmente em dados moleculares, mas também utilizaremos dados morfológicos tanto para reconstrução filogenética quanto para mapeamento de caracteres nas árvores obtidas.
-
-Quanto aos métodos de inferência filogenética, rodaremos análises de máxima verossimilhança e bayesiana. Não rodaremos análises de parsimônia, uma vez que o enfoque do curso será nos dados moleculares. Atualmente, há um senso comum de que ambas as análises, de máxima verossimilhança e bayesiana, são mais apropriadas do que a máxima parsimônia quando se tratam de dados moleculares (genotípicos). Não obstante, a análise de parsimônia continua a ser uma abordagem importante quando os dados são de natureza fenotípica (por exemplo, morfológicos).
+Em nossas práticas, utilizaremos dados moleculares na condução das análises filogenéticas. Quanto aos métodos de inferência filogenética, rodaremos análises de máxima verossimilhança e bayesiana. Não rodaremos análises de parsimônia, uma vez que o enfoque do curso será nos dados moleculares. Atualmente, é consensual que ambas as análises, de máxima verossimilhança e bayesiana, são mais apropriadas do que a máxima parsimônia quando se tratam de dados moleculares (genotípicos). Não obstante, a análise de parsimônia continua a ser uma abordagem importante quando os dados são de natureza fenotípica (por exemplo, morfológicos).
 
 Iniciaremos nossas atividades com a etapa de montagem de sequências, onde aprenderemos a montar uma sequência consenso a partir dos *primers* sequenciados.
 
-Em seguida, realizaremos o alinhamento múltiplo e manual das sequências, onde construiremos a matriz com os dados moleculares.
+Em seguida, aprenderemos a baixar sequências do *Genbank* e a editar os principais tipos de arquivos que armazenam dados filogenéticos. Para isso, faremos uso das expressões regulares através de um editor de texto plano.
 
-Posteriormente, aprenderemos o básico sobre o terminal (ou console ou *shell*) do Windows - `MS-DOS`, conhecimentos que serão essenciais utilizar aplicativos com interface de linha de comando (CLI, em inglês) e para procederemos as análises filogenéticas.
+Então, realizaremos o alinhamento múltiplo e manual das sequências, onde construiremos a matriz com os dados moleculares.
 
-As análises filogenéticas serão rodadas com dados moleculares, morfológicos, e a análise combinada, incluindo ambos. Utilizaremos os programas `IQ-TREE` para máxima verossimilhança e o `MrBayes` para bayesiana.
+Aprenderemos o básico sobre o terminal (ou console ou *shell*) do Windows - `MS-DOS`, conhecimentos que serão essenciais utilizar aplicativos com interface de linha de comando (CLI, em inglês) e para procederemos as análises filogenéticas.
+
+As análises filogenéticas serão rodadas com dados moleculares. Utilizaremos os programas `IQ-TREE` para máxima verossimilhança, e `MrBayes` e `Beast2` para bayesiana.
 
 Então, aprenderemos o básico sobre o `r fa("r-project", fill = "steelblue")` para apresentarmos os principais pacotes desenvolvidos para análises filogenéticas e afins. Uma grande atenção será dada à edição de árvores filogenéticas através de três pacotes (`ape`, `phytools`, `ggtree`).
 
-Logo, aprenderemos a executar estimações do estado ancestral com dados contínuos e discretos utilizando o pacote `phytools`.
-
-Também executaremos uma análise de diversificação utilizando o programa `BAMMtools` para investigar mudanças nos regimes de diversificação.
-
-Finalmente, conheceremos o programa `Biodiverse GUI`, que realiza diversos tipos de análises que incluem a conjunção de árvore filogenética e coordenadas geográficas dos terminais, dentre as quais inclui-se a métrica de diversidade filogenética.
+Finalmente, uma introdução ao `RMarkdown` para redação da documentação e apresentação dos códigos encerra o curso de introdução à filoinformática.
 
 
 # Técnicas moleculares
@@ -2834,8 +2830,11 @@ plot(tree)
 nodelabels(tree$node.label, frame = "none", cex = 0.7)
 ```
 
+
 ## Personalizando o estilo da árvore
+
 Agora que temos um conjunto de objetos de classe `phylo` e `phylo4`, vamos aprender a alterar o design das árvores utilizando alguns dos principais pacotes para filogenia. Vamos conhecer um pacote de cada vez.
+
 
 ### Pacote ape
 O pacote [ape](https://cran.r-project.org/web/packages/ape/index.html)
@@ -4029,15 +4028,8 @@ plotTree(tree, ftype = "off", ylim = c(-0.2*Ntip(tree), Ntip(tree)), lwd = 1)
 geo.legend(leg = obj$leg, colors = obj$colors, cex = 1.2)
 ```
 
-### Estimação do estado ancestral usando R
 
-As análises de estimação do estado ancestral, ou reconstrução do caráter ancestral do ponto-de-vista da parsimônia, são utilizadas para investigar a evolução de caracteres. Como serão utilizados métodos probabilísticos, o termo correto é estimação e não reconstrução.
-
-#### Pacote phytools
-
-##### Dados contínuos
-
-##### Dados discretos
+# RMarkdown
 
 
 # Referências{-}
