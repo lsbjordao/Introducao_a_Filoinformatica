@@ -1692,6 +1692,25 @@ Maddison, W.P. & Maddison, D.R., 2002. Mesquite: a modular system for evolutiona
 
 :::
 
+# GeneBank *Blast*
+
+
+
+# Baixando sequências do GeneBank
+
+Buscar e baixar sequências
+
+National Center for Biotechnology Information
+
+
+# Preparação dos arquivos das sequências
+
+## Expressões regulares
+
+RegEx
+
+### Prática
+
 
 # Alinhamento múltiplo e manual de sequências
 
@@ -1752,7 +1771,7 @@ O *software* [SequenceMatrix](http://www.ggvaidya.com/taxondna/) `r Cite(referen
 
 ![](images/SequenceMatrix.jpg)
 
-## Prática
+## Prática: RegEx 2
 
 O arquivo `.nex` resultante do procedimento de codificação do SeqState precisa ser aberto em um editor de texto mais especializado para programação. Experimente o [Notepad2](http://www.flos-freeware.ch).
 
@@ -2224,8 +2243,9 @@ Plant and Fungal Trees of Life (PAFTOL) project: [https://www.kew.org/science/ou
 
 - Objetos possuem uma **estrutura de dados** que armazenam **variáveis**.
 
-- As variáveis são categorizadas como confome o **tipo dos dados**
+- Variáveis armazenam **valores** ou **conjunto de valores** de acordo com o **tipo dos dados**
 
+- As variáveis populam estruturas de dados.
 
 ## Principais estruturas de dados
 
@@ -2265,11 +2285,12 @@ As váriáveis pode ser de diferentes tipos:
     
   - níveis do fator
 
-## Classe
+## Classe x propriedade x atributo
 
-- Todo objeto tem uma classe.
+- Todo objeto tem uma **classe**.
   - Diz-se que um objeto é uma instância de uma classe.
-    - Uma classe define as propriedades do objeto.
+    - Uma classe contém **propriedades**.
+      - O valor que cada propriedade assume em um objeto é chamado de **atributo**.
 
 ![](images/class.png)
 
@@ -2727,6 +2748,91 @@ plot(tree.mrbayes@phylo)
 
 ```
 
+
+## Extraindo clados
+
+A função `extract.clade()` obtém uma árvore a partir de um determinado nó.
+
+- Vamos plotar a árvore das plantas:
+
+```{r}
+library(ape)
+
+plants.tree <- "((((((((((((((Eudicots), Monocots), Magnoliids), Chloranthales), Autrobaileyales), Nymphaeales), Amborellales),((((Gnetales, Conifers), Gingkoales), Cycadales))),(((Sphenophytes, Marattiales), Filicales),(Ophioglossaceae, Psilophytes))),(Selaginellales, Lycopodiales)),(Bryophyta)),(Anthocerophyta)),(Marchantiophyta)));"
+
+plants.tree <- read.tree(text = plants.tree)
+
+plot(plants.tree)
+```
+
+- Os nomes dos terminais (`tip labels`) são numerados em ordem consecutiva começando do 1:
+
+```{r}
+plot(plants.tree)
+tiplabels()
+```
+
+- Os nós (`nodes`) são numerados em ordem consecutiva começando do número consecutivo ao número de terminais:
+
+```{r}
+length(plants.tree$tip.label) + 1
+```
+
+- Vejam os rótulos (*labels*) dos nós:
+
+```{r}
+plot(plants.tree)
+nodelabels()
+```
+
+- Vamos extrair os clados com base no número (rótulo) do nó:
+
+```{r}
+tree1 <- extract.clade(phy = plants.tree, node = 29)
+plot(tree1)
+
+# Tente a seleção do nó interativamente
+# tree2 <- extract.clade(plants.tree, interactive = T)
+# plot(tree2)
+```
+
+
+<br>
+
+Agora vamos importar a árvore do APG:
+
+- Importe a árvore:
+
+```{r}
+library(ape)
+
+apg.tree <- read.tree("./files/trees/apg.tree")
+```
+
+- Vamos extrair o clado das Lamiales:
+
+```{r}
+tree <- extract.clade(phy = apg.tree, node = "lamiales")
+plot(tree)
+nodelabels(tree$node.label, frame = "none", cex = 0.7)
+```
+
+- Vamos descobrir como localizar certa *string* no conjunto de rótulos dos nós.
+  - Vamos procurar o: **Clado das Fixadoras de Nitrogênio (clado CFN)** FABA-ROSA-CUCU-FAGA
+
+```{r}
+nome <- "nitrogen"
+index_of_clades_found <- grep(nome, apg.tree$node.label)
+apg.tree$node.label[index_of_clades_found]
+```
+
+- Extraia o clado:
+
+```{r}
+tree <- extract.clade(phy = apg.tree, node = "nitrogenfixing")
+plot(tree)
+nodelabels(tree$node.label, frame = "none", cex = 0.7)
+```
 
 ## Personalizando o estilo da árvore
 Agora que temos um conjunto de objetos de classe `phylo` e `phylo4`, vamos aprender a alterar o design das árvores utilizando alguns dos principais pacotes para filogenia. Vamos conhecer um pacote de cada vez.
@@ -3932,119 +4038,6 @@ As análises de estimação do estado ancestral, ou reconstrução do caráter a
 ##### Dados contínuos
 
 ##### Dados discretos
-
-
-# Exercícios
-
-```{r}
-library(ape)
-
-plants.tree <- "((((((((((((((Eudicots), Monocots), Magnoliids), Chloranthales), Autrobaileyales), Nymphaeales), Amborellales),((((Gnetales, Conifers), Gingkoales), Cycadales))),(((Sphenophytes, Marattiales), Filicales),(Ophioglossaceae, Psilophytes))),(Selaginellales, Lycopodiales)),(Bryophyta)),(Anthocerophyta)),(Marchantiophyta)));"
-
-plants.tree <- read.tree(text = plants.tree)
-
-plot(plants.tree)
-```
-
-- Os nomes dos terminais (`tip labels`) são numerados em ordem consecutiva começando do 1:
-
-```{r}
-plot(plants.tree)
-tiplabels()
-```
-
-- Os nós (`nodes`) são numerados em ordem consecutiva começando do número consecutivo ao número de terminais:
-
-```{r}
-length(plants.tree$tip.label) + 1
-```
-
-- Vejam os rótulos (*labels*) dos nós:
-
-```{r}
-plot(plants.tree)
-nodelabels()
-```
-
-- Vamos extrair os clados com base no número (rótulo) do nó:
-
-```{r}
-tree1 <- extract.clade(phy = plants.tree, node = 29)
-plot(tree1)
-
-# Tente a seleção do nó interativamente
-# tree2 <- extract.clade(plants.tree, interactive = T)
-# plot(tree2)
-```
-
-<br>
-
-**Clado das Fixadoras de Nitrogênio (clado CFN)** FABA-ROSA-CUCU-FAGA
-
-```{r}
-library(ape)
-
-apg.tree <- read.tree("./files/trees/apg.tree")
-
-nome <- "nitrogenfixing"
-  
-busca_clado <- grep(nome, apg.tree$node.label)
-
-apg.tree$node.label[busca_clado]
-
-if(length(busca_clado) > 1){
-  
-  node <- max(busca_clado + length(apg.tree$tip.label))
-  
-} else {
-  
-  node <- busca_clado + length(apg.tree$tip.label)
-  
-}
-
-tree <- extract.clade(phy = apg.tree, node = node)
-
-plot(tree)
-
-nodelabels(tree$node.label, frame = "none", cex = 0.7)
-
-```
-
-**Ordem Fabales**
-
-```{r}
-nome <- "fabales"
-  
-busca_clado <- grep(nome, apg.tree$node.label)
-
-apg.tree$node.label[busca_clado]
-
-if(length(busca_clado) > 1){
-  
-  node <- max(busca_clado + length(apg.tree$tip.label))
-  
-} else {
-  
-  node <- busca_clado + length(apg.tree$tip.label)
-  
-}
-
-tree <- extract.clade(phy = apg.tree, node = node)
-
-plot(tree)
-nodelabels(tree$node.label, frame = "none", cex = 0.7)
-
-```
-
-
-# GeneBank (NCBI)
-
-National Center for Biotechnology Information
-
-
-## Blast
-
-Buscar e baixar sequências
 
 
 # Referências{-}
