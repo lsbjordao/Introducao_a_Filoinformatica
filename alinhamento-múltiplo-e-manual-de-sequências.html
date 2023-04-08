@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10 Alinhamento múltiplo e manual de sequências | Introdução à Filoinformática (in development)</title>
   <meta name="description" content="10 Alinhamento múltiplo e manual de sequências | Introdução à Filoinformática (in development)" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10 Alinhamento múltiplo e manual de sequências | Introdução à Filoinformática (in development)" />
   <meta property="og:type" content="book" />
@@ -23,6 +23,7 @@
 <meta name="author" content="Lucas S.B. Jordão" />
 
 
+<meta name="date" content="2023-06-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,7 +56,7 @@
 <link href="libs/primer-tooltips-1.4.0/build.css" rel="stylesheet" />
 <link href="libs/klippy-0.0.0.9500/css/klippy.min.css" rel="stylesheet" />
 <script src="libs/klippy-0.0.0.9500/js/klippy.min.js"></script>
-<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
 <link href="libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet" />
 <link href="libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet" />
 <link href="libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet" />
@@ -402,7 +403,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">10</span> Alinhamento múltiplo e manual de sequências<a href="alinhamento-múltiplo-e-manual-de-sequências.html#alinhamento-múltiplo-e-manual-de-sequências" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>O alinhamento múltiplo de sequências é a etapa do reconhecimento das homologias moleculares, isto é, a inferência da homologia primária molecular. Essa etapa pode ser executada através de diversos aplicativos, tais quais: Geneious, BioEdit, CodonCode Aligner.</p>
 <p>Existem diversos algoritmos de alinhamento são utilizados, como: Clustal, T-Coffee, MergeAlign, Muscle.</p>
-<p><img src="images/alignment_apps.PNG" /></p>
+<p><img src="images/alignment_apps.png" /></p>
 <p>Após o alinhamento múltiplo automático de sequências, dá-se início ao alinhamento manual. O alinhamento manual é necessário para garantir um alinhamento perfeito na matriz de dados. Cada coluna representa um caráter homólogo, cuja posição será comparada entre todos os terminais.</p>
 <p>O <code>BioEdit v.7.0.5.3</code> <a name=cite-Hall></a>(<a href="#bib-Hall">Hall, 1999</a>) é um programa <em>open-source</em> bem conhecido para realização do alinhamento manual, mas seu desenvolvimento foi descontinuado. Não obstante, atualmente ainda é bastante utilizado.</p>
 <p>Geralmente, as extremidades do alinhamento são cortadas (<em>trim</em>, em inglês) durante a preparação da matriz final de caracteres.</p>

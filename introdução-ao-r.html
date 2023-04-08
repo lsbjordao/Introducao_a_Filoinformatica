@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>17 Introdução ao R | Introdução à Filoinformática (in development)</title>
   <meta name="description" content="17 Introdução ao R | Introdução à Filoinformática (in development)" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="17 Introdução ao R | Introdução à Filoinformática (in development)" />
   <meta property="og:type" content="book" />
@@ -23,6 +23,7 @@
 <meta name="author" content="Lucas S.B. Jordão" />
 
 
+<meta name="date" content="2023-06-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,7 +56,7 @@
 <link href="libs/primer-tooltips-1.4.0/build.css" rel="stylesheet" />
 <link href="libs/klippy-0.0.0.9500/css/klippy.min.css" rel="stylesheet" />
 <script src="libs/klippy-0.0.0.9500/js/klippy.min.js"></script>
-<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
 <link href="libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet" />
 <link href="libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet" />
 <link href="libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet" />
@@ -400,7 +401,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="introdução-ao-r" class="section level1 hasAnchor" number="17">
 <h1><span class="header-section-number">17</span> Introdução ao R<a href="introdução-ao-r.html#introdução-ao-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="images/ross_robert.PNG" /></p>
+<p><img src="images/ross_robert.png" /></p>
 <ul>
 <li><p>O <a href="https://www.r-project.org"><svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg></a> foi criado por Ross Ihaka e Robert Gentleman no departamento de Estatística da Universidade de Auckland, Nova Zelândia, mas foi posteriormente desenvolvido por um esforço colaborativo de pessoas em vários locais do mundo.</p></li>
 <li><p>É uma linguagem e um ambiente de desenvolvimento integrado para cálculos estatísticos, gráficos e análises diversas.</p></li>
@@ -429,7 +430,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>dataframes</li>
 <li>arrays</li>
 </ul>
-<p><img src="images/Robjects.PNG" /></p>
+<p><img src="images/Robjects.png" /></p>
 <ul>
 <li>Funções são também são objetos, mas executam um conjunto operações determinadas.</li>
 </ul>
@@ -472,7 +473,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 </ul>
-<p><img src="images/class.PNG" /></p>
+<p><img src="images/class.png" /></p>
 <p><a href="images/class_mode_typeof.png"></a></p>
 <ul>
 <li>Outras classes podem ser definidas.</li>
@@ -560,6 +561,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## $os
 ## [1] &quot;mingw32&quot;
 ## 
+## $crt
+## [1] &quot;ucrt&quot;
+## 
 ## $system
 ## [1] &quot;x86_64, mingw32&quot;
 ## 
@@ -570,28 +574,28 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## [1] &quot;4&quot;
 ## 
 ## $minor
-## [1] &quot;0.2&quot;
+## [1] &quot;2.2&quot;
 ## 
 ## $year
-## [1] &quot;2020&quot;
+## [1] &quot;2022&quot;
 ## 
 ## $month
-## [1] &quot;06&quot;
+## [1] &quot;10&quot;
 ## 
 ## $day
-## [1] &quot;22&quot;
+## [1] &quot;31&quot;
 ## 
 ## $`svn rev`
-## [1] &quot;78730&quot;
+## [1] &quot;83211&quot;
 ## 
 ## $language
 ## [1] &quot;R&quot;
 ## 
 ## $version.string
-## [1] &quot;R version 4.0.2 (2020-06-22)&quot;
+## [1] &quot;R version 4.2.2 (2022-10-31 ucrt)&quot;
 ## 
 ## $nickname
-## [1] &quot;Taking Off Again&quot;</code></pre>
+## [1] &quot;Innocent and Trusting&quot;</code></pre>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="introdução-ao-r.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">license</span>() <span class="co"># informações sobre a licença</span></span></code></pre></div>
 <pre><code>## 
 ## This software is distributed under the terms of the GNU General
@@ -616,7 +620,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## 
 ## To cite R in publications use:
 ## 
-##   R Core Team (2020). R: A language and environment for statistical
+##   R Core Team (2022). R: A language and environment for statistical
 ##   computing. R Foundation for Statistical Computing, Vienna, Austria.
 ##   URL https://www.R-project.org/.
 ## 
@@ -627,7 +631,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ##     author = {{R Core Team}},
 ##     organization = {R Foundation for Statistical Computing},
 ##     address = {Vienna, Austria},
-##     year = {2020},
+##     year = {2022},
 ##     url = {https://www.R-project.org/},
 ##   }
 ## 
@@ -639,11 +643,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## starting httpd help server ... done</code></pre>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="introdução-ao-r.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help.start</span>() <span class="co"># Manuais e outros materiais</span></span></code></pre></div>
 <pre><code>## If nothing happens, you should open
-## &#39;http://127.0.0.1:11268/doc/html/index.html&#39; yourself</code></pre>
+## &#39;http://127.0.0.1:22334/doc/html/index.html&#39; yourself</code></pre>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="introdução-ao-r.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(base) <span class="co"># Manual do pacote &quot;base&quot;</span></span></code></pre></div>
 <p>Funções de data e hora:</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="introdução-ao-r.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>() <span class="co"># Obtém data e horário exatos do sistema</span></span></code></pre></div>
-<pre><code>## [1] &quot;2022-10-29 23:29:23 -03&quot;</code></pre>
+<pre><code>## [1] &quot;2023-04-06 20:25:38 -03&quot;</code></pre>
 </div>
 </div>
 <div id="pacotes" class="section level2 hasAnchor" number="17.9">
@@ -811,29 +815,29 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>Com os métodos da função <code>is</code> é possível testar se um objeto corresponde a uma determinada <code>classe</code>. E com os métodos da função <code>as</code> é possível coagir um objeto de uma classe a transformar-se em outra.</p>
 <p>Veja os métodos das funções <code>is</code> e <code>as</code>: (Retire o operador # da frente do comando para rodá-lo)</p>
 <div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="introdução-ao-r.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">methods</span>(is)</span></code></pre></div>
-<pre><code>## Warning in .S3methods(generic.function, class, envir): function &#39;is&#39; appears not
-## to be S3 generic; found functions that look like S3 methods</code></pre>
+<pre><code>## Warning in .S3methods(generic.function, class, envir): function &#39;is&#39; appears
+## not to be S3 generic; found functions that look like S3 methods</code></pre>
 <pre><code>##  [1] is.array                is.atomic               is.BibEntry            
 ##  [4] is.call                 is.character            is.complex             
 ##  [7] is.data.frame           is.double               is.element             
 ## [10] is.empty.model          is.environment          is.expression          
 ## [13] is.factor               is.finite               is.function            
-## [16] is.grouped_df           is.infinite             is.integer             
-## [19] is.language             is.leaf                 is.list                
-## [22] is.loaded               is.logical              is.matrix              
-## [25] is.mts                  is.na                   is.na.data.frame       
-## [28] is.na.numeric_version   is.na.POSIXlt           is.na&lt;-                
-## [31] is.na&lt;-.default         is.na&lt;-.factor          is.na&lt;-.numeric_version
-## [34] is.name                 is.nan                  is.null                
-## [37] is.numeric              is.numeric.Date         is.numeric.difftime    
-## [40] is.numeric.POSIXt       is.numeric_version      is.object              
-## [43] is.ordered              is.package_version      is.pairlist            
-## [46] is.primitive            is.qr                   is.R                   
-## [49] is.raster               is.raw                  is.recursive           
-## [52] is.relistable           is.single               is.src                 
-## [55] is.stepfun              is.symbol               is.table               
-## [58] is.tbl                  is.ts                   is.tskernel            
-## [61] is.unsorted             is.vector              
+## [16] is.grouped_df           is.hashtab              is.infinite            
+## [19] is.integer              is.language             is.leaf                
+## [22] is.list                 is.loaded               is.logical             
+## [25] is.matrix               is.mts                  is.na                  
+## [28] is.na.data.frame        is.na.numeric_version   is.na.POSIXlt          
+## [31] is.na&lt;-                 is.na&lt;-.default         is.na&lt;-.factor         
+## [34] is.na&lt;-.numeric_version is.name                 is.nan                 
+## [37] is.null                 is.numeric              is.numeric.Date        
+## [40] is.numeric.difftime     is.numeric.POSIXt       is.numeric_version     
+## [43] is.object               is.ordered              is.package_version     
+## [46] is.pairlist             is.primitive            is.qr                  
+## [49] is.R                    is.raster               is.raw                 
+## [52] is.recursive            is.relistable           is.single              
+## [55] is.src                  is.stepfun              is.symbol              
+## [58] is.table                is.tbl                  is.ts                  
+## [61] is.tskernel             is.unsorted             is.vector              
 ## see &#39;?methods&#39; for accessing help and source code</code></pre>
 <div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="introdução-ao-r.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="co"># methods(as)</span></span></code></pre></div>
 <p>Teste com os objetos já criados:</p>
@@ -848,7 +852,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Editor com destaque de sintaxe</p></li>
 <li><p>Auto-completar comandos</p></li>
 </ul>
-<p><img src="images/rstudio1.PNG" /></p>
+<p><img src="images/rstudio1.png" /></p>
 </div>
 <div id="ambiente-de-trabalho" class="section level2 hasAnchor" number="17.12">
 <h2><span class="header-section-number">17.12</span> Ambiente de Trabalho<a href="introdução-ao-r.html#ambiente-de-trabalho" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -864,8 +868,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><p>O <strong>caminho absoluto</strong> tem início na pasta raiz do seu disco local do computador. O caminho absoluto do ambiente de trabalho (<em>workspace</em>) pode ser obtido com a função <code>getwd()</code>. Abaixo vemos o diretório-raiz do presente <em>bookdown</em> no computador local:</p></li>
 </ul>
 <div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="introdução-ao-r.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;C:/git repositories/Introducao_a_Filoinformatica&quot;</code></pre>
-<p><img src="images/rstudio2.PNG" /></p>
+<pre><code>## [1] &quot;D:/git repositories/Introducao_a_Filoinformatica&quot;</code></pre>
+<p><img src="images/rstudio2.png" /></p>
 <div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="introdução-ao-r.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>() <span class="co"># lista todos os objetos/funções do Ambiente de Trabalho</span></span></code></pre></div>
 <pre><code>##  [1] &quot;charact_fact&quot;     &quot;character&quot;        &quot;edges&quot;            &quot;edges.is_a&quot;      
 ##  [5] &quot;função&quot;           &quot;graph&quot;            &quot;graph2&quot;           &quot;graph3&quot;          

@@ -3301,6 +3301,12 @@ ggtree(plants.tree) + geom_treescale(x = 1, y = 20, width = 1, color = 'red', fo
 
 
 #### Ramos
+Coloque textos nos ramos:
+```{r}
+ggtree(plants.tree) +
+  geom_text2(aes(x = branch, label = "Eba!"))
+```
+
 Altere a cor da linha da árvore:
 ```{r}
 ggtree(plants.tree, color = "firebrick")
