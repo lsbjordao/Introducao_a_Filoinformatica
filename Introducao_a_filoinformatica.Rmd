@@ -7,6 +7,8 @@ output:
   bookdown::gitbook:
     highlight: tango
     toc_depth: 4
+    includes:
+      in_header: "analytics.html"
 link-citations: true
 urlcolor: blue
 ---
